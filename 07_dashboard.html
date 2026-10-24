@@ -1,0 +1,654 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. Dashboard y despliegue &#8212; Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '07_dashboard';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="8. Conclusiones y limitaciones" href="08_conclusiones.html" />
+    <link rel="prev" title="6. Validación estadística" href="06_validacion.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Dashboard predictivo, modelo original e informe reproducible
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_datos.html">2. Datos: ETL y EDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark: selección, reentrenamiento y artefactos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/07_dashboard.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>7. Dashboard y despliegue</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arquitectura">7.1 Arquitectura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secciones-y-decisiones-de-diseno">7.2 Secciones y decisiones de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#despliegue-en-render">7.3 Despliegue en Render</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="dashboard-y-despliegue">
+<h1>7. Dashboard y despliegue<a class="headerlink" href="#dashboard-y-despliegue" title="Link to this heading">#</a></h1>
+<p>El dashboard está publicado en <strong><a class="reference external" href="https://sipsa-corredores-e3.onrender.com">https://sipsa-corredores-e3.onrender.com</a></strong>. Es una aplicación multipágina
+de Dash (<code class="docutils literal notranslate"><span class="pre">use_pages=True</span></code>) con tres secciones, Contexto, EDA y Modelos, pensada para que una persona sin
+formación en aprendizaje automático entienda el problema, explore los datos y use los modelos.</p>
+<section id="arquitectura">
+<h2>7.1 Arquitectura<a class="headerlink" href="#arquitectura" title="Link to this heading">#</a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Entregable3MachineLearningProject/
+├── app.py                  # crea la app, la barra de navegación fija y expone `server` para gunicorn
+├── pages/
+│   ├── contexto.py         # sección 1: narrativa estática, cifras clave, diccionario, metodología, ética
+│   ├── eda.py              # sección 2: filtros globales y callbacks que actualizan todas las figuras
+│   └── modelos.py          # sección 3: líderes, predicción en vivo, diagnóstico, comparación, modelo original
+├── src/
+│   ├── original_model.py   # clase ApilamientoJerarquicoKL (AJ-KL, numpy + scipy)
+│   ├── data.py             # carga única y en caché (lru_cache) de datos y artefactos
+│   ├── plots.py            # funciones de figuras Plotly reutilizadas por el dashboard y el libro
+│   ├── explicacion.py      # valores de Shapley por permutaciones para la explicación local
+│   └── artefactos.py       # tuberías completas, AJKLProduccion, metadatos y esquema de entrada
+├── artifacts/              # 10 modelos serializados (7 del curso, LightGBM, CatBoost y AJ-KL) (joblib, compress=3), metadata.json y predicciones de referencia
+├── data/dashboard/         # datos livianos: muestra del EDA, series semanales, predicciones 2025, SHAP, pruebas
+├── assets/estilo.css       # paleta de cinco colores y estilos
+├── tests/                  # pytest: modelo original, explicación local y prueba de ida y vuelta
+├── book/                   # este libro
+├── requirements.txt        # versiones exactas para Render
+└── render.yaml             # Blueprint de Render
+</pre></div>
+</div>
+<p>La interfaz, la lógica de datos y los artefactos están separados: las páginas solo llaman a <code class="docutils literal notranslate"><span class="pre">data.py</span></code> (que
+lee una vez cada archivo) y a <code class="docutils literal notranslate"><span class="pre">plots.py</span></code>. El servidor <strong>nunca entrena ni optimiza</strong>: deserializa los diez
+artefactos de <code class="docutils literal notranslate"><span class="pre">artifacts/</span></code>, que pesan en total unos 23 MB, y lee <code class="docutils literal notranslate"><span class="pre">data/dashboard/</span></code> (unos 13 MB).</p>
+</section>
+<section id="secciones-y-decisiones-de-diseno">
+<h2>7.2 Secciones y decisiones de diseño<a class="headerlink" href="#secciones-y-decisiones-de-diseno" title="Link to this heading">#</a></h2>
+<p><strong>Contexto.</strong> Una cabecera con la pregunta del proyecto y dos cifras con fuente (7,54 millones de toneladas
+recibidas por las 32 centrales en 2025 según los microdatos del SIPSA; 27,9 % de corredor-semanas con
+interrupción), tarjetas con el tamaño del panel, la pregunta de investigación y los objetivos, la fuente y el
+periodo de los datos, un diccionario de variables que se puede filtrar, el diagrama de la metodología y una
+sección de limitaciones, ética y sesgos.</p>
+<figure class="align-default" id="fig-dash-contexto">
+<a class="reference internal image-reference" href="_images/dash_contexto.jpg"><img alt="_images/dash_contexto.jpg" src="_images/dash_contexto.jpg" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 1 </span><span class="caption-text">Sección Contexto.</span><a class="headerlink" href="#fig-dash-contexto" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>EDA.</strong> Cuatro filtros globales en una barra fija (central, departamento de origen, rango de semanas con
+<code class="docutils literal notranslate"><span class="pre">DatePickerRange</span></code> y distancia con <code class="docutils literal notranslate"><span class="pre">RangeSlider</span></code>) actualizan todas las figuras: serie semanal de interrupciones
+con los choques de 2020 y 2021 marcados, balance de clases, distribuciones univariadas, un explorador bivariado
+con selectores de ejes y color, la matriz de correlación de Spearman, faltantes y atípicos, la descomposición
+STL, la ACF/PACF y las pruebas ADF y KPSS. Cada figura lleva una frase de interpretación calculada con los
+datos filtrados, de modo que el texto cambia con la selección.</p>
+<figure class="align-default" id="fig-dash-eda">
+<a class="reference internal image-reference" href="_images/dash_eda.jpg"><img alt="_images/dash_eda.jpg" src="_images/dash_eda.jpg" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 2 </span><span class="caption-text">Sección EDA con los filtros globales.</span><a class="headerlink" href="#fig-dash-eda" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Modelos.</strong> Cinco pestañas:</p>
+<ul class="simple">
+<li><p><em>Tabla de líderes</em> (<code class="docutils literal notranslate"><span class="pre">DataTable</span></code> ordenable y filtrable): la mejor combinación de cada modelo, LightGBM, CatBoost y el AJ-KL, con
+las métricas del bucle externo como media ± desviación estándar, el AUC de 2025, el tiempo de inferencia y el
+tamaño del artefacto.</p></li>
+<li><p><em>Predicción en vivo</em>: un formulario generado a partir del esquema de <code class="docutils literal notranslate"><span class="pre">metadata.json</span></code> (34 variables con su
+tipo y rango), un selector de modelo y un botón que carga un corredor real de 2025. La salida muestra la
+probabilidad, la alerta con el umbral del modelo y la explicación local por valores de Shapley. Las entradas
+vacías, no numéricas o imposibles (negativas, fracciones mayores que 1, categorías no vistas) se rechazan con
+un mensaje; las que caen fuera del rango de entrenamiento se aceptan con un aviso de extrapolación, porque
+valores como la antigüedad de un corredor crecen legítimamente con el tiempo.</p></li>
+<li><p><em>Diagnóstico</em>: curvas ROC y precisión-recall, matriz de confusión, diagrama de calibración y resumen SHAP
+global del modelo elegido, siempre frente a XGBoost.</p></li>
+<li><p><em>Comparación estadística</em>: diagrama de diferencia crítica con el modelo original incluido y la tabla de
+pruebas con p crudo y ajustado.</p></li>
+<li><p><em>Modelo original (AJ-KL)</em>: veredicto explícito, descripción, pseudocódigo, diferencias con la literatura,
+pesos por central, aporte de cada modelo base a una predicción, convergencia de TPE, ablación y tamaños del
+efecto.</p></li>
+</ul>
+<p>La barra de navegación tiene, además de las tres secciones, dos botones que abren este informe (Jupyter Book)
+y el repositorio de código en una pestaña nueva.</p>
+<figure class="align-default" id="fig-dash-prediccion">
+<a class="reference internal image-reference" href="_images/dash_prediccion.jpg"><img alt="_images/dash_prediccion.jpg" src="_images/dash_prediccion.jpg" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 3 </span><span class="caption-text">Predicción en vivo con explicación local.</span><a class="headerlink" href="#fig-dash-prediccion" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-dash-original">
+<a class="reference internal image-reference" href="_images/dash_original.jpg"><img alt="_images/dash_original.jpg" src="_images/dash_original.jpg" style="width: 95%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 4 </span><span class="caption-text">Subsección del modelo original con el veredicto.</span><a class="headerlink" href="#fig-dash-original" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p><strong>Criterios de calidad.</strong> Tema FLATLY de dash-bootstrap-components, paleta de cinco colores (azul oscuro para
+la estructura, azul para XGBoost, naranja para el modelo original, rojo para las interrupciones y gris para el
+resto), plantilla Plotly única con títulos y ejes con unidades, barra de navegación fija y rejilla <code class="docutils literal notranslate"><span class="pre">dbc.Row</span></code> /
+<code class="docutils literal notranslate"><span class="pre">dbc.Col</span></code> que reacomoda los filtros y las tarjetas en tableta (<a class="reference internal" href="#fig-dash-tableta"><span class="std std-numref">Figura 5</span></a>). Los datos y los
+modelos se cargan una sola vez; los callbacks usan <code class="docutils literal notranslate"><span class="pre">prevent_initial_call</span></code> y <code class="docutils literal notranslate"><span class="pre">no_update</span></code> donde corresponde, y
+las excepciones de la predicción se muestran en un <code class="docutils literal notranslate"><span class="pre">dbc.Alert</span></code> sin detener la aplicación. Ningún color es la
+única forma de leer una figura: las clases y los modelos también se distinguen por etiquetas y leyendas.</p>
+<figure class="align-default" id="fig-dash-tableta">
+<a class="reference internal image-reference" href="_images/dash_tableta.jpg"><img alt="_images/dash_tableta.jpg" src="_images/dash_tableta.jpg" style="width: 55%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Figura 5 </span><span class="caption-text">Sección EDA en una tableta (768 × 1024).</span><a class="headerlink" href="#fig-dash-tableta" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="despliegue-en-render">
+<h2>7.3 Despliegue en Render<a class="headerlink" href="#despliegue-en-render" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Verificar localmente con <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">app.py</span></code> (o <code class="docutils literal notranslate"><span class="pre">gunicorn</span> <span class="pre">app:server</span></code>) que las tres páginas y los callbacks
+funcionan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> fija las versiones exactas con las que se serializaron los artefactos (scikit-learn
+1.9.1, XGBoost 3.2.0, LightGBM 4.7.0, CatBoost 1.2.10, imbalanced-learn 0.14.2, Dash 4.4.1, entre otras) y Python 3.11.16 se fija en
+<code class="docutils literal notranslate"><span class="pre">render.yaml</span></code>.</p></li>
+<li><p>El repositorio público en GitHub contiene el código, los artefactos y <code class="docutils literal notranslate"><span class="pre">render.yaml</span></code>. En Render se crea el
+servicio desde el Blueprint, que ejecuta <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> y arranca
+<code class="docutils literal notranslate"><span class="pre">gunicorn</span> <span class="pre">app:server</span> <span class="pre">--workers</span> <span class="pre">1</span> <span class="pre">--threads</span> <span class="pre">2</span> <span class="pre">--timeout</span> <span class="pre">180</span></code>.</p></li>
+<li><p>Se revisaron los registros de construcción y se probaron todas las páginas y la predicción en la URL
+pública.</p></li>
+</ol>
+<p>El plan gratuito de Render suspende el servicio tras un periodo sin visitas, de modo que el primer acceso
+puede tardar cerca de un minuto. Para la sustentación conviene abrir la URL unos minutos antes. Con un solo
+proceso y los artefactos aligerados, la aplicación usa menos memoria de la que ofrece el plan gratuito.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="06_validacion.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">6. Validación estadística</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="08_conclusiones.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">8. Conclusiones y limitaciones</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arquitectura">7.1 Arquitectura</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#secciones-y-decisiones-de-diseno">7.2 Secciones y decisiones de diseño</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#despliegue-en-render">7.3 Despliegue en Render</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Camilo Molina Guerrero y Lina Margarita Buelvas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

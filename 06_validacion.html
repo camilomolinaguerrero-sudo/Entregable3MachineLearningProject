@@ -1,0 +1,2419 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. Validación estadística &#8212; Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '06_validacion';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="7. Dashboard y despliegue" href="07_dashboard.html" />
+    <link rel="prev" title="5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)" href="05_modelo_original.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Dashboard predictivo, modelo original e informe reproducible
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_datos.html">2. Datos: ETL y EDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark: selección, reentrenamiento y artefactos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Validación estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/06_validacion.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>6. Validación estadística</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo">6.1 Protocolo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-1-auc-medio-del-bucle-externo">6.2 Criterio 1: AUC medio del bucle externo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supuestos-de-cada-prueba">6.3 Supuestos de cada prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-de-pruebas-de-hipotesis">6.4 Tabla de pruebas de hipótesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-de-diferencia-critica">6.5 Diagrama de diferencia crítica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tamanos-del-efecto-e-intervalos">6.6 Tamaños del efecto e intervalos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diferencias-en-la-prueba-2025-intervalos-bca-por-bloques-de-semana">6.7 Diferencias en la prueba 2025 (intervalos BCa por bloques de semana)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-el-estado-del-arte-reciente">6.8 Comparación con el estado del arte reciente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-informacion-igual-modelos-de-produccion-en-2025">6.9 Comparación con información igual: modelos de producción en 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veredicto">6.10 Veredicto</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="validacion-estadistica">
+<h1>6. Validación estadística<a class="headerlink" href="#validacion-estadistica" title="Link to this heading">#</a></h1>
+<p>El modelo original se considera superior solo si (guía, sección 6.1): (1) su AUC medio del bucle
+externo supera al de la mejor combinación de cada uno de los siete modelos, (2) al menos tres pruebas
+distintas rechazan la igualdad de desempeño con p ajustado por comparaciones múltiples menor que 0,05
+(0,10 en el MCS) y (3) el tamaño del efecto no es despreciable. Este capítulo aplica ese protocolo y
+reporta también las pruebas que no rechazan.</p>
+<section id="protocolo">
+<h2>6.1 Protocolo<a class="headerlink" href="#protocolo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Universo:</strong> el AJ-KL y las siete mejores combinaciones del capítulo 3 (los benchmarks del curso), con las mismas particiones
+externas, la misma semilla y el mismo preprocesamiento. Las predicciones de los benchmarks son las del
+Entregable 2, emparejadas fila por fila con las del AJ-KL. Los dos comparadores recientes del estado del arte
+(LightGBM y CatBoost, ajustados con el mismo protocolo) se contrastan aparte en la sección 6.8.</p></li>
+<li><p><strong>Bloques:</strong> el bucle externo cubre cuatro años (k1-k4) y se divide en 48 bloques mensuales; la prueba
+2025 tiene 52 semanas. Usar meses y semanas en lugar de solo cinco pliegues da potencia a las pruebas
+no paramétricas sin repetir la búsqueda de hiperparámetros, que tardó 29 horas-CPU para los 140 modelos.
+Los meses de un mismo pliegue comparten modelo y año, así que no son independientes: la prueba de
+Friedman se complementa con una permutación restringida al pliegue y las pruebas sobre 2025 usan errores
+estándar por bloques de semana o bootstrap estacionario.</p></li>
+<li><p><strong>Ajuste por comparaciones múltiples:</strong> Holm dentro de cada familia de siete comparaciones (AJ-KL frente
+a cada benchmark); Nemenyi ya controla el error de familia de sus 28 pares; el MCS controla el error de
+familia por construcción.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">joblib</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plotly.io</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pio</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy</span><span class="w"> </span><span class="kn">import</span> <span class="n">stats</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"../src"</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s2">"notebook_connected"</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">plots</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">PL</span>
+
+<span class="n">V</span> <span class="o">=</span> <span class="s2">"../data/resultados/validacion/"</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.width"</span><span class="p">,</span> <span class="mi">220</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_colwidth"</span><span class="p">,</span> <span class="mi">90</span><span class="p">)</span>
+<span class="n">tabla</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"tabla_pruebas.parquet"</span><span class="p">)</span>
+<span class="n">W</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"wilcoxon_mensual.parquet"</span><span class="p">)</span>
+<span class="n">Dl</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"delong_2025.parquet"</span><span class="p">)</span>
+<span class="n">DM</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"diebold_mariano_2025.parquet"</span><span class="p">)</span>
+<span class="n">NB</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"nadeau_bengio.parquet"</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"resumen.json"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="n">mens</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"metricas_mensuales_externo.parquet"</span><span class="p">)</span>
+<span class="n">corto</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="n">c</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" | "</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="criterio-1-auc-medio-del-bucle-externo">
+<h2>6.2 Criterio 1: AUC medio del bucle externo<a class="headerlink" href="#criterio-1-auc-medio-del-bucle-externo" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/resultados/seleccion_mejores.csv"</span><span class="p">)</span>
+<span class="n">ejul</span> <span class="o">=</span> <span class="p">[</span><span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">"../data/resultados/ajkl/</span><span class="si">{</span><span class="n">pl</span><span class="si">}</span><span class="s2">.joblib"</span><span class="p">)[</span><span class="s2">"resumen"</span><span class="p">]</span> <span class="k">for</span> <span class="n">pl</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"k1"</span><span class="p">,</span> <span class="s2">"k2"</span><span class="p">,</span> <span class="s2">"k3"</span><span class="p">,</span> <span class="s2">"k4"</span><span class="p">]]</span>
+<span class="n">sota</span> <span class="o">=</span> <span class="p">{</span><span class="n">m</span><span class="p">:</span> <span class="p">[</span><span class="n">joblib</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="sa">f</span><span class="s2">"../data/resultados/sota/</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">_</span><span class="si">{</span><span class="n">pl</span><span class="si">}</span><span class="s2">.joblib"</span><span class="p">)[</span><span class="s2">"resumen"</span><span class="p">]</span> <span class="k">for</span> <span class="n">pl</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"k1"</span><span class="p">,</span> <span class="s2">"k2"</span><span class="p">,</span> <span class="s2">"k3"</span><span class="p">,</span> <span class="s2">"k4"</span><span class="p">]]</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"LightGBM"</span><span class="p">,</span> <span class="s2">"CatBoost"</span><span class="p">]}</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"auc"</span><span class="p">,</span> <span class="s2">"auc_pr"</span><span class="p">,</span> <span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">,</span> <span class="s2">"f1"</span><span class="p">,</span> <span class="s2">"precision"</span><span class="p">,</span> <span class="s2">"recall"</span><span class="p">,</span> <span class="s2">"accuracy"</span><span class="p">]</span>
+<span class="n">comp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([{</span><span class="s2">"modelo"</span><span class="p">:</span> <span class="s2">"AJ-KL (original)"</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">e</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ejul</span><span class="p">])</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">},</span>
+                      <span class="s2">"auc_de"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">([</span><span class="n">e</span><span class="p">[</span><span class="s2">"auc"</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">ejul</span><span class="p">],</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)}]</span> <span class="o">+</span>
+                    <span class="p">[{</span><span class="s2">"modelo"</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2"> (estado del arte)"</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">([</span><span class="n">e</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">v</span><span class="p">])</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">},</span>
+                      <span class="s2">"auc_de"</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">([</span><span class="n">e</span><span class="p">[</span><span class="s2">"auc"</span><span class="p">]</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="n">v</span><span class="p">],</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">1</span><span class="p">)}</span> <span class="k">for</span> <span class="n">m</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">sota</span><span class="o">.</span><span class="n">items</span><span class="p">()]</span> <span class="o">+</span>
+                    <span class="p">[{</span><span class="s2">"modelo"</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">modelo</span><span class="p">,</span> <span class="o">**</span><span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">_media"</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">},</span> <span class="s2">"auc_de"</span><span class="p">:</span> <span class="n">r</span><span class="o">.</span><span class="n">auc_de</span><span class="p">}</span>
+                     <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">sel</span><span class="o">.</span><span class="n">itertuples</span><span class="p">()])</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"modelo"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">comp</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">mejor</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="p">(</span><span class="n">comp</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">idxmin</span><span class="p">()</span> <span class="k">if</span> <span class="n">c</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">)</span> <span class="k">else</span> <span class="n">comp</span><span class="p">[</span><span class="n">c</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">())</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">}</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">"Modelo con el mejor valor medio externo en cada métrica: "</span> <span class="o">+</span>
+                 <span class="s2">"; "</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="sa">f</span><span class="s2">"**</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">**: </span><span class="si">{</span><span class="n">m</span><span class="si">}</span><span class="s2">"</span> <span class="k">for</span> <span class="n">c</span><span class="p">,</span> <span class="n">m</span> <span class="ow">in</span> <span class="n">mejor</span><span class="o">.</span><span class="n">items</span><span class="p">())</span> <span class="o">+</span> <span class="s2">"."</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>auc</th>
+      <th>auc_pr</th>
+      <th>brier</th>
+      <th>log_loss</th>
+      <th>ece</th>
+      <th>f1</th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>accuracy</th>
+      <th>auc_de</th>
+    </tr>
+    <tr>
+      <th>modelo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>AJ-KL (original)</th>
+      <td>0.7874</td>
+      <td>0.5642</td>
+      <td>0.1613</td>
+      <td>0.4829</td>
+      <td>0.0117</td>
+      <td>0.5846</td>
+      <td>0.4793</td>
+      <td>0.7504</td>
+      <td>0.6983</td>
+      <td>0.0029</td>
+    </tr>
+    <tr>
+      <th>LightGBM (estado del arte)</th>
+      <td>0.7865</td>
+      <td>0.5630</td>
+      <td>0.1616</td>
+      <td>0.4837</td>
+      <td>0.0108</td>
+      <td>0.5826</td>
+      <td>0.4633</td>
+      <td>0.7878</td>
+      <td>0.6807</td>
+      <td>0.0029</td>
+    </tr>
+    <tr>
+      <th>CatBoost (estado del arte)</th>
+      <td>0.7860</td>
+      <td>0.5623</td>
+      <td>0.1617</td>
+      <td>0.4844</td>
+      <td>0.0089</td>
+      <td>0.5848</td>
+      <td>0.4706</td>
+      <td>0.7724</td>
+      <td>0.6898</td>
+      <td>0.0026</td>
+    </tr>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.7867</td>
+      <td>0.5632</td>
+      <td>0.1615</td>
+      <td>0.4835</td>
+      <td>0.0115</td>
+      <td>0.5843</td>
+      <td>0.4692</td>
+      <td>0.7754</td>
+      <td>0.6880</td>
+      <td>0.0027</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.7852</td>
+      <td>0.5602</td>
+      <td>0.1619</td>
+      <td>0.4846</td>
+      <td>0.0086</td>
+      <td>0.5838</td>
+      <td>0.4795</td>
+      <td>0.7470</td>
+      <td>0.6987</td>
+      <td>0.0026</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.7844</td>
+      <td>0.5573</td>
+      <td>0.1634</td>
+      <td>0.4912</td>
+      <td>0.0298</td>
+      <td>0.5828</td>
+      <td>0.4715</td>
+      <td>0.7634</td>
+      <td>0.6909</td>
+      <td>0.0023</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.7809</td>
+      <td>0.5503</td>
+      <td>0.1639</td>
+      <td>0.4904</td>
+      <td>0.0214</td>
+      <td>0.5803</td>
+      <td>0.4639</td>
+      <td>0.7751</td>
+      <td>0.6829</td>
+      <td>0.0030</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.7751</td>
+      <td>0.5416</td>
+      <td>0.1661</td>
+      <td>0.4952</td>
+      <td>0.0273</td>
+      <td>0.5765</td>
+      <td>0.4565</td>
+      <td>0.7826</td>
+      <td>0.6748</td>
+      <td>0.0029</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.7736</td>
+      <td>0.5364</td>
+      <td>0.1982</td>
+      <td>0.5743</td>
+      <td>0.1647</td>
+      <td>0.5722</td>
+      <td>0.4498</td>
+      <td>0.7891</td>
+      <td>0.6661</td>
+      <td>0.0032</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.7685</td>
+      <td>0.5161</td>
+      <td>0.2317</td>
+      <td>0.9624</td>
+      <td>0.1983</td>
+      <td>0.5733</td>
+      <td>0.4636</td>
+      <td>0.7516</td>
+      <td>0.6835</td>
+      <td>0.0045</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p>Modelo con el mejor valor medio externo en cada métrica: <strong>auc</strong>: AJ-KL (original); <strong>auc_pr</strong>: AJ-KL (original); <strong>brier</strong>: AJ-KL (original); <strong>log_loss</strong>: AJ-KL (original); <strong>ece</strong>: Random Forest; <strong>f1</strong>: CatBoost (estado del arte); <strong>precision</strong>: Random Forest; <strong>recall</strong>: Decision Tree; <strong>accuracy</strong>: Random Forest.</p>
+</div>
+</div>
+</section>
+<section id="supuestos-de-cada-prueba">
+<h2>6.3 Supuestos de cada prueba<a class="headerlink" href="#supuestos-de-cada-prueba" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">mens</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"bloque"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"modelo"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">"auc"</span><span class="p">)</span>
+<span class="n">ORIG</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">t</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">c</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"AJ-KL"</span><span class="p">)][</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">filas</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="n">sel</span><span class="p">[</span><span class="s2">"combinacion"</span><span class="p">]:</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="n">ORIG</span><span class="p">]</span> <span class="o">-</span> <span class="n">t</span><span class="p">[</span><span class="n">b</span><span class="p">])</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">filas</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">"benchmark"</span><span class="p">:</span> <span class="n">corto</span><span class="p">(</span><span class="n">b</span><span class="p">),</span> <span class="s2">"media ΔAUC"</span><span class="p">:</span> <span class="n">d</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="s2">"asimetría"</span><span class="p">:</span> <span class="n">stats</span><span class="o">.</span><span class="n">skew</span><span class="p">(</span><span class="n">d</span><span class="p">),</span>
+                  <span class="s2">"Shapiro-Wilk p"</span><span class="p">:</span> <span class="n">stats</span><span class="o">.</span><span class="n">shapiro</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">pvalue</span><span class="p">,</span> <span class="s2">"autocorrelación rezago 1"</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">d</span><span class="p">)</span><span class="o">.</span><span class="n">autocorr</span><span class="p">(</span><span class="mi">1</span><span class="p">)})</span>
+<span class="n">sup</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">filas</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"benchmark"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">sup</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span>
+    <span class="s2">"Wilcoxon supone diferencias simétricas alrededor de la mediana; la asimetría de las diferencias mensuales es "</span>
+    <span class="sa">f</span><span class="s2">"pequeña (entre </span><span class="si">{</span><span class="n">sup</span><span class="p">[</span><span class="s1">'asimetría'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2"> y </span><span class="si">{</span><span class="n">sup</span><span class="p">[</span><span class="s1">'asimetría'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">). La normalidad no es necesaria para "</span>
+    <span class="s2">"Wilcoxon, pero sí para la t de Nadeau-Bengio, por eso esta última se usa solo como prueba complementaria. La "</span>
+    <span class="s2">"autocorrelación de rezago 1 de las diferencias mensuales indica cuánto se parecen meses consecutivos: cuando no "</span>
+    <span class="s2">"es despreciable, los p de Wilcoxon son algo optimistas y la evidencia debe leerse junto con las pruebas que "</span>
+    <span class="s2">"respetan la dependencia (permutación por pliegue, DeLong con bloques de semana, Diebold-Mariano con varianza HAC)."</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>media ΔAUC</th>
+      <th>asimetría</th>
+      <th>Shapiro-Wilk p</th>
+      <th>autocorrelación rezago 1</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.0007</td>
+      <td>1.4006</td>
+      <td>0.0007</td>
+      <td>0.0350</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.0021</td>
+      <td>0.6856</td>
+      <td>0.1110</td>
+      <td>-0.0030</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.0030</td>
+      <td>0.3035</td>
+      <td>0.0493</td>
+      <td>0.2507</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.0064</td>
+      <td>0.3786</td>
+      <td>0.2240</td>
+      <td>-0.1749</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.0124</td>
+      <td>-0.6677</td>
+      <td>0.1232</td>
+      <td>0.1920</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.0135</td>
+      <td>0.4978</td>
+      <td>0.5529</td>
+      <td>0.0319</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.0188</td>
+      <td>0.9225</td>
+      <td>0.0198</td>
+      <td>0.2294</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p>Wilcoxon supone diferencias simétricas alrededor de la mediana; la asimetría de las diferencias mensuales es pequeña (entre -0.67 y 1.40). La normalidad no es necesaria para Wilcoxon, pero sí para la t de Nadeau-Bengio, por eso esta última se usa solo como prueba complementaria. La autocorrelación de rezago 1 de las diferencias mensuales indica cuánto se parecen meses consecutivos: cuando no es despreciable, los p de Wilcoxon son algo optimistas y la evidencia debe leerse junto con las pruebas que respetan la dependencia (permutación por pliegue, DeLong con bloques de semana, Diebold-Mariano con varianza HAC).</p>
+</div>
+</div>
+</section>
+<section id="tabla-de-pruebas-de-hipotesis">
+<h2>6.4 Tabla de pruebas de hipótesis<a class="headerlink" href="#tabla-de-pruebas-de-hipotesis" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mostrar</span> <span class="o">=</span> <span class="n">tabla</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">mostrar</span><span class="p">[</span><span class="s2">"conclusión"</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">mostrar</span><span class="p">[</span><span class="s2">"rechaza_h0"</span><span class="p">],</span> <span class="s2">"Rechaza H0"</span><span class="p">,</span> <span class="s2">"No rechaza H0"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">mostrar</span><span class="p">[[</span><span class="s2">"prueba"</span><span class="p">,</span> <span class="s2">"comparacion"</span><span class="p">,</span> <span class="s2">"h0"</span><span class="p">,</span> <span class="s2">"supuestos"</span><span class="p">,</span> <span class="s2">"estadistico"</span><span class="p">,</span> <span class="s2">"p_crudo"</span><span class="p">,</span> <span class="s2">"p_ajustado"</span><span class="p">,</span> <span class="s2">"efecto"</span><span class="p">,</span> <span class="s2">"conclusión"</span><span class="p">]]</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">({</span><span class="s2">"estadistico"</span><span class="p">:</span> <span class="mi">3</span><span class="p">}))</span>
+<span class="n">n_comp</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">tabla</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Se reportan </span><span class="si">{</span><span class="n">n_comp</span><span class="si">}</span><span class="s2"> contrastes en total: 1 de Friedman, 7 de Nemenyi, 7 de Wilcoxon, 7 de DeLong, "</span>
+                 <span class="s2">"2 MCS y 7 de Diebold-Mariano, además de las 7 t de Nadeau-Bengio y las 28 pruebas bayesianas de las "</span>
+                 <span class="s2">"tablas siguientes."</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>prueba</th>
+      <th>comparacion</th>
+      <th>h0</th>
+      <th>supuestos</th>
+      <th>estadistico</th>
+      <th>p_crudo</th>
+      <th>p_ajustado</th>
+      <th>efecto</th>
+      <th>conclusión</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Friedman (Iman-Davenport) + permutación por pliegue</td>
+      <td>8 modelos</td>
+      <td>los 8 modelos tienen el mismo AUC mensual (mismos rangos)</td>
+      <td>bloques mensuales; dependencia dentro del pliegue tratada con permutación restringida</td>
+      <td>620.659</td>
+      <td>9.999000e-05</td>
+      <td>9.999000e-05</td>
+      <td>rango AJ-KL (original) 1.27 (CD = 1.52)</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs XGBoost</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>0.813</td>
+      <td>7.352451e-01</td>
+      <td>7.352451e-01</td>
+      <td>Δrango = 0.81</td>
+      <td>No rechaza H0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs Random Forest</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>1.833</td>
+      <td>6.005108e-03</td>
+      <td>6.005108e-03</td>
+      <td>Δrango = 1.83</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs SVM</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>2.333</td>
+      <td>8.323043e-05</td>
+      <td>8.323043e-05</td>
+      <td>Δrango = 2.33</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs Regresión logística</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>3.729</td>
+      <td>2.453260e-12</td>
+      <td>2.453260e-12</td>
+      <td>Δrango = 3.73</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs KNN</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>5.146</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>Δrango = 5.15</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs Decision Tree</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>5.333</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>Δrango = 5.33</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Nemenyi (post hoc)</td>
+      <td>AJ-KL (original) vs Naive Bayes</td>
+      <td>rangos medios iguales</td>
+      <td>post hoc de Friedman; ajuste incluido en q de Tukey</td>
+      <td>6.646</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>Δrango = 6.65</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs XGBoost</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>114.000</td>
+      <td>1.119195e-07</td>
+      <td>1.119195e-07</td>
+      <td>Cliff pareado 0.62 (grande); d_z 0.79</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs Random Forest</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>1.000</td>
+      <td>1.421085e-14</td>
+      <td>4.973799e-14</td>
+      <td>Cliff pareado 0.96 (grande); d_z 1.74</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs SVM</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>11.000</td>
+      <td>3.907985e-13</td>
+      <td>7.815970e-13</td>
+      <td>Cliff pareado 0.88 (grande); d_z 1.68</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs Regresión logística</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>0.000</td>
+      <td>7.105427e-15</td>
+      <td>4.973799e-14</td>
+      <td>Cliff pareado 1.00 (grande); d_z 3.31</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs KNN</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>0.000</td>
+      <td>7.105427e-15</td>
+      <td>4.973799e-14</td>
+      <td>Cliff pareado 1.00 (grande); d_z 5.46</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs Decision Tree</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>0.000</td>
+      <td>7.105427e-15</td>
+      <td>4.973799e-14</td>
+      <td>Cliff pareado 1.00 (grande); d_z 5.51</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Wilcoxon pareado (Holm)</td>
+      <td>AJ-KL (original) vs Naive Bayes</td>
+      <td>mediana de ΔAUC mensual = 0</td>
+      <td>diferencias simétricas; 48 meses</td>
+      <td>0.000</td>
+      <td>7.105427e-15</td>
+      <td>4.973799e-14</td>
+      <td>Cliff pareado 1.00 (grande); d_z 5.20</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs XGBoost</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>6.017</td>
+      <td>1.771746e-09</td>
+      <td>3.543492e-09</td>
+      <td>ΔAUC +0.0011 [+0.0007; +0.0014]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs Random Forest</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>4.216</td>
+      <td>2.490528e-05</td>
+      <td>2.490528e-05</td>
+      <td>ΔAUC +0.0022 [+0.0014; +0.0035]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs SVM</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>6.327</td>
+      <td>2.494770e-10</td>
+      <td>7.484311e-10</td>
+      <td>ΔAUC +0.0030 [+0.0022; +0.0041]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs Regresión logística</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>12.293</td>
+      <td>9.926975e-35</td>
+      <td>3.970790e-34</td>
+      <td>ΔAUC +0.0059 [+0.0050; +0.0069]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs KNN</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>20.334</td>
+      <td>6.392176e-92</td>
+      <td>4.474523e-91</td>
+      <td>ΔAUC +0.0134 [+0.0121; +0.0148]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs Decision Tree</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>13.896</td>
+      <td>6.737067e-44</td>
+      <td>3.368534e-43</td>
+      <td>ΔAUC +0.0115 [+0.0102; +0.0136]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>DeLong con EE por bloques de semana (Holm)</td>
+      <td>AJ-KL (original) vs Naive Bayes</td>
+      <td>AUC iguales en 2025</td>
+      <td>normalidad asintótica de ΔAUC; dependencia semanal en el EE</td>
+      <td>20.334</td>
+      <td>6.499636e-92</td>
+      <td>4.474523e-91</td>
+      <td>ΔAUC +0.0178 [+0.0162; +0.0196]</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Model Confidence Set (brier semanal, α = 0,10)</td>
+      <td>8 modelos</td>
+      <td>igual capacidad predictiva de los modelos del conjunto</td>
+      <td>pérdidas semanales estacionarias; bootstrap estacionario</td>
+      <td>0.151</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>conjunto: AJ-KL (original)</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Model Confidence Set (log_loss semanal, α = 0,10)</td>
+      <td>8 modelos</td>
+      <td>igual capacidad predictiva de los modelos del conjunto</td>
+      <td>pérdidas semanales estacionarias; bootstrap estacionario</td>
+      <td>0.457</td>
+      <td>0.000000e+00</td>
+      <td>0.000000e+00</td>
+      <td>conjunto: AJ-KL (original)</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs XGBoost</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>6.385</td>
+      <td>5.086541e-08</td>
+      <td>8.923117e-08</td>
+      <td>gana 42/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs Random Forest</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>6.421</td>
+      <td>4.461559e-08</td>
+      <td>8.923117e-08</td>
+      <td>gana 48/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs SVM</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>18.151</td>
+      <td>6.618567e-24</td>
+      <td>3.309284e-23</td>
+      <td>gana 50/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs Regresión logística</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>17.793</td>
+      <td>1.595945e-23</td>
+      <td>6.383780e-23</td>
+      <td>gana 52/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs KNN</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>16.172</td>
+      <td>1.015137e-21</td>
+      <td>3.045410e-21</td>
+      <td>gana 52/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs Decision Tree</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>30.350</td>
+      <td>2.590735e-34</td>
+      <td>1.554441e-33</td>
+      <td>gana 52/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Diebold-Mariano HLN, log-loss semanal (Holm)</td>
+      <td>AJ-KL (original) vs Naive Bayes</td>
+      <td>igual log-loss esperada</td>
+      <td>diferencial de pérdida estacionario; varianza HAC</td>
+      <td>55.050</td>
+      <td>4.257262e-47</td>
+      <td>2.980084e-46</td>
+      <td>gana 52/52 semanas</td>
+      <td>Rechaza H0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p>Se reportan 31 contrastes en total: 1 de Friedman, 7 de Nemenyi, 7 de Wilcoxon, 7 de DeLong, 2 MCS y 7 de Diebold-Mariano, además de las 7 t de Nadeau-Bengio y las 28 pruebas bayesianas de las tablas siguientes.</p>
+</div>
+</div>
+</section>
+<section id="diagrama-de-diferencia-critica">
+<h2>6.5 Diagrama de diferencia crítica<a class="headerlink" href="#diagrama-de-diferencia-critica" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">PL</span><span class="o">.</span><span class="n">diagrama_cd</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">({</span><span class="n">corto</span><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">res</span><span class="p">[</span><span class="s2">"friedman"</span><span class="p">][</span><span class="s2">"rangos"</span><span class="p">]</span><span class="o">.</span><span class="n">items</span><span class="p">()}),</span> <span class="n">res</span><span class="p">[</span><span class="s2">"friedman"</span><span class="p">][</span><span class="s2">"CD"</span><span class="p">],</span>
+               <span class="s2">"Friedman-Nemenyi: rango medio del AUC en 48 meses del bucle externo (1 = mejor)"</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">        <script>
+        window.PlotlyConfig = {MathJaxConfig: 'local'};
+        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        </script>
+        <script type="module">import "https://cdn.plot.ly/plotly-4.1.1.min"</script>
+        </div><div class="output text_html"><div style="height:380px; width:100%;">            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.min.js"></script><script>if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script>                <script>window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-4.1.1.min.js" integrity="sha256-O24V1F27f8pb0glCkelh3cVHLNiHAJ5gCaVtq2aNch8=" crossorigin="anonymous"></script>                <div id="1e4f9866-9b1c-452a-91b9-5179d99ea99c" class="plotly-graph-div" style="height:100%; width:100%;"></div>            <script>                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("1e4f9866-9b1c-452a-91b9-5179d99ea99c")) {                    Plotly.newPlot(                        "1e4f9866-9b1c-452a-91b9-5179d99ea99c",                        [{"hovertemplate":"%{text}\u003cextra\u003e\u003c\u002fextra\u003e","marker":{"color":["#e8590c","#1c7ed6","#868e96","#868e96","#868e96","#868e96","#868e96","#868e96"],"size":12},"mode":"markers+text","showlegend":false,"text":["AJ-KL (original) (1.27)","XGBoost (2.08)","Random Forest (3.10)","SVM (3.60)","Regresi\u00f3n log\u00edstica (5.00)","KNN (6.42)","Decision Tree (6.60)","Naive Bayes (7.92)"],"textposition":"middle right","x":{"dtype":"f8","bdata":"VVVVVVVV9D+rqqqqqqoAQFVVVVVV1QhAVVVVVVXVDEAAAAAAAAAUQKuqqqqqqhlAq6qqqqpqGkCrqqqqqqofQA=="},"y":{"dtype":"i1","bdata":"BwYFBAMCAQA="},"type":"scatter"}],                        {"template":{"layout":{"colorway":["#0b3d6e","#1c7ed6","#e8590c","#c92a2a","#868e96"],"font":{"color":"#212529","family":"Inter, Segoe UI, Helvetica, Arial, sans-serif","size":12},"hoverlabel":{"font":{"size":12}},"legend":{"font":{"size":11},"orientation":"h","x":0,"y":1.01,"yanchor":"bottom"},"margin":{"b":50,"l":55,"r":20,"t":70},"paper_bgcolor":"white","plot_bgcolor":"white","title":{"font":{"size":15},"x":0.01,"xanchor":"left"},"xaxis":{"automargin":true,"gridcolor":"#eef0f2","linecolor":"#ced4da","zerolinecolor":"#dee2e6"},"yaxis":{"automargin":true,"gridcolor":"#eef0f2","linecolor":"#ced4da","zerolinecolor":"#dee2e6"}}},"shapes":[{"fillcolor":"#e8590c","line":{"width":0},"opacity":0.08,"type":"rect","x0":1.2708333333333333,"x1":2.7862725581405403,"y0":-0.6,"y1":7.6}],"annotations":[{"font":{"color":"#e8590c"},"showarrow":false,"text":"CD = 1.52","x":2.7862725581405403,"y":7.6,"yanchor":"bottom"}],"title":{"text":"Friedman-Nemenyi: rango medio del AUC en 48 meses del bucle externo (1 = mejor)"},"height":380,"xaxis":{"title":{"text":"Rango medio (1 = mejor)"},"range":[0.5,10.5]},"yaxis":{"visible":false}},                        {"responsive": true}                    ).then(function(){
+                            
+var gd = document.getElementById('1e4f9866-9b1c-452a-91b9-5179d99ea99c');
+var x = new MutationObserver(function (mutations, observer) {{
+        var display = window.getComputedStyle(gd).display;
+        if (!display || display === 'none') {{
+            console.log([gd, 'removed!']);
+            Plotly.purge(gd);
+            observer.disconnect();
+        }}
+}});
+
+// Listen for the removal of the full notebook cells
+var notebookContainer = gd.closest('#notebook-container');
+if (notebookContainer) {{
+    x.observe(notebookContainer, {childList: true});
+}}
+
+// Listen for the clearing of the current output cell
+var outputEl = gd.closest('.output');
+if (outputEl) {{
+    x.observe(outputEl, {childList: true});
+}}
+
+                        })                };            </script>        </div></div></div>
+</div>
+</section>
+<section id="tamanos-del-efecto-e-intervalos">
+<h2>6.6 Tamaños del efecto e intervalos<a class="headerlink" href="#tamanos-del-efecto-e-intervalos" title="Link to this heading">#</a></h2>
+<p>Se reportan dos versiones del delta de Cliff porque responden preguntas distintas. El <strong>delta de Cliff
+de dos muestras</strong> <span class="bibtex-citation" id="id1">[<a class="reference internal" href="09_reproducibilidad.html#id48" title="Norman Cliff. Dominance statistics: ordinal analyses to answer ordinal questions. Psychological Bulletin, 114(3):494–509, 1993.">Cliff, 1993</a>]</span> compara la distribución de los 48 AUC mensuales del AJ-KL con la del
+benchmark como si fueran muestras independientes; la variación entre meses (choques, estacionalidad) es
+mucho mayor que la diferencia entre modelos y lo vuelve pequeño. La <strong>dominancia pareada</strong> es la media de
+signo(ΔAUC) mes a mes: mide qué tan consistente es la ventaja cuando se compara en el mismo mes. La guía
+acepta también la d de Cohen pareada, <span class="math notranslate nohighlight">\(d_z\)</span> = media / desviación estándar de las diferencias.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="n">W</span><span class="o">.</span><span class="n">metrica</span> <span class="o">==</span> <span class="s2">"auc"</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">w</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">w</span><span class="p">[[</span><span class="s2">"benchmark"</span><span class="p">,</span> <span class="s2">"media_dif"</span><span class="p">,</span> <span class="s2">"ic_inf"</span><span class="p">,</span> <span class="s2">"ic_sup"</span><span class="p">,</span> <span class="s2">"meses_gana"</span><span class="p">,</span> <span class="s2">"p_holm"</span><span class="p">,</span> <span class="s2">"cliff"</span><span class="p">,</span> <span class="s2">"mag_cliff"</span><span class="p">,</span>
+           <span class="s2">"cliff_pareado"</span><span class="p">,</span> <span class="s2">"mag_cliff_pareado"</span><span class="p">,</span> <span class="s2">"d_cohen"</span><span class="p">,</span> <span class="s2">"mag_d"</span><span class="p">,</span> <span class="s2">"bayes_p_izq"</span><span class="p">,</span> <span class="s2">"bayes_p_rope"</span><span class="p">,</span> <span class="s2">"bayes_p_der"</span><span class="p">]]</span>
+        <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"benchmark"</span><span class="p">))</span>
+<span class="n">otros</span> <span class="o">=</span> <span class="n">W</span><span class="p">[</span><span class="n">W</span><span class="o">.</span><span class="n">metrica</span> <span class="o">!=</span> <span class="s2">"auc"</span><span class="p">]</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">benchmark</span><span class="o">=</span><span class="k">lambda</span> <span class="n">d</span><span class="p">:</span> <span class="n">d</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">otros</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"benchmark"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"metrica"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">"meses_gana"</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"meses que gana (</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">)"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>media_dif</th>
+      <th>ic_inf</th>
+      <th>ic_sup</th>
+      <th>meses_gana</th>
+      <th>p_holm</th>
+      <th>cliff</th>
+      <th>mag_cliff</th>
+      <th>cliff_pareado</th>
+      <th>mag_cliff_pareado</th>
+      <th>d_cohen</th>
+      <th>mag_d</th>
+      <th>bayes_p_izq</th>
+      <th>bayes_p_rope</th>
+      <th>bayes_p_der</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.0007</td>
+      <td>0.0005</td>
+      <td>0.0010</td>
+      <td>39</td>
+      <td>0.0</td>
+      <td>0.0451</td>
+      <td>despreciable</td>
+      <td>0.6250</td>
+      <td>grande</td>
+      <td>0.7864</td>
+      <td>mediano</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.0021</td>
+      <td>0.0018</td>
+      <td>0.0025</td>
+      <td>47</td>
+      <td>0.0</td>
+      <td>0.1241</td>
+      <td>despreciable</td>
+      <td>0.9583</td>
+      <td>grande</td>
+      <td>1.7431</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.0030</td>
+      <td>0.0025</td>
+      <td>0.0036</td>
+      <td>45</td>
+      <td>0.0</td>
+      <td>0.1710</td>
+      <td>pequeño</td>
+      <td>0.8750</td>
+      <td>grande</td>
+      <td>1.6807</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.0064</td>
+      <td>0.0059</td>
+      <td>0.0070</td>
+      <td>48</td>
+      <td>0.0</td>
+      <td>0.3681</td>
+      <td>mediano</td>
+      <td>1.0000</td>
+      <td>grande</td>
+      <td>3.3068</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>1.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.0124</td>
+      <td>0.0117</td>
+      <td>0.0131</td>
+      <td>48</td>
+      <td>0.0</td>
+      <td>0.6285</td>
+      <td>grande</td>
+      <td>1.0000</td>
+      <td>grande</td>
+      <td>5.4565</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.0135</td>
+      <td>0.0128</td>
+      <td>0.0142</td>
+      <td>48</td>
+      <td>0.0</td>
+      <td>0.6701</td>
+      <td>grande</td>
+      <td>1.0000</td>
+      <td>grande</td>
+      <td>5.5142</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.0188</td>
+      <td>0.0176</td>
+      <td>0.0202</td>
+      <td>48</td>
+      <td>0.0</td>
+      <td>0.8064</td>
+      <td>grande</td>
+      <td>1.0000</td>
+      <td>grande</td>
+      <td>5.2026</td>
+      <td>grande</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>metrica</th>
+      <th>meses que gana (auc_pr)</th>
+      <th>meses que gana (brier)</th>
+      <th>meses que gana (log_loss)</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Decision Tree</th>
+      <td>48</td>
+      <td>48</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>48</td>
+      <td>48</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>48</td>
+      <td>48</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>42</td>
+      <td>44</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>48</td>
+      <td>48</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>47</td>
+      <td>47</td>
+      <td>47</td>
+    </tr>
+    <tr>
+      <th>XGBoost</th>
+      <td>29</td>
+      <td>36</td>
+      <td>38</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>La prueba bayesiana de rangos con signo <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id37" title="Alessio Benavoli, Giorgio Corani, Janez Demšar, and Marco Zaffalon. Time for a change: a tutorial for comparing multiple classifiers through Bayesian analysis. Journal of Machine Learning Research, 18(77):1–36, 2017.">Benavoli <em>et al.</em>, 2017</a>, <a class="reference internal" href="09_reproducibilidad.html#id38" title="Alessio Benavoli, Giorgio Corani, Francesca Mangili, Marco Zaffalon, and Fabrizio Ruggeri. A Bayesian Wilcoxon signed-rank test based on the Dirichlet process. In Proceedings of the 31st International Conference on Machine Learning, volume 32 of PMLR, 1026–1034. 2014.">Benavoli <em>et al.</em>, 2014</a>]</span> usa una región
+de equivalencia práctica (ROPE) de ±0,01 en AUC, la frontera entre diferencias «triviales» y «pequeñas» de
+la escala del curso. Las columnas <code class="docutils literal notranslate"><span class="pre">bayes_p_*</span></code> son las probabilidades posteriores de que el benchmark sea
+mejor, de que la diferencia caiga en la ROPE y de que el AJ-KL sea mejor.</p>
+</section>
+<section id="diferencias-en-la-prueba-2025-intervalos-bca-por-bloques-de-semana">
+<h2>6.7 Diferencias en la prueba 2025 (intervalos BCa por bloques de semana)<a class="headerlink" href="#diferencias-en-la-prueba-2025-intervalos-bca-por-bloques-de-semana" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="o">=</span> <span class="n">Dl</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">d</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">m_</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"auc"</span><span class="p">,</span> <span class="s2">"auc_pr"</span><span class="p">,</span> <span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">]:</span>
+    <span class="n">d</span><span class="p">[</span><span class="n">m_</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">; </span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">]"</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">d</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_dif"</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_ic_inf"</span><span class="p">],</span> <span class="n">d</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_ic_sup"</span><span class="p">])]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">d</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"benchmark"</span><span class="p">)[[</span><span class="s2">"auc"</span><span class="p">,</span> <span class="s2">"auc_pr"</span><span class="p">,</span> <span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">,</span> <span class="s2">"p_delong_iid"</span><span class="p">,</span> <span class="s2">"p_delong_bloques"</span><span class="p">,</span> <span class="s2">"p_holm"</span><span class="p">]])</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s2">"Las diferencias son AJ-KL − benchmark: positivas son mejores en AUC y AUC-PR; negativas son mejores en "</span>
+                 <span class="s2">"Brier, log-loss y ECE."</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>auc</th>
+      <th>auc_pr</th>
+      <th>brier</th>
+      <th>log_loss</th>
+      <th>ece</th>
+      <th>p_delong_iid</th>
+      <th>p_delong_bloques</th>
+      <th>p_holm</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>XGBoost</th>
+      <td>+0.0011 [+0.0007; +0.0014]</td>
+      <td>+0.0016 [+0.0003; +0.0028]</td>
+      <td>-0.0003 [-0.0004; -0.0002]</td>
+      <td>-0.0010 [-0.0013; -0.0007]</td>
+      <td>-0.0002 [-0.0021; +0.0015]</td>
+      <td>1.862235e-10</td>
+      <td>1.771746e-09</td>
+      <td>3.543492e-09</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>+0.0022 [+0.0014; +0.0035]</td>
+      <td>+0.0041 [+0.0023; +0.0060]</td>
+      <td>-0.0008 [-0.0011; -0.0006]</td>
+      <td>-0.0026 [-0.0036; -0.0021]</td>
+      <td>-0.0060 [-0.0082; -0.0043]</td>
+      <td>1.276056e-20</td>
+      <td>2.490528e-05</td>
+      <td>2.490528e-05</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>+0.0030 [+0.0022; +0.0041]</td>
+      <td>+0.0080 [+0.0053; +0.0111]</td>
+      <td>-0.0021 [-0.0026; -0.0018]</td>
+      <td>-0.0096 [-0.0107; -0.0085]</td>
+      <td>-0.0241 [-0.0280; -0.0206]</td>
+      <td>1.549067e-18</td>
+      <td>2.494770e-10</td>
+      <td>7.484311e-10</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>+0.0059 [+0.0050; +0.0069]</td>
+      <td>+0.0159 [+0.0134; +0.0185]</td>
+      <td>-0.0025 [-0.0029; -0.0022]</td>
+      <td>-0.0077 [-0.0086; -0.0069]</td>
+      <td>-0.0142 [-0.0182; -0.0109]</td>
+      <td>4.990335e-51</td>
+      <td>9.926975e-35</td>
+      <td>3.970790e-34</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>+0.0134 [+0.0121; +0.0148]</td>
+      <td>+0.0274 [+0.0240; +0.0306]</td>
+      <td>-0.0046 [-0.0054; -0.0042]</td>
+      <td>-0.0127 [-0.0142; -0.0116]</td>
+      <td>-0.0146 [-0.0213; -0.0082]</td>
+      <td>7.225689e-138</td>
+      <td>6.392176e-92</td>
+      <td>4.474523e-91</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>+0.0115 [+0.0102; +0.0136]</td>
+      <td>+0.0232 [+0.0201; +0.0268]</td>
+      <td>-0.0384 [-0.0404; -0.0354]</td>
+      <td>-0.0958 [-0.1003; -0.0903]</td>
+      <td>-0.1614 [-0.1650; -0.1580]</td>
+      <td>5.804349e-102</td>
+      <td>6.737067e-44</td>
+      <td>3.368534e-43</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>+0.0178 [+0.0162; +0.0196]</td>
+      <td>+0.0508 [+0.0466; +0.0549]</td>
+      <td>-0.0677 [-0.0702; -0.0657]</td>
+      <td>-0.4382 [-0.4518; -0.4278]</td>
+      <td>-0.1807 [-0.1880; -0.1775]</td>
+      <td>8.623422e-182</td>
+      <td>6.499636e-92</td>
+      <td>4.474523e-91</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p>Las diferencias son AJ-KL − benchmark: positivas son mejores en AUC y AUC-PR; negativas son mejores en Brier, log-loss y ECE.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">NB</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">benchmark</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">))</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"benchmark"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">nb</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">dm</span> <span class="o">=</span> <span class="n">DM</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">benchmark</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dm</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"benchmark"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"perdida"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">"p_holm"</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="k">lambda</span> <span class="n">c</span><span class="p">:</span> <span class="sa">f</span><span class="s2">"p Holm DM (</span><span class="si">{</span><span class="n">c</span><span class="si">}</span><span class="s2">)"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>t</th>
+      <th>gl</th>
+      <th>p</th>
+      <th>media</th>
+      <th>pliegues_gana</th>
+      <th>p_holm</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>XGBoost</th>
+      <td>1.9024</td>
+      <td>4</td>
+      <td>0.1299</td>
+      <td>0.0008</td>
+      <td>5</td>
+      <td>0.1299</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>3.4790</td>
+      <td>4</td>
+      <td>0.0254</td>
+      <td>0.0022</td>
+      <td>5</td>
+      <td>0.0761</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>3.3262</td>
+      <td>4</td>
+      <td>0.0292</td>
+      <td>0.0030</td>
+      <td>5</td>
+      <td>0.0761</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>5.1997</td>
+      <td>4</td>
+      <td>0.0065</td>
+      <td>0.0064</td>
+      <td>5</td>
+      <td>0.0261</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>7.9746</td>
+      <td>4</td>
+      <td>0.0013</td>
+      <td>0.0126</td>
+      <td>5</td>
+      <td>0.0094</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>7.1174</td>
+      <td>4</td>
+      <td>0.0021</td>
+      <td>0.0133</td>
+      <td>5</td>
+      <td>0.0124</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>5.7349</td>
+      <td>4</td>
+      <td>0.0046</td>
+      <td>0.0187</td>
+      <td>5</td>
+      <td>0.0229</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>perdida</th>
+      <th>p Holm DM (brier)</th>
+      <th>p Holm DM (log_loss)</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="comparacion-con-el-estado-del-arte-reciente">
+<h2>6.8 Comparación con el estado del arte reciente<a class="headerlink" href="#comparacion-con-el-estado-del-arte-reciente" title="Link to this heading">#</a></h2>
+<p>LightGBM <span class="bibtex-citation" id="id3">[<a class="reference internal" href="09_reproducibilidad.html#id29" title="Guolin Ke, Qi Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei Ye, and Tie-Yan Liu. LightGBM: a highly efficient gradient boosting decision tree. In Advances in Neural Information Processing Systems, volume 30. 2017.">Ke <em>et al.</em>, 2017</a>]</span> y CatBoost <span class="bibtex-citation" id="id4">[<a class="reference internal" href="09_reproducibilidad.html#id30" title="Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna Veronika Dorogush, and Andrey Gulin. CatBoost: unbiased boosting with categorical features. In Advances in Neural Information Processing Systems, volume 31. 2018.">Prokhorenkova <em>et al.</em>, 2018</a>]</span> son los GBDT que la literatura
+reciente sobre datos tabulares sigue señalando como referencia <span class="bibtex-citation" id="id5">[<a class="reference internal" href="09_reproducibilidad.html#id94" title="Vadim Borisov and others. Deep neural networks and tabular data: a survey. IEEE Transactions on Neural Networks and Learning Systems, 35(6):7499–7519, 2024. doi:10.1109/TNNLS.2022.3229161.">Borisov and others, 2024</a>, <a class="reference internal" href="09_reproducibilidad.html#id93" title="Ravid Shwartz-Ziv and Amitai Armon. Tabular data: deep learning is not all you need. Information Fusion, 81:84–90, 2022. doi:10.1016/j.inffus.2021.11.011.">Shwartz-Ziv and Armon, 2022</a>]</span>.
+No se vieron en clase; se ajustaron con exactamente el mismo protocolo que los benchmarks (mismos pliegues,
+misma muestra <span class="math notranslate nohighlight">\(S_k\)</span>, TPE con 24 evaluaciones y semilla 42). La tabla resume, para cada uno, el AUC medio del
+bucle externo, la diferencia en 2025 con DeLong por bloques de semana y los meses del bucle externo en que el
+AJ-KL gana.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"comparadores_sota.parquet"</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"comparadores_sota.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>comparador</th>
+      <th>auc_ext_orig</th>
+      <th>auc_ext_comp</th>
+      <th>meses_gana</th>
+      <th>p_wilcoxon</th>
+      <th>delta_2025</th>
+      <th>ic_inf</th>
+      <th>ic_sup</th>
+      <th>p_delong_bloques</th>
+      <th>brier_dif</th>
+      <th>log_loss_dif</th>
+      <th>ece_dif</th>
+      <th>p_wilcoxon_holm</th>
+      <th>p_delong_holm</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>LightGBM</td>
+      <td>0.78721</td>
+      <td>0.78636</td>
+      <td>40</td>
+      <td>0.0</td>
+      <td>0.00040</td>
+      <td>0.00003</td>
+      <td>0.00078</td>
+      <td>0.03384</td>
+      <td>-0.00024</td>
+      <td>-0.00151</td>
+      <td>-0.00557</td>
+      <td>0.0</td>
+      <td>0.06769</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CatBoost</td>
+      <td>0.78721</td>
+      <td>0.78589</td>
+      <td>44</td>
+      <td>0.0</td>
+      <td>0.00028</td>
+      <td>-0.00018</td>
+      <td>0.00069</td>
+      <td>0.22158</td>
+      <td>-0.00005</td>
+      <td>-0.00073</td>
+      <td>-0.00000</td>
+      <td>0.0</td>
+      <td>0.22158</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="comparacion-con-informacion-igual-modelos-de-produccion-en-2025">
+<h2>6.9 Comparación con información igual: modelos de producción en 2025<a class="headerlink" href="#comparacion-con-informacion-igual-modelos-de-produccion-en-2025" title="Link to this heading">#</a></h2>
+<p>En la validación anidada, el combinador del AJ-KL ve las predicciones fuera de muestra de los bloques
+externos anteriores, más filas etiquetadas que la muestra <span class="math notranslate nohighlight">\(S_k\)</span> de 40 mil filas de los benchmarks (aunque
+ninguna posterior a su corte de entrenamiento). La sección 5.8 muestra que reducir ese historial a 40 mil
+filas no cambia el resultado. Una segunda forma de igualar la información es la de producción (Bloque B):
+todos los modelos se reentrenan con las 622.244 filas de entrenamiento, y el AJ-KL combina esos nueve
+artefactos con el combinador del pliegue final, entrenado con predicciones de semanas que los benchmarks
+también usaron para entrenar. Cada artefacto se evalúa una sola vez en las 103.466 filas de 2025.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"produccion_2025.parquet"</span><span class="p">):</span>
+    <span class="n">pr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_parquet</span><span class="p">(</span><span class="n">V</span> <span class="o">+</span> <span class="s2">"produccion_2025.parquet"</span><span class="p">)</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="n">benchmark</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s2">"benchmark"</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">corto</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">m_</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">"auc"</span><span class="p">,</span> <span class="s2">"auc_pr"</span><span class="p">,</span> <span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">]:</span>
+        <span class="n">pr</span><span class="p">[</span><span class="n">m_</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">a</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2"> [</span><span class="si">{</span><span class="n">b</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">; </span><span class="si">{</span><span class="n">c</span><span class="si">:</span><span class="s2">+.4f</span><span class="si">}</span><span class="s2">]"</span> <span class="k">for</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">pr</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_dif"</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_ic_inf"</span><span class="p">],</span> <span class="n">pr</span><span class="p">[</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">m_</span><span class="si">}</span><span class="s2">_ic_sup"</span><span class="p">])]</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">pr</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"benchmark"</span><span class="p">)[[</span><span class="s2">"auc_orig"</span><span class="p">,</span> <span class="s2">"auc_bench"</span><span class="p">,</span> <span class="s2">"auc"</span><span class="p">,</span> <span class="s2">"p_delong_holm"</span><span class="p">,</span> <span class="s2">"mcnemar_orig_acierta"</span><span class="p">,</span>
+                                        <span class="s2">"mcnemar_bench_acierta"</span><span class="p">,</span> <span class="s2">"p_mcnemar_holm"</span><span class="p">,</span> <span class="s2">"brier"</span><span class="p">,</span> <span class="s2">"log_loss"</span><span class="p">,</span> <span class="s2">"ece"</span><span class="p">]]</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">art</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/resultados/artefactos_resumen.csv"</span><span class="p">)</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">art</span><span class="p">[[</span><span class="s2">"modelo"</span><span class="p">,</span> <span class="s2">"auc_2025"</span><span class="p">,</span> <span class="s2">"auc_pr_2025"</span><span class="p">,</span> <span class="s2">"brier_2025"</span><span class="p">,</span> <span class="s2">"log_loss_2025"</span><span class="p">,</span> <span class="s2">"ece_2025"</span><span class="p">,</span> <span class="s2">"f1_2025"</span><span class="p">,</span> <span class="s2">"mb"</span><span class="p">,</span> <span class="s2">"ms_por_1000"</span><span class="p">]]</span>
+            <span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"auc_2025"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"modelo"</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>auc_orig</th>
+      <th>auc_bench</th>
+      <th>auc</th>
+      <th>p_delong_holm</th>
+      <th>mcnemar_orig_acierta</th>
+      <th>mcnemar_bench_acierta</th>
+      <th>p_mcnemar_holm</th>
+      <th>brier</th>
+      <th>log_loss</th>
+      <th>ece</th>
+    </tr>
+    <tr>
+      <th>benchmark</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.80072</td>
+      <td>0.79994</td>
+      <td>+0.0008 [+0.0004; +0.0012]</td>
+      <td>0.00043</td>
+      <td>2119</td>
+      <td>924</td>
+      <td>0.0</td>
+      <td>-0.0002 [-0.0004; -0.0001]</td>
+      <td>-0.0008 [-0.0011; -0.0005]</td>
+      <td>+0.0004 [-0.0011; +0.0015]</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.80072</td>
+      <td>0.79827</td>
+      <td>+0.0025 [+0.0015; +0.0041]</td>
+      <td>0.00017</td>
+      <td>1277</td>
+      <td>1596</td>
+      <td>0.0</td>
+      <td>-0.0008 [-0.0012; -0.0006]</td>
+      <td>-0.0029 [-0.0040; -0.0023]</td>
+      <td>-0.0040 [-0.0058; -0.0019]</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.80072</td>
+      <td>0.79847</td>
+      <td>+0.0022 [+0.0014; +0.0034]</td>
+      <td>0.00003</td>
+      <td>2997</td>
+      <td>1698</td>
+      <td>0.0</td>
+      <td>-0.0015 [-0.0020; -0.0012]</td>
+      <td>-0.0078 [-0.0088; -0.0069]</td>
+      <td>-0.0156 [-0.0214; -0.0108]</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.80072</td>
+      <td>0.79343</td>
+      <td>+0.0073 [+0.0064; +0.0083]</td>
+      <td>0.00000</td>
+      <td>5041</td>
+      <td>1955</td>
+      <td>0.0</td>
+      <td>-0.0028 [-0.0032; -0.0025]</td>
+      <td>-0.0083 [-0.0092; -0.0075]</td>
+      <td>-0.0067 [-0.0116; -0.0030]</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.80072</td>
+      <td>0.78510</td>
+      <td>+0.0156 [+0.0144; +0.0173]</td>
+      <td>0.00000</td>
+      <td>4186</td>
+      <td>3163</td>
+      <td>0.0</td>
+      <td>-0.0052 [-0.0061; -0.0047]</td>
+      <td>-0.0142 [-0.0162; -0.0130]</td>
+      <td>-0.0092 [-0.0193; -0.0017]</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.80072</td>
+      <td>0.79270</td>
+      <td>+0.0080 [+0.0067; +0.0098]</td>
+      <td>0.00000</td>
+      <td>4553</td>
+      <td>2430</td>
+      <td>0.0</td>
+      <td>-0.0379 [-0.0398; -0.0348]</td>
+      <td>-0.0920 [-0.0968; -0.0847]</td>
+      <td>-0.1611 [-0.1632; -0.1567]</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.80072</td>
+      <td>0.78017</td>
+      <td>+0.0206 [+0.0190; +0.0226]</td>
+      <td>0.00000</td>
+      <td>4274</td>
+      <td>3289</td>
+      <td>0.0</td>
+      <td>-0.0675 [-0.0698; -0.0654]</td>
+      <td>-0.4481 [-0.4614; -0.4373]</td>
+      <td>-0.1769 [-0.1851; -0.1718]</td>
+    </tr>
+    <tr>
+      <th>LightGBM</th>
+      <td>0.80072</td>
+      <td>0.80108</td>
+      <td>-0.0004 [-0.0007; -0.0000]</td>
+      <td>0.07797</td>
+      <td>1315</td>
+      <td>790</td>
+      <td>0.0</td>
+      <td>-0.0000 [-0.0001; +0.0001]</td>
+      <td>-0.0010 [-0.0013; -0.0008]</td>
+      <td>-0.0046 [-0.0073; -0.0026]</td>
+    </tr>
+    <tr>
+      <th>CatBoost</th>
+      <td>0.80072</td>
+      <td>0.80113</td>
+      <td>-0.0004 [-0.0009; -0.0000]</td>
+      <td>0.07797</td>
+      <td>1370</td>
+      <td>946</td>
+      <td>0.0</td>
+      <td>+0.0002 [+0.0001; +0.0003]</td>
+      <td>-0.0001 [-0.0004; +0.0002]</td>
+      <td>+0.0004 [-0.0018; +0.0018]</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>auc_2025</th>
+      <th>auc_pr_2025</th>
+      <th>brier_2025</th>
+      <th>log_loss_2025</th>
+      <th>ece_2025</th>
+      <th>f1_2025</th>
+      <th>mb</th>
+      <th>ms_por_1000</th>
+    </tr>
+    <tr>
+      <th>modelo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>CatBoost</th>
+      <td>0.8011</td>
+      <td>0.5602</td>
+      <td>0.1507</td>
+      <td>0.4554</td>
+      <td>0.0107</td>
+      <td>0.5786</td>
+      <td>0.1848</td>
+      <td>0.8307</td>
+    </tr>
+    <tr>
+      <th>LightGBM</th>
+      <td>0.8011</td>
+      <td>0.5591</td>
+      <td>0.1509</td>
+      <td>0.4563</td>
+      <td>0.0157</td>
+      <td>0.5786</td>
+      <td>0.5098</td>
+      <td>12.9869</td>
+    </tr>
+    <tr>
+      <th>AJ-KL (original)</th>
+      <td>0.8007</td>
+      <td>0.5580</td>
+      <td>0.1509</td>
+      <td>0.4553</td>
+      <td>0.0111</td>
+      <td>0.5780</td>
+      <td>11.1959</td>
+      <td>71.3058</td>
+    </tr>
+    <tr>
+      <th>XGBoost</th>
+      <td>0.7999</td>
+      <td>0.5566</td>
+      <td>0.1511</td>
+      <td>0.4561</td>
+      <td>0.0107</td>
+      <td>0.5778</td>
+      <td>0.1339</td>
+      <td>3.0418</td>
+    </tr>
+    <tr>
+      <th>SVM</th>
+      <td>0.7985</td>
+      <td>0.5523</td>
+      <td>0.1524</td>
+      <td>0.4631</td>
+      <td>0.0267</td>
+      <td>0.5759</td>
+      <td>0.7368</td>
+      <td>5.1757</td>
+    </tr>
+    <tr>
+      <th>Random Forest</th>
+      <td>0.7983</td>
+      <td>0.5545</td>
+      <td>0.1517</td>
+      <td>0.4582</td>
+      <td>0.0151</td>
+      <td>0.5762</td>
+      <td>1.6803</td>
+      <td>7.6656</td>
+    </tr>
+    <tr>
+      <th>Regresión logística</th>
+      <td>0.7934</td>
+      <td>0.5386</td>
+      <td>0.1537</td>
+      <td>0.4636</td>
+      <td>0.0178</td>
+      <td>0.5696</td>
+      <td>0.0160</td>
+      <td>1.2305</td>
+    </tr>
+    <tr>
+      <th>Decision Tree</th>
+      <td>0.7927</td>
+      <td>0.5415</td>
+      <td>0.1888</td>
+      <td>0.5473</td>
+      <td>0.1722</td>
+      <td>0.5701</td>
+      <td>0.0304</td>
+      <td>0.8859</td>
+    </tr>
+    <tr>
+      <th>KNN</th>
+      <td>0.7851</td>
+      <td>0.5264</td>
+      <td>0.1561</td>
+      <td>0.4695</td>
+      <td>0.0203</td>
+      <td>0.5656</td>
+      <td>6.8484</td>
+      <td>74.7415</td>
+    </tr>
+    <tr>
+      <th>Naive Bayes</th>
+      <td>0.7802</td>
+      <td>0.5017</td>
+      <td>0.2184</td>
+      <td>0.9034</td>
+      <td>0.1879</td>
+      <td>0.5634</td>
+      <td>0.0183</td>
+      <td>1.4411</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</section>
+<section id="veredicto">
+<h2>6.10 Veredicto<a class="headerlink" href="#veredicto" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s2">"../data/dashboard/resumen_modelos.json"</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">rm</span><span class="p">[</span><span class="s2">"veredicto"</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Superior según la definición operativa de la guía (sección 6.1). (1) AUC externo medio del AJ-KL 0,7874 frente a 0,7867 de XGBoost, el mejor de los siete benchmarks. (2) 5 pruebas distintas rechazan la igualdad frente a XGBoost con p ajustado &lt; 0,05 (0,10 en el MCS): DeLong, Diebold-Mariano, Friedman, Model Confidence Set, Wilcoxon pareado; no rechazan: Nemenyi. (3) Tamaño del efecto: d de Cohen pareada 0,79, dominancia pareada 0,62 (gana 39 de 48 meses) y delta de Cliff de dos muestras 0,05 (despreciable). Con los modelos de producción (622 mil filas, prueba 2025) la diferencia frente a XGBoost es ΔAUC 0,0008 [IC BCa 0,0004; 0,0012] (DeLong con bloques de semana, p Holm &lt; 0,001). Frente a los comparadores recientes: LightGBM ΔAUC 2025 0,0004 (p Holm DeLong 0,068), gana 40 de 48 meses; CatBoost ΔAUC 2025 0,0003 (p Holm DeLong 0,222), gana 44 de 48 meses. En unidades de AUC la ventaja media es 0,0007 (escala del curso: trivial).</p>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "ml-e2"
+        },
+        kernelOptions: {
+            name: "ml-e2",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ml-e2'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="05_modelo_original.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="07_dashboard.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">7. Dashboard y despliegue</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo">6.1 Protocolo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#criterio-1-auc-medio-del-bucle-externo">6.2 Criterio 1: AUC medio del bucle externo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supuestos-de-cada-prueba">6.3 Supuestos de cada prueba</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-de-pruebas-de-hipotesis">6.4 Tabla de pruebas de hipótesis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diagrama-de-diferencia-critica">6.5 Diagrama de diferencia crítica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tamanos-del-efecto-e-intervalos">6.6 Tamaños del efecto e intervalos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#diferencias-en-la-prueba-2025-intervalos-bca-por-bloques-de-semana">6.7 Diferencias en la prueba 2025 (intervalos BCa por bloques de semana)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-el-estado-del-arte-reciente">6.8 Comparación con el estado del arte reciente</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#comparacion-con-informacion-igual-modelos-de-produccion-en-2025">6.9 Comparación con información igual: modelos de producción en 2025</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veredicto">6.10 Veredicto</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Camilo Molina Guerrero y Lina Margarita Buelvas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

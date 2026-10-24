@@ -1,0 +1,651 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. Conclusiones y limitaciones &#8212; Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '08_conclusiones';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="9. Reproducibilidad y bibliografía" href="09_reproducibilidad.html" />
+    <link rel="prev" title="7. Dashboard y despliegue" href="07_dashboard.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Dashboard predictivo, modelo original e informe reproducible
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_datos.html">2. Datos: ETL y EDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark: selección, reentrenamiento y artefactos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_literatura.html">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/08_conclusiones.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>8. Conclusiones y limitaciones</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos">8.1 Hallazgos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veredicto-sobre-las-condiciones-del-modelo-original">8.2 Veredicto sobre las condiciones del modelo original</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones">8.3 Limitaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajo-futuro">8.4 Trabajo futuro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-autoria-y-uso-de-herramientas">8.5 Declaración de autoría y uso de herramientas</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="conclusiones-y-limitaciones">
+<h1>8. Conclusiones y limitaciones<a class="headerlink" href="#conclusiones-y-limitaciones" title="Link to this heading">#</a></h1>
+<section id="hallazgos">
+<h2>8.1 Hallazgos<a class="headerlink" href="#hallazgos" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>El techo de información sigue siendo el principal límite.</strong> Los siete modelos del Entregable 2 quedan
+dentro de 0,02 de AUC entre sí y ninguna variable observada al cierre de la semana se asocia con fuerza con
+el abastecimiento de la semana siguiente (la mayor correlación de Spearman en valor absoluto es 0,20). Las
+mejoras posibles con más modelado son pequeñas, y el AJ-KL lo confirma: combina los nueve mejores modelos
+disponibles y gana por menos de una milésima de AUC.</p></li>
+<li><p><strong>Combinar con pesos locales encogidos supera de forma consistente al mejor modelo individual.</strong> El AJ-KL
+tiene el mayor AUC externo medio (0,7874 frente a 0,7867 de XGBoost) y también el mejor AUC-PR, Brier
+y log-loss; gana a XGBoost en 39 de los 48 meses del bucle externo, en los cuatro años y en la prueba 2025
+de la validación anidada (+0,0011, DeLong con bloques de semana p Holm &lt; 0,001, y 42 de 52 semanas con menor
+log-loss). Con los modelos de producción la ventaja frente a XGBoost se mantiene (+0,0008, p Holm &lt; 0,001).
+En los tres conjuntos de datos adicionales tiene mayor AUC medio que XGBoost.</p></li>
+<li><p><strong>El encogimiento es el componente que más aporta; la profundidad, poco.</strong> Quitar el encogimiento (λ = 0)
+empeora la log-loss en los cinco pliegues y el ECE en cuatro (ΔAUC −0,0017, ΔAUC-PR −0,011), porque los
+nodos pequeños sobreajustan. La profundidad
+elegida por TPE fue 4 (hasta el corredor) en tres de los cinco pliegues, pero la diferencia frente a
+profundidades menores es de diezmilésimas: casi toda la ganancia la dan los pesos de la raíz y de la central.
+Los controles de la sección 5.8 muestran que la ganancia no viene de incluir LightGBM y CatBoost como base
+(con solo los 7 modelos del curso el AUC baja apenas 0,0002) ni de ver más filas etiquetadas que los
+benchmarks (con el historial reducido a 40 mil filas el AJ-KL sigue por encima de XGBoost en los cuatro
+pliegues donde el historial era mayor). Frente al stacking logístico y al BLP ajustados con el mismo
+historial, el AJ-KL gana por 0,0003 de AUC y 0,0001 de log-loss, pero su ECE es algo peor.</p></li>
+<li><p><strong>Un optimizador que se detiene antes del óptimo es una regularización oculta.</strong> La revisión adversarial
+del código mostró que la primera implementación, con un número fijo de iteraciones, dejaba los pesos lejos
+del minimizador y que la teoría no describía el estimador evaluado. Resolver cada nodo hasta la brecha de
+Frank-Wolfe hizo que λ recuperara su papel y que los pesos y la ablación se puedan interpretar.</p></li>
+</ol>
+</section>
+<section id="veredicto-sobre-las-condiciones-del-modelo-original">
+<h2>8.2 Veredicto sobre las condiciones del modelo original<a class="headerlink" href="#veredicto-sobre-las-condiciones-del-modelo-original" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>R1, novedad en la aplicación: se cumple</strong> según la búsqueda en Web of Science, Scopus y ScienceDirect del
+capítulo 4, complementada con 20 cadenas por aplicación en Web of Science. Ningún registro aplica una
+combinación local o jerárquica de clasificadores a la predicción de interrupciones de corredores de
+abastecimiento. El trabajo más cercano por método, el apilamiento jerárquico bayesiano
+<span class="bibtex-citation" id="id1">[<a class="reference internal" href="09_reproducibilidad.html#id71" title="Yuling Yao, Gregor Pirš, Aki Vehtari, and Andrew Gelman. Bayesian hierarchical stacking: some models are (somewhere) useful. Bayesian Analysis, 17(4):1043–1071, 2022. doi:10.1214/21-BA1287.">Yao <em>et al.</em>, 2022</a>]</span>, usa MCMC con pesos softmax-lineales y no tiene olvido; el más cercano por
+aplicación <span class="bibtex-citation" id="id2">[<a class="reference internal" href="09_reproducibilidad.html#id67" title="Gustavo Niño. Disruption in ground transportation: natural disasters and disintegration of local food markets. Food Policy, 140:103051, 2026. doi:10.1016/j.foodpol.2026.103051.">Niño, 2026</a>]</span> es causal, no predictivo.</p></li>
+<li><p><strong>R2, implementación algorítmica propia: se cumple.</strong> La clase <code class="docutils literal notranslate"><span class="pre">ApilamientoJerarquicoKL</span></code> hereda de
+<code class="docutils literal notranslate"><span class="pre">BaseEstimator</span></code> y <code class="docutils literal notranslate"><span class="pre">ClassifierMixin</span></code>; el objetivo, el gradiente, la actualización de descenso espejo, la
+brecha de Frank-Wolfe, el recorrido de la jerarquía y la calibración beta por Newton ponderado están
+programados con numpy y scipy, con pseudocódigo, seis proposiciones demostradas, complejidad contrastada con
+tiempos medidos y 20 pruebas unitarias del modelo. Los modelos base son los artefactos del capítulo 3; el
+combinador no proviene de ningún <code class="docutils literal notranslate"><span class="pre">import</span></code>.</p></li>
+<li><p><strong>R3, superioridad estadística: se cumple frente a los benchmarks del curso con la definición operativa de
+la guía, con matices.</strong> (1) El AUC externo medio del AJ-KL (0,7874) supera al de las siete mejores
+combinaciones. (2) Cinco pruebas distintas rechazan la igualdad frente a XGBoost con p ajustado &lt; 0,05 (0,10
+en el MCS): Friedman con permutación por pliegue, Wilcoxon-Holm sobre 48 meses, DeLong con error estándar
+por bloques de semana en 2025, el Model Confidence Set (que en Brier y en log-loss semanales conserva solo al
+AJ-KL) y Diebold-Mariano sobre la log-loss semanal de 2025. (3) El tamaño del efecto no es despreciable: d de
+Cohen pareada 0,79 y dominancia pareada 0,62 (grande). Los matices: no rechazan Nemenyi (conservadora con 8
+modelos) ni la t de Nadeau-Bengio con cinco pliegues; la diferencia es trivial en unidades de AUC (+0,0007) y
+cae dentro de la región de equivalencia práctica de ±0,01; y el delta de Cliff de dos muestras es
+despreciable (0,05), porque la variación entre meses es mucho mayor que la diferencia entre modelos.</p></li>
+</ul>
+</section>
+<section id="limitaciones">
+<h2>8.3 Limitaciones<a class="headerlink" href="#limitaciones" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Modelos de producción y comparadores recientes.</strong> Con los nueve modelos base reentrenados con las 622 mil
+filas, el AJ-KL obtiene en 2025 un AUC de 0,8007, por encima de XGBoost (0,7999, p Holm &lt; 0,001) y con la
+mejor log-loss, pero LightGBM y CatBoost reentrenados llegan a 0,8011 (diferencia de −0,0004, no
+significativa tras Holm). Una explicación probable es un desajuste de régimen: el combinador aprendió los
+pesos con predicciones de modelos entrenados con 40 mil filas y en producción combina modelos más fuertes y
+más parecidos entre sí. Reentrenar el combinador con predicciones fuera de muestra de modelos de 622 mil
+filas exige repetir la validación temporal completa de los nueve modelos y queda como trabajo futuro. En el
+bucle externo el AJ-KL gana a LightGBM en 40 y a CatBoost en 44 de los 48 meses (Wilcoxon-Holm p &lt; 0,001), y
+en la prueba 2025 de la validación anidada queda por encima de ambos sin significancia tras Holm.</p></li>
+<li><p><strong>Calibración.</strong> El ECE externo medio del AJ-KL (0,0117) es parecido al de XGBoost (0,0115) y peor que el de
+Random Forest (0,0086) y el del stacking logístico con el mismo historial.</p></li>
+<li><p><strong>Conjuntos de datos adicionales.</strong> Solo se evaluaron cuatro pliegues por conjunto, insuficientes para una
+prueba formal por conjunto; en Bank Marketing, con un cambio de régimen fuerte entre años, el AJ-KL gana a
+XGBoost en 2 de 4 pliegues y el mejor modelo es la regresión logística.</p></li>
+<li><p><strong>Iteraciones del diseño.</strong> El modelo final es la cuarta versión (EJUL exploratorio, AJ-KL v1, v2.0 y v2.1) y
+los resultados de 2025 de las anteriores se conocían. Los cambios de la última versión se hicieron por
+corrección, no por desempeño, pero 2025 ya no es una prueba ciega para el diseño.</p></li>
+<li><p><strong>Información del combinador.</strong> En los pliegues k2 a final el combinador ve las predicciones de los bloques
+externos anteriores (entre 76 y 375 mil filas etiquetadas, todas anteriores al corte de entrenamiento), más
+que la muestra de 40 mil filas de los benchmarks. El control con 40 mil filas conserva la ventaja sobre
+XGBoost, pero la reduce (ΔAUC medio −0,0007 frente al modelo completo).</p></li>
+<li><p><strong>SMOTE sobre variables one-hot</strong> en la combinación seleccionada de Naive Bayes (heredado del Entregable 2).</p></li>
+</ul>
+</section>
+<section id="trabajo-futuro">
+<h2>8.4 Trabajo futuro<a class="headerlink" href="#trabajo-futuro" title="Link to this heading">#</a></h2>
+<p>Reentrenar el combinador con predicciones de modelos del mismo tamaño que los de producción; incorporar
+información anticipada de la semana <em>t+1</em> (pronósticos de lluvias, alertas de cierres viales, como los que
+estudia <span class="bibtex-citation" id="id3">Niño [<a class="reference internal" href="09_reproducibilidad.html#id67" title="Gustavo Niño. Disruption in ground transportation: natural disasters and disintegration of local food markets. Food Policy, 140:103051, 2026. doi:10.1016/j.foodpol.2026.103051.">2026</a>]</span>); y elegir el umbral de alerta con un criterio de costo explícito en lugar
+del F1.</p>
+</section>
+<section id="declaracion-de-autoria-y-uso-de-herramientas">
+<h2>8.5 Declaración de autoría y uso de herramientas<a class="headerlink" href="#declaracion-de-autoria-y-uso-de-herramientas" title="Link to this heading">#</a></h2>
+<p>El trabajo es de los dos autores, que responden por cada línea entregada y pueden explicarla y modificarla en
+la sustentación. Se usaron como herramientas: Python y las librerías listadas en <code class="docutils literal notranslate"><span class="pre">requirements-dev.txt</span></code>; Web
+of Science, Scopus y ScienceDirect (acceso institucional) para la revisión de literatura; y un asistente de IA generativa (Claude, de
+Anthropic) como apoyo en la escritura y depuración de código, la automatización de las búsquedas y el cribado
+inicial de registros, la redacción de borradores del texto, la revisión adversarial del código y de las demostraciones
+(que encontró el problema de convergencia corregido en la versión 2.1) y la revisión de consistencia entre
+cifras y resultados. Las decisiones de diseño del modelo, la interpretación de los resultados y las conclusiones fueron
+revisadas por los autores, que verificaron los resultados contra las salidas de los scripts.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Integrante</p></th>
+<th class="head"><p>Firma</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Camilo Molina Guerrero</p></td>
+<td><p>____________________</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lina Margarita Buelvas</p></td>
+<td><p>____________________</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="07_dashboard.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">7. Dashboard y despliegue</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="09_reproducibilidad.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">9. Reproducibilidad y bibliografía</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hallazgos">8.1 Hallazgos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#veredicto-sobre-las-condiciones-del-modelo-original">8.2 Veredicto sobre las condiciones del modelo original</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#limitaciones">8.3 Limitaciones</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajo-futuro">8.4 Trabajo futuro</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-autoria-y-uso-de-herramientas">8.5 Declaración de autoría y uso de herramientas</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Camilo Molina Guerrero y Lina Margarita Buelvas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

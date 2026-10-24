@@ -1,0 +1,1115 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. Revisión de literatura y novedad &#8212; Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=55c26ed414f5f8a31ebb" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="_static/scripts/fontawesome.js?digest=55c26ed414f5f8a31ebb"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb" />
+
+    <script src="_static/documentation_options.js?v=78d55cf8"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script>let toggleHintShow = 'Haz clic para mostrar';</script>
+    <script>let toggleHintHide = 'Haz clic para ocultar';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=b8b12719"></script>
+    <script src="_static/translations.js?v=d190bf04"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '04_literatura';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)" href="05_modelo_original.html" />
+    <link rel="prev" title="3. Modelos benchmark: selección, reentrenamiento y artefactos" href="03_benchmarks.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="es"/>
+  <meta name="docsearch:version" content="" />
+  
+    
+    <script src="_static/searchtools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Saltar al contenido principal</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Volver arriba</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Advertencia de versión"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Navegación del sitio">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="En esta página">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Búsqueda</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Dashboard predictivo, modelo original e informe reproducible
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01_correcciones.html">1. Trazabilidad de correcciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_datos.html">2. Datos: ETL y EDA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_benchmarks.html">3. Modelos benchmark: selección, reentrenamiento y artefactos</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Revisión de literatura y novedad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_modelo_original.html">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_validacion.html">6. Validación estadística</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_dashboard.html">7. Dashboard y despliegue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_conclusiones.html">8. Conclusiones y limitaciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_reproducibilidad.html">9. Reproducibilidad y bibliografía</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject" target="_blank"
+   class="btn btn-sm btn-source-repository-button"
+   title="Repositorio de origen"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Descarga esta pagina">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/04_literatura.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Descargar archivo fuente"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Imprimir en PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button pst-navbar-icon"
+  title="Modo de pantalla completa"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Tema" data-bs-title="Tema"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Claro"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Oscuro"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="Sistema"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Búsqueda" aria-label="Búsqueda" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4. Revisión de literatura y novedad</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contenido </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo">4.1 Protocolo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#familias-de-modelos-mejorados-encontradas">4.2 Familias de modelos mejorados encontradas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-novedad">4.3 Matriz de novedad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajos-mas-cercanos">4.4 Trabajos más cercanos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-de-diferenciacion-por-familia-algoritmica">4.5 Tabla de diferenciación por familia algorítmica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambios-entre-la-propuesta-y-la-implementacion">4.6 Cambios entre la propuesta y la implementación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-novedad">4.7 Declaración de novedad</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="revision-de-literatura-y-novedad">
+<h1>4. Revisión de literatura y novedad<a class="headerlink" href="#revision-de-literatura-y-novedad" title="Link to this heading">#</a></h1>
+<p>La novedad del modelo original no se declara: se contrasta con una búsqueda documentada (guía, sección
+5.2). Este capítulo presenta el protocolo, las familias de modelos que encontró la búsqueda, la matriz de
+novedad, la tabla de diferenciación por familia algorítmica y la declaración de novedad.</p>
+<section id="protocolo">
+<h2>4.1 Protocolo<a class="headerlink" href="#protocolo" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Problema de aplicación:</strong> predicción de interrupciones semanales de corredores de abastecimiento de
+alimentos (municipio de origen → central mayorista) con los microdatos del SIPSA-A (DANE, 2018-2025).
+Tarea: clasificación binaria.</p></li>
+<li><p><strong>Familia del modelo propuesto:</strong> combinación de clasificadores con pesos locales o jerárquicos
+(apilamiento jerárquico, selección dinámica de ensambles, combinación de pronósticos de probabilidad,
+agregación con pesos exponenciales).</p></li>
+<li><p><strong>Bases:</strong> Web of Science Core Collection y Scopus (ambas por el proxy de la Universidad del Norte) y
+ScienceDirect, consultadas el 23 de octubre de 2026. ScienceDirect no admite comodines y permite como
+máximo 8 conectores por campo, así que sus cadenas se acortaron.</p></li>
+<li><p><strong>Cadenas:</strong> seis por base (una en español) que combinan la familia del modelo, el problema y sinónimos,
+y una cadena de método puro (M1) para la tabla de diferenciación.</p></li>
+<li><p><strong>Revisión:</strong> título y resumen de los resultados (hasta 100 por cadena en las de método) y texto completo
+de los trabajos más cercanos.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">"../src"</span><span class="p">)</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">"ignore"</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.max_colwidth"</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">"display.width"</span><span class="p">,</span> <span class="mi">220</span><span class="p">)</span>
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/revision/matriz_novedad_equipo.csv"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="familias-de-modelos-mejorados-encontradas">
+<h2>4.2 Familias de modelos mejorados encontradas<a class="headerlink" href="#familias-de-modelos-mejorados-encontradas" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Familia</p></th>
+<th class="head"><p>Qué mejora frente a los benchmarks</p></th>
+<th class="head"><p>Por qué encaja en este problema</p></th>
+<th class="head"><p>Referencias clave</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>A. Apilamiento con pesos heterogéneos o jerárquicos</p></td>
+<td><p>Los pesos del ensamble cambian según la región de los datos, con agrupamiento parcial entre regiones</p></td>
+<td><p>El desempeño de cada modelo cambia entre centrales y grupos de alimentos</p></td>
+<td><p><span class="bibtex-citation" id="id1">Yao <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id71" title="Yuling Yao, Gregor Pirš, Aki Vehtari, and Andrew Gelman. Bayesian hierarchical stacking: some models are (somewhere) useful. Bayesian Analysis, 17(4):1043–1071, 2022. doi:10.1214/21-BA1287.">2022</a>]</span>; <span class="bibtex-citation" id="id2">Kejzlar and others [<a class="reference internal" href="09_reproducibilidad.html#id72" title="Vojtech Kejzlar and others. Local Bayesian Dirichlet mixing of imperfect models. Scientific Reports, 2023. doi:10.1038/s41598-023-46568-0.">2023</a>]</span>; <span class="bibtex-citation" id="id3">Huang and Kaplan [<a class="reference internal" href="09_reproducibilidad.html#id73" title="M. Huang and D. Kaplan. Predictive performance of Bayesian stacking in multilevel education data. Journal of Educational and Behavioral Statistics, 50(2):214–238, 2025. doi:10.3102/10769986241255969.">2025</a>]</span>; <span class="bibtex-citation" id="id4">Naimi and Balzer [<a class="reference internal" href="09_reproducibilidad.html#id74" title="Ashley I. Naimi and Laura B. Balzer. Stacked generalization: an introduction to super learning. European Journal of Epidemiology, 33(5):459–464, 2018. doi:10.1007/s10654-018-0390-z.">2018</a>]</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>B. Combinación de pronósticos de probabilidad</p></td>
+<td><p>El pool lineal y su versión transformada con beta (BLP) corrigen la falta de calibración del promedio</p></td>
+<td><p>La salida es una probabilidad de interrupción</p></td>
+<td><p><span class="bibtex-citation" id="id5">Ranjan and Gneiting [<a class="reference internal" href="09_reproducibilidad.html#id75" title="Roopesh Ranjan and Tilmann Gneiting. Combining probability forecasts. Journal of the Royal Statistical Society: Series B, 72(1):71–91, 2010. doi:10.1111/j.1467-9868.2009.00726.x.">2010</a>]</span>; <span class="bibtex-citation" id="id6">Gneiting and Ranjan [<a class="reference internal" href="09_reproducibilidad.html#id76" title="Tilmann Gneiting and Roopesh Ranjan. Combining predictive distributions. Electronic Journal of Statistics, 7:1747–1782, 2013. doi:10.1214/13-EJS823.">2013</a>]</span></p></td>
+</tr>
+<tr class="row-even"><td><p>C. Selección dinámica de ensambles</p></td>
+<td><p>Elige o pondera clasificadores según su competencia local</p></td>
+<td><p>Ofrece la idea de región de competencia y un comparador directo</p></td>
+<td><p><span class="bibtex-citation" id="id7">Ko <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id77" title="Albert H. R. Ko, Robert Sabourin, and Alceu S. Britto. From dynamic classifier selection to dynamic ensemble selection. Pattern Recognition, 41(5):1718–1731, 2008. doi:10.1016/j.patcog.2007.10.015.">2008</a>]</span>; <span class="bibtex-citation" id="id8">Woloszynski and Kurzynski [<a class="reference internal" href="09_reproducibilidad.html#id78" title="Tomasz Woloszynski and Marek Kurzynski. A probabilistic model of classifier competence for dynamic ensemble selection. Pattern Recognition, 44(10–11):2656–2668, 2011. doi:10.1016/j.patcog.2011.03.020.">2011</a>]</span>; <span class="bibtex-citation" id="id9">Cruz <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id79" title="Rafael M. O. Cruz, Robert Sabourin, and George D. C. Cavalcanti. Dynamic classifier selection: recent advances and perspectives. Information Fusion, 41:195–216, 2018. doi:10.1016/j.inffus.2017.09.010.">2018</a>]</span>; <span class="bibtex-citation" id="id10">Abbasi and others [<a class="reference internal" href="09_reproducibilidad.html#id80" title="B. Abbasi and others. Dynamic ensemble selection via optimization of competence regions. Applied Soft Computing, 2026. doi:10.1016/j.asoc.2026.115425.">2026</a>]</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>D. Agregación con pesos exponenciales</p></td>
+<td><p>Actualizaciones multiplicativas con cotas de arrepentimiento</p></td>
+<td><p>Aporta la regla de actualización y su justificación teórica</p></td>
+<td><p><span class="bibtex-citation" id="id11">Cesa-Bianchi <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id81" title="Nicolò Cesa-Bianchi, Yishay Mansour, and Gilles Stoltz. Improved second-order bounds for prediction with expert advice. Machine Learning, 66(2–3):321–352, 2007. doi:10.1007/s10994-006-5001-7.">2007</a>]</span>; <span class="bibtex-citation" id="id12">Vovk and Zhdanov [<a class="reference internal" href="09_reproducibilidad.html#id82" title="Vladimir Vovk and Fedor Zhdanov. Prediction with expert advice for the Brier game. Journal of Machine Learning Research, 10:2445–2471, 2009.">2009</a>]</span>; <span class="bibtex-citation" id="id13">Wintenberger [<a class="reference internal" href="09_reproducibilidad.html#id83" title="Olivier Wintenberger. Optimal learning with Bernstein online aggregation. Machine Learning, 106(1):119–141, 2017. doi:10.1007/s10994-016-5592-6.">2017</a>]</span>; <span class="bibtex-citation" id="id14">Berrisch and Ziel [<a class="reference internal" href="09_reproducibilidad.html#id84" title="Jonathan Berrisch and Florian Ziel. CRPS learning. Journal of Econometrics, 2023. doi:10.1016/j.jeconom.2021.11.008.">2023</a>]</span></p></td>
+</tr>
+<tr class="row-even"><td><p>E. Árboles y boosting con efectos mixtos</p></td>
+<td><p>Modelan la heterogeneidad por grupo dentro del aprendiz</p></td>
+<td><p>El panel corredor-semana es agrupado y longitudinal</p></td>
+<td><p><span class="bibtex-citation" id="id15">Sela and Simonoff [<a class="reference internal" href="09_reproducibilidad.html#id85" title="Rebecca J. Sela and Jeffrey S. Simonoff. RE-EM trees: a data mining approach for longitudinal and clustered data. Machine Learning, 86(2):169–207, 2012. doi:10.1007/s10994-011-5258-3.">2012</a>]</span>; <span class="bibtex-citation" id="id16">Hajjem <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id86" title="Ahlem Hajjem, François Bellavance, and Denis Larocque. Mixed-effects random forest for clustered data. Journal of Statistical Computation and Simulation, 84(6):1313–1328, 2014. doi:10.1080/00949655.2012.741599.">2014</a>]</span>; <span class="bibtex-citation" id="id17">Fokkema and others [<a class="reference internal" href="09_reproducibilidad.html#id87" title="Marjolein Fokkema and others. Detecting treatment-subgroup interactions in clustered data with generalized linear mixed-effects model trees. Behavior Research Methods, 50(5):2016–2034, 2018. doi:10.3758/s13428-017-0971-x.">2018</a>]</span>; <span class="bibtex-citation" id="id18">Salditt and others [<a class="reference internal" href="09_reproducibilidad.html#id88" title="M. Salditt and others. Gradient tree boosting for hierarchical data. Multivariate Behavioral Research, 58(5):911–937, 2023. doi:10.1080/00273171.2022.2146638.">2023</a>]</span>; <span class="bibtex-citation" id="id19">Sigrist [<a class="reference internal" href="09_reproducibilidad.html#id89" title="Fabio Sigrist. Gaussian process boosting. Journal of Machine Learning Research, 2022.">2022</a>]</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>F. Aprendizaje bajo deriva temporal</p></td>
+<td><p>Reponderan las observaciones según su antigüedad</p></td>
+<td><p>Se entrena hasta octubre de 2024 y se prueba en 2025</p></td>
+<td><p><span class="bibtex-citation" id="id20">Scholz and Klinkenberg [<a class="reference internal" href="09_reproducibilidad.html#id91" title="Martin Scholz and Ralf Klinkenberg. Boosting classifiers for drifting concepts. Intelligent Data Analysis, 11(1):3–28, 2007. doi:10.3233/IDA-2007-11102.">2007</a>]</span>; <span class="bibtex-citation" id="id21">Kanamori <em>et al.</em> [<a class="reference internal" href="09_reproducibilidad.html#id92" title="Takafumi Kanamori, Shohei Hido, and Masashi Sugiyama. A least-squares approach to direct importance estimation. Journal of Machine Learning Research, 10:1391–1445, 2009.">2009</a>]</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Estado del arte tabular (solo como comparador)</p></td>
+<td><p>Los GBDT siguen siendo la referencia en datos tabulares</p></td>
+<td><p>Justifica comparar con LightGBM y CatBoost además de XGBoost</p></td>
+<td><p><span class="bibtex-citation" id="id22">Shwartz-Ziv and Armon [<a class="reference internal" href="09_reproducibilidad.html#id93" title="Ravid Shwartz-Ziv and Amitai Armon. Tabular data: deep learning is not all you need. Information Fusion, 81:84–90, 2022. doi:10.1016/j.inffus.2021.11.011.">2022</a>]</span>; <span class="bibtex-citation" id="id23">Borisov and others [<a class="reference internal" href="09_reproducibilidad.html#id94" title="Vadim Borisov and others. Deep neural networks and tabular data: a survey. IEEE Transactions on Neural Networks and Learning Systems, 35(6):7499–7519, 2024. doi:10.1109/TNNLS.2022.3229161.">2024</a>]</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>La guía admite expresamente como contribución original un «ensamble con meta-aprendiz o regla de
+ponderación diseñados y programados por el estudiante (pesos según la región del espacio de entrada, la
+incertidumbre o el error local), con regla de actualización derivada y contrastada contra reglas
+estándar» (cuadro 1). El AJ-KL combina las familias A, B, D y F en esa vía.</p>
+</section>
+<section id="matriz-de-novedad">
+<h2>4.3 Matriz de novedad<a class="headerlink" href="#matriz-de-novedad" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">base</span><span class="p">,</span> <span class="n">g</span> <span class="ow">in</span> <span class="n">matriz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"base"</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">"**</span><span class="si">{</span><span class="n">base</span><span class="si">}</span><span class="s2">**"</span><span class="p">))</span>
+    <span class="n">display</span><span class="p">(</span><span class="n">g</span><span class="p">[[</span><span class="s2">"cadena"</span><span class="p">,</span> <span class="s2">"consulta"</span><span class="p">,</span> <span class="s2">"resultados"</span><span class="p">,</span> <span class="s2">"revisados"</span><span class="p">,</span> <span class="s2">"relevantes"</span><span class="p">,</span> <span class="s2">"observacion"</span><span class="p">]]</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"cadena"</span><span class="p">))</span>
+<span class="n">tot</span> <span class="o">=</span> <span class="n">matriz</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"base"</span><span class="p">)[[</span><span class="s2">"resultados"</span><span class="p">,</span> <span class="s2">"revisados"</span><span class="p">,</span> <span class="s2">"relevantes"</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">display</span><span class="p">(</span><span class="n">tot</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong>Web of Science</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>consulta</th>
+      <th>resultados</th>
+      <th>revisados</th>
+      <th>relevantes</th>
+      <th>observacion</th>
+    </tr>
+    <tr>
+      <th>cadena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>W1</th>
+      <td>TS=("hierarchical stacking" OR "local stacking" OR "dynamic ensemble selection" OR "dynamic classifier selection" OR "dynamic weighting" OR "ensemble weighting" OR "weighted ensemble") AND TS=("fo...</td>
+      <td>5</td>
+      <td>5</td>
+      <td>0</td>
+      <td>Los más cercanos son RIOT (ESWA 333) y P-WEV (Agribusiness 2026): RIOT fusiona probabilidades con transporte óptimo para predecir retrasos en cadenas de suministro con una regla global; P-WEV pond...</td>
+    </tr>
+    <tr>
+      <th>W2</th>
+      <td>TS=("forecast combination*" OR "opinion pool*" OR "online aggregation" OR "expert advice" OR "exponential weights" OR "exponentially weighted" OR "model averaging") AND TS=("food supply" OR "suppl...</td>
+      <td>2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>Inflación de alimentos con ML (Food Policy 2026) y un estudio multimodelo de riego (2017). Ninguno aplica.</td>
+    </tr>
+    <tr>
+      <th>W3</th>
+      <td>TS=(ensemble* OR stacking OR "machine learning" OR boosting) AND TS=("supply corridor*" OR "food corridor*" OR "supply route*" OR "freight corridor*" OR "origin-destination" OR "food flow*") AND T...</td>
+      <td>6</td>
+      <td>6</td>
+      <td>0</td>
+      <td>Índice de riesgo de puentes en corredores de carga (2025) y estudios de transporte de pasajeros. Ninguno combina clasificadores ni trata abastecimiento de alimentos.</td>
+    </tr>
+    <tr>
+      <th>W4 (ES)</th>
+      <td>TS=(ensamble* OR apilamiento OR "aprendizaje autom*" OR "agregaci* de pron*" OR "combinaci* de pron*" OR ensemble* OR "machine learning") AND TS=("abastecimiento de alimentos" OR desabastecimiento...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Sin resultados para los términos en español.</td>
+    </tr>
+    <tr>
+      <th>W5</th>
+      <td>TS=("hierarchical shrinkage" OR "Bayesian hierarchical stacking" OR "Dirichlet mixing" OR "region-specific weight*" OR "local competence" OR "mixture of experts") AND TS=(food OR agricultur* OR "s...</td>
+      <td>4</td>
+      <td>4</td>
+      <td>0</td>
+      <td>Mezcla de expertos neuronal para precios de papa, inventarios con aprendizaje por refuerzo y otros. Ninguno aplica y varios son neuronales.</td>
+    </tr>
+    <tr>
+      <th>W6</th>
+      <td>TS=(ensemble* OR stacking OR "machine learning" OR boosting OR "random forest" OR "logistic regression") AND TS=(Colombia*) AND TS=("food supply" OR "food distribution" OR wholesale OR SIPSA OR "f...</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>Inventarios agroalimentarios en Colombia (2025) y pronóstico de demanda con redes neuronales (2023). Ninguno predice interrupciones de corredores.</td>
+    </tr>
+    <tr>
+      <th>M1 (método)</th>
+      <td>TS=("hierarchical stacking" OR "feature-weighted linear stacking" OR "Bayesian stacking" OR "local stacking" OR "stacking weights") AND TS=(heterogen* OR hierarch* OR local OR "input-dependent" OR...</td>
+      <td>191</td>
+      <td>14</td>
+      <td>4</td>
+      <td>Cadena de método puro para la tabla de diferenciación. Relevantes por método: Yao et al. 2022, Kejzlar et al. 2023, Huang y Kaplan 2025 y NN-Stacking (Coscrato et al. 2020, neuronal).</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>Scopus</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>consulta</th>
+      <th>resultados</th>
+      <th>revisados</th>
+      <th>relevantes</th>
+      <th>observacion</th>
+    </tr>
+    <tr>
+      <th>cadena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>S1</th>
+      <td>Igual a W1 con TITLE-ABS-KEY(...)</td>
+      <td>9</td>
+      <td>9</td>
+      <td>0</td>
+      <td>Aparece de nuevo RIOT. El resto trata selección de proveedores, riesgo cambiario, consumo de combustible y un ensamble para riesgo en cadenas de bioinsumos (2022). Ninguno usa pesos locales ni pre...</td>
+    </tr>
+    <tr>
+      <th>S2</th>
+      <td>Igual a W2</td>
+      <td>7</td>
+      <td>7</td>
+      <td>0</td>
+      <td>Inflación de alimentos con ML (2026) e inseguridad alimentaria en África con imágenes MODIS (2023). Ninguno combina modelos para interrupciones de abastecimiento.</td>
+    </tr>
+    <tr>
+      <th>S3</th>
+      <td>Igual a W3</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>Índice de riesgo de puentes en corredores de carga (2025) y un marco de dos etapas para retrasos logísticos (2025). Ninguno tiene una regla de combinación jerárquica.</td>
+    </tr>
+    <tr>
+      <th>S4 (ES)</th>
+      <td>Igual a W4</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>Falso positivo por la sigla: «SIPSA: Secure IoT Protocol-Based Smart Adapter» (2019).</td>
+    </tr>
+    <tr>
+      <th>S5</th>
+      <td>Igual a W5</td>
+      <td>15</td>
+      <td>15</td>
+      <td>1</td>
+      <td>Yazdi (2026, IEEE Access): encogimiento jerárquico de Bayes empírico frente a GBDT para demanda semanal de distribución (74 millones de entregas, validación fuera de tiempo). El peso convexo globa...</td>
+    </tr>
+    <tr>
+      <th>S6</th>
+      <td>Igual a W6</td>
+      <td>20</td>
+      <td>20</td>
+      <td>0</td>
+      <td>Riesgo en la cadena del plátano en Colombia (2012) e inventarios agroalimentarios (2025). Ninguno predice interrupciones semanales de corredores.</td>
+    </tr>
+    <tr>
+      <th>M1 (método)</th>
+      <td>Igual a M1, ordenada por relevancia</td>
+      <td>271</td>
+      <td>23</td>
+      <td>5</td>
+      <td>Predominan geofísica y ciencia de materiales. Relevantes por método: Yao et al. 2022, Huang y Kaplan 2025, Kejzlar et al. 2023, NN-Stacking (2020, neuronal) y un stacking bayesiano no negativo par...</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><p><strong>ScienceDirect</strong></p>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>consulta</th>
+      <th>resultados</th>
+      <th>revisados</th>
+      <th>relevantes</th>
+      <th>observacion</th>
+    </tr>
+    <tr>
+      <th>cadena</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>D1</th>
+      <td>("hierarchical stacking" OR "local stacking" OR "dynamic ensemble selection" OR "weighted ensemble") AND ("food supply" OR "supply chain") AND (disruption OR shortage)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Sin resultados.</td>
+    </tr>
+    <tr>
+      <th>D2</th>
+      <td>("forecast combination" OR "opinion pool" OR "online aggregation" OR "model averaging") AND ("food supply" OR "supply chain") AND (disruption OR "early warning")</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>Inflación de alimentos con ML (2026) y choques de precios de materias primas (2023). Ninguno aplica.</td>
+    </tr>
+    <tr>
+      <th>D3</th>
+      <td>(ensemble OR "machine learning") AND ("food corridor" OR "supply corridor" OR "food flow") AND (disruption OR interruption OR closure)</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>Niño (2026, Food Policy): efecto causal de los cierres viales por deslizamientos sobre los precios de los mercados mayoristas colombianos, con bosques causales para la heterogeneidad. No predice i...</td>
+    </tr>
+    <tr>
+      <th>D4 (ES)</th>
+      <td>(ensamble OR "aprendizaje automático") AND ("abastecimiento de alimentos" OR desabastecimiento OR "centrales mayoristas")</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Sin resultados.</td>
+    </tr>
+    <tr>
+      <th>D5</th>
+      <td>("hierarchical shrinkage" OR "Bayesian hierarchical stacking" OR "local competence" OR "mixture of experts") AND (food OR "supply chain" OR freight) AND (disruption OR shortage)</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Sin resultados.</td>
+    </tr>
+    <tr>
+      <th>D6</th>
+      <td>("machine learning" OR ensemble OR boosting) AND Colombia AND ("food supply" OR wholesale OR SIPSA)</td>
+      <td>4</td>
+      <td>4</td>
+      <td>1</td>
+      <td>Aparece de nuevo Niño (2026). Los demás tratan sostenibilidad urbana, políticas alimentarias urbanas y el mercado eléctrico.</td>
+    </tr>
+    <tr>
+      <th>M1 (método)</th>
+      <td>("hierarchical stacking" OR "Bayesian stacking" OR "local stacking" OR "stacking weights") AND (heterogeneity OR hierarchical OR local)</td>
+      <td>128</td>
+      <td>100</td>
+      <td>0</td>
+      <td>Casi todo es ciencia de materiales (stacking faults). ScienceDirect solo cubre revistas de Elsevier, así que Yao et al. (2022) no aparece.</td>
+    </tr>
+  </tbody>
+</table>
+</div></div><div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>resultados</th>
+      <th>revisados</th>
+      <th>relevantes</th>
+    </tr>
+    <tr>
+      <th>base</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>ScienceDirect</th>
+      <td>136</td>
+      <td>108</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>Scopus</th>
+      <td>331</td>
+      <td>83</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <th>Web of Science</th>
+      <td>216</td>
+      <td>39</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Los «relevantes» de las cadenas de método (M1) son trabajos de la misma familia en otras aplicaciones, y el
+de las cadenas D3 y D6 es un trabajo del mismo sistema de abastecimiento con otra tarea (inferencia causal).
+Ninguno aplica una regla de combinación local o jerárquica de clasificadores a la predicción de
+interrupciones de corredores.</p>
+<p><strong>Búsqueda complementaria en Web of Science.</strong> El 23 y 24 de octubre se hizo además una búsqueda por
+aplicación en WoS con 20 cadenas (alerta temprana de seguridad alimentaria, disrupciones de cadenas
+agroalimentarias, llegadas a mercados mayoristas, flujos de carga y SIPSA, en inglés y español). De 464
+resultados se revisaron 363 con doble revisor; ninguno predice interrupciones de corredores de abastecimiento
+con un ensamble jerárquico. La tabla completa está en <code class="docutils literal notranslate"><span class="pre">data/revision/matriz_novedad_wos.csv</span></code> y confirma, por
+el lado de la aplicación, el resultado de la matriz anterior.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">wos</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"../data/revision/matriz_novedad_wos.csv"</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Búsqueda complementaria: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">wos</span><span class="p">)</span><span class="si">}</span><span class="s2"> cadenas, </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">wos</span><span class="p">[</span><span class="s1">'resultados'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="si">}</span><span class="s2"> resultados, "</span>
+                 <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">wos</span><span class="p">[</span><span class="s1">'revisados'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="si">}</span><span class="s2"> revisados, </span><span class="si">{</span><span class="nb">int</span><span class="p">(</span><span class="n">wos</span><span class="p">[</span><span class="s1">'relevantes'</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span><span class="si">}</span><span class="s2"> relevantes."</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p>Búsqueda complementaria: 20 cadenas, 464 resultados, 363 revisados, 0 relevantes.</p>
+</div>
+</div>
+</section>
+<section id="trabajos-mas-cercanos">
+<h2>4.4 Trabajos más cercanos<a class="headerlink" href="#trabajos-mas-cercanos" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Por aplicación.</strong> <span class="bibtex-citation" id="id24">Niño [<a class="reference internal" href="09_reproducibilidad.html#id67" title="Gustavo Niño. Disruption in ground transportation: natural disasters and disintegration of local food markets. Food Policy, 140:103051, 2026. doi:10.1016/j.foodpol.2026.103051.">2026</a>]</span> estima con variables instrumentales el efecto causal de
+los cierres viales por deslizamientos sobre los precios de los mercados mayoristas colombianos y usa bosques
+causales para ver en qué mercados el efecto es mayor; no predice interrupciones ni combina modelos. RIOT
+<span class="bibtex-citation" id="id25">[<a class="reference internal" href="09_reproducibilidad.html#id96" title="Y. S. Zhang and others. RIOT: a Riemannian-optimal transport ensemble for robust supply chain delay prediction. Expert Systems with Applications, 2027. doi:10.1016/j.eswa.2026.134295.">Zhang and others, 2027</a>]</span> combina probabilidades con transporte óptimo para predecir retrasos en cadenas de
+suministro, con una regla de combinación global, y P-WEV <span class="bibtex-citation" id="id26">[<a class="reference internal" href="09_reproducibilidad.html#id95" title="A. K. Singh and others. P-WEV: PSO based weighted ensemble technique for agricultural food price volatility modeling. Agribusiness, 42(3):1482–1498, 2026. doi:10.1002/agr.22000.">Singh and others, 2026</a>]</span> pondera con PSO modelos GARCH
+para la volatilidad de precios agrícolas, una tarea de regresión.</p></li>
+<li><p><strong>Por método.</strong> El apilamiento jerárquico bayesiano <span class="bibtex-citation" id="id27">[<a class="reference internal" href="09_reproducibilidad.html#id71" title="Yuling Yao, Gregor Pirš, Aki Vehtari, and Andrew Gelman. Bayesian hierarchical stacking: some models are (somewhere) useful. Bayesian Analysis, 17(4):1043–1071, 2022. doi:10.1214/21-BA1287.">Yao <em>et al.</em>, 2022</a>]</span> es el trabajo más cercano:
+propone pesos de apilamiento que varían con los datos y se agrupan parcialmente. <span class="bibtex-citation" id="id28">Yazdi [<a class="reference internal" href="09_reproducibilidad.html#id97" title="A. K. Yazdi. Hierarchical empirical-Bayes shrinkage versus gradient-boosted trees for large-scale retail distribution demand: an out-of-time benchmark on 74 million delivery records. IEEE Access, 2026. doi:10.1109/ACCESS.2026.3738471.">2026</a>]</span>
+compara el encogimiento jerárquico de Bayes empírico con GBDT en la demanda de distribución minorista y
+encuentra que el peso convexo global se va por completo al GBDT, aunque el encogimiento gana en un estrato,
+lo que respalda los pesos locales y advierte que la ganancia de combinar puede ser nula.</p></li>
+</ul>
+</section>
+<section id="tabla-de-diferenciacion-por-familia-algoritmica">
+<h2>4.5 Tabla de diferenciación por familia algorítmica<a class="headerlink" href="#tabla-de-diferenciacion-por-familia-algoritmica" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Método afín</p></th>
+<th class="head"><p>Familia</p></th>
+<th class="head"><p>Qué se conserva</p></th>
+<th class="head"><p>Qué es nuevo en el AJ-KL</p></th>
+<th class="head"><p>Por qué el método existente no resuelve la limitación</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Apilamiento / Super Learner <span class="bibtex-citation" id="id29">[<a class="reference internal" href="09_reproducibilidad.html#id74" title="Ashley I. Naimi and Laura B. Balzer. Stacked generalization: an introduction to super learning. European Journal of Epidemiology, 33(5):459–464, 2018. doi:10.1007/s10654-018-0390-z.">Naimi and Balzer, 2018</a>]</span></p></td>
+<td><p>Combinación lineal</p></td>
+<td><p>Combinación convexa de probabilidades fuera de muestra</p></td>
+<td><p>Pesos por nodo de una jerarquía, con encogimiento y olvido</p></td>
+<td><p>Un solo vector de pesos ignora la heterogeneidad entre centrales, grupos y corredores</p></td>
+</tr>
+<tr class="row-odd"><td><p>BLP <span class="bibtex-citation" id="id30">[<a class="reference internal" href="09_reproducibilidad.html#id76" title="Tilmann Gneiting and Roopesh Ranjan. Combining predictive distributions. Electronic Journal of Statistics, 7:1747–1782, 2013. doi:10.1214/13-EJS823.">Gneiting and Ranjan, 2013</a>, <a class="reference internal" href="09_reproducibilidad.html#id75" title="Roopesh Ranjan and Tilmann Gneiting. Combining probability forecasts. Journal of the Royal Statistical Society: Series B, 72(1):71–91, 2010. doi:10.1111/j.1467-9868.2009.00726.x.">Ranjan and Gneiting, 2010</a>]</span></p></td>
+<td><p>Pool de probabilidades</p></td>
+<td><p>Pool lineal y calibración</p></td>
+<td><p>Pesos locales con prior jerárquico</p></td>
+<td><p>Es global; corrige la calibración pero no la heterogeneidad</p></td>
+</tr>
+<tr class="row-even"><td><p>KNORA / DES <span class="bibtex-citation" id="id31">[<a class="reference internal" href="09_reproducibilidad.html#id79" title="Rafael M. O. Cruz, Robert Sabourin, and George D. C. Cavalcanti. Dynamic classifier selection: recent advances and perspectives. Information Fusion, 41:195–216, 2018. doi:10.1016/j.inffus.2017.09.010.">Cruz <em>et al.</em>, 2018</a>, <a class="reference internal" href="09_reproducibilidad.html#id77" title="Albert H. R. Ko, Robert Sabourin, and Alceu S. Britto. From dynamic classifier selection to dynamic ensemble selection. Pattern Recognition, 41(5):1718–1731, 2008. doi:10.1016/j.patcog.2007.10.015.">Ko <em>et al.</em>, 2008</a>]</span></p></td>
+<td><p>Selección dinámica</p></td>
+<td><p>Noción de región de competencia</p></td>
+<td><p>Regiones definidas por la estructura del problema y pesos suaves con objetivo convexo</p></td>
+<td><p>La competencia por vecinos escala mal a cientos de miles de filas, es inestable donde hay pocos datos y no maneja la deriva</p></td>
+</tr>
+<tr class="row-odd"><td><p>Competencia probabilística <span class="bibtex-citation" id="id32">[<a class="reference internal" href="09_reproducibilidad.html#id78" title="Tomasz Woloszynski and Marek Kurzynski. A probabilistic model of classifier competence for dynamic ensemble selection. Pattern Recognition, 44(10–11):2656–2668, 2011. doi:10.1016/j.patcog.2011.03.020.">Woloszynski and Kurzynski, 2011</a>]</span>; DESbADE <span class="bibtex-citation" id="id33">[<a class="reference internal" href="09_reproducibilidad.html#id80" title="B. Abbasi and others. Dynamic ensemble selection via optimization of competence regions. Applied Soft Computing, 2026. doi:10.1016/j.asoc.2026.115425.">Abbasi and others, 2026</a>]</span></p></td>
+<td><p>Selección dinámica</p></td>
+<td><p>Competencia estimada localmente</p></td>
+<td><p>Encogimiento hacia el padre en lugar de heurísticas o metaheurísticas sobre la región</p></td>
+<td><p>Las regiones se construyen sin jerarquía ni agrupamiento parcial</p></td>
+</tr>
+<tr class="row-even"><td><p>Apilamiento jerárquico bayesiano <span class="bibtex-citation" id="id34">[<a class="reference internal" href="09_reproducibilidad.html#id71" title="Yuling Yao, Gregor Pirš, Aki Vehtari, and Andrew Gelman. Bayesian hierarchical stacking: some models are (somewhere) useful. Bayesian Analysis, 17(4):1043–1071, 2022. doi:10.1214/21-BA1287.">Yao <em>et al.</em>, 2022</a>]</span></p></td>
+<td><p>Apilamiento jerárquico</p></td>
+<td><p>Agrupamiento parcial de pesos que varían con los datos</p></td>
+<td><p>Jerarquía anidada de cuatro niveles con KL hacia el padre, olvido γ y estimador convexo con actualización cerrada en O(n) por iteración</p></td>
+<td><p>Usa inferencia MCMC con pesos softmax-lineales en covariables, costosa a esta escala y sin olvido explícito</p></td>
+</tr>
+<tr class="row-odd"><td><p>Encogimiento de Bayes empírico frente a GBDT <span class="bibtex-citation" id="id35">[<a class="reference internal" href="09_reproducibilidad.html#id97" title="A. K. Yazdi. Hierarchical empirical-Bayes shrinkage versus gradient-boosted trees for large-scale retail distribution demand: an out-of-time benchmark on 74 million delivery records. IEEE Access, 2026. doi:10.1109/ACCESS.2026.3738471.">Yazdi, 2026</a>]</span></p></td>
+<td><p>Encogimiento jerárquico</p></td>
+<td><p>Encoger las estimaciones de grupos pequeños hacia su nivel superior</p></td>
+<td><p>El encogimiento se aplica a los pesos del ensamble, no a la media del objetivo</p></td>
+<td><p>Un solo peso global no captura ventajas locales</p></td>
+</tr>
+<tr class="row-even"><td><p>Mezcla de Dirichlet local <span class="bibtex-citation" id="id36">[<a class="reference internal" href="09_reproducibilidad.html#id72" title="Vojtech Kejzlar and others. Local Bayesian Dirichlet mixing of imperfect models. Scientific Reports, 2023. doi:10.1038/s41598-023-46568-0.">Kejzlar and others, 2023</a>]</span></p></td>
+<td><p>Mezcla bayesiana</p></td>
+<td><p>Pesos locales</p></td>
+<td><p>Objetivo frecuentista convexo con jerarquía</p></td>
+<td><p>Diseñada para modelos físicos con incertidumbre, no para clasificación en un panel</p></td>
+</tr>
+<tr class="row-odd"><td><p>Pesos exponenciales y BOA <span class="bibtex-citation" id="id37">[<a class="reference internal" href="09_reproducibilidad.html#id84" title="Jonathan Berrisch and Florian Ziel. CRPS learning. Journal of Econometrics, 2023. doi:10.1016/j.jeconom.2021.11.008.">Berrisch and Ziel, 2023</a>, <a class="reference internal" href="09_reproducibilidad.html#id81" title="Nicolò Cesa-Bianchi, Yishay Mansour, and Gilles Stoltz. Improved second-order bounds for prediction with expert advice. Machine Learning, 66(2–3):321–352, 2007. doi:10.1007/s10994-006-5001-7.">Cesa-Bianchi <em>et al.</em>, 2007</a>, <a class="reference internal" href="09_reproducibilidad.html#id83" title="Olivier Wintenberger. Optimal learning with Bernstein online aggregation. Machine Learning, 106(1):119–141, 2017. doi:10.1007/s10994-016-5592-6.">Wintenberger, 2017</a>]</span></p></td>
+<td><p>Agregación en línea</p></td>
+<td><p>Actualización multiplicativa y olvido</p></td>
+<td><p>Pesos estructurados por región con prior del padre, aprendidos por lotes dentro de la validación anidada</p></td>
+<td><p>Pesos globales y secuenciales, sin estructura jerárquica</p></td>
+</tr>
+<tr class="row-even"><td><p>MERF, RE-EM, GPBoost <span class="bibtex-citation" id="id38">[<a class="reference internal" href="09_reproducibilidad.html#id86" title="Ahlem Hajjem, François Bellavance, and Denis Larocque. Mixed-effects random forest for clustered data. Journal of Statistical Computation and Simulation, 84(6):1313–1328, 2014. doi:10.1080/00949655.2012.741599.">Hajjem <em>et al.</em>, 2014</a>, <a class="reference internal" href="09_reproducibilidad.html#id85" title="Rebecca J. Sela and Jeffrey S. Simonoff. RE-EM trees: a data mining approach for longitudinal and clustered data. Machine Learning, 86(2):169–207, 2012. doi:10.1007/s10994-011-5258-3.">Sela and Simonoff, 2012</a>, <a class="reference internal" href="09_reproducibilidad.html#id89" title="Fabio Sigrist. Gaussian process boosting. Journal of Machine Learning Research, 2022.">Sigrist, 2022</a>]</span></p></td>
+<td><p>Efectos mixtos</p></td>
+<td><p>Modelar la heterogeneidad por grupo</p></td>
+<td><p>La heterogeneidad se modela en la combinación y aprovecha nueve modelos diversos</p></td>
+<td><p>Es un solo aprendiz; no combina la diversidad de los modelos</p></td>
+</tr>
+<tr class="row-odd"><td><p>Boosting con deriva <span class="bibtex-citation" id="id39">[<a class="reference internal" href="09_reproducibilidad.html#id91" title="Martin Scholz and Ralf Klinkenberg. Boosting classifiers for drifting concepts. Intelligent Data Analysis, 11(1):3–28, 2007. doi:10.3233/IDA-2007-11102.">Scholz and Klinkenberg, 2007</a>]</span></p></td>
+<td><p>Aprendizaje con deriva</p></td>
+<td><p>Ponderación temporal</p></td>
+<td><p>El olvido actúa en el combinador y se cruza con la jerarquía</p></td>
+<td><p>No es un combinador local</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="cambios-entre-la-propuesta-y-la-implementacion">
+<h2>4.6 Cambios entre la propuesta y la implementación<a class="headerlink" href="#cambios-entre-la-propuesta-y-la-implementacion" title="Link to this heading">#</a></h2>
+<p>La propuesta de la revisión combinaba los 7 modelos del Entregable 2 con una jerarquía de tres niveles
+(país, central y central × grupo). La implementación final (capítulo 5) mantiene el mecanismo y cambia tres
+cosas, por las razones que documenta la sección 5.8: (i) el conjunto de modelos base incluye también
+LightGBM y CatBoost, los dos comparadores recientes ajustados con el mismo protocolo; (ii) la jerarquía añade
+un cuarto nivel, el corredor; y (iii) el combinador se entrena con las predicciones fuera de muestra de los
+bloques externos anteriores, que provienen de modelos entrenados en el mismo régimen que los que se combinan.
+Ninguno de los cambios toca la declaración de novedad: siguen siendo una regla de combinación jerárquica
+con encogimiento KL y olvido, programada por el equipo.</p>
+</section>
+<section id="declaracion-de-novedad">
+<h2>4.7 Declaración de novedad<a class="headerlink" href="#declaracion-de-novedad" title="Link to this heading">#</a></h2>
+<p>Al mejor de nuestro conocimiento y según la búsqueda descrita en Web of Science Core Collection, Scopus y
+ScienceDirect (23 de octubre de 2026; cadenas W1-W6, S1-S6, D1-D6 y las cadenas de método M1), complementada
+con 20 cadenas por aplicación en Web of Science (23 y 24 de octubre de 2026), no se encontraron estudios que
+apliquen un apilamiento jerárquico con encogimiento KL y olvido temporal, ni ningún otro esquema de
+combinación local de clasificadores, a la predicción de interrupciones semanales de corredores de
+abastecimiento de alimentos. Los trabajos más cercanos por aplicación son <span class="bibtex-citation" id="id40">Niño [<a class="reference internal" href="09_reproducibilidad.html#id67" title="Gustavo Niño. Disruption in ground transportation: natural disasters and disintegration of local food markets. Food Policy, 140:103051, 2026. doi:10.1016/j.foodpol.2026.103051.">2026</a>]</span>, que
+estima con métodos causales el efecto de los cierres viales sobre los mercados mayoristas colombianos sin
+predecir interrupciones, y RIOT y P-WEV, que usan reglas de combinación globales en tareas distintas. Por
+método, los más cercanos son el apilamiento jerárquico bayesiano <span class="bibtex-citation" id="id41">[<a class="reference internal" href="09_reproducibilidad.html#id71" title="Yuling Yao, Gregor Pirš, Aki Vehtari, and Andrew Gelman. Bayesian hierarchical stacking: some models are (somewhere) useful. Bayesian Analysis, 17(4):1043–1071, 2022. doi:10.1214/21-BA1287.">Yao <em>et al.</em>, 2022</a>]</span> y el
+encogimiento jerárquico de Bayes empírico frente a GBDT en logística de distribución
+<span class="bibtex-citation" id="id42">[<a class="reference internal" href="09_reproducibilidad.html#id97" title="A. K. Yazdi. Hierarchical empirical-Bayes shrinkage versus gradient-boosted trees for large-scale retail distribution demand: an out-of-time benchmark on 74 million delivery records. IEEE Access, 2026. doi:10.1109/ACCESS.2026.3738471.">Yazdi, 2026</a>]</span>. Nuestra propuesta se diferencia en que estima los pesos del ensamble sobre una
+jerarquía anidada propia del problema, con penalización KL hacia el nodo padre y olvido temporal, mediante un
+estimador convexo con actualización multiplicativa de costo lineal.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "ml-e2"
+        },
+        kernelOptions: {
+            name: "ml-e2",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'ml-e2'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03_benchmarks.html"
+       title="página anterior">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">anterior</p>
+        <p class="prev-next-title">3. Modelos benchmark: selección, reentrenamiento y artefactos</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05_modelo_original.html"
+       title="siguiente página">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">siguiente</p>
+        <p class="prev-next-title">5. Modelo original: apilamiento jerárquico con encogimiento KL y olvido temporal (AJ-KL)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contenido
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#protocolo">4.1 Protocolo</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#familias-de-modelos-mejorados-encontradas">4.2 Familias de modelos mejorados encontradas</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#matriz-de-novedad">4.3 Matriz de novedad</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trabajos-mas-cercanos">4.4 Trabajos más cercanos</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tabla-de-diferenciacion-por-familia-algoritmica">4.5 Tabla de diferenciación por familia algorítmica</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cambios-entre-la-propuesta-y-la-implementacion">4.6 Cambios entre la propuesta y la implementación</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#declaracion-de-novedad">4.7 Declaración de novedad</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Por Camilo Molina Guerrero y Lina Margarita Buelvas
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=55c26ed414f5f8a31ebb"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=55c26ed414f5f8a31ebb"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
