@@ -1,0 +1,48 @@
+# Jupyter Book (versión 1.x, como en el tutorial del curso)
+title: "Dashboard predictivo, modelo original e informe reproducible: interrupciones en corredores de abastecimiento"
+author: Camilo Molina Guerrero y Lina Margarita Buelvas
+copyright: "2026"
+logo: ""
+only_build_toc_files: true
+
+# Los cuadernos se entregan ya ejecutados: leen los resultados que guardan los scripts de
+# scripts/ en data/resultados (las búsquedas tardan horas y no se repiten al construir el libro).
+execute:
+  execute_notebooks: "off"
+  timeout: 7200
+
+bibtex_bibfiles:
+  - references.bib
+
+sphinx:
+  config:
+    language: es
+    html_show_copyright: true
+    nb_merge_streams: true
+    bibtex_reference_style: author_year
+    bibtex_default_style: plain
+    numfig: true
+    math_numfig: true
+    # Plotly en Jupyter Book 1 necesita require.js para dibujar las figuras interactivas
+    html_js_files:
+      - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    mathjax3_config:
+      tex:
+        inlineMath: [["$", "$"], ["\\(", "\\)"]]
+
+parse:
+  myst_enable_extensions:
+    - dollarmath
+    - amsmath
+    - colon_fence
+    - linkify
+
+html:
+  use_repository_button: true
+  use_download_button: true
+  home_page_in_navbar: true
+
+repository:
+  url: https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject
+  branch: main
+  path_to_book: book

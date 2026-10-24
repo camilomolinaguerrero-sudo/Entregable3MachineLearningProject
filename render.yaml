@@ -1,0 +1,14 @@
+# Despliegue en Render (Blueprint). Render instala requirements.txt y lanza gunicorn sobre app:server.
+services:
+  - type: web
+    name: sipsa-corredores-e3
+    runtime: python
+    plan: free
+    repo: https://github.com/camilomolinaguerrero-sudo/Entregable3MachineLearningProject
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:server --workers 1 --threads 2 --timeout 180
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16

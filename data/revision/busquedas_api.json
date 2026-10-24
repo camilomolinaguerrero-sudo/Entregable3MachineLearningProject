@@ -1,0 +1,1691 @@
+[
+ {
+  "cadena": "C1_umbrales_latentes",
+  "base": "OpenAlex",
+  "consulta": "(\"multiple thresholds\" OR \"threshold ensemble\" OR \"dichotomized outcome\") AND (\"binary classification\" OR classifier) AND (continuous OR latent)",
+  "fecha": "2026-10-23",
+  "resultados": 12,
+  "registros": [
+   {
+    "titulo": "Continuous EEG classification for a self-paced BCI",
+    "anio": 2009,
+    "id": "https://doi.org/10.1109/ner.2009.5109296",
+    "fuente": "International IEEE/EMBS Conference on Neural Engineering",
+    "citas": 30
+   },
+   {
+    "titulo": "Classifying responders and non-responders; does it help when there is evidence of differentially responding patient groups?",
+    "anio": 2012,
+    "id": "https://doi.org/10.1016/j.jpsychires.2012.05.005",
+    "fuente": "Journal of Psychiatric Research",
+    "citas": 7
+   },
+   {
+    "titulo": "Measuring consequentiality: A “Knife-Edge” versus Continuous Approach",
+    "anio": 2020,
+    "id": "https://openalex.org/W3170104580",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 0
+   },
+   {
+    "titulo": "MAPPING URBAN GROWTH AND DEVELOPMENT AS CONTINUOUS FIELDS IN SPACE AND TIME",
+    "anio": 2014,
+    "id": "https://doi.org/10.11606/rdg.v0i0.555",
+    "fuente": "Geography Department University of Sao Paulo",
+    "citas": 6
+   },
+   {
+    "titulo": "Multiple-level threshold load balancing in distributed SDN controllers",
+    "anio": 2021,
+    "id": "https://doi.org/10.1016/j.comnet.2021.108369",
+    "fuente": "Computer Networks",
+    "citas": 42
+   },
+   {
+    "titulo": "Plane-splitting logic techniques using hybrid CMOS-memristor circuits and systems",
+    "anio": 2018,
+    "id": "https://openalex.org/W2948904098",
+    "fuente": "ePrints Soton (University of Southampton)",
+    "citas": 0
+   },
+   {
+    "titulo": "A Global Discretization Approach to Handle Numerical Attributes as Preprocessing",
+    "anio": 2015,
+    "id": "https://openalex.org/W2267981074",
+    "fuente": "KU ScholarWorks (The University of Kansas)",
+    "citas": 0
+   },
+   {
+    "titulo": "Measuring Face Recognition Ability: Identifying Individuals at the Extremes of Performance",
+    "anio": 2026,
+    "id": "https://doi.org/10.31234/osf.io/9adb8_v1",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "399: AGE-BMI INTERACTION PREDICTS MORTALITY IN CRITICAL ILLNESS: A MACHINE LEARNING STUDY",
+    "anio": 2026,
+    "id": "https://doi.org/10.1097/01.ccm.0001183592.30260.ab",
+    "fuente": "Critical Care Medicine",
+    "citas": 0
+   },
+   {
+    "titulo": "Multi-channel Imager Algorithm (MIA): A novel cloud top phase classification algorithm applied to Himawari-8 Geostationary Satellite",
+    "anio": 2021,
+    "id": "https://doi.org/10.5194/egusphere-egu21-5149",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Four-Channel Pulse Extraction and Matching Method for Loose Particle Localization on Sealed Electronic Equipment",
+    "anio": 2025,
+    "id": "https://doi.org/10.1109/tim.2025.3547476",
+    "fuente": "IEEE Transactions on Instrumentation and Measurement",
+    "citas": 2
+   },
+   {
+    "titulo": "Multiplexed in situ analysis of protein expression to predict response to trastuzumab",
+    "anio": 2007,
+    "id": "https://openalex.org/W1259037943",
+    "fuente": "Cancer Research",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "C1_umbrales_latentes",
+  "base": "arXiv",
+  "consulta": "all:\"multiple thresholds\" AND all:classification AND all:latent",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "C1_umbrales_latentes",
+  "base": "Semantic Scholar",
+  "consulta": "ensemble of classifiers at multiple thresholds of a continuous latent outcome binary event",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "C2_regresion_distribucional",
+  "base": "OpenAlex",
+  "consulta": "(\"distribution regression\" OR \"distributional regression\") AND (boosting OR \"gradient boosting\" OR \"machine learning\") AND (classification OR \"binary\")",
+  "fecha": "2026-10-23",
+  "resultados": 15,
+  "registros": [
+   {
+    "titulo": "Deep distribution regression",
+    "anio": 2021,
+    "id": "https://doi.org/10.1016/j.csda.2021.107203",
+    "fuente": "Computational Statistics & Data Analysis",
+    "citas": 33
+   },
+   {
+    "titulo": "Boosting multivariate structured additive distributional regression models",
+    "anio": 2023,
+    "id": "https://doi.org/10.1002/sim.9699",
+    "fuente": "Statistics in Medicine",
+    "citas": 12
+   },
+   {
+    "titulo": "Boosting Multivariate Structured Additive Distributional Regression Models",
+    "anio": 2022,
+    "id": "https://doi.org/10.48550/arxiv.2207.08470",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Distributional regression with reject option",
+    "anio": 2025,
+    "id": "https://doi.org/10.48550/arxiv.2503.23782",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Efficient Distributional Regression Trees Learning Algorithms for Calibrated Non-Parametric Probabilistic Forecasts",
+    "anio": 2026,
+    "id": "https://doi.org/10.1080/10618600.2026.2675431",
+    "fuente": "Journal of Computational and Graphical Statistics",
+    "citas": 0
+   },
+   {
+    "titulo": "Efficient Distributional Regression Trees Learning Algorithms for Calibrated Non-Parametric Probabilistic Forecasts",
+    "anio": 2026,
+    "id": "https://doi.org/10.6084/m9.figshare.32337847",
+    "fuente": "Figshare",
+    "citas": 0
+   },
+   {
+    "titulo": "Efficient Distributional Regression Trees Learning Algorithms for Calibrated Non-Parametric Probabilistic Forecasts",
+    "anio": 2026,
+    "id": "https://doi.org/10.3929/ethz-c-000802155",
+    "fuente": "Repository for Publications and Research Data (ETH Zurich)",
+    "citas": 0
+   },
+   {
+    "titulo": "Efficient distributional regression trees learning algorithms for calibrated non-parametric probabilistic forecasts",
+    "anio": 2025,
+    "id": "https://doi.org/10.48550/arxiv.2502.05157",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Representations of molecules and materials for interpolation of quantum-mechanical simulations via machine learning",
+    "anio": 2022,
+    "id": "https://doi.org/10.1038/s41524-022-00721-x",
+    "fuente": "npj Computational Materials",
+    "citas": 142
+   },
+   {
+    "titulo": "Beyond binary AKI classification: development and external validation of a distributional model predicting serum creatinine and urine output trajectories in ICU patients",
+    "anio": 2026,
+    "id": "https://doi.org/10.1186/s13054-026-06017-6",
+    "fuente": "Critical Care",
+    "citas": 1
+   },
+   {
+    "titulo": "Statistical Learning Theory for Distributional Classification",
+    "anio": 2026,
+    "id": "https://doi.org/10.48448/wyjm-j192",
+    "fuente": "Underline Science Inc.",
+    "citas": 0
+   },
+   {
+    "titulo": "Uncertainty in Model-Agnostic Meta-Learning using Variational Inference",
+    "anio": 2020,
+    "id": "https://doi.org/10.1109/wacv45572.2020.9093536",
+    "fuente": "IEEE Winter Conference on Applications of Computer Vision",
+    "citas": 48
+   },
+   {
+    "titulo": "Regression diagnostics meets forecast evaluation: conditional calibration, reliability diagrams, and coefficient of determination",
+    "anio": 2023,
+    "id": "https://doi.org/10.1214/23-ejs2180",
+    "fuente": "Electronic Journal of Statistics",
+    "citas": 57
+   },
+   {
+    "titulo": "Magic Weapon for Wordle: Modeling and Analysis based on Word's Attributes",
+    "anio": 2023,
+    "id": "https://doi.org/10.1145/3650215.3650266",
+    "fuente": "International Conference on Machine Learning and Computer Application (ICMLCA)",
+    "citas": 0
+   },
+   {
+    "titulo": "Letter to the Editor response: Garcia et al.",
+    "anio": 2018,
+    "id": "https://doi.org/10.1093/biostatistics/kxy079",
+    "fuente": "Biostatistics",
+    "citas": 2
+   }
+  ]
+ },
+ {
+  "cadena": "C2_regresion_distribucional",
+  "base": "arXiv",
+  "consulta": "all:\"distribution regression\" AND (all:boosting OR all:classification)",
+  "fecha": "2026-10-23",
+  "resultados": 23,
+  "registros": [
+   {
+    "titulo": "Ordinal Distribution Regression for Gait-based Age Estimation",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1905.11005v4",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Stagewise Boosting Distributional Regression",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2405.18288v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Deselection of Base-Learners for Statistical Boosting -- with an Application to Distributional Regression",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2202.01657v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Boosting Multivariate Structured Additive Distributional Regression Models",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2207.08470v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Scalable Estimation for Structured Additive Distributional Regression",
+    "anio": 2023,
+    "id": "http://arxiv.org/abs/2301.05593v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Distributional regression with reject option",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2503.23782v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Sufficiently Reduced Distributional Regression",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2609.29291v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Distributional Regression Forests for Probabilistic Precipitation Forecasting in Complex Terrain",
+    "anio": 2018,
+    "id": "http://arxiv.org/abs/1804.02921v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Enhanced variable selection for boosting sparser and less complex models in distributional copula regression",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2406.03900v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Detecting gene-environment interactions to guide personalized intervention: boosting distributional regression for polygenic scores",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2509.20850v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Uncertainty in Model-Agnostic Meta-Learning using Variational Inference",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1907.11864v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Deep Distribution Regression",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1903.06023v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Distributional Random Forests: Heterogeneity Adjustment and Multivariate Distributional Regression",
+    "anio": 2020,
+    "id": "http://arxiv.org/abs/2005.14458v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Domain2Vec: Deep Domain Generalization",
+    "anio": 2018,
+    "id": "http://arxiv.org/abs/1807.02919v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "PAC-Bayes meta-learning with implicit task-specific posteriors",
+    "anio": 2020,
+    "id": "http://arxiv.org/abs/2003.02455v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Distributional Adaptive Soft Regression Trees",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2210.10389v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "SurvPFN: Towards Foundation Models for Survival Predictions",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2606.04564v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Improving Regression Performance with Distributional Losses",
+    "anio": 2018,
+    "id": "http://arxiv.org/abs/1806.04613v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Distributed Nonparametric Estimation under Communication Constraints",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2204.10373v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond)",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1909.11784v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Machine learning methods for postprocessing ensemble forecasts of wind gusts: A systematic comparison",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2106.09512v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Bivariate Postprocessing of Wind Vectors",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2601.21401v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "RiO-DETRv2: Geometry-Aware Uncertainty Modeling Meets Real-Time Oriented Object Detection Transformer",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2610.29159v1",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "C2_regresion_distribucional",
+  "base": "Semantic Scholar",
+  "consulta": "distribution regression binary regressions at many thresholds gradient boosting",
+  "fecha": "2026-10-23",
+  "resultados": 21,
+  "registros": [
+   {
+    "titulo": "Comparative Evaluation of Logistic Regression and Gradient Boosting Models for Influenza Outbreak Early-Warning Using U.S. CDC ILINet Surveillance Data (2010-2025)",
+    "anio": 2026,
+    "id": "10.64898/2026.03.05.26347655",
+    "fuente": "medRxiv",
+    "citas": 0
+   },
+   {
+    "titulo": "Predicting tree species presence and basal area in Utah: A comparison of stochastic gradient boosting, generalized additive models, and tree-based methods",
+    "anio": 2006,
+    "id": "10.1016/J.ECOLMODEL.2006.05.021",
+    "fuente": "",
+    "citas": 303
+   },
+   {
+    "titulo": "Explainable Ensemble Learning for Java Code Smell Detection and Maintainability Enhancement",
+    "anio": 2026,
+    "id": "10.1109/SCSE70081.2026.11499840",
+    "fuente": "International Conference on Soft Computing and Software Engineering",
+    "citas": 0
+   },
+   {
+    "titulo": "Forecasting ocean hypoxia in salmonid fish farms",
+    "anio": 2024,
+    "id": "10.3389/faquc.2024.1365123",
+    "fuente": "Frontiers in Aquaculture",
+    "citas": 5
+   },
+   {
+    "titulo": "Benchmarking and interpreting a tabular foundation model for PISA 2022 mathematical literacy",
+    "anio": 2026,
+    "id": "10.21449/ijate.1856645",
+    "fuente": "International Journal of Assessment Tools in Education",
+    "citas": 0
+   },
+   {
+    "titulo": "TCN-XGBoost Hybrid Model for Daily FCR Prediction and One Step Forecasting in Broiler Farm",
+    "anio": 2026,
+    "id": "10.62754/ais.v7i1.1017",
+    "fuente": "Architecture  Image Studies",
+    "citas": 0
+   },
+   {
+    "titulo": "Classification and regression with random forests as a standard method for presence-only data SDMs: A future conservation example using China tree species",
+    "anio": 2019,
+    "id": "10.1016/J.ECOINF.2019.05.003",
+    "fuente": "Ecological Informatics",
+    "citas": 82
+   },
+   {
+    "titulo": "HADS-Net: A Hybrid Attention-Based Deep Security Network for Network Intrusion Detection",
+    "anio": 2026,
+    "id": "10.55938/ijgasr.v5i3.489",
+    "fuente": "International Journal for Global Academic &amp; Scientific Research",
+    "citas": 1
+   },
+   {
+    "titulo": "Predictive Condition Assessment of Distribution Transformers: Using Load, Thermal, Power-Quality, and Maintenance Indicators",
+    "anio": 2026,
+    "id": "10.64388/irev10i3-1723216",
+    "fuente": "Iconic research and engineering journals",
+    "citas": 0
+   },
+   {
+    "titulo": "Uncovering nonlinear urban factors of homelessness: Evidence from New York City using interpretable machine learning",
+    "anio": 2025,
+    "id": "10.1177/23998083251342406",
+    "fuente": "Environment and Planning B Urban Analytics and City Science",
+    "citas": 11
+   },
+   {
+    "titulo": "Machine learning evaluation of racial and ethnic inclusion under alternative cost-based approaches to Medicare Medication Therapy Management eligibility.",
+    "anio": 2026,
+    "id": "10.18553/jmcp.2026.32.6.736",
+    "fuente": "Journal of Managed Care & Specialty Pharmacy",
+    "citas": 0
+   },
+   {
+    "titulo": "Anomaly detection in European cryptocurrency exchange-traded products",
+    "anio": 2026,
+    "id": "8b486fd9d1159114cbcb3c964dd1e144dd3ba7d3",
+    "fuente": "",
+    "citas": 0
+   },
+   {
+    "titulo": "Species Distribution, Abundance and Survival Modeling: New Opportunities and Methods",
+    "anio": 2023,
+    "id": "10.19074/1814-8654-2023-2-347-357",
+    "fuente": "Raptors Conservation",
+    "citas": 0
+   },
+   {
+    "titulo": "Testing of null hypotheses in exploratory community analyses: similarity profiles and biota-environment linkage",
+    "anio": 2008,
+    "id": "10.1016/J.JEMBE.2008.07.009",
+    "fuente": "",
+    "citas": 1086
+   },
+   {
+    "titulo": "Chronic disease treatment default prediction with random sampling optimization.",
+    "anio": 2023,
+    "id": "10.32388/qzpwnx",
+    "fuente": "Qeios",
+    "citas": 0
+   },
+   {
+    "titulo": "Analysis of Massive Online Medical Consultation Service Data to Understand Physicians’ Economic Return: Observational Data Mining Study",
+    "anio": 2020,
+    "id": "10.2196/16765",
+    "fuente": "JMIR Medical Informatics",
+    "citas": 26
+   },
+   {
+    "titulo": "Which Physicians Attract Payment? Mining Massive Platform Data to Understand Patient Payment in Online Medical Consultation (Preprint)",
+    "anio": 2019,
+    "id": "10.2196/preprints.16765",
+    "fuente": "",
+    "citas": 0
+   },
+   {
+    "titulo": "RANDOM FORESTS BASED ON DYNAMIC NETWORK PARAMETERS IN LOW POWER AND LOSSY NETWORKS",
+    "anio": 2019,
+    "id": "db77a4bfbfa98b6c6e3283ca90c10295ed19d8f0",
+    "fuente": "",
+    "citas": 0
+   },
+   {
+    "titulo": "The 41st Annual Meeting of the Japanese Association for the Study of Taste and Smell (JASTS XLI) A Male-Attracting Pheromone in the Urine of Female",
+    "anio": 2008,
+    "id": "ec965c839807f28a8e16ef46f80f438d4b2d10a6",
+    "fuente": "",
+    "citas": 0
+   },
+   {
+    "titulo": "From Literary Archives to Cultural Memory: A Machine-Learning Investigation of Consecration, Retention, and Canon Formation in English-Language Literature, 1820–2022",
+    "anio": 2026,
+    "id": "10.17762/jidmis.v3.5135",
+    "fuente": "Journal of Intelligent Decision Making and Information Science",
+    "citas": 0
+   },
+   {
+    "titulo": "Title: Contextual MDPs: A New Model and PAC Guarantees for Reinforcement Learning with Rich Observations",
+    "anio": 2016,
+    "id": "943a5e53084bbcf0facc75886f1975c719184225",
+    "fuente": "",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "C3_reordenamiento_monotono",
+  "base": "OpenAlex",
+  "consulta": "(\"monotone rearrangement\" OR \"isotonic projection\" OR \"quantile crossing\") AND (\"conditional distribution\" OR \"distribution function\")",
+  "fecha": "2026-10-23",
+  "resultados": 26,
+  "registros": [
+   {
+    "titulo": "Quantile and Probability Curves Without Crossing",
+    "anio": 2010,
+    "id": "https://doi.org/10.3982/ecta7880",
+    "fuente": "Econometrica",
+    "citas": 407
+   },
+   {
+    "titulo": "Quantile and Probability Curves Without Crossing",
+    "anio": 2007,
+    "id": "https://doi.org/10.48550/arxiv.0704.3649",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 25
+   },
+   {
+    "titulo": "Nonparametric quantile regression for twice censored data",
+    "anio": 2013,
+    "id": "https://doi.org/10.3150/12-bej462",
+    "fuente": "Bernoulli",
+    "citas": 14
+   },
+   {
+    "titulo": "Nonparametric quantile regression for twice censored data",
+    "anio": 2010,
+    "id": "https://doi.org/10.48550/arxiv.1007.3376",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 2
+   },
+   {
+    "titulo": "Non-crossing quantile regressions by SVM",
+    "anio": 2005,
+    "id": "https://doi.org/10.1109/ijcnn.2004.1379939",
+    "fuente": "IEEE International Joint Conference on Neural Networks (IJCNN)",
+    "citas": 37
+   },
+   {
+    "titulo": "A novel time series probabilistic prediction approach based on the monotone quantile regression neural network",
+    "anio": 2023,
+    "id": "https://doi.org/10.1016/j.ins.2023.119844",
+    "fuente": "Information Sciences",
+    "citas": 24
+   },
+   {
+    "titulo": "An Effective Nonparametric Quantile Regression Method for Solving the Crossing Problem in Data Fitting Process",
+    "anio": 2014,
+    "id": "https://doi.org/10.4028/www.scientific.net/amm.631-632.245",
+    "fuente": "Applied Mechanics and Materials",
+    "citas": 0
+   },
+   {
+    "titulo": "Semiparametric Distribution Regression with Instruments and Monotonicity",
+    "anio": 2022,
+    "id": "https://doi.org/10.48550/arxiv.2212.03704",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 2
+   },
+   {
+    "titulo": "Parsimonious Quantile Regression of Financial Asset Tail Dynamics via Sequential Learning",
+    "anio": 2020,
+    "id": "https://doi.org/10.48550/arxiv.2010.08263",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 18
+   },
+   {
+    "titulo": "Semiparametric distribution regression with instruments and monotonicity",
+    "anio": 2024,
+    "id": "https://doi.org/10.1016/j.labeco.2024.102565",
+    "fuente": "Labour Economics",
+    "citas": 3
+   },
+   {
+    "titulo": "Semiparametric distribution regression with instruments and monotonicity",
+    "anio": 2022,
+    "id": "https://doi.org/10.2139/ssrn.4296043",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Deep Distributional Learning with Non-crossing Quantile Network",
+    "anio": 2025,
+    "id": "https://doi.org/10.48550/arxiv.2504.08215",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Quantile Spacings: An Interpretable and Scalable Approach to Distributional Modeling",
+    "anio": 2013,
+    "id": "https://doi.org/10.2139/ssrn.2220901",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 8
+   },
+   {
+    "titulo": "Coherent Hierarchical Probabilistic Forecasting of Electric Vehicle Charging Demand",
+    "anio": 2023,
+    "id": "https://doi.org/10.1109/tia.2023.3344544",
+    "fuente": "IEEE Transactions on Industry Applications",
+    "citas": 31
+   },
+   {
+    "titulo": "Parametric Quantile Regression Based on the Generalized Gamma Distribution",
+    "anio": 2013,
+    "id": "https://doi.org/10.1111/rssc.12014",
+    "fuente": "Journal of the Royal Statistical Society Series C (Applied Statistics)",
+    "citas": 54
+   },
+   {
+    "titulo": "Factor Model of Mixtures",
+    "anio": 2023,
+    "id": "https://doi.org/10.48550/arxiv.2301.13843",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 0
+   },
+   {
+    "titulo": "Convolution Smoothed Quantile Regression for XGBoost",
+    "anio": 2026,
+    "id": "https://doi.org/10.48550/arxiv.2608.15290",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Integrating random forests into deep neural networks for simultaneous estimation of non-crossing multiple quantiles",
+    "anio": 2026,
+    "id": "https://doi.org/10.1007/s11222-026-10905-w",
+    "fuente": "Statistics and Computing",
+    "citas": 0
+   },
+   {
+    "titulo": "Bivariate vine copula based regression, bivariate level and quantile curves",
+    "anio": 2022,
+    "id": "https://doi.org/10.48550/arxiv.2205.02557",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "mixqr: An Extensible Framework for Finite Mixtures of Quantile and Expectile Regressions in R",
+    "anio": 2026,
+    "id": "https://openalex.org/W7165701995",
+    "fuente": "Econstor (Econstor)",
+    "citas": 0
+   },
+   {
+    "titulo": "A Cybersecure Distribution-Free Learning Model for Interval Forecasting of Power Load Under Cyberattacks",
+    "anio": 2024,
+    "id": "https://doi.org/10.1109/tii.2024.3507946",
+    "fuente": "IEEE Transactions on Industrial Informatics",
+    "citas": 7
+   },
+   {
+    "titulo": "Nonadditive Identification using Nested Multivariate Center-Outward Quantile Normalization",
+    "anio": 2026,
+    "id": "https://doi.org/10.2139/ssrn.7514418",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Efficient probabilistic forecasting for power system time series via conditional variational autoencoders",
+    "anio": 2026,
+    "id": "https://doi.org/10.1016/j.seta.2026.105062",
+    "fuente": "Sustainable Energy Technologies and Assessments",
+    "citas": 1
+   },
+   {
+    "titulo": "Regular vine copula based quantile regression",
+    "anio": 2018,
+    "id": "https://openalex.org/W2941763994",
+    "fuente": null,
+    "citas": 2
+   },
+   {
+    "titulo": "Efficient Transported Distributional and Quantile Treatment Effects with Surrogate-Assisted Missing Primary Outcomes",
+    "anio": 2026,
+    "id": "https://doi.org/10.48550/arxiv.2605.02154",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "C3_reordenamiento_monotono",
+  "base": "arXiv",
+  "consulta": "all:rearrangement AND all:\"distribution function\" AND all:monotone",
+  "fecha": "2026-10-23",
+  "resultados": 3,
+  "registros": [
+   {
+    "titulo": "Semiparametric Distribution Regression with Instruments and Monotonicity",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2212.03704v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Quantile and Probability Curves Without Crossing",
+    "anio": 2007,
+    "id": "http://arxiv.org/abs/0704.3649v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Nonparametric quantile regression for twice censored data",
+    "anio": 2010,
+    "id": "http://arxiv.org/abs/1007.3376v2",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "C3_reordenamiento_monotono",
+  "base": "Semantic Scholar",
+  "consulta": "monotone rearrangement conditional distribution function estimates crossing",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "C4_bayes_empirico_categoricas",
+  "base": "OpenAlex",
+  "consulta": "(\"empirical Bayes\" OR \"hierarchical shrinkage\" OR \"target encoding\") AND (categorical OR \"high cardinality\") AND (boosting OR \"random forest\" OR classifier)",
+  "fecha": "2026-10-23",
+  "resultados": 45,
+  "registros": [
+   {
+    "titulo": "Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features",
+    "anio": 2022,
+    "id": "https://doi.org/10.1007/s00180-022-01207-6",
+    "fuente": "Computational Statistics",
+    "citas": 168
+   },
+   {
+    "titulo": "Quantile Encoder: Tackling High Cardinality Categorical Features in Regression Problems",
+    "anio": 2021,
+    "id": "https://doi.org/10.1007/978-3-030-85529-1_14",
+    "fuente": "Lecture notes in computer science",
+    "citas": 20
+   },
+   {
+    "titulo": "Smoothing target encoding and class center-based firefly algorithm for handling missing values in categorical variable",
+    "anio": 2023,
+    "id": "https://doi.org/10.1186/s40537-022-00679-z",
+    "fuente": "Journal Of Big Data",
+    "citas": 17
+   },
+   {
+    "titulo": "Chi-Square Target Encoding for Categorical Data Representation: A Real-World Sensor Data Case Study",
+    "anio": 2025,
+    "id": "https://doi.org/10.1007/s42979-025-03766-z",
+    "fuente": "SN Computer Science",
+    "citas": 5
+   },
+   {
+    "titulo": "The revival of bagged trees: hierarchical shrinkage as a regularization tool",
+    "anio": 2026,
+    "id": "https://doi.org/10.1088/2632-2153/aea39d",
+    "fuente": "Machine Learning Science and Technology",
+    "citas": 0
+   },
+   {
+    "titulo": "Hierarchical Empirical-Bayes Naive Bayes: Minimax Smoothing and Calibration with AODE Extension",
+    "anio": 2026,
+    "id": "https://doi.org/10.48550/arxiv.2608.11162",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Fairness Implications of Encoding Protected Categorical Attributes",
+    "anio": 2023,
+    "id": "https://doi.org/10.1145/3600211.3604657",
+    "fuente": "Proceedings of the AAAI/ACM Conference on AI Ethics and Society",
+    "citas": 14
+   },
+   {
+    "titulo": "WoEEE: a hybrid approach for enhancement of categorical data transformation",
+    "anio": 2025,
+    "id": "https://doi.org/10.1007/s41060-025-00845-5",
+    "fuente": "International Journal of Data Science and Analytics",
+    "citas": 0
+   },
+   {
+    "titulo": "Impact of Categorical Variables Encoding on Property Mass Valuation",
+    "anio": 2021,
+    "id": "https://doi.org/10.1016/j.procs.2021.09.127",
+    "fuente": "Procedia Computer Science",
+    "citas": 32
+   },
+   {
+    "titulo": "Optimal Response Modeling: Comparison of Logistic Regression, Random Forest and I* Algorithm",
+    "anio": 2011,
+    "id": "https://doi.org/10.2139/ssrn.1918410",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Integrated classification algorithms for data with categorical features",
+    "anio": 2019,
+    "id": "https://openalex.org/W7119329043",
+    "fuente": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)",
+    "citas": 0
+   },
+   {
+    "titulo": "Comparative Study on the Performance of Categorical Variable Encoders in Classification and Regression Tasks",
+    "anio": 2024,
+    "id": "https://doi.org/10.48550/arxiv.2401.09682",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 10
+   },
+   {
+    "titulo": "41250 Machine Learning to Identify Predictors of Iatrogenic Injury Using Empirical Bayes Estimates: A Cohort Study of Pressure Injury Prevention",
+    "anio": 2021,
+    "id": "https://doi.org/10.1017/cts.2021.530",
+    "fuente": "Journal of Clinical and Translational Science",
+    "citas": 0
+   },
+   {
+    "titulo": "Team voyTECH: User Activity Modeling with Boosting Trees",
+    "anio": 2020,
+    "id": "https://doi.org/10.48550/arxiv.2007.01620",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Genetic Algorithm Based Hyperparameter Optimization of XGBoost for Car Price Determination with Smooth Target Encoding and SHAP-Based Interpretability",
+    "anio": 2026,
+    "id": "https://openalex.org/W7218185154",
+    "fuente": "International Journal of Advanced Natural Sciences and Engineering Researches",
+    "citas": 0
+   },
+   {
+    "titulo": "Discrete Box-Constrained Minimax Classifier for Uncertain and Imbalanced Class Proportions",
+    "anio": 2020,
+    "id": "https://doi.org/10.1109/tpami.2020.3046439",
+    "fuente": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "citas": 12
+   },
+   {
+    "titulo": "Subset Mixture Model: Interpretable Bayesian Regression for Categorical Features with Principled Uncertainty",
+    "anio": 2026,
+    "id": "https://doi.org/10.21203/rs.3.rs-9272926/v1",
+    "fuente": "Research Square",
+    "citas": 0
+   },
+   {
+    "titulo": "Categorical Encoding Methods Converge on Balanced Data: Evidence from Large-Scale Accident Risk Prediction",
+    "anio": 2025,
+    "id": "https://doi.org/10.2139/ssrn.5807312",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Product Length Predictions with Machine Learning: An Integrated Approach Using Extreme Gradient Boosting",
+    "anio": 2024,
+    "id": "https://doi.org/10.1007/s42979-024-02999-8",
+    "fuente": "SN Computer Science",
+    "citas": 8
+   },
+   {
+    "titulo": "Prediction of Blasting Efficiency in Mining: A Comprehensive Evaluation with Boosting-Based Machine Learning Algorithms",
+    "anio": 2026,
+    "id": "https://doi.org/10.47495/okufbed.1758876",
+    "fuente": "Osmaniye Korkut Ata Üniversitesi Fen Bilimleri Enstitüsü Dergisi",
+    "citas": 2
+   },
+   {
+    "titulo": "A Comparative Study of Different Data Pre-processing Methods for Machine Learning",
+    "anio": 2025,
+    "id": "https://doi.org/10.36948/ijfmr.2025.v07i04.52920",
+    "fuente": "International Journal For Multidisciplinary Research",
+    "citas": 1
+   },
+   {
+    "titulo": "A Comprehensive Explainable AI Framework Integrating Hybrid Machine Learning and Neural Network Models for Bank Transaction Fraud Detection",
+    "anio": 2026,
+    "id": "https://doi.org/10.5281/zenodo.22068120",
+    "fuente": "Zenodo (CERN European Organization for Nuclear Research)",
+    "citas": 0
+   },
+   {
+    "titulo": "Identification of Electricity Load Fluctuation Characteristics in the Textile and Apparel Industry Based on CatBoost Algorithm Model",
+    "anio": 2026,
+    "id": "https://doi.org/10.1109/icgeps69938.2026.11521869",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Predicting Online Gaming Engagement Levels Using Machine Learning Models",
+    "anio": 2025,
+    "id": "https://doi.org/10.55041/isjem04952",
+    "fuente": "International Scientific Journal of Engineering and Management",
+    "citas": 0
+   },
+   {
+    "titulo": "Integrating Geospatial Hotspot Analysis with Ensemble Learning for Accident Severity Prediction",
+    "anio": 2025,
+    "id": "https://doi.org/10.1109/iccit68739.2025.11491654",
+    "fuente": "International Conference on Computer and Information Technology (ICCIT)",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "C4_bayes_empirico_categoricas",
+  "base": "arXiv",
+  "consulta": "all:\"target encoding\" AND (all:hierarchical OR all:bayes) AND all:categorical",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "C4_bayes_empirico_categoricas",
+  "base": "Semantic Scholar",
+  "consulta": "hierarchical empirical Bayes target encoding high cardinality categorical gradient boosting",
+  "fecha": "2026-10-23",
+  "resultados": 1,
+  "registros": [
+   {
+    "titulo": "WoEEE: a hybrid approach for enhancement of categorical data transformation",
+    "anio": 2025,
+    "id": "10.1007/s41060-025-00845-5",
+    "fuente": "International Journal of Data Science and Analysis",
+    "citas": 1
+   }
+  ]
+ },
+ {
+  "cadena": "C5_informacion_privilegiada",
+  "base": "OpenAlex",
+  "consulta": "(\"privileged information\" OR \"auxiliary continuous\" OR \"auxiliary target\") AND (classification) AND (continuous OR regression)",
+  "fecha": "2026-10-23",
+  "resultados": 38,
+  "registros": [
+   {
+    "titulo": "KOC+: Kernel ridge regression based one-class classification using privileged information",
+    "anio": 2019,
+    "id": "https://doi.org/10.1016/j.ins.2019.07.052",
+    "fuente": "Information Sciences",
+    "citas": 21
+   },
+   {
+    "titulo": "A Generalized Meta-loss function for regression and classification using privileged information",
+    "anio": 2018,
+    "id": "https://doi.org/10.48550/arxiv.1811.06885",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 0
+   },
+   {
+    "titulo": "A generalized meta-loss function for distillation and learning using privileged information for classification and regression",
+    "anio": 2018,
+    "id": "https://openalex.org/W2900449377",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 1
+   },
+   {
+    "titulo": "Incorporating Privileged Information to Improve Manifold Ordinal Regression",
+    "anio": 2014,
+    "id": "https://doi.org/10.5220/0005075801870194",
+    "fuente": "International Conference on Neural Computation Theory and Applications",
+    "citas": 1
+   },
+   {
+    "titulo": "AEKOC+: Kernel Ridge Regression-Based Auto-Encoder for One-Class Classification Using Privileged Information",
+    "anio": 2020,
+    "id": "https://doi.org/10.1007/s12559-019-09705-4",
+    "fuente": "Cognitive Computation",
+    "citas": 11
+   },
+   {
+    "titulo": "A Generalized Meta-loss Function for Distillation Based Learning Using Privileged Information for Classification and Regression",
+    "anio": 2021,
+    "id": "https://doi.org/10.1007/978-3-030-86365-4_43",
+    "fuente": "Lecture notes in computer science",
+    "citas": 3
+   },
+   {
+    "titulo": "Advances in learning using privileged information for supervised classification",
+    "anio": 2025,
+    "id": "https://openalex.org/W7110682855",
+    "fuente": "BIRD (Basque Center for Applied Mathematics)",
+    "citas": 0
+   },
+   {
+    "titulo": "Multi-view ordinal regression with feature augmentation and privileged information learning",
+    "anio": 2025,
+    "id": "https://doi.org/10.1016/j.ins.2025.122065",
+    "fuente": "Information Sciences",
+    "citas": 2
+   },
+   {
+    "titulo": "OCKELM+: Kernel Extreme Learning Machine based One-class Classification using Privileged Information (or KOC+: Kernel Ridge Regression or Least Square SVM with zero bias based One-class Classification using Privileged Information)",
+    "anio": 2019,
+    "id": "https://doi.org/10.48550/arxiv.1904.08338",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 3
+   },
+   {
+    "titulo": "Gaussian Process Classification with Privileged Information by Soft-to-Hard Labeling Transfer",
+    "anio": 2018,
+    "id": "https://doi.org/10.48550/arxiv.1802.03877",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 1
+   },
+   {
+    "titulo": "Learning using privileged information with logistic regression on acute respiratory distress syndrome detection",
+    "anio": 2024,
+    "id": "https://doi.org/10.1016/j.artmed.2024.102947",
+    "fuente": "Artificial Intelligence in Medicine",
+    "citas": 9
+   },
+   {
+    "titulo": "Efficient and robust kernel learning with class-wise privileged information for pattern classification",
+    "anio": 2026,
+    "id": "https://doi.org/10.1016/j.patcog.2026.113522",
+    "fuente": "Pattern Recognition",
+    "citas": 1
+   },
+   {
+    "titulo": "Self-paced learning and privileged information based KRR classification algorithm for diagnosis of Parkinson’s disease",
+    "anio": 2021,
+    "id": "https://doi.org/10.1016/j.neulet.2021.136312",
+    "fuente": "Neuroscience Letters",
+    "citas": 8
+   },
+   {
+    "titulo": "Feature Selection in Learning Using Privileged Information",
+    "anio": 2017,
+    "id": "https://doi.org/10.1109/icdmw.2017.131",
+    "fuente": "IEEE ... International Conference on Data Mining workshops",
+    "citas": 7
+   },
+   {
+    "titulo": "From the Lab to the Wild: Affect Modeling Via Privileged Information",
+    "anio": 2023,
+    "id": "https://doi.org/10.1109/taffc.2023.3265072",
+    "fuente": "IEEE Transactions on Affective Computing",
+    "citas": 14
+   },
+   {
+    "titulo": "Incremental learning paradigm with privileged information for random vector functional-link networks: IRVFL+",
+    "anio": 2022,
+    "id": "https://doi.org/10.1007/s00521-021-06793-y",
+    "fuente": "Neural Computing and Applications",
+    "citas": 15
+   },
+   {
+    "titulo": "PINet: Privileged Information Improve the Interpretablity and generalization of structural MRI in Alzheimer's Disease",
+    "anio": 2023,
+    "id": "https://doi.org/10.1145/3584371.3613000",
+    "fuente": "ACM International Conference on Bioinformatics, Computational Biology, and Health Informatics (ACM-BCB)",
+    "citas": 2
+   },
+   {
+    "titulo": "A Cross-Validation Approach to Knowledge Transfer for SVM Models in the Learning Using Privileged Information Paradigm",
+    "anio": 2019,
+    "id": "https://openalex.org/W3104426380",
+    "fuente": "KTH Publication Database DiVA (KTH Royal Institute of Technology)",
+    "citas": 0
+   },
+   {
+    "titulo": "Improving MRI-based analysis of brain structural changes in patients with hypertension via a privileged information learning algorithm",
+    "anio": 2021,
+    "id": "https://doi.org/10.1016/j.ymeth.2021.07.004",
+    "fuente": "Methods",
+    "citas": 1
+   },
+   {
+    "titulo": "Dense Adaptive Grouping Distillation Network for Multimodal Land Cover Classification With Privileged Modality",
+    "anio": 2022,
+    "id": "https://doi.org/10.1109/tgrs.2022.3176936",
+    "fuente": "IEEE Transactions on Geoscience and Remote Sensing",
+    "citas": 23
+   },
+   {
+    "titulo": "Fault Classification with Robust Knowledge Transfer for Single Phase Grid Connected Photovoltaic Systems",
+    "anio": 2019,
+    "id": "https://doi.org/10.1109/icpeca47973.2019.8975554",
+    "fuente": "2019 International Conference on Power Electronics, Control and Automation (ICPECA)",
+    "citas": 2
+   },
+   {
+    "titulo": "From Soft Logic to Hard Rules: A Differentiable Boolean Framework for Interpretable and Balanced Classification",
+    "anio": 2026,
+    "id": "https://doi.org/10.1007/978-981-92-1465-5_27",
+    "fuente": "Lecture notes in computer science",
+    "citas": 0
+   },
+   {
+    "titulo": "Kernel methods for time series data",
+    "anio": 2015,
+    "id": "https://openalex.org/W634951714",
+    "fuente": "University of Birmingham Institutional Research Archive (University of Birmingham)",
+    "citas": 2
+   },
+   {
+    "titulo": "Hyperbolic Busemann Learning with Ideal Prototypes",
+    "anio": 2021,
+    "id": "https://doi.org/10.48550/arxiv.2106.14472",
+    "fuente": "arXiv (Cornell University)",
+    "citas": 13
+   },
+   {
+    "titulo": "Multi-dimensional MRI representation and privileged learning approaches to functional outcome prediction for ischemic stroke patients",
+    "anio": 2026,
+    "id": "https://doi.org/10.1038/s41746-026-02708-0",
+    "fuente": "npj Digital Medicine",
+    "citas": 1
+   }
+  ]
+ },
+ {
+  "cadena": "C5_informacion_privilegiada",
+  "base": "arXiv",
+  "consulta": "all:\"privileged information\" AND all:classification AND all:boosting",
+  "fecha": "2026-10-23",
+  "resultados": 2,
+  "registros": [
+   {
+    "titulo": "Privileged Zero-Shot AutoML",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2106.13743v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "DenseReg: Fully Convolutional Dense Shape Regression In-the-Wild",
+    "anio": 2018,
+    "id": "http://arxiv.org/abs/1803.02188v2",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "C5_informacion_privilegiada",
+  "base": "Semantic Scholar",
+  "consulta": "learning using privileged information continuous auxiliary label available only at training binary classification",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "C6_aplicacion_abastecimiento_en",
+  "base": "OpenAlex",
+  "consulta": "(\"food supply\" OR \"wholesale market\" OR \"agri-food supply chain\" OR \"food distribution\") AND (disruption OR interruption OR shortage) AND (\"machine learning\" OR \"gradient boosting\" OR XGBoost)",
+  "fecha": "2026-10-23",
+  "resultados": 103,
+  "registros": [
+   {
+    "titulo": "Quantitative Methods for Agri-Food Supply Chain Resilience: A Systematic Literature Review Using Text Mining",
+    "anio": 2025,
+    "id": "https://doi.org/10.1016/j.ifacol.2025.09.044",
+    "fuente": "IFAC-PapersOnLine",
+    "citas": 0
+   },
+   {
+    "titulo": "Editorial: Advancing sustainability and resilience in agri-food supply chains through multi-criteria decision-making methods",
+    "anio": 2026,
+    "id": "https://doi.org/10.3389/fsufs.2026.2002057",
+    "fuente": "Frontiers in Sustainable Food Systems",
+    "citas": 0
+   },
+   {
+    "titulo": "Impact of Climate Change on Global Food Supply using Machine learning Algorithms",
+    "anio": 2024,
+    "id": "https://doi.org/10.1109/accai61061.2024.10602468",
+    "fuente": "International Conference on Advances in Computing, Communication and Applied Informatics (ACCAI)",
+    "citas": 1
+   },
+   {
+    "titulo": "Predicting Food Shortages at Food Pantries using Machine Learning and Predictive Analytics",
+    "anio": 2026,
+    "id": "https://doi.org/10.1109/cai68641.2026.11536282",
+    "fuente": "IEEE Conference on Artificial Intelligence (CAI)",
+    "citas": 0
+   },
+   {
+    "titulo": "Decarbonization and waste reduction in a disrupted food supply chain: a step towards achieving food sustainability",
+    "anio": 2024,
+    "id": "https://doi.org/10.1108/bfj-12-2023-1068",
+    "fuente": "British Food Journal",
+    "citas": 4
+   },
+   {
+    "titulo": "Crop Prediction Model Using Machine Learning Algorithms",
+    "anio": 2023,
+    "id": "https://doi.org/10.3390/app13169288",
+    "fuente": "Applied Sciences",
+    "citas": 332
+   },
+   {
+    "titulo": "Friendshoring in global food supply chains",
+    "anio": 2024,
+    "id": "https://doi.org/10.1093/erae/jbae031",
+    "fuente": "European Review of Agricultural Economics",
+    "citas": 4
+   },
+   {
+    "titulo": "Building a Resilient, Sustainable, and Healthier Food Supply Through Innovation and Technology",
+    "anio": 2020,
+    "id": "https://doi.org/10.1146/annurev-food-092220-030824",
+    "fuente": "Annual Review of Food Science and Technology",
+    "citas": 121
+   },
+   {
+    "titulo": "Plant Diseases Classification using Machine Learning",
+    "anio": 2021,
+    "id": "https://doi.org/10.1088/1742-6596/1962/1/012024",
+    "fuente": "Journal of Physics Conference Series",
+    "citas": 83
+   },
+   {
+    "titulo": "AI-Driven Risk Forecasting for Strengthening the United States Food Supply Chain Resilience: Case Study: A National AI-Enabled Food Supply Chain Risk Forecasting Framework and a Data Analytics Approach to Predicting Disruptions",
+    "anio": 2026,
+    "id": "https://doi.org/10.5281/zenodo.18456033",
+    "fuente": "International Journal of Science and Research Archive",
+    "citas": 0
+   },
+   {
+    "titulo": "AI-Driven Risk Forecasting for Strengthening the United States Food Supply Chain Resilience: Case Study: A National AI-Enabled Food Supply Chain Risk Forecasting Framework and a Data Analytics Approach to Predicting Disruptions",
+    "anio": 2026,
+    "id": "https://doi.org/10.30574/ijsra.2026.18.1.0143",
+    "fuente": "International Journal of Science and Research Archive",
+    "citas": 0
+   },
+   {
+    "titulo": "Predictive Analytics in Food Supply Chains",
+    "anio": 2025,
+    "id": "https://doi.org/10.55938/wlp.v2i5.324",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Machine learning for soybean yield forecasting in Brazil",
+    "anio": 2023,
+    "id": "https://doi.org/10.1016/j.agrformet.2023.109670",
+    "fuente": "Agricultural and Forest Meteorology",
+    "citas": 44
+   },
+   {
+    "titulo": "Smart Irrigation System Using Machine Learning and IOT",
+    "anio": 2019,
+    "id": "https://doi.org/10.1109/vitecon.2019.8899433",
+    "fuente": "International Conference on Vision Towards Emerging Trends in Communication and Networking (ViTECoN)",
+    "citas": 45
+   },
+   {
+    "titulo": "Applications and Trends of Machine Learning in Genomics and Phenomics for Next-Generation Breeding",
+    "anio": 2019,
+    "id": "https://doi.org/10.3390/plants9010034",
+    "fuente": "Plants",
+    "citas": 97
+   },
+   {
+    "titulo": "Food supply chain resilience in the digital era: a bibliometric analysis and development of conceptual framework",
+    "anio": 2024,
+    "id": "https://doi.org/10.1108/jbim-10-2023-0587",
+    "fuente": "Journal of Business and Industrial Marketing",
+    "citas": 40
+   },
+   {
+    "titulo": "An Offline Digital Twin for Resilience and Supplier Reliability in Perishable Food Supply Chains",
+    "anio": 2023,
+    "id": "https://doi.org/10.46254/au02.20230085",
+    "fuente": null,
+    "citas": 2
+   },
+   {
+    "titulo": "Implementing Advanced Analytics for Optimizing Food Supply Chain Logistics and Efficiency",
+    "anio": 2025,
+    "id": "https://doi.org/10.51244/ijrsi.2024.11120077",
+    "fuente": "International journal of research and scientific innovation",
+    "citas": 2
+   },
+   {
+    "titulo": "Soil Classification and Crop Suggestion using Machine Learning",
+    "anio": 2020,
+    "id": "https://doi.org/10.22214/ijraset.2020.30611",
+    "fuente": "International Journal for Research in Applied Science and Engineering Technology",
+    "citas": 18
+   },
+   {
+    "titulo": "Design and Validation of a Predictive Agribusiness Intelligence Platform for U.S. Food-Supply and Market Resilience",
+    "anio": 2026,
+    "id": "https://doi.org/10.63125/bsqvs196",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "An Experimental Analysis of Traditional Machine Learning Algorithms for Maize Yield Prediction",
+    "anio": 2024,
+    "id": "https://doi.org/10.37256/cm.5420244481",
+    "fuente": "Contemporary Mathematics",
+    "citas": 0
+   },
+   {
+    "titulo": "Ensemble Machine Learning Model for Better Crop Production",
+    "anio": 2024,
+    "id": "https://doi.org/10.1007/978-981-97-3485-6_10",
+    "fuente": "Innovations in Sustainable Technologies and Computing",
+    "citas": 0
+   },
+   {
+    "titulo": "AI-Driven Computational Simulation for Enhancing Resilience in Agri-Fresh Food Supply Chains",
+    "anio": 2025,
+    "id": "https://doi.org/10.46254/na10.20250225",
+    "fuente": null,
+    "citas": 1
+   },
+   {
+    "titulo": "Machine Learning and IoT based Seed Suggestion: To Increase Agriculture Harvesting and Development",
+    "anio": 2023,
+    "id": "https://doi.org/10.1109/icscds56580.2023.10104981",
+    "fuente": "International Conference on Sustainable Computing and Data Communication Systems (ICSCDS)",
+    "citas": 8
+   },
+   {
+    "titulo": "Structural robustness of the international food supply network under external shocks and its determinants",
+    "anio": 2025,
+    "id": "https://doi.org/10.48550/arxiv.2504.08857",
+    "fuente": "RePEc: Research Papers in Economics",
+    "citas": 1
+   }
+  ]
+ },
+ {
+  "cadena": "C6_aplicacion_abastecimiento_en",
+  "base": "arXiv",
+  "consulta": "(all:\"food supply\" OR all:\"supply chain\") AND all:disruption AND (all:\"machine learning\" OR all:boosting)",
+  "fecha": "2026-10-23",
+  "resultados": 43,
+  "registros": [
+   {
+    "titulo": "Enhancing supply chain security with automated machine learning",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2406.13166v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Disruption Detection for a Cognitive Digital Supply Chain Twin Using Hybrid Deep Learning",
+    "anio": 2023,
+    "id": "http://arxiv.org/abs/2309.14557v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Enhancing Supply Chain Resilience: A Machine Learning Approach for Predicting Product Availability Dates Under Disruption",
+    "anio": 2023,
+    "id": "http://arxiv.org/abs/2304.14902v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Forecasting Supply Chain Disruptions with Foresight Learning",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2604.01298v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Forecasting Automotive Supply Chain Shortfalls with Heterogeneous Time Series",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2407.16739v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Viable Supply Chain Network Design: Machine Learning-Derived Chance-Constrained Programming",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2606.10766v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Supply Chain Analytics: A Data-Driven Approach",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2609.10563v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Credit Risk Identification in Supply Chains Using Generative Adversarial Networks",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2501.10348v4",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Resilience Inference for Supply Chains with Hypergraph Neural Network",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2511.06208v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Discovering Supply Chain Links with Augmented Intelligence",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2111.01878v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Structural robustness of the international food supply network under external shocks and its determinants",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2504.08857v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Credit Risk Analysis for SMEs Using Graph Neural Networks in Supply Chain",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2507.07854v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Large Language Models for Supply Chain Optimization",
+    "anio": 2023,
+    "id": "http://arxiv.org/abs/2307.03875v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Implementing Reinforcement Learning Algorithms in Retail Supply Chains with OpenAI Gym Toolkit",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2104.14398v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Bridging Theory and Practice: A Stochastic Learning-Optimization Model for Resilient Automotive Supply Chains",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2511.06479v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Remote Sensing and Machine Learning for Food Crop Production Data in Africa Post-COVID-19",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2108.10054v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Structural Consequences of Policy-Based Interventions on the Global Supply Chain Network",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2604.11479v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "SupplyNetPy: An Open-Source Python Library for High-Fidelity Modeling and Simulation of Arbitrary Supply Chain and Inventory Networks",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2607.09745v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Leveraging Code Cohesion Analysis to Identify Source Code Supply Chain Attacks",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2510.14778v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "A Theoretical Framework for Graph-based Digital Twins for Supply Chain Management and Optimization",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2504.03692v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Federated Machine Learning for Intelligent IoT via Reconfigurable Intelligent Surface",
+    "anio": 2020,
+    "id": "http://arxiv.org/abs/2004.05843v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Predicting the Financial Impact of Supply Chain Risk for Major AI-Related Semiconductor Firms: A Heterogeneous Graph Patch Transformer Approach",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2609.32741v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "DriftGuard: A Hierarchical Framework for Concept Drift Detection and Remediation in Supply Chain Forecasting",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2601.08928v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Online Detection Of Supply Chain Network Disruptions Using Sequential Change-Point Detection for Hawkes Processes",
+    "anio": 2022,
+    "id": "http://arxiv.org/abs/2211.12091v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Modelling Cascading Physical Climate Risk in Supply Chains with Adaptive Firms: A Spatial Agent-Based Framework",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2509.18633v4",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "C6_aplicacion_abastecimiento_en",
+  "base": "Semantic Scholar",
+  "consulta": "machine learning prediction of food supply disruptions wholesale markets",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "C7_aplicacion_abastecimiento_es",
+  "base": "OpenAlex",
+  "consulta": "(abastecimiento OR \"centrales mayoristas\" OR SIPSA) AND (interrupción OR desabastecimiento OR caída) AND (\"aprendizaje automático\" OR \"machine learning\")",
+  "fecha": "2026-10-23",
+  "resultados": 6,
+  "registros": [
+   {
+    "titulo": "Diseño de un modelo con uso de machine learning y big data para predecir el desabastecimiento de medicamentos",
+    "anio": 2025,
+    "id": "https://openalex.org/W7112898955",
+    "fuente": "Institutional Repository of the National University Open and Distance UNAD (Universidad Nacional Abierta y a Distancia)",
+    "citas": 0
+   },
+   {
+    "titulo": "Sistema de gestión de compras de efectivo para el abastecimiento de cajeros automáticos mediante machine learning",
+    "anio": 2025,
+    "id": "https://openalex.org/W7212344537",
+    "fuente": "Universidad de Chile",
+    "citas": 0
+   },
+   {
+    "titulo": "Aplicación de algoritmos de Machine Learning para la predicción de demanda y optimización del abastecimiento en empresas comerciales: Revisión Sistemática de Literatura",
+    "anio": 2026,
+    "id": "https://doi.org/10.5281/zenodo.21245751",
+    "fuente": "Zenodo (CERN European Organization for Nuclear Research)",
+    "citas": 0
+   },
+   {
+    "titulo": "Optimizing inventory control to reduce drug stockouts by lean manufacturing and machine learning models in a pharmaceutical company",
+    "anio": 2026,
+    "id": "https://openalex.org/W7171343386",
+    "fuente": "Repositorio Académico UPC (Universidad Peruana de Ciencias Aplicadas)",
+    "citas": 0
+   },
+   {
+    "titulo": "Modelo predictivo de machine learning para la estimación de la demanda de medicamentos críticos en un gestor farmacéutico de la ciudad de Bogotá",
+    "anio": 2025,
+    "id": "https://openalex.org/W7212215652",
+    "fuente": "Institutional Repository of the National University Open and Distance UNAD (Universidad Nacional Abierta y a Distancia)",
+    "citas": 0
+   },
+   {
+    "titulo": "Sistema de recomendación para compra de material de forma inteligente a partir de datos de consumo, utilizando estrategias de machine learning",
+    "anio": 2024,
+    "id": "https://openalex.org/W7133027414",
+    "fuente": "Repositorio UNIREMINGTON",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "C7_aplicacion_abastecimiento_es",
+  "base": "arXiv",
+  "consulta": "all:SIPSA OR (all:Colombia AND all:\"food supply\" AND all:\"machine learning\")",
+  "fecha": "2026-10-23",
+  "resultados": 1,
+  "registros": [
+   {
+    "titulo": "SIPSA-Net: Shift-Invariant Pan Sharpening with Moving Object Alignment for Satellite Imagery",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2105.02400v1",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "C7_aplicacion_abastecimiento_es",
+  "base": "Semantic Scholar",
+  "consulta": "abastecimiento de alimentos centrales mayoristas Colombia aprendizaje automático interrupción",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "C8_combinacion_exacta",
+  "base": "OpenAlex",
+  "consulta": "(\"distribution regression\" OR \"multiple thresholds\") AND (\"rearrangement\" OR isotonic) AND (\"empirical Bayes\" OR hierarchical) AND (classification OR classifier)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "C8_combinacion_exacta",
+  "base": "arXiv",
+  "consulta": "all:\"distribution regression\" AND all:rearrangement AND all:classification",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "C8_combinacion_exacta",
+  "base": "Semantic Scholar",
+  "consulta": "threshold-smoothed distribution regression ensemble with monotone rearrangement and empirical Bayes group encoding for binary events",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ }
+]

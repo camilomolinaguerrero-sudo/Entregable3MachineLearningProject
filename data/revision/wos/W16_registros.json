@@ -1,0 +1,41 @@
+{
+  "id": "W16",
+  "consulta": "TS=(\"conditional distribution function*\" OR \"conditional CDF\" OR \"conditional distribution estimation\" OR \"cumulative probabilit*\" OR \"multi-threshold classif*\" OR \"multiple threshold classif*\" OR \"quantile classif*\" OR \"threshold-based label*\") AND TS=(\"binary classifier*\" OR \"binary classification*\" OR \"series of binary\" OR \"sequence of binary\" OR \"classifier ensemble*\" OR \"ensemble of classifiers\" OR \"stacked classifier*\") AND TS=(threshold* OR cutoff* OR \"cut-off*\")",
+  "resultados": 4,
+  "url": "https://www.webofscience.com/wos/woscc/summary/102f15b8-44e3-4f05-9287-c2b24251ab00-01d002e7cb/relevance/1",
+  "problema": "",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Locally Weighted Score Estimation for Quantile Classification in Binary Regression Models",
+      "autores": "Rice, JD and Taylor, JMG",
+      "fecha": "Oct 2016",
+      "fuente": "STATISTICS IN BIOSCIENCES, 8(2), pp.333-350",
+      "resumen": "One common use of binary response regression methods is classification based on an arbitrary probability threshold dictated by the particular application. Since this is given to us a priori, it is sensible to incorporate the threshold into our estimation procedure. Specifically, for the linear logistic model, we solve a set of locally weighted score equations, using a kernel-like weight functio"
+    },
+    {
+      "rango": 2,
+      "titulo": "Data driven prediction of uranium in groundwater for environmental radioactivity surveillance",
+      "autores": "Savitri, PP; Bharadwaj, U; (...); Rao, ADP",
+      "fecha": "Sep 28 2026",
+      "fuente": "ENVIRONMENTAL GEOCHEMISTRY AND HEALTH, 48(15)",
+      "resumen": "Uranium occurrence in groundwater is governed by complex hydrogeochemical processes, yet routine monitoring remains analytically demanding. A dataset of 1295 groundwater samples collected from a coastal region of southeastern India during 2016-2025 was used to develop a machine learning framework for predicting uranium concentrations from routinely measured physicochemical parameters. Multi-thr"
+    },
+    {
+      "rango": 3,
+      "titulo": "An IoT-Based Predictive Maintenance Framework Using a Hybrid Deep Learning Model for Smart Industrial Systems",
+      "autores": "Aleran, A; Almukhalfi, H; (...); Noor, TH",
+      "fecha": "2026",
+      "fuente": "CMC-COMPUTERS MATERIALS & CONTINUA, 86(3)",
+      "resumen": "Modern industrial environments require uninterrupted machinery operation to maintain productivity standards while ensuring safety and minimizing costs. Conventional maintenance methods, such as reactive maintenance (i.e., run to failure) or time-based preventive maintenance (i.e., scheduled servicing), prove ineffective for complex systems with many Internet of Things (IoT) devices and sensors"
+    },
+    {
+      "rango": 4,
+      "titulo": "Public Governance and Public Health: Evaluating the Spatial Transferability of Groundwater Fluoride Risk Models in China",
+      "autores": "Wang, YX; Guo, LW; (...); Khan, H",
+      "fecha": "Jul-sep 2026",
+      "fuente": "FLUORIDE, 59(10)",
+      "resumen": "Purpose: Groundwater fluoride contamination is commonly modeled as independently trained binary classifiers evaluated by random cross-validation, an approach that can overstate real-world predictive performance and produce logically inconsistent risk estimates across nested concentration thresholds. Methods: Using 1,787 groundwater samples from five Ningxia, China prefectures (Yinchuan, Wuzhong"
+    }
+  ]
+}

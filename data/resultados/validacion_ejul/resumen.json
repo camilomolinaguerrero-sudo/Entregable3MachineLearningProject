@@ -1,0 +1,22 @@
+{
+  "friedman": {
+    "chi2": 310.5277777777778,
+    "p": 3.410779125936665e-63,
+    "F_ID": 572.9694656488562,
+    "p_F": 4.575554052521827e-180,
+    "p_perm": 9.999000099990002e-05,
+    "N": 48,
+    "k": 8,
+    "CD": 1.5154392248072073,
+    "rangos": {
+      "EJUL (original) | Sin balanceo | Bayesiana (TPE)": 1.3541666666666667,
+      "XGBoost | Sin balanceo | Random Search": 2.0625,
+      "Random Forest | Sin balanceo | Random Search": 3.0208333333333335,
+      "SVM | Sin balanceo | Bayesiana (TPE)": 3.625,
+      "Regresión logística | Sin balanceo | Grid Search": 5.0,
+      "KNN | Sin balanceo | Random Search": 6.416666666666667,
+      "Decision Tree | class_weight | Grid Search": 6.604166666666667,
+      "Naive Bayes | SMOTE | Grid Search": 7.916666666666667
+    }
+  }
+}

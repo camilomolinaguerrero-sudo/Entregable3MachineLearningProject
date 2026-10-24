@@ -1,0 +1,120 @@
+{
+  "id": "W14",
+  "consulta": "TS=(\"freight flow*\" OR \"truck flow*\" OR \"road freight\" OR corridor*) AND TS=(food OR agricultur* OR produce) AND TS=(disruption* OR interruption* OR \"supply shock*\") AND TS=(predict* OR forecast* OR \"machine learning\")",
+  "resultados": 14,
+  "url": "https://www.webofscience.com/wos/woscc/summary/a0ca395d-67e9-4bab-8866-74718e22866d-01cffc85c0/relevance/1",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Demand and supply shocks derived from COVID-19 on the freight transportation system in Mexico",
+      "autores": "Cedillo-Campos, MG; Martner-Peyrelongue, CD; (...); Covarrubias, D",
+      "fecha": "Sep 11 2025",
+      "fuente": "INTERNATIONAL JOURNAL OF LOGISTICS MANAGEMENT, 36(5), pp.1355-1384",
+      "resumen": "Purpose - This paper's purpose is twofold. First, based on a case study, it aims to comprehend the consequences of COVID-19 on the demand and supply shocks of the freight transportation system in Mexico. Second, it seeks to provide an integrated perspective of four transportation modes, which would help prepare public policies for future global pandemics. Design/methodology/approach - Ana"
+    },
+    {
+      "rango": 2,
+      "titulo": "Predicting pedestrian-level melanopic illuminance from multi-source urban data with explainable machine learning",
+      "autores": "Hong, WJ; Kong, Z; (...); Wu, XY",
+      "fecha": "Mar 1 2026",
+      "fuente": "BUILDING AND ENVIRONMENT, 291",
+      "resumen": "Urban nighttime illumination has been associated with circadian disruption in prior research, potentially reducing sleep quality and thereby affecting residents' physical and mental health under certain conditions. Most studies on outdoor artificial light at night (ALAN) focus on photometric indicators, neglecting city-scale circadian-effective measures. This study maps pedestrian-scale nocturn"
+    },
+    {
+      "rango": 3,
+      "titulo": "Disruption in ground transportation: Natural disasters and disintegration of local food markets",
+      "autores": "Nino, G",
+      "fecha": "May 2026",
+      "fuente": "FOOD POLICY, 140",
+      "resumen": "Spatial integration between production regions and consumer markets is essential for price efficiency, yet even a single road blockage can break that link and push prices up overnight. Climate change is expected to bring more frequent natural disasters such as flash floods and landslides, turning these small but recurring blockages into a growing threat. Leveraging a novel dataset linking 230,0"
+    },
+    {
+      "rango": 4,
+      "titulo": "Advancing Flood Disaster Risk Mapping Through Multi-Sensor Fusion and Machine Learning",
+      "autores": "Sun, JJ; Aslam, RW; (...); Said, Y",
+      "fecha": "Mar 24 2026",
+      "fuente": "TRANSACTIONS IN GIS, 30(2)",
+      "resumen": "Flood disaster risk assessment in large river basins remains a critical challenge due to sensor limitations, cloud contamination, and insufficient integration of hazard, exposure, and vulnerability indicators. This study presents an AI-driven multi-sensor flood risk mapping framework applied to the extreme 2020 flood event, integrating Synthetic Aperture Radar (SAR), optical remote sensing indi"
+    },
+    {
+      "rango": 5,
+      "titulo": "Link priority index for urban road networks: a data-driven framework for continuous network design problem",
+      "autores": "Mohamed, A; Sonbaty, A; (...); Owais, M",
+      "fecha": "Dec 15 2026",
+      "fuente": "EXPERT SYSTEMS WITH APPLICATIONS, 331",
+      "resumen": "Urban road networks in megacities face increasing vulnerability to congestion, which can severely impair mobility and accessibility. Assessing the resilience of such systems calls for solving the continuous network design problem (CNDP), in which limited investment or protection resources must be allocated across links to preserve network performance under stress. In this context, a central tas"
+    },
+    {
+      "rango": 6,
+      "titulo": "Forecasting liquefaction hazard from Seattle fault zone earthquakes: impacts on a major metropolitan area",
+      "autores": "Rasanen, RA",
+      "fecha": "Sep 2025",
+      "fuente": "NATURAL HAZARDS, 121(16), pp.19117-19149",
+      "resumen": "The Seattle Fault Zone (SFZ), a 70-km-long thrust fault system that passes directly beneath Seattle, Washington, poses a significant seismic hazard to the Puget Sound region due to its proximity to dense urban infrastructure. While other coseismic hazards, such as tsunamis, landslides, and structural damage, have been forecasted for SFZ earthquakes and garnered considerable attention, soil liqu"
+    },
+    {
+      "rango": 7,
+      "titulo": "Modeling seismic impacts on bridge networks and accessibility: a scenario-based framework for resilient transportation systems",
+      "autores": "Abaza, OA and Hegland, M",
+      "fecha": "Mar 2026",
+      "fuente": "TRANSPORTATION RESEARCH INTERDISCIPLINARY PERSPECTIVES, 36",
+      "resumen": "Bridges serve as critical links in regional transportation networks, where seismic disruption can generate cascading impacts on mobility, accessibility, and emergency response. This study develops a transferable, scenario-based modeling framework to quantify how varying earthquake magnitudes influence bridge performance and regional connectivity. Structural, geotechnical, and seismic indicators"
+    },
+    {
+      "rango": 8,
+      "titulo": "An examination of the complex climate risks and management approaches confronting the Northeast Tiger and Leopard National Park in the future",
+      "autores": "Wu, Y; Liu, X and Zhao, ZQ",
+      "fecha": "May 26 2026",
+      "fuente": "SCIENTIFIC REPORTS, 16(1)",
+      "resumen": "The Northeast Tiger and Leopard National Park is crucial for global biodiversity protection; yet, its environment is under considerable threat from climate change. The absence of a comprehensive grasp of future risk parameters by area managers may impede the development of effective adaptation solutions. This study utilized a \"contrasting futures\" climatic concept to tackle the issue of \"decisi"
+    },
+    {
+      "rango": 9,
+      "titulo": "Collision risk management for non-cooperative UAS traffic in airport-restricted airspace with alert zones based on probabilistic conflict map",
+      "autores": "Wang, CHJ; Tan, SK and Low, KH",
+      "fecha": "Dec 2019",
+      "fuente": "TRANSPORTATION RESEARCH PART C-EMERGING TECHNOLOGIES, 109, pp.19-39",
+      "resumen": "Recent years have seen an increase in reported unmanned aerial systems (UAS) incursion into terminal airspace, likely due to the ease of access to recreational UAS to the general public with minimal understanding of aviation regulations. Such incursions often lead to extensive airport shutdowns due to safety concern and could cause a cascading disruption to airline operations throughout the reg"
+    },
+    {
+      "rango": 10,
+      "titulo": "A Multi-Objective MATLAB-FEM Framework for Sustainable Impressed-Current Cathodic Protection of DC-Electrified Railway Infrastructure",
+      "autores": "Aussawamaykin, A and Pao-la-or, P",
+      "fecha": "May 24 2026",
+      "fuente": "SUSTAINABILITY, 18(11)",
+      "resumen": "Stray-current corrosion from DC-electrified railways drives premature failure of buried metallic infrastructure (pipelines, foundations, tunnel reinforcement), causing resource waste, repair-driven carbon emissions and service disruptions that undermine the sustainability of urban transit corridors. Conventional impressed-current cathodic protection (ICCP) design relies on uniform-anode rules o"
+    },
+    {
+      "rango": 11,
+      "titulo": "Option-C Verified Semantic Digital Twins for Decarbonized, Pressure-Reliable Central Business District Hospitals",
+      "autores": "Wei, Z",
+      "fecha": "Mar 10 2026",
+      "fuente": "BUILDINGS, 16(6)",
+      "resumen": "Central business district (CBD) hospitals must sustain reliable pressure relationships in critical rooms while reducing whole-facility carbon under tight space and disruption constraints. We developed an ontology-grounded semantic digital twin that normalizes building automation system (BAS) and building management system (BMS) telemetry into a unified semantic store consistent with Brick Schem"
+    },
+    {
+      "rango": 12,
+      "titulo": "Large-scale flood susceptibility mapping along major tributaries of the Nile River system in Sudan using convolutional neural network",
+      "autores": "Mohammed, MAA; Eltijani, A; (...); Szucs, P",
+      "fecha": "Jun 20 2026",
+      "fuente": "SCIENTIFIC REPORTS, 16(1)",
+      "resumen": "Every fall season, Sudan experiences devastating floods that result in significant fatalities, displacement of populations, and severe disruptions to agricultural and economic activities. The 2020 floods were particularly catastrophic, reaching the highest Nile River levels in over a century and affecting more than 800,000 people. To the best of the authors' knowledge, this study represents one"
+    },
+    {
+      "rango": 13,
+      "titulo": "Historical data to recover the distribution of freshwater fishes across 1950s Japan",
+      "autores": "Ogawa, K; Moriyama, T; (...); Fukuda, S",
+      "fecha": "Jan 2026",
+      "fuente": "BIOLOGICAL CONSERVATION, 313",
+      "resumen": "Freshwater ecosystems face severe anthropogenic threats, making historical data invaluable for damage assessment and conservation planning. We reconstructed spatial distributions of four culturally significant freshwater fish species, eel, ayu, bitterling, and catfish, across 1950s Japan. To obtain 1950s fish occurrence data, elderly citizens contributed childhood recollections through a nation"
+    },
+    {
+      "rango": 14,
+      "titulo": "High-resolution remote sensing-driven water management in semi-arid basins: A CNN-Attention-SWAT fusion framework for the Fen River",
+      "autores": "Liu, JW; Zhang, XQ; (...); Wang, KM",
+      "fecha": "Dec 2025",
+      "fuente": "SCIENCE OF REMOTE SENSING, 12",
+      "resumen": "The Fen River Basin (FRB), a critical ecological corridor in China's Yellow River Basin, faces escalating water-security challenges under climate change and intensive human activities. Pressures include concentrated precipitation patterns, severe agricultural non-point source pollution (contributing >60 % nitrogen loads), groundwater overdraft, and increasing river flow interruptions (67 days/y"
+    }
+  ]
+}

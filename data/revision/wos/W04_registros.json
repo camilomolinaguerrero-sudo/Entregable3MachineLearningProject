@@ -1,0 +1,32 @@
+{
+  "id": "W04",
+  "consulta": "TS=(\"monotone rearrangement\" OR \"isotonic regression\" OR \"non-crossing\" OR \"quantile crossing\") AND TS=(\"empirical Bayes\" OR \"hierarchical shrinkage\" OR \"target encoding\" OR \"hierarchical Bayes*\") AND TS=(classif* OR \"early warning\" OR forecast* OR predict*)",
+  "resultados": 3,
+  "url": "https://www.webofscience.com/wos/woscc/summary/a176b98d-135e-4e2c-85e7-18da08742de8-01cffc736f/relevance/1",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Reliability modelling of wheel wear deterioration using conditional bivariate gamma processes and Bayesian hierarchical models",
+      "autores": "Dai, XL; Qu, S; (...); Wu, PB",
+      "fecha": "Oct 2022",
+      "fuente": "RELIABILITY ENGINEERING & SYSTEM SAFETY, 226",
+      "resumen": "Wear of wheel profiles is a common degradation process that significantly impacts the reliability of wheelsets. In this study, a conditional bivariate Gamma process is constructed to characterize wheel wear, and hierarchical Bayesian models are employed to identify the differences in wear between each vehicle within a train. Before computation, the field data are modified by isotonic regression"
+    },
+    {
+      "rango": 2,
+      "titulo": "Monotone false discovery rate",
+      "autores": "Won, JH; Lim, J; (...); Kim, K",
+      "fecha": "Apr 2014",
+      "fuente": "STATISTICS & PROBABILITY LETTERS, 87, pp.86-93",
+      "resumen": "This paper proposes a procedure to obtain monotone estimates of both the local and the tail false discovery rates that arise in large-scale multiple testing. The proposed monotonization is asymptotically optimal for controlling the false discovery rate and also has many attractive finite-sample properties. (C) 2013 Elsevier B.V. All rights reserved."
+    },
+    {
+      "rango": 3,
+      "titulo": "Permuted and Unlinked Monotone Regression in Rd: an approach based on mixture modeling and optimal transport",
+      "autores": "Slawski, M and Sen, B",
+      "fecha": "2024",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 25, pp.1-57",
+      "resumen": "Suppose that we have a regression problem with response variable Y is an element of R d and predictor X is an element of R (d) , for d > 1. In permuted or unlinked regression we have access to separate unordered data on X and Y , as opposed to data on ( X, Y ) -pairs in usual regression. So far in the literature the case d = 1 has received attention, see e.g., the recent papers by Rigollet and"
+    }
+  ]
+}

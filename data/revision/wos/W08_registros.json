@@ -1,0 +1,8 @@
+{
+  "id": "W08",
+  "consulta": "TS=(\"distribution regression\" OR \"multiple thresholds\" OR \"threshold ensemble\" OR \"cumulative binary\") AND TS=(\"empirical Bayes\" OR hierarchical OR shrinkage) AND TS=(rearrangement OR isotonic OR monoton*)",
+  "resultados": 0,
+  "url": "https://www.webofscience.com/wos/woscc/advanced-search",
+  "problema": "Sin errores de sintaxis. WoS Core Collection respondió 'Your search found no results' (0 registros). Confirmado de nuevo el 2026-10-23: el editor traía restos de un intento previo, se vació con 'Clear', se escribió la consulta exacta (verificada en el textarea) y se pulsó Search; el resultado volvió a ser 0.",
+  "registros": []
+}

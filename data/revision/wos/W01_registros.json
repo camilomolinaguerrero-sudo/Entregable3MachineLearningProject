@@ -1,0 +1,10 @@
+{
+  "id": "W01",
+  "consulta": "TS=(\"distribution regression\" OR \"distributional regression\" OR \"threshold ensemble\" OR \"multiple thresholds\" OR \"conditional distribution\") AND TS=(\"food supply\" OR \"food distribution\" OR \"wholesale market*\" OR \"supply chain*\") AND TS=(disruption* OR interruption* OR shortage*)",
+  "resultados": 0,
+  "url": "https://www.webofscience.com/wos/woscc/advanced-search",
+  "problema": "Sin errores de sintaxis. Web of Science Core Collection respondió 'Your search found no results' (N = 0); resultado confirmado en una segunda ejecución independiente. El recuadro Query Preview traía una consulta previa de otra sesión; se limpió con el botón 'Clear search query' antes de escribir la consulta exacta.",
+  "fecha_busqueda": "2026-10-23",
+  "base": "Web of Science Core Collection (Editions: All), acceso Colciencias Consortium",
+  "registros": []
+}

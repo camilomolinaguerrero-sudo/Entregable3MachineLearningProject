@@ -1,0 +1,303 @@
+{
+ "filas": [
+  {
+   "id": "W15",
+   "consulta": "TS=(\"extended logistic regression\" OR \"threshold exceedance\" OR \"exceedance probabilit*\" OR \"probability of exceedance\") AND TS=(\"multiple threshold*\" OR \"threshold-specific\" OR \"adjacent threshold*\" OR \"neighbo*ring threshold*\" OR \"non-crossing\" OR monoton* OR isotonic OR \"coherent probabilit*\" OR \"full predictive distribution\")",
+   "proposito": "Familia del mecanismo en pronóstico probabilístico (meteorología e hidrología): la regresión logística extendida (Wilks 2009; Messner et al. 2014) mete el umbral como covariable para obtener probabilidades coherentes entre umbrales vecinos. Es el antecedente metodológico más cercano a 'combinar clasificadores en umbrales vecinos + monotonía' y ninguna cadena previa lo cubre.",
+   "resultados": 28,
+   "revisados": 28,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "A multiple threshold method for fitting the generalized Pareto distribution to rainfall time series",
+     "autores": "Deidda, R",
+     "fecha": "2010",
+     "fuente": "HYDROLOGY AND EARTH SYSTEM SCIENCES",
+     "clase": "cercano_metodo",
+     "motivo": "Ajusta la distribución de Pareto generalizada combinando estimaciones en varios umbrales de la lluvia diaria, un parentesco débil con el ensamble sobre umbrales vecinos aplicado a la hidrología; no emplea clasificadores."
+    },
+    {
+     "titulo": "Landslide predictions through combined rainfall threshold models",
+     "autores": "Guzzetti, F; Melillo, M and Mondini, AC",
+     "fecha": "Jan 2025",
+     "fuente": "LANDSLIDES",
+     "clase": "cercano_metodo",
+     "motivo": "Compara y combina varios modelos de umbral de lluvia para predecir un evento binario (deslizamientos); la afinidad es débil porque los umbrales están sobre la covariable y no sobre la variable respuesta."
+    },
+    {
+     "titulo": "Regional Analysis of the Dependence of Peak-Flow Quantiles on Climate with Application to Adjustment to Climate Trends",
+     "autores": "Over, T; Marti, M and Podzorski, H",
+     "fecha": "May 14 2025",
+     "fuente": "HYDROLOGY",
+     "clase": "cercano_metodo",
+     "motivo": "Modela regionalmente cómo dependen del clima los cuantiles de caudal pico, un afín lejano de la regresión distribucional (cuantiles condicionales a covariables) aplicado a la hidrología."
+    }
+   ],
+   "observacion": "La consulta W15 trajo sobre todo trabajos de probabilidad de excedencia en ingeniería estructural, oceanografía, hidrología y extremos climáticos. Ninguno trata la regresión logística extendida ni la cadena agroalimentaria, así que ninguno es relevante ni cercano_aplicacion. Los más próximos al EJUL, solo por parentesco metodológico débil, son Deidda (2010), que combina estimaciones en múltiples umbrales para ajustar la GPD, y Guzzetti et al. (2025), que combinan modelos de umbral de lluvia para predecir un evento binario. / La consulta W15 trajo sobre todo estudios de probabilidades de excedencia y fiabilidad en ingeniería estructural y sísmica, oceanografía, hidrología y clima. Ninguno usa la regresión logística extendida y ninguno trata el abastecimiento de alimentos, así que no hay registros relevantes ni cercanos por aplicación. El más cercano al EJUL es [4] (Guzzetti et al., 2025), que combina modelos de umbral de lluvia para predecir deslizamientos como evento binario, aunque solo es un pariente lejano por el método.",
+   "problema": "Sin error de sintaxis. El editor traía una consulta previa ya cargada y la borré con el botón \"Clear search query\" antes de escribir. La pestaña estaba en segundo plano y la página solo dibujaba los registros que quedaban a la vista, así que los cargué desplazando la página por pasos y tomando capturas de pantalla. Se extrajeron los 28 registros. Archivo guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W15_registros.json"
+  },
+  {
+   "id": "W18",
+   "consulta": "TS=(\"market arrival*\" OR \"commodity arrival*\" OR \"produce arrival*\" OR \"mandi arrival*\" OR \"arrival volume*\" OR \"wholesale volume*\" OR \"food flow*\" OR \"supply shortfall*\" OR \"food supply shortfall*\" OR \"supply interruption*\") AND TS=(food OR agricultur* OR vegetable* OR fruit* OR crop* OR commodit*) AND TS=(predict* OR forecast* OR \"early warning\" OR classif* OR \"machine learning\" OR anomal*)",
+   "proposito": "Sinónimos del fenómeno en inglés: llegadas o volúmenes a mercados mayoristas (por ejemplo, llegadas a mandis/APMC en India), flujos de alimentos y caídas de oferta. W03, W13 y W14 usaron disruption/shortage y omitieron 'arrivals', que es el término de la literatura sobre volúmenes en centrales.",
+   "resultados": 36,
+   "revisados": 36,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Food flows between counties in the United States",
+     "autores": "Lin, XW; Ruess, PJ; (...); Konar, M",
+     "fecha": "Aug 2019",
+     "fuente": "ENVIRONMENTAL RESEARCH LETTERS 14(8)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Estima flujos de alimentos entre condados de EE. UU. para evaluar cadenas de suministro y seguridad alimentaria; no usa clasificadores por umbrales ni predice un evento binario."
+    },
+    {
+     "titulo": "Quantifying the foodshed: a systematic review of urban food flow and local food self-sufficiency research",
+     "autores": "Schreiber, K; Hickey, GM; (...); MacDonald, GK",
+     "fecha": "Feb 2021",
+     "fuente": "ENVIRONMENTAL RESEARCH LETTERS 16(2)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Revisión sistemática de flujos urbanos de alimentos y autosuficiencia local; trata el abastecimiento de las ciudades sin ningún método de la familia del EJUL."
+    },
+    {
+     "titulo": "Anatomy of an Urban Food Supply in the Global South-The Case of Vegetable Supply to Hanoi City",
+     "autores": "Pham, HV; Hoang, VQ and Nguyen, TTL",
+     "fecha": "Jun 2026",
+     "fuente": "RESEARCH ON WORLD AGRICULTURAL ECONOMY 7(2), pp.240-256",
+     "clase": "cercano_aplicacion",
+     "motivo": "Cuantifica el abastecimiento de hortalizas a Hanói (mercados y orígenes) con datos empíricos descriptivos, sin modelos de umbrales ni clasificación."
+    },
+    {
+     "titulo": "Resiliency within the Socio-Ecological System of a Large Food Bank Network: Preparing, mitigating, responding, and recovering from Hurricane Florence",
+     "autores": "Hasnain, T; Walton, TN; (...); Mpere, E",
+     "fecha": "Apr 1 2023",
+     "fuente": "INTERNATIONAL JOURNAL OF DISASTER RISK REDUCTION 88",
+     "clase": "cercano_aplicacion",
+     "motivo": "Analiza la resiliencia de una red de bancos de alimentos ante el huracán Florence (una disrupción de la distribución de alimentos) desde un enfoque de sistema socioecológico, sin modelos de umbrales."
+    },
+    {
+     "titulo": "The impact of foreign trade policy on food independence for separate commodity groups: Methodological aspects",
+     "autores": "Prokopyev, MG",
+     "fecha": "Oct-dec 2022",
+     "fuente": "EKONOMIKA I MATEMATICESKIE METODY-ECONOMICS AND MATHEMATICAL METHODS 58(4), pp.45-55",
+     "clase": "cercano_aplicacion",
+     "motivo": "Propone herramientas para medir el efecto de la política comercial sobre la autosuficiencia alimentaria por grupos de productos; es seguridad alimentaria con otro tipo de método."
+    },
+    {
+     "titulo": "Time series analysis and forecasting of kinnow (Citrus reticulata) arrivals and prices in Himachal Pradesh",
+     "autores": "Thakur, V; Sharma, A; (...); Verma, S",
+     "fecha": "Jun 2026",
+     "fuente": "INDIAN JOURNAL OF AGRICULTURAL SCIENCES 96(6), pp.811-818",
+     "clase": "cercano_aplicacion",
+     "motivo": "Analiza y pronostica con series de tiempo las llegadas y los precios del kinnow en mercados de Himachal Pradesh; es el fenómeno de volúmenes en mercados con otro método."
+    },
+    {
+     "titulo": "Forecasting long range dependent time series with exogenous variable using ARFIMAX model",
+     "autores": "Sarkar, KP; Singh, KN; (...); Gurung, B",
+     "fecha": "Jul 2020",
+     "fuente": "INDIAN JOURNAL OF AGRICULTURAL SCIENCES 90(7), pp.1302-1305",
+     "clase": "cercano_aplicacion",
+     "motivo": "Modelo ARFIMAX con variable exógena para pronosticar precios agrícolas; es pronóstico continuo, no clasificación por umbrales."
+    },
+    {
+     "titulo": "COVID-19: TREND ANALYSIS FOR MARKET ARRIVAL OF GREEN GRAM IN INDIA",
+     "autores": "Saroha, K; Dagar, V; (...); Zakaria, A",
+     "fecha": "2020",
+     "fuente": "INTERNATIONAL JOURNAL OF AGRICULTURAL AND STATISTICAL SCIENCES 16, pp.1017-1031",
+     "clase": "cercano_aplicacion",
+     "motivo": "Analiza tendencias de la caída de las llegadas de frijol mungo a los mercados indios por la COVID-19; es el fenómeno más próximo, pero con análisis de tendencia y sin predicción binaria."
+    },
+    {
+     "titulo": "Temporal Analysis of Tomato Prices and Arrivals in Karnataka: Insights from SARIMA Model",
+     "autores": "Suresh, P; Priya, KL; (...); Mathew, M",
+     "fecha": "Sep 2024",
+     "fuente": "INDIAN JOURNAL OF ECONOMICS AND DEVELOPMENT 20(3)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Modela con SARIMA los precios y las llegadas de tomate en mercados de Karnataka; son volúmenes mayoristas pronosticados con series de tiempo."
+    },
+    {
+     "titulo": "Machine Learning Algorithm for Estimating Volatile Potato Market Prediction",
+     "autores": "Dash, A; Mishra, P; (...); Matuka, A",
+     "fecha": "Jan 28 2026",
+     "fuente": "POTATO RESEARCH 69(2)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica con aprendizaje automático los precios y las llegadas de papa al mercado de Banki (Odisha); es regresión continua, no clasificadores por umbrales."
+    },
+    {
+     "titulo": "ACCURACY OF DIFFERENT PRICE FORECASTING MODELS FOR MAIZE IN NIMBAHERA MARKET OF RAJASTHAN",
+     "autores": "Sharma, H and Burark, SS",
+     "fecha": "2016",
+     "fuente": "INTERNATIONAL JOURNAL OF AGRICULTURAL AND STATISTICAL SCIENCES 12, pp.95-101",
+     "clase": "cercano_aplicacion",
+     "motivo": "Compara modelos de pronóstico del precio del maíz en un mercado de Rajastán, con referencia a las fluctuaciones de las llegadas; usa métodos clásicos de series de tiempo."
+    },
+    {
+     "titulo": "Weather shocks, traders' expectations, and food prices",
+     "autores": "Letta, M; Montalbano, P and Pierre, G",
+     "fecha": "May 2022",
+     "fuente": "AMERICAN JOURNAL OF AGRICULTURAL ECONOMICS 104(3), pp.1100-1119",
+     "clase": "cercano_aplicacion",
+     "motivo": "Estima con datos de panel el efecto de los choques climáticos y de las expectativas de los comerciantes sobre los precios mayoristas de alimentos en India; es econometría, no umbrales."
+    },
+    {
+     "titulo": "A Controlled Empirical Evaluation of Input Design and Temporal Architectures for Multi-Horizon Forecasting of Onion Wholesale Prices",
+     "autores": "Yang, J; Park, Y and Seong, JT",
+     "fecha": "2026",
+     "fuente": "IEEE ACCESS 14, pp.129085-129102",
+     "clase": "cercano_aplicacion",
+     "motivo": "Evaluación controlada de entradas y arquitecturas temporales para pronosticar a varios horizontes los precios mayoristas de la cebolla en Corea; es regresión continua."
+    }
+   ],
+   "observacion": "La consulta W18 trajo sobre todo ruido por la ambigüedad de «food flow» (reología, hormigas, flujo de fluidos). La parte útil es literatura india de series de tiempo sobre llegadas y precios en mercados mayoristas (ARIMA/SARIMA/ML). Ningún registro usa clasificadores por umbrales, regresión distribucional, reordenamiento ni Bayes empírico jerárquico. Los más cercanos al EJUL, solo por la aplicación, son [23] (caída de llegadas de frijol mungo por la COVID-19) y [27] (aprendizaje automático para llegadas y precios de papa). / La consulta devolvió mucho ruido por la polisemia de 'food flow' (reología, mecánica de fluidos, hormigas). La parte útil son estudios indios y coreanos de llegadas y precios a mercados mayoristas con series de tiempo (SARIMA, ARFIMAX, ML) y trabajos descriptivos de flujos urbanos de alimentos; ninguno es relevante ni usa la familia de umbrales. El más cercano al EJUL por fenómeno es [23], que documenta la caída de las llegadas de garbanzo verde por la COVID-19; [27] es el más cercano por tarea, porque pronostica llegadas de papa con ML, aunque en regresión y no como evento binario.",
+   "problema": "Sin errores de sintaxis. El editor traía una consulta previa: se limpió con \"Clear\" antes de escribir y se verificó el texto exacto. Los registros 2, 3, 13, 21 y 22 no se renderizaron en la primera extracción (carga diferida) y se recuperaron desplazándolos a la vista. Archivo guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W18_registros.json"
+  },
+  {
+   "id": "W16",
+   "consulta": "TS=(\"conditional distribution function*\" OR \"conditional CDF\" OR \"conditional distribution estimation\" OR \"cumulative probabilit*\" OR \"multi-threshold classif*\" OR \"multiple threshold classif*\" OR \"quantile classif*\" OR \"threshold-based label*\") AND TS=(\"binary classifier*\" OR \"binary classification*\" OR \"series of binary\" OR \"sequence of binary\" OR \"classifier ensemble*\" OR \"ensemble of classifiers\" OR \"stacked classifier*\") AND TS=(threshold* OR cutoff* OR \"cut-off*\")",
+   "proposito": "Sinónimos de la familia que no aparecen en W01, W08 ni W09: estimar F(c|x) con una serie de clasificadores binarios en varios cortes, clasificación multiumbral o por cuantiles y etiquetas definidas por umbral. Así se recupera la línea econométrica de distribution regression (Foresi y Peracchi; Chernozhukov, Fernández-Val y Melly), que el filtro de W09 pudo dejar fuera.",
+   "resultados": 4,
+   "revisados": 4,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Locally Weighted Score Estimation for Quantile Classification in Binary Regression Models",
+     "autores": "Rice, JD and Taylor, JMG",
+     "fecha": "Oct 2016",
+     "fuente": "STATISTICS IN BIOSCIENCES, 8(2), pp.333-350",
+     "clase": "cercano_metodo",
+     "motivo": "Usa ecuaciones de score con pesos locales tipo núcleo alrededor de un umbral en regresión binaria, una idea afín a la ponderación local en la dirección del umbral del EJUL; sin embargo, el umbral está sobre la probabilidad y no sobre una variable continua, y la aplicación es biomédica, no alimentaria."
+    },
+    {
+     "titulo": "Data driven prediction of uranium in groundwater for environmental radioactivity surveillance",
+     "autores": "Savitri, PP; Bharadwaj, U; (...); Rao, ADP",
+     "fecha": "Sep 28 2026",
+     "fuente": "ENVIRONMENTAL GEOCHEMISTRY AND HEALTH, 48(15)",
+     "clase": "cercano_metodo",
+     "motivo": "Dicotomiza la concentración continua de uranio en aguas subterráneas en varios umbrales y entrena clasificadores para cada corte (clasificación multiumbral), lo que es afín al EJUL, pero en una aplicación ambiental."
+    },
+    {
+     "titulo": "Public Governance and Public Health: Evaluating the Spatial Transferability of Groundwater Fluoride Risk Models in China",
+     "autores": "Wang, YX; Guo, LW; (...); Khan, H",
+     "fecha": "Jul-sep 2026",
+     "fuente": "FLUORIDE, 59(10)",
+     "clase": "cercano_metodo",
+     "motivo": "Entrena clasificadores binarios en umbrales anidados de la concentración de fluoruro y aborda la incoherencia lógica entre ellos, es decir, la monotonía entre umbrales, lo que lo acerca mucho a la familia del EJUL, aunque se aplica al riesgo de contaminación de aguas subterráneas y no a interrupciones del abastecimiento alimentario."
+    }
+   ],
+   "observacion": "La consulta W16 devolvió sobre todo trabajos ambientales que aplican clasificación multiumbral a concentraciones de contaminantes en aguas subterráneas (uranio, fluoruro), un artículo estadístico de clasificación con umbral de probabilidad y uno de mantenimiento predictivo; ninguno trata el abastecimiento alimentario, así que ninguno es relevante. El más cercano al EJUL es [4] (Wang et al., 2026), que entrena clasificadores en umbrales anidados de una variable continua y corrige la incoherencia entre ellos, algo análogo a la proyección isotónica del EJUL. / W16 devolvió sobre todo trabajos de clasificación binaria o multiumbral sobre variables ambientales continuas (uranio y fluoruro en aguas subterráneas), un artículo de bioestadística sobre estimación local en un umbral y uno de mantenimiento industrial; ninguno trata el abastecimiento de alimentos. El más cercano al EJUL es [4], que también entrena clasificadores en umbrales anidados de una variable continua y aborda la incoherencia entre ellos.",
+   "problema": "Sin error de sintaxis. El recuadro de consulta traía texto de otra sesión; se vació con \"Clear\" antes de escribir. Los registros solo se renderizaron al desplazarlos a la vista y tomar captura (pestaña en segundo plano). JSON guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W16_registros.json"
+  },
+  {
+   "id": "W19",
+   "consulta": "TS=(\"abastecimiento de alimentos\" OR \"abastecimiento alimentario\" OR \"plazas de mercado\" OR \"plaza de mercado\" OR \"central de abastos\" OR \"centrales de abasto*\" OR \"mercados mayoristas\" OR \"flujos de alimentos\" OR \"acopio de alimentos\" OR Corabastos) AND TS=(predicci* OR pronostic* OR pronóstic* OR clasificaci* OR \"alerta temprana\" OR \"aprendizaje automatico\" OR \"aprendizaje automático\" OR interrupci* OR desabastec* OR \"series de tiempo\" OR \"series temporales\")",
+   "proposito": "Sinónimos del fenómeno en español (plazas de mercado, centrales de abasto, flujos de alimentos, Corabastos) cruzados con predicción o interrupción. W05 exigía términos de ML o de umbral y W06 iba en inglés o se limitaba a SIPSA; esta cadena recoge trabajos latinoamericanos en revistas ESCI/SciELO que pronostican abastecimiento.",
+   "resultados": 0,
+   "revisados": 0,
+   "relevantes": 0,
+   "cercanos": [],
+   "observacion": "Sin resultados en WoS.",
+   "problema": "Sin errores de sintaxis. WoS mostró 'Your search found no results' (0 resultados); la página permaneció en advanced-search sin generar URL de resumen. Confirmado en un segundo intento (consulta verificada carácter a carácter en el editor antes de pulsar Search). Fecha de consulta: 2026-10-23."
+  },
+  {
+   "id": "W17",
+   "consulta": "TS=(\"soft label*\" OR \"label smoothing\" OR \"auxiliary regression\" OR \"auxiliary target*\" OR \"classification via regression\" OR \"regression-based classification\" OR \"regression versus classification\" OR \"regression vs classification\") AND TS=(\"continuous outcome*\" OR \"continuous target*\" OR \"continuous response*\" OR \"underlying continuous\" OR \"latent continuous\") AND TS=(threshold* OR dichotom* OR binari* OR cutoff* OR \"cut-off*\")",
+   "proposito": "Ángulo de la tarea: usar la variable continua R para clasificar un evento definido por umbral (etiquetas suaves, objetivo auxiliar continuo, regresión frente a clasificación directa). Un evaluador lo citaría como alternativa directa a EJUL y ni W11 (LUPI) ni W12 (dicotomización) lo cubren con estos términos.",
+   "resultados": 0,
+   "revisados": 0,
+   "relevantes": 0,
+   "cercanos": [],
+   "observacion": "Sin resultados en WoS.",
+   "problema": "No hay errores de sintaxis. El editor de consultas todavía tenía la consulta de otra búsqueda, así que lo vacié con \"Clear search query\", escribí la consulta exacta (lo comprobé leyendo el valor del textarea) y pulsé Search. WoS respondió \"Your search found no results\" (0 registros). La página siguió en advanced-search, así que no hay URL de resultados. El resultado coincide con el del intento anterior. El archivo se guardó en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W17_registros.json"
+  },
+  {
+   "id": "W20",
+   "consulta": "TS=(\"target encoding\" OR \"impact coding\" OR \"mean encoding\" OR \"likelihood encoding\" OR \"high-cardinality categorical*\" OR \"high cardinality categorical*\") AND TS=(hierarch* OR nested OR multilevel OR \"empirical Bayes\" OR shrinkage OR \"mixed model*\") AND TS=(classif* OR boosting OR \"random forest*\" OR predict*)",
+   "proposito": "Componente jerárquico de EJUL por separado. En W04 'target encoding' iba unido a rearrangement/isotonic, combinación que no aparece en la literatura. Esta cadena busca la codificación Bayes empírica jerárquica de categóricas de alta cardinalidad (Micci-Barreca 2001; codificación por GLMM de Pargent et al. 2022) para citarla como antecedente del componente y acotar la novedad a la combinación.",
+   "resultados": 8,
+   "revisados": 8,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Machine Learning with High-Cardinality Categorical Features in Actuarial Applications",
+     "autores": "Avanzi, B; Taylor, G; (...); Wong, BR",
+     "fecha": "May 2024",
+     "fuente": "ASTIN BULLETIN-THE JOURNAL OF THE INTERNATIONAL ACTUARIAL ASSOCIATION, 54(2), pp.213-238",
+     "clase": "cercano_metodo",
+     "motivo": "Propone GLMMNet, que codifica categóricas de alta cardinalidad con efectos aleatorios (contracción tipo Bayes empírico) en datos actuariales; es un método afín al componente jerárquico del EJUL, pero sin umbrales y sin relación con el abastecimiento de alimentos."
+    },
+    {
+     "titulo": "Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features",
+     "autores": "Pargent, F; Pfisterer, F; (...); Bischl, B",
+     "fecha": "Nov 2022",
+     "fuente": "COMPUTATIONAL STATISTICS, 37(5), pp.2671-2692",
+     "clase": "cercano_metodo",
+     "motivo": "Pargent et al. (2022) comparan la codificación por objetivo regularizada (incluida la codificación por GLMM) para categóricas de alta cardinalidad; es el antecedente directo del componente Bayes empírico del EJUL, en un contexto de evaluación general y sin umbrales."
+    },
+    {
+     "titulo": "A robust neural network with random effects for subject-specific prediction of clustered count data",
+     "autores": "Lee, H; Ha, ID; (...); Lee, Y",
+     "fecha": "Aug 2026",
+     "fuente": "STATISTICAL METHODS IN MEDICAL RESEARCH, 35(8), pp.1637-1657",
+     "clase": "cercano_metodo",
+     "motivo": "Usa una red neuronal con efectos aleatorios y verosimilitud jerárquica para tratar categóricas de alta cardinalidad en datos de conteo agrupados biomédicos; es una contracción jerárquica afín, aplicada a otro dominio y a otra tarea."
+    },
+    {
+     "titulo": "High-cardinality categorical covariates in network regressions",
+     "autores": "Richman, R and Wüthrich, MV",
+     "fecha": "Nov 2024",
+     "fuente": "JAPANESE JOURNAL OF STATISTICS AND DATA SCIENCE, 7(2), pp.921-965",
+     "clase": "cercano_metodo",
+     "motivo": "Richman y Wüthrich estudian cómo incluir covariables categóricas de alta cardinalidad en regresiones con redes neuronales (embeddings y efectos aleatorios); es una técnica afín a la codificación jerárquica, aplicada al ámbito actuarial."
+    },
+    {
+     "titulo": "A Nested GLM Framework with Neural Network Encoding and Spatially Constrained Clustering in Non-Life Insurance Ratemaking",
+     "autores": "Wang, RA; Shi, HL and Cao, JG",
+     "fecha": "Jul 3 2025",
+     "fuente": "NORTH AMERICAN ACTUARIAL JOURNAL, 29(3), pp.645-661",
+     "clase": "cercano_metodo",
+     "motivo": "Codifica con redes neuronales categóricas de alta cardinalidad y agrupa territorios con restricciones espaciales para la tarificación de seguros; se acerca solo de forma periférica al componente de grupos geográficos, porque no usa Bayes empírico ni umbrales."
+    }
+   ],
+   "observacion": "La consulta devolvió sobre todo trabajos sobre categóricas de alta cardinalidad codificadas con efectos aleatorios, GLMM o embeddings, casi todos en ciencia actuarial, más tres falsos positivos (video, intrusiones, fármacos). El más cercano al EJUL es Pargent et al. (2022), el antecedente que se buscaba para el componente Bayes empírico jerárquico. Ninguno combina este componente con clasificadores en varios umbrales ni se aplica al abastecimiento de alimentos. / La consulta W20 devolvió sobre todo trabajos metodológicos de codificación de categóricas de alta cardinalidad (target encoding regularizado, GLMM, efectos aleatorios, embeddings) aplicados a actuaría y biomedicina, además de tres registros ajenos atraídos por las palabras 'encoding', 'target' o 'hierarchical'. Ninguno trata el abastecimiento de alimentos, y el más cercano al EJUL es Pargent et al. (2022) [2], el antecedente directo que conviene citar para el componente Bayes empírico jerárquico.",
+   "problema": "Sin errores de sintaxis. El editor traía precargada una consulta de otra sesión (SIPSA); se vació con el botón \"Clear search query\" antes de escribir W20. La lista de resultados es virtualizada (solo muestra unos 3 registros a la vez), por eso el script indicado devolvía \"partes\" vacías; los 8 registros se recogieron desplazando la página poco a poco. Los registros 6 (codificación de video) y 7 (detección de intrusos) parecen falsos positivos de \"target encoding\"/\"nested\". Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W20_registros.json"
+  }
+ ],
+ "consultas_nuevas": [
+  {
+   "id": "W15",
+   "q": "TS=(\"extended logistic regression\" OR \"threshold exceedance\" OR \"exceedance probabilit*\" OR \"probability of exceedance\") AND TS=(\"multiple threshold*\" OR \"threshold-specific\" OR \"adjacent threshold*\" OR \"neighbo*ring threshold*\" OR \"non-crossing\" OR monoton* OR isotonic OR \"coherent probabilit*\" OR \"full predictive distribution\")",
+   "proposito": "Familia del mecanismo en pronóstico probabilístico (meteorología e hidrología): la regresión logística extendida (Wilks 2009; Messner et al. 2014) mete el umbral como covariable para obtener probabilidades coherentes entre umbrales vecinos. Es el antecedente metodológico más cercano a 'combinar clasificadores en umbrales vecinos + monotonía' y ninguna cadena previa lo cubre."
+  },
+  {
+   "id": "W16",
+   "q": "TS=(\"conditional distribution function*\" OR \"conditional CDF\" OR \"conditional distribution estimation\" OR \"cumulative probabilit*\" OR \"multi-threshold classif*\" OR \"multiple threshold classif*\" OR \"quantile classif*\" OR \"threshold-based label*\") AND TS=(\"binary classifier*\" OR \"binary classification*\" OR \"series of binary\" OR \"sequence of binary\" OR \"classifier ensemble*\" OR \"ensemble of classifiers\" OR \"stacked classifier*\") AND TS=(threshold* OR cutoff* OR \"cut-off*\")",
+   "proposito": "Sinónimos de la familia que no aparecen en W01, W08 ni W09: estimar F(c|x) con una serie de clasificadores binarios en varios cortes, clasificación multiumbral o por cuantiles y etiquetas definidas por umbral. Así se recupera la línea econométrica de distribution regression (Foresi y Peracchi; Chernozhukov, Fernández-Val y Melly), que el filtro de W09 pudo dejar fuera."
+  },
+  {
+   "id": "W17",
+   "q": "TS=(\"soft label*\" OR \"label smoothing\" OR \"auxiliary regression\" OR \"auxiliary target*\" OR \"classification via regression\" OR \"regression-based classification\" OR \"regression versus classification\" OR \"regression vs classification\") AND TS=(\"continuous outcome*\" OR \"continuous target*\" OR \"continuous response*\" OR \"underlying continuous\" OR \"latent continuous\") AND TS=(threshold* OR dichotom* OR binari* OR cutoff* OR \"cut-off*\")",
+   "proposito": "Ángulo de la tarea: usar la variable continua R para clasificar un evento definido por umbral (etiquetas suaves, objetivo auxiliar continuo, regresión frente a clasificación directa). Un evaluador lo citaría como alternativa directa a EJUL y ni W11 (LUPI) ni W12 (dicotomización) lo cubren con estos términos."
+  },
+  {
+   "id": "W18",
+   "q": "TS=(\"market arrival*\" OR \"commodity arrival*\" OR \"produce arrival*\" OR \"mandi arrival*\" OR \"arrival volume*\" OR \"wholesale volume*\" OR \"food flow*\" OR \"supply shortfall*\" OR \"food supply shortfall*\" OR \"supply interruption*\") AND TS=(food OR agricultur* OR vegetable* OR fruit* OR crop* OR commodit*) AND TS=(predict* OR forecast* OR \"early warning\" OR classif* OR \"machine learning\" OR anomal*)",
+   "proposito": "Sinónimos del fenómeno en inglés: llegadas o volúmenes a mercados mayoristas (por ejemplo, llegadas a mandis/APMC en India), flujos de alimentos y caídas de oferta. W03, W13 y W14 usaron disruption/shortage y omitieron 'arrivals', que es el término de la literatura sobre volúmenes en centrales."
+  },
+  {
+   "id": "W19",
+   "q": "TS=(\"abastecimiento de alimentos\" OR \"abastecimiento alimentario\" OR \"plazas de mercado\" OR \"plaza de mercado\" OR \"central de abastos\" OR \"centrales de abasto*\" OR \"mercados mayoristas\" OR \"flujos de alimentos\" OR \"acopio de alimentos\" OR Corabastos) AND TS=(predicci* OR pronostic* OR pronóstic* OR clasificaci* OR \"alerta temprana\" OR \"aprendizaje automatico\" OR \"aprendizaje automático\" OR interrupci* OR desabastec* OR \"series de tiempo\" OR \"series temporales\")",
+   "proposito": "Sinónimos del fenómeno en español (plazas de mercado, centrales de abasto, flujos de alimentos, Corabastos) cruzados con predicción o interrupción. W05 exigía términos de ML o de umbral y W06 iba en inglés o se limitaba a SIPSA; esta cadena recoge trabajos latinoamericanos en revistas ESCI/SciELO que pronostican abastecimiento."
+  },
+  {
+   "id": "W20",
+   "q": "TS=(\"target encoding\" OR \"impact coding\" OR \"mean encoding\" OR \"likelihood encoding\" OR \"high-cardinality categorical*\" OR \"high cardinality categorical*\") AND TS=(hierarch* OR nested OR multilevel OR \"empirical Bayes\" OR shrinkage OR \"mixed model*\") AND TS=(classif* OR boosting OR \"random forest*\" OR predict*)",
+   "proposito": "Componente jerárquico de EJUL por separado. En W04 'target encoding' iba unido a rearrangement/isotonic, combinación que no aparece en la literatura. Esta cadena busca la codificación Bayes empírica jerárquica de categóricas de alta cardinalidad (Micci-Barreca 2001; codificación por GLMM de Pargent et al. 2022) para citarla como antecedente del componente y acotar la novedad a la combinación."
+  }
+ ],
+ "comentario_critico": "La cobertura del problema de aplicación (W03, W05–W07, W13, W14) y de la combinación exacta (W01, W08) es razonable. Quedan tres huecos que un evaluador podría señalar:\n\n(1) La familia metodológica más cercana en pronóstico probabilístico: la regresión logística extendida, de un solo modelo con el umbral como covariable, y la probabilidad de excedencia en varios umbrales con coherencia entre ellos. Equivale conceptualmente a suavizar clasificadores de umbrales vecinos y es el antecedente directo más probable (lo cubre W15).\n\n(2) Los sinónimos 'conditional distribution function', 'series of binary classifiers', 'multi-threshold' o 'quantile classification', 'soft labels' y 'classification via regression'. Con ellos se recupera la distribution regression econométrica y las alternativas que aprovechan la R continua (W16 y W17).\n\n(3) El vocabulario del fenómeno: 'market/commodity arrivals' en inglés y 'plazas de mercado', 'central de abastos' y 'Corabastos' en español (W18 y W19).\n\nW20 sirve para citar el componente de codificación jerárquica como conocido y sostener que la novedad está en la combinación, no en cada pieza. Es probable que W16, W17 y W20 devuelvan más de 100 registros; conviene ordenarlos por relevancia y revisar los primeros 50, como en las cadenas anteriores. Por posibles diferencias de acentos en el índice, W19 ya lleva formas con tilde y sin tilde."
+}

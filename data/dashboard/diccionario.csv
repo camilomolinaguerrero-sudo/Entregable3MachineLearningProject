@@ -1,0 +1,37 @@
+variable,descripcion,tipo,rango
+n_envios8,Cargas por semana (prom. 8),numérica,0.5 a 1.1e+03
+n_alimentos8,Productos por semana (prom. 8),numérica,0.5 a 103
+dist_km,Distancia origen-central (km),numérica,0 a 1.32e+03
+antig_sem,Antigüedad del corredor (semanas),numérica,3 a 416
+ratio_t,Abastecimiento en t / promedio 8 sem.,numérica,0 a 7.96
+ratio_t_1,Abastecimiento en t-1 / promedio 8 sem.,numérica,0 a 7.96
+log_base8,Escala del corredor (log t/día),numérica,0.00245 a 6.24
+cv8,Coeficiente de variación (8 sem.),numérica,0 a 2.81
+pend8_rel,Tendencia relativa (8 sem.),numérica,-1.08 a 0.953
+activas8,Semanas activas (de 8),numérica,4 a 8
+activas26,Fracción de semanas activas (26),numérica,0.154 a 1
+frac_caida_mercado_t,Fracción en caída en la central (t),numérica,0 a 0.958
+frac_caida_nacional_t,Fracción en caída en el país (t),numérica,0.0851 a 0.495
+festivos_t1,Festivos en t+1,numérica,0 a 3
+sem_sin,Semana del año (seno),numérica,-1 a 1
+sem_cos,Semana del año (coseno),numérica,-1 a 1
+sh_verduras,Participación verduras,numérica,0 a 1
+sh_frutas,Participación frutas,numérica,0 a 1
+sh_tuberculos,Participación tubérculos,numérica,0 a 1
+sh_granos,Participación granos,numérica,0 a 1
+sh_lacteos,Participación lácteos,numérica,0 a 1
+sh_carnes,Participación carnes,numérica,0 a 1
+sh_pescados,Participación pescados,numérica,0 a 1
+frac_caida_mpio_t,Fracción en caída del municipio (t),numérica,0 a 1
+frac_caida_vec_t,Fracción en caída en municipios vecinos (t),numérica,0 a 1
+tasa_int_vec26,Tasa de interrupción de vecinos (26 sem.),numérica,0 a 1
+tasa_int_mpio26,Tasa de interrupción del municipio (26 sem.),numérica,0 a 1
+mismo_depto,Mismo departamento,binaria,0 / 1
+local,Corredor local,binaria,0 / 1
+pdet_origen,Origen PDET,binaria,0 / 1
+mercado,Central mayorista,categórica,32 categorías
+depto_origen,Departamento de origen,categórica,30 categorías
+grupo_dom,Grupo de alimentos dominante,categórica,8 categorías
+cod_mpio,Municipio de origen (DIVIPOLA),categórica,925 categorías
+interrupcion_t1,Interrupción en t+1 (objetivo),binaria,0 / 1
+ratio_t1,Abastecimiento en t+1 / promedio 8 sem.,numérica,0 a 1.27e+03

@@ -1,0 +1,22 @@
+{
+  "veredicto": "Superior según la definición operativa de la guía (sección 6.1). (1) AUC externo medio del AJ-KL 0,7874 frente a 0,7867 de XGBoost, el mejor de los siete benchmarks. (2) 5 pruebas distintas rechazan la igualdad frente a XGBoost con p ajustado < 0,05 (0,10 en el MCS): DeLong, Diebold-Mariano, Friedman, Model Confidence Set, Wilcoxon pareado; no rechazan: Nemenyi. (3) Tamaño del efecto: d de Cohen pareada 0,79, dominancia pareada 0,62 (gana 39 de 48 meses) y delta de Cliff de dos muestras 0,05 (despreciable). Con los modelos de producción (622 mil filas, prueba 2025) la diferencia frente a XGBoost es ΔAUC 0,0008 [IC BCa 0,0004; 0,0012] (DeLong con bloques de semana, p Holm < 0,001). Frente a los comparadores recientes: LightGBM ΔAUC 2025 0,0004 (p Holm DeLong 0,068), gana 40 de 48 meses; CatBoost ΔAUC 2025 0,0003 (p Holm DeLong 0,222), gana 44 de 48 meses. En unidades de AUC la ventaja media es 0,0007 (escala del curso: trivial).",
+  "cumple_r3": 1.0,
+  "descripcion_original": "El AJ-KL **combina** las probabilidades de 9 modelos ya entrenados (los 7 del curso, LightGBM y CatBoost) con un promedio ponderado cuyos pesos dependen de dónde está el corredor: país → central mayorista → central × grupo de alimentos → corredor. Los pesos de cada nodo se estiman minimizando la log-loss de las semanas anteriores, con más peso para las recientes (olvido γ), y se **encogen hacia los de su nodo padre** con una penalización KL: un corredor con pocas semanas usa casi los pesos de su central y uno con muchas se aparta solo si los datos lo justifican.\n\n**Qué es nuevo:** la jerarquía anidada propia del problema, el encogimiento KL hacia el padre, el olvido temporal y un estimador convexo con actualización multiplicativa cerrada (descenso espejo) de costo lineal en n, frente al apilamiento global, la selección dinámica por vecinos o el apilamiento jerárquico bayesiano por MCMC.",
+  "cd": {
+    "rangos": {
+      "AJ-KL (original)": 1.2708333333333333,
+      "XGBoost": 2.0833333333333335,
+      "Random Forest": 3.1041666666666665,
+      "SVM": 3.6041666666666665,
+      "Regresión logística": 5.0,
+      "KNN": 6.416666666666667,
+      "Decision Tree": 6.604166666666667,
+      "Naive Bayes": 7.916666666666667
+    },
+    "cd": 1.5154392248072073
+  },
+  "lectura_cd": "El AJ-KL tiene el mejor rango medio (1,27). Los modelos a menos de una diferencia crítica (1,52) no difieren de él según Nemenyi, una prueba conservadora; las pruebas pareadas de la tabla siguiente tienen más potencia.",
+  "lectura_lideres": "Métricas del bucle externo de la validación anidada (media ± desviación estándar de 4 años); «AUC 2025» es la prueba con los modelos de producción reentrenados con todo el periodo de entrenamiento. La fila resaltada es el modelo original; LightGBM y CatBoost son comparadores recientes no vistos en clase.",
+  "lectura_ablacion": "Lo que más reduce el AUC frente al AJ-KL completo es «Modelo base: Naive Bayes» (-0,01868 en promedio). Valores negativos de ΔAUC y positivos de ΔBrier o ΔECE indican que el AJ-KL es mejor.",
+  "pruebas_unitarias": "Resultado de `pytest tests/`: **81 passed, 2 warnings in 2.59s**. Las pruebas del AJ-KL verifican la recuperación de los pesos de cada región en datos sintéticos, el óptimo del descenso espejo frente a SLSQP, los casos límite de λ, el efecto del olvido, la herencia de nodos no vistos, la calibración, la reproducibilidad, las entradas inválidas y `clone`.\n\n**Tamaño del efecto frente a XGBoost:** d de Cohen pareada 0,79 (mediano); dominancia pareada 0,62 (grande); delta de Cliff de dos muestras 0,05 (despreciable)."
+}

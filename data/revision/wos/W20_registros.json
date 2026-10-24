@@ -1,0 +1,72 @@
+{
+  "id": "W20",
+  "consulta": "TS=(\"target encoding\" OR \"impact coding\" OR \"mean encoding\" OR \"likelihood encoding\" OR \"high-cardinality categorical*\" OR \"high cardinality categorical*\") AND TS=(hierarch* OR nested OR multilevel OR \"empirical Bayes\" OR shrinkage OR \"mixed model*\") AND TS=(classif* OR boosting OR \"random forest*\" OR predict*)",
+  "resultados": 8,
+  "url": "https://www.webofscience.com/wos/woscc/summary/6bb0724e-b8fd-49a5-a2dd-55a6dd806dfe-01d002f6a9/relevance/1",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Machine Learning with High-Cardinality Categorical Features in Actuarial Applications",
+      "autores": "Avanzi, B; Taylor, G; (...); Wong, BR",
+      "fecha": "May 2024",
+      "fuente": "ASTIN BULLETIN-THE JOURNAL OF THE INTERNATIONAL ACTUARIAL ASSOCIATION, 54(2), pp.213-238",
+      "resumen": "High-cardinality categorical features are pervasive in actuarial data (e.g., occupation in commercial property insurance). Standard categorical encoding methods like one-hot encoding are inadequate in these settings.In this work, we present a novel Generalised Linear Mixed Model Neural Network (\"GLMMNet\") approach to the modelling of high-cardinality categorical features. The GLMMNet integrates"
+    },
+    {
+      "rango": 2,
+      "titulo": "Regularized target encoding outperforms traditional methods in supervised machine learning with high cardinality features",
+      "autores": "Pargent, F; Pfisterer, F; (...); Bischl, B",
+      "fecha": "Nov 2022",
+      "fuente": "COMPUTATIONAL STATISTICS, 37(5), pp.2671-2692",
+      "resumen": "Since most machine learning (ML) algorithms are designed for numerical inputs, efficiently encoding categorical variables is a crucial aspect in data analysis. A common problem are high cardinality features, i.e. unordered categorical predictor variables with a high number of levels. We study techniques that yield numeric representations of categorical variables which can then be used in subseq"
+    },
+    {
+      "rango": 3,
+      "titulo": "A robust neural network with random effects for subject-specific prediction of clustered count data",
+      "autores": "Lee, H; Ha, ID; (...); Lee, Y",
+      "fecha": "Aug 2026",
+      "fuente": "STATISTICAL METHODS IN MEDICAL RESEARCH, 35(8), pp.1637-1657",
+      "resumen": "There is a growing interest in subject-specific predictions using neural networks, as large-scale biomedical data often exhibit dependency due to high-cardinality categorical features, which have been largely overlooked by traditional neural network frameworks. This article proposes a novel hierarchical likelihood learning framework that captures both nonlinear overall effects and subject-speci"
+    },
+    {
+      "rango": 4,
+      "titulo": "High-cardinality categorical covariates in network regressions",
+      "autores": "Richman, R and Wüthrich, MV",
+      "fecha": "Nov 2024",
+      "fuente": "JAPANESE JOURNAL OF STATISTICS AND DATA SCIENCE, 7(2), pp.921-965",
+      "resumen": "High-cardinality (nominal) categorical covariates are challenging in regression modeling, because they lead to high-dimensional models. For example, in generalized linear models (GLMs), categorical covariates can be implemented by dummy coding which results in high-dimensional regression parameters for high-cardinality categorical covariates. It is difficult to find the correct structure of int"
+    },
+    {
+      "rango": 5,
+      "titulo": "A Nested GLM Framework with Neural Network Encoding and Spatially Constrained Clustering in Non-Life Insurance Ratemaking",
+      "autores": "Wang, RA; Shi, HL and Cao, JG",
+      "fecha": "Jul 3 2025",
+      "fuente": "NORTH AMERICAN ACTUARIAL JOURNAL, 29(3), pp.645-661",
+      "resumen": "The generalized linear model (GLM) is a popular modeling choice for pricing non-life insurance policies. However, high-cardinality categorical insurance data presents significant challenges for these GLM rate-making models. Additionally, insurance regulators often require rating territories, which are clusters of insurance policies' geographic locations for setting insurance rates, to meet cert"
+    },
+    {
+      "rango": 6,
+      "titulo": "Precise Encoding Complexity Control for Versatile Video Coding",
+      "autores": "Huang, Y; Xu, J; (...); Zhang, WJ",
+      "fecha": "Mar 2023",
+      "fuente": "IEEE TRANSACTIONS ON BROADCASTING, 69(1), pp.33-48",
+      "resumen": "Complexity reduction is a commonly used method to deal with complicated video coding standards, such as High Efficiency Video Coding (HEVC) and Versatile Video Coding (VVC). But the unstable performance under different video contents and Quantization Parameters (QPs) makes it difficult to precisely specify the target encoding time of every single sequence, which limits the practical use of the"
+    },
+    {
+      "rango": 7,
+      "titulo": "Enhancing intrusion detection using MAG: a shallow multilayer perceptron tuned with Adam and grey wolf optimization",
+      "autores": "Dehkordi, IF and Manochehri, K",
+      "fecha": "Jul 24 2026",
+      "fuente": "CLUSTER COMPUTING-THE JOURNAL OF NETWORKS SOFTWARE TOOLS AND APPLICATIONS, 29(9)",
+      "resumen": "This study introduces MAG, a lightweight intrusion detection system (IDS) that couples a single-hidden-layer multilayer perceptron (MLP) with the Adam optimizer and a Grey Wolf Optimizer (GWO) for hyperparameter tuning. A Classification and Regression Tree (CART) stage in WEKA first derives compact five-feature subsets for the KDDCup99 and NSL-KDD benchmarks, enabling multiclass and binary eval"
+    },
+    {
+      "rango": 8,
+      "titulo": "Hierarchical attention-driven multimodal local to global learning framework for enhanced drug-target interaction prediction",
+      "autores": "Chen, H; Jin, MY; (...); Zhang, Y",
+      "fecha": "Mar 1 2026",
+      "fuente": "EXPERT SYSTEMS WITH APPLICATIONS, 299",
+      "resumen": "Accurate prediction of drug-target interactions (DTIs) can effectively prompt drug development and lower expenses. However, existing DTI prediction methods based on multimodal and deep learning have limitations in effectively extracting local and global information from drugs and targets, as well as cross-modal and cross-entity fusion. Therefore, this study presents a Hierarchical Attention-Dri"
+    }
+  ]
+}

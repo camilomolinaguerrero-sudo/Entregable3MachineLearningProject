@@ -1,0 +1,8 @@
+{
+  "id": "W19",
+  "consulta": "TS=(\"abastecimiento de alimentos\" OR \"abastecimiento alimentario\" OR \"plazas de mercado\" OR \"plaza de mercado\" OR \"central de abastos\" OR \"centrales de abasto*\" OR \"mercados mayoristas\" OR \"flujos de alimentos\" OR \"acopio de alimentos\" OR Corabastos) AND TS=(predicci* OR pronostic* OR pronóstic* OR clasificaci* OR \"alerta temprana\" OR \"aprendizaje automatico\" OR \"aprendizaje automático\" OR interrupci* OR desabastec* OR \"series de tiempo\" OR \"series temporales\")",
+  "resultados": 0,
+  "url": "https://www.webofscience.com/wos/woscc/advanced-search",
+  "problema": "Sin errores de sintaxis. WoS mostró 'Your search found no results' (0 resultados); la página permaneció en advanced-search sin generar URL de resumen. Confirmado en un segundo intento (consulta verificada carácter a carácter en el editor antes de pulsar Search). Fecha de consulta: 2026-10-23.",
+  "registros": []
+}

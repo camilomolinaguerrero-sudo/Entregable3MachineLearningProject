@@ -1,0 +1,26 @@
+{
+  "filas": 744921,
+  "corredores": 4512,
+  "centrales": 32,
+  "municipios": 925,
+  "semanas": 414,
+  "inicio": "2018-01-29",
+  "fin": "2025-12-29",
+  "tasa_interrupcion": 0.2793786186723156,
+  "filas_entrenamiento": 622244,
+  "filas_prueba": 103466,
+  "variables": 34,
+  "fin_entrenamiento": "2024-10-27",
+  "inicio_prueba": "2025-01-06",
+  "registros_crudos": 15493054,
+  "toneladas_millones_por_anio": {
+    "2018": 6.228,
+    "2019": 6.228,
+    "2020": 6.308,
+    "2021": 6.311,
+    "2022": 6.264,
+    "2023": 6.689,
+    "2024": 7.174,
+    "2025": 7.535
+  }
+}

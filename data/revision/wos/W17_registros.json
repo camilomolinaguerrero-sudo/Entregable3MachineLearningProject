@@ -1,0 +1,8 @@
+{
+  "id": "W17",
+  "consulta": "TS=(\"soft label*\" OR \"label smoothing\" OR \"auxiliary regression\" OR \"auxiliary target*\" OR \"classification via regression\" OR \"regression-based classification\" OR \"regression versus classification\" OR \"regression vs classification\") AND TS=(\"continuous outcome*\" OR \"continuous target*\" OR \"continuous response*\" OR \"underlying continuous\" OR \"latent continuous\") AND TS=(threshold* OR dichotom* OR binari* OR cutoff* OR \"cut-off*\")",
+  "resultados": 0,
+  "url": "https://www.webofscience.com/wos/woscc/advanced-search",
+  "problema": "Sin errores de sintaxis. Se verificó de nuevo (2026-10-23): el editor traía una consulta previa, se vació con 'Clear search query', se escribió la consulta exacta y se pulsó Search. WoS respondió 'Your search found no results' (0 registros). La página siguió en advanced-search, así que no hay URL de resultados. Coincide con el intento anterior.",
+  "registros": []
+}

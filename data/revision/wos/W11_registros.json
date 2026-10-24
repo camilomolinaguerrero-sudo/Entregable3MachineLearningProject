@@ -1,0 +1,257 @@
+{
+  "id": "W11",
+  "consulta": "TS=(\"privileged information\" OR \"LUPI\") AND TS=(classif*) AND TS=(regression OR continuous OR auxiliary)",
+  "resultados": 31,
+  "url": "https://www.webofscience.com/wos/woscc/summary/2cb657b0-e7a0-487f-9307-25c744406205-01d002c477/relevance/1",
+  "problema": "",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Efficient and robust kernel learning with class-wise privileged information for pattern classification",
+      "autores": "Tang, JJ; Gou, Q; (...); Tian, YJ",
+      "fecha": "Nov 2026",
+      "fuente": "PATTERN RECOGNITION, 179",
+      "resumen": "Learning Using Privileged Information (LUPI) leverages auxiliary information available only during training improve model generalization. While most existing LUPI methods assume instance-wise privileged information, such fine-grained annotations are often costly to obtain in practice. In contrast, class-wise privileged information, shared across all samples of the same class, is more accessible"
+    },
+    {
+      "rango": 2,
+      "titulo": "Robust learning with imperfect privileged information",
+      "autores": "Li, X; Du, B; (...); Tao, DC",
+      "fecha": "May 2020",
+      "fuente": "ARTIFICIAL INTELLIGENCE, 282",
+      "resumen": "In the learning using privileged information (LUPI) paradigm, example data cannot always be clean, while the gathered privileged information can be imperfect in practice. Here, imperfect privileged information can refer to auxiliary information that is not always accurate or perturbed by noise, or alternatively to incomplete privileged information, where privileged information is only available"
+    },
+    {
+      "rango": 3,
+      "titulo": "Learning using privileged information with logistic regression on acute respiratory distress syndrome detection",
+      "autores": "Gao, ZJ; Cheng, SY; (...); Najarian, K",
+      "fecha": "Oct 2024",
+      "fuente": "ARTIFICIAL INTELLIGENCE IN MEDICINE, 156",
+      "resumen": "The advanced learning paradigm, learning using privileged information (LUPI), leverages information in training that is not present at the time of prediction. In this study, we developed privileged logistic regression (PLR) models under the LUPI paradigm to detect acute respiratory distress syndrome (ARDS), with mechanical ventilation variables or chest x-ray image features employed in the priv"
+    },
+    {
+      "rango": 4,
+      "titulo": "KOC plus : Kernel ridge regression based one-class classification using privileged information",
+      "autores": "Gautam, C; Tiwari, A and Tanveer, M",
+      "fecha": "Dec 2019",
+      "fuente": "INFORMATION SCIENCES, 504, pp.324-333",
+      "resumen": "A kernel-based one-class classifier is mainly used for outlier or novelty detection. Kernel ridge regression (KRR) based methods have received quite a lot of attention in recent years due to its non-iterative approach of learning. In this paper, KRR-based one-class classifier (KOC) has been extended for learning using privileged information (LUPI) framework. LUPI-based KOC method is referred to"
+    },
+    {
+      "rango": 5,
+      "titulo": "AEKOC plus : Kernel Ridge Regression-Based Auto-Encoder for One-Class Classification Using Privileged Information",
+      "autores": "Gautam, C; Tiwari, A and Tanveer, M",
+      "fecha": "Mar 2020",
+      "fuente": "COGNITIVE COMPUTATION, 12(2), pp.412-425",
+      "resumen": "In recent years, non-iterative learning approaches for kernel have received quite an attention by researchers and kernel ridge regression (KRR) approach is one of them. Recently, KRR-based Auto-Encoder is developed for the one-class classification (OCC) task and named as AEKOC. OCC is generally used for outlier or novelty detection. The brain can detect outlier just by learning from only normal"
+    },
+    {
+      "rango": 6,
+      "titulo": "Coarse-grained privileged learning for classification",
+      "autores": "Fu, SJ; Wang, XX; (...); Li, JC",
+      "fecha": "Nov 2023",
+      "fuente": "INFORMATION PROCESSING & MANAGEMENT, 60(6)",
+      "resumen": "Privileged information, a form of prior knowledge, can significantly enhance traditional machine learning performance through a novel paradigm known as learning using privileged information (LUPI). Although effective, current studies on LUPI require a distinct piece of privileged information per input, and these fine-grained priors are difficult to collect in practice. To this end, this paper p"
+    },
+    {
+      "rango": 7,
+      "titulo": "Extending the learning using privileged information paradigm to logistic regression",
+      "autores": "Martínez-García, M; García-Gutierrez, S; (...); Lozano, JA",
+      "fecha": "Jan 28 2025",
+      "fuente": "NEUROCOMPUTING, 615",
+      "resumen": "Learning using privileged information paradigm is a learning scenario that exploits privileged features, available at training time, but not at prediction, as additional information for training models. This paper delves into the learning of logistic regression models using privileged information. We provide two new algorithms. For its development, the parameters of a conventional logistic regr"
+    },
+    {
+      "rango": 8,
+      "titulo": "Ensemble Deep Random Vector Functional Link Network Using Privileged Information for Alzheimer's Disease Diagnosis",
+      "autores": "Ganaie, MA and Tanveer, M",
+      "fecha": "Jul-aug 2024",
+      "fuente": "IEEE-ACM TRANSACTIONS ON COMPUTATIONAL BIOLOGY AND BIOINFORMATICS, 21(4), pp.534-545",
+      "resumen": "Alzheimer's disease (AD) is a progressive brain disorder. Machine learning models have been proposed for the diagnosis of AD at early stage. Recently, deep learning architectures have received quite a lot attention. Most of the deep learning architectures suffer from the issues of local minima, slow convergence and sensitivity to learning rate. To overcome these issues, non-iterative learning b"
+    },
+    {
+      "rango": 9,
+      "titulo": "A novel stochastic configuration network with iterative learning using privileged information and its application",
+      "autores": "Lu, J and Ding, JL",
+      "fecha": "Oct 2022",
+      "fuente": "INFORMATION SCIENCES, 613, pp.953-965",
+      "resumen": "In the real-world applications, some auxiliary information is commonly available in addi-tion to the standard data, which is often ignored by the traditional learning algorithms. To effectively utilize the auxiliary information for assisting in building learner models with improved performance, this paper presents a novel stochastic configuration network (SCN) incorporating the iterative learni"
+    },
+    {
+      "rango": 10,
+      "titulo": "Incremental learning paradigm with privileged information for random vector functional-link networks: IRVFL",
+      "autores": "Dai, W; Ao, YS; (...); Wang, XS",
+      "fecha": "May 2022",
+      "fuente": "NEURAL COMPUTING & APPLICATIONS, 34(9), pp.6847-6859",
+      "resumen": "Learning using privileged information (LUPI) paradigm, which pioneered teacher-student interaction mechanism, makes the learning models use additional information in the training stage. This paper is the first to propose an incremental learning algorithm with LUPI paradigm for random vector functional-link (RVFL) networks, named IRVFL+ . This novel algorithm can leverage privileged information"
+    },
+    {
+      "rango": 11,
+      "titulo": "Incorporating Privileged Information Through Metric Learning",
+      "autores": "Fouad, S; Tino, P; (...); Schneider, P",
+      "fecha": "Jul 2013",
+      "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS, 24(7), pp.1086-1098",
+      "resumen": "In some pattern analysis problems, there exists expert knowledge, in addition to the original data involved in the classification process. The vast majority of existing approaches simply ignore such auxiliary (privileged) knowledge. Recently a new paradigm-learning using privileged information-was introduced in the framework of SVM+. This approach is formulated for binary classification and, as"
+    },
+    {
+      "rango": 12,
+      "titulo": "Dictionary-Based Multi-View Learning With Privileged Information",
+      "autores": "Liu, B; Sun, P; (...); Huang, YS",
+      "fecha": "May 2024",
+      "fuente": "IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY, 34(5), pp.3523-3537",
+      "resumen": "Multi-view learning can improve classification performance by combining information between different views. Due to the similarity in different views of the dataset, sometimes the features obtained are highly limited and redundant. At the same time, different views accumulate a large amount of noisy information, which will affect the classification performance of the model. To solve these probl"
+    },
+    {
+      "rango": 13,
+      "titulo": "Self-paced multi-view positive and unlabeled graph learning with auxiliary information",
+      "autores": "Liu, B; Peng, TT; (...); Huang, YS",
+      "fecha": "Sep 2023",
+      "fuente": "INFORMATION SCIENCES, 642",
+      "resumen": "Graph widely exists in the research study, with complex structure and rich information, and it has always been a powerful mode to analyze difficult problems. Meanwhile, graph classification is an important application problem in many fields, it means that we use the structure of known graph datasets to classify the unknown graph. Most of the current work is to classify through positive and unla"
+    },
+    {
+      "rango": 14,
+      "titulo": "Multi-view ordinal regression with feature augmentation and privileged information learning",
+      "autores": "Xiao, YS; Chen, LB and Liu, B",
+      "fecha": "Aug 2025",
+      "fuente": "INFORMATION SCIENCES, 708",
+      "resumen": "Ordinal regression deals with the classification problems that the classes are ranked in order. The majority of existing ordinal regression approaches are designed for single-view data, and only a little work is done on multi-view ordinal regression. However, these multi-view ordinal regression works mainly concentrate on the consensus information between different views, while the complementar"
+    },
+    {
+      "rango": 15,
+      "titulo": "Learning Using Privileged Information: Similarity Control and Knowledge Transfer",
+      "autores": "Vapnik, V and Izmailov, R",
+      "fecha": "Sep 2015",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 16, pp.2023-2049",
+      "resumen": "This paper describes a new paradigm of machine learning, in which Intelligent Teacher is involved. During training stage, Intelligent Teacher provides Student with information that contains, along with classification of each example, additional privileged information (for example, explanation) of this example. The paper describes two mechanisms that can be used for significantly accelerating th"
+    },
+    {
+      "rango": 16,
+      "titulo": "A novel extreme learning machine using privileged information",
+      "autores": "Zhang, WB; Ji, HB; (...); Zhang, YQ",
+      "fecha": "Nov 30 2015",
+      "fuente": "NEUROCOMPUTING, 168, pp.823-828",
+      "resumen": "Extreme learning machine (ELM) is a competitive machine learning technique, which is much more efficient and usually lead to better generalization performance compared to the traditional classifiers. In order to further improve its performance, we proposed a novel ELM called ELM+ which introduces the privileged information to the traditional ELM method. This privileged information, which is ign"
+    },
+    {
+      "rango": 17,
+      "titulo": "Self-paced learning and privileged information based KRR classification algorithm for diagnosis of Parkinson's disease",
+      "autores": "Peng, B; Gong, ZJ; (...); Dai, YK",
+      "fecha": "Jan 1 2022",
+      "fuente": "NEUROSCIENCE LETTERS, 766",
+      "resumen": "Computer aided diagnosis (CAD) methods for Parkinson's disease (PD) can assist clinicians in diagnosis and treatment. Magnetic resonance imaging (MRI) based CAD methods can help reveal structural changes in brain. Classifier is a key component in CAD system, which directly affects the classification performance. Privileged information (PI) can assist to train the classifier by providing additio"
+    },
+    {
+      "rango": 18,
+      "titulo": "Capturing global spatial patterns for distinguishing posed and spontaneous expressions",
+      "autores": "Wang, SF; Wu, CL and Ji, Q",
+      "fecha": "Jun 2016",
+      "fuente": "COMPUTER VISION AND IMAGE UNDERSTANDING, 147, pp.69-76",
+      "resumen": "In this paper, we introduce methods to differentiate posed expressions from spontaneous ones by capturing global spatial patterns embedded in posed and spontaneous expressions, and by incorporating gender and expression categories as privileged information during spatial pattern modeling. Specifically, we construct multiple restricted Boltzmann machines (RBMs) with continuous visible units to m"
+    },
+    {
+      "rango": 19,
+      "titulo": "From the Lab to the Wild: Affect Modeling Via Privileged Information",
+      "autores": "Makantasis, K; Pinitas, K; (...); Yannakakis, GN",
+      "fecha": "Apr-jun 2024",
+      "fuente": "IEEE TRANSACTIONS ON AFFECTIVE COMPUTING, 15(2), pp.380-392",
+      "resumen": "How can we reliably transfer affect models trained in controlled laboratory conditions (in-vitro) to uncontrolled real-world settings (in-vivo)? The information gap between in-vitro and in-vivo applications defines a core challenge of affective computing. This gap is caused by limitations related to affect sensing including intrusiveness, hardware malfunctions and availability of sensors. As a"
+    },
+    {
+      "rango": 20,
+      "titulo": "Synergy of Monotonic Rules",
+      "autores": "Vapnik, V and Izmailov, R",
+      "fecha": "2016",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 17",
+      "resumen": "This article describes a method for constructing a special rule (we call it synergy rule) that uses as its input information the outputs (scores) of several monotonic rules which solve the same pattern recognition problem. As an example of scores of such monotonic rules we consider here scores of SVM classifiers. In order to construct the optimal synergy rule, we estimate the conditional"
+    },
+    {
+      "rango": 21,
+      "titulo": "Posed and Spontaneous Expression Distinction Using Latent Regression Bayesian Networks",
+      "autores": "Wang, SF; Hao, LF and Ji, Q",
+      "fecha": "Sep 2020",
+      "fuente": "ACM TRANSACTIONS ON MULTIMEDIA COMPUTING COMMUNICATIONS AND APPLICATIONS, 16(3)",
+      "resumen": "Facial spatial patterns can help distinguish between posed and spontaneous expressions, but this information has not been thoroughly leveraged by current studies. We present several latent regression Bayesian networks (LRBNs) to capture the patterns existing in facial landmark points and to use those points to differentiate posed from spontaneous expressions. The visible nodes of the LRBN repre"
+    },
+    {
+      "rango": 22,
+      "titulo": "An Efficient Transfer Learning Method with Auxiliary Information",
+      "autores": "Liu, B; Li, LJ; (...); Huang, RG",
+      "fecha": "Jan 2024",
+      "fuente": "ACM TRANSACTIONS ON KNOWLEDGE DISCOVERY FROM DATA, 18(1)",
+      "resumen": "Transfer learning (TL) is an information reuse learning tool, which can help us learn better classification effect than traditional single task learning, because transfer learning can share information within the task-to-task model. Most TL algorithms are studied in the field of data improvement, doing some data extraction and transformation. However, it ignores that existing the additional inf"
+    },
+    {
+      "rango": 23,
+      "titulo": "Knowledge transfer in SVM and neural networks",
+      "autores": "Vapnik, V and Izmailov, R",
+      "fecha": "Oct 2017",
+      "fuente": "ANNALS OF MATHEMATICS AND ARTIFICIAL INTELLIGENCE, 81(1-2), pp.3-19 (5th Symposium on Conformal and Probabilistic Prediction with Applications, COPA)",
+      "resumen": "The paper considers general machine learning models, where knowledge transfer is positioned as the main method to improve their convergence properties. Previous research was focused on mechanisms of knowledge transfer in the context of SVM framework; the paper shows that this mechanism is applicable to neural network framework as well. The paper describes several general approaches for knowledg"
+    },
+    {
+      "rango": 24,
+      "titulo": "Enhancing SVM for survival data using local invariances and weighting",
+      "autores": "Sanz, H; Reverter, F and Valim, C",
+      "fecha": "May 19 2020",
+      "fuente": "BMC BIOINFORMATICS, 21(1)",
+      "resumen": "Background The necessity to analyze medium-throughput data in epidemiological studies with small sample size, particularly when studying biomedical data may hinder the use of classical statistical methods. Support vector machines (SVM) models can be successfully applied in this setting because they are a powerful tool to analyze data with large number of predictors and limited sample size, espe"
+    },
+    {
+      "rango": 25,
+      "titulo": "Multi-dimensional MRI representation and privileged learning approaches to functional outcome prediction for ischemic stroke patients",
+      "autores": "Wittrup, E; Reavey-Cantwell, J; (...); Najarian, K",
+      "fecha": "May 10 2026",
+      "fuente": "NPJ DIGITAL MEDICINE, 9(1)",
+      "resumen": "Accurate prediction of long-term functional outcomes for stroke patients remains a clinical challenge, despite advances in diagnostics and treatments. Most machine learning (ML) and artificial intelligence (AI) outcome prediction models lack robust strategies to incorporate high-dimensional clinical imaging data or to account for data availability at the point of care. In this study, we present"
+    },
+    {
+      "rango": 26,
+      "titulo": "Improving MRI-based analysis of brain structural changes in patients with hypertension via a privileged information learning algorithm",
+      "autores": "Peng, B; Yu, XY; (...); Dai, YK",
+      "fecha": "Jun 2022",
+      "fuente": "METHODS, 202, pp.103-109",
+      "resumen": "Hypertension can lead to changes in the brain structure and function, and different blood pressure levels (2017ACC/AHA) have different effects on brain structure. It is important to analyze these changes by machine learning methods, and various characteristics can provide rich information for the analysis of these changes. However, multiple feature extraction involves complex data processing. H"
+    },
+    {
+      "rango": 27,
+      "titulo": "Predicting Visual Political Bias Using Webly Supervised Data and an Auxiliary Task",
+      "autores": "Thomas, C and Kovashka, A",
+      "fecha": "Nov 2021",
+      "fuente": "INTERNATIONAL JOURNAL OF COMPUTER VISION, 129(11), pp.2978-3003",
+      "resumen": "The news media shape public opinion, and often, the visual bias they contain is evident for careful human observers. This bias can be inferred from how different media sources portray different subjects or topics. In this paper, we model visual political bias in contemporary media sources at scale, using webly supervised data. We collect a dataset of over one million unique images and associate"
+    },
+    {
+      "rango": 28,
+      "titulo": "Pedestrian Counting With Back-Propagated Information and Target Drift Remedy",
+      "autores": "Chen, K and Zhang, ZX",
+      "fecha": "Apr 2017",
+      "fuente": "IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS, 47(4), pp.639-647",
+      "resumen": "Pedestrian density is one of the important factors in designing visual surveillance and intelligent transportation systems, but it is challenging to obtain accurate and robust estimates because of both inconsistent crowd patterns in the scenes and target drift caused by imbalanced data distribution. Most of existing global regression frameworks focus on the former challenge to improve the robus"
+    },
+    {
+      "rango": 29,
+      "titulo": "Rethinking statistical learning theory: learning using statistical invariants",
+      "autores": "Vapnik, V and Izmailov, R",
+      "fecha": "Mar 2019",
+      "fuente": "MACHINE LEARNING, 108(3), pp.381-423",
+      "resumen": "This paper introduces a new learning paradigm, called Learning Using Statistical Invariants (LUSI), which is different from the classical one. In a classical paradigm, the learning machine constructs a classification rule that minimizes the probability of expected error; it is data-driven model of learning. In the LUSI paradigm, in order to construct the desired classification function, a learn"
+    },
+    {
+      "rango": 30,
+      "titulo": "The Benefits of Modeling Slack Variables in SVMs",
+      "autores": "Tang, FZ; Tino, P; (...); Chen, HH",
+      "fecha": "Apr 2015",
+      "fuente": "NEURAL COMPUTATION, 27(4), pp.954-981",
+      "resumen": "In this letter, we explore the idea of modeling slack variables in support vector machine (SVM) approaches. The study is motivated by SVM+, which models the slacks through a smooth correcting function that is determined by additional (privileged) information about the training examples not available in the test phase. We take a closer look at the meaning and consequences of smooth modeling of s"
+    },
+    {
+      "rango": 31,
+      "titulo": "Learning to Classify Fine-Grained Categories with Privileged Visual-Semantic Misalignment",
+      "autores": "Chen, K and Zhang, ZX",
+      "fecha": "Mar 1 2017",
+      "fuente": "IEEE TRANSACTIONS ON BIG DATA, 3(1), pp.37-43",
+      "resumen": "Image categorisation is an active yet challenging research topic in computer vision, which is to classify the images according to their semantic content. Recently, fine-grained object categorisation has attracted wide attention and remains difficult due to feature inconsistency caused by smaller inter-class and larger intra-class variation as well as large varying poses. Most of the existing fr"
+    }
+  ]
+}

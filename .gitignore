@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+.claude/
+logs/
+book/_build/
+data/interim/
+data/resultados/pred_externo_clf.parquet
+data/resultados/pred_prueba_clf.parquet
+data/resultados/trabajos/
+*.tmp
+data/externos/

@@ -1,0 +1,408 @@
+{
+  "id": "W09",
+  "consulta": "TS=(\"distribution regression\" OR \"distributional regression\") AND TS=(classif* OR \"binary regression*\" OR \"binary outcome*\" OR boosting OR \"random forest*\")",
+  "resultados": 58,
+  "url": "https://www.webofscience.com/wos/woscc/summary/5f015580-79f5-48c0-9722-8d021b338f69-01d002ad0d/relevance/1",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Confidence and Uncertainty Assessment for Distributional Random Forests",
+      "autores": "Näf, J; Emmenegger, C; (...); Meinshausen, N",
+      "fecha": "2023",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 24, pp.1-77",
+      "resumen": "The Distributional Random Forest (DRF) is a recently introduced Random Forest algorithm to estimate multivariate conditional distributions. Due to its general estimation procedure, it can be employed to estimate a wide range of targets such as conditional average treatment effects, conditional quantiles, and conditional correlations. However, only results about the consistency and convergence r"
+    },
+    {
+      "rango": 2,
+      "titulo": "DISTRIBUTIONAL REGRESSION FORESTS FOR PROBABILISTIC PRECIPITATION FORECASTING IN COMPLEX TERRAIN",
+      "autores": "Schlosser, L; Hothorn, T; (...); Zeileis, A",
+      "fecha": "Sep 2019",
+      "fuente": "ANNALS OF APPLIED STATISTICS, 13(3), pp.1564-1589",
+      "resumen": "To obtain a probabilistic model for a dependent variable based on some set of explanatory variables, a distributional approach is often adopted where the parameters of the distribution are linked to regressors. In many classical models this only captures the location of the distribution but over the last decade there has been increasing interest in distributional regression approaches modeling"
+    },
+    {
+      "rango": 3,
+      "titulo": "Circular regression trees and forests with an application to probabilistic wind direction forecasting",
+      "autores": "Lang, MN; Schlosser, L; (...); Zeileis, A",
+      "fecha": "Nov 2020",
+      "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS, 69(5), pp.1357-1374",
+      "resumen": "Although circular data occur in a wide range of scientific fields, the methodology for distributional modelling and probabilistic forecasting of circular response variables is quite limited. Most of the existing methods are built on generalized linear and additive models, which are often challenging to optimize and interpret. Specifically, capturing abrupt changes or interactions is not straigh"
+    },
+    {
+      "rango": 4,
+      "titulo": "A review of predictive uncertainty estimation with machine learning",
+      "autores": "Tyralis, H and Papacharalampous, G",
+      "fecha": "Mar 18 2024",
+      "fuente": "ARTIFICIAL INTELLIGENCE REVIEW, 57(4)",
+      "resumen": "Predictions and forecasts of machine learning models should take the form of probability distributions, aiming to increase the quantity of information communicated to end users. Although applications of probabilistic prediction and forecasting with machine learning models in academia and industry are becoming more frequent, related concepts and methods have not been formalized and structured un"
+    },
+    {
+      "rango": 5,
+      "titulo": "Distributional Random Forests: Heterogeneity Adjustment and Multivariate Distributional Regression",
+      "autores": "Cevid, D; Michel, L; (...); Meinshausen, N",
+      "fecha": "2022",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 23",
+      "resumen": "Random Forest (Breiman, 2001) is a successful and widely used regression and classification algorithm. Part of its appeal and reason for its versatility is its (implicit) construction of a kernel-type weighting function on training data, which can also be used for targets other than the original mean estimation. We propose a novel forest construction for multivariate responses based on their jo"
+    },
+    {
+      "rango": 6,
+      "titulo": "Distributional Regression Forests Approach to Regional Frequency Analysis With Partial Duration Series",
+      "autores": "Kiran, KG and Srinivas, VV",
+      "fecha": "Oct 2021",
+      "fuente": "WATER RESOURCES RESEARCH, 57(10)",
+      "resumen": "Regional flood frequency analysis (RFFA) is widely used to quantify flood risk at ungauged and sparsely gauged locations. There are minimal attempts to use partial duration series (PDS) for RFFA, though the use of PDS instead of widely used annual maximum series (AMS) can offer some advantages. This article contributes two novel random/regression forests (RFs)-based methodologies, namely genera"
+    },
+    {
+      "rango": 7,
+      "titulo": "Postprocessing of Ensemble Weather Forecast Using Decision Tree-Based Probabilistic Forecasting Methods",
+      "autores": "Benácek, P; Farda, A and Stepánek, P",
+      "fecha": "Jan 2023",
+      "fuente": "WEATHER AND FORECASTING, 38(1), pp.69-82",
+      "resumen": "Producing an accurate and calibrated probabilistic forecast has high social and economic value. Systematic errors or biases in the ensemble weather forecast can be corrected by postprocessing models whose development is an urgent challenge. Traditionally, the bias correction is done by employing linear regression models that estimate the conditional probability distribution of the forecast. Alt"
+    },
+    {
+      "rango": 8,
+      "titulo": "Efficient Distributional Regression Trees Learning Algorithms for Calibrated Non-Parametric Probabilistic Forecasts",
+      "autores": "Duchemin, Q and Obozinski, G",
+      "fecha": "Jun 2026 (Early Access)",
+      "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS",
+      "resumen": "The perspective of developing trustworthy AI for critical applications in science and engineering requires machine learning techniques that are capable of estimating their own uncertainty. In the context of regression, instead of estimating a conditional mean, this can be achieved by producing a predictive interval for the output, or to even learn a model of the conditional probability p(y|x) o"
+    },
+    {
+      "rango": 9,
+      "titulo": "Transformation boosting machines",
+      "autores": "Hothorn, T",
+      "fecha": "Feb 2020",
+      "fuente": "STATISTICS AND COMPUTING, 30(1), pp.141-152",
+      "resumen": "The broad class of conditional transformation models includes interpretable and simple as well as potentially very complex models for conditional distributions. This makes conditional transformation models attractive for predictive distribution modelling, especially because models featuring interpretable parameters and black-box machines can be understood as extremes in a whole cascade of model"
+    },
+    {
+      "rango": 10,
+      "titulo": "Dynamic Changes in Habitat Quality and the Driving Mechanism in the Luoxiao Mountains Area from 1995 to 2020",
+      "autores": "Guo, K; Niu, X; (...); Ma, X",
+      "fecha": "Apr 11 2023",
+      "fuente": "ECOSYSTEM HEALTH AND SUSTAINABILITY, 9",
+      "resumen": "The strengthening of regional habitat quality is crucial to protect biodiversity and fully utilize ecosystem services such as those provided by forestry and aquatic ecosystems. However, the long-term patterns of change in the habitat quality of the Luoxiao Mountains area, which is both an important ecological barrier area and a concentrated poverty-stricken area, and the driving mechanism remai"
+    },
+    {
+      "rango": 11,
+      "titulo": "Nonlinear Distribution Regression for Remote Sensing Applications",
+      "autores": "Adsuara, JE; Perez-Suay, A; (...); Camps-Valls, G",
+      "fecha": "Dec 2019",
+      "fuente": "IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING, 57(12), pp.10025-10035",
+      "resumen": "In many remote sensing applications, one wants to estimate variables or parameters of interest from observations. When the target variable is available at a resolution that matches the remote sensing observations, standard algorithms, such as neural networks, random forests, or the Gaussian processes, are readily available to relate the two. However, we often encounter situations where the targ"
+    },
+    {
+      "rango": 12,
+      "titulo": "UAV multisensor data and GAMLSS improve forage biomass estimation in Cerrado integrated crop-livestock pastures",
+      "autores": "de Lima, GSA; Ferreira, ME; (...); Madari, BE",
+      "fecha": "Aug 26 2026",
+      "fuente": "FRONTIERS IN AGRONOMY, 8",
+      "resumen": "Introduction Accurate estimation of aboveground biomass (AGB) is essential for monitoring pasture productivity and supporting sustainable management of integrated crop-livestock (ICL) systems. We hypothesized that integrating multispectral, thermal, and canopy-structural information derived from unmanned aerial vehicles (UAVs) would improve AGB prediction relative to spectral information alone,"
+    },
+    {
+      "rango": 13,
+      "titulo": "Machine Learning-Based GNSS Positioning Error Compensation for Static Receivers",
+      "autores": "Carbune, V; Gutu, M; (...); Melnic, V",
+      "fecha": "Sep 5 2026",
+      "fuente": "GEOSCIENCES, 16(9)",
+      "resumen": "Global Navigation Satellite Systems (GNSS) positioning accuracy is affected by multiple error sources, including atmospheric delays, multipath propagation, and receiver noise, which can significantly reduce positioning reliability in low-cost receivers. This study investigates the use of a feedforward neural network to compensate for positioning errors in a static GNSS receiver scenario. A synt"
+    },
+    {
+      "rango": 14,
+      "titulo": "Isotonic distributional regression",
+      "autores": "Henzi, A; Ziegel, JF and Gneiting, T",
+      "fecha": "Nov 2021",
+      "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES B-STATISTICAL METHODOLOGY, 83(5), pp.963-993",
+      "resumen": "Isotonic distributional regression (IDR) is a powerful non-parametric technique for the estimation of conditional distributions under order restrictions. In a nutshell, IDR learns conditional distributions that are calibrated, and simultaneously optimal relative to comprehensive classes of relevant loss functions, subject to isotonicity constraints in terms of a partial order on the covariate s"
+    },
+    {
+      "rango": 15,
+      "titulo": "Stagewise Boosting Distributional Regression",
+      "autores": "Wetscher, M; Seiler, J; (...); Umlauf, N",
+      "fecha": "Dec 29 2025",
+      "fuente": "STAT, 15(1)",
+      "resumen": "Distributional regression extends generalized additive models by linking all distributional parameters to covariates. Gradient boosting is among the most effective estimation techniques for such models, yet it can suffer from vanishing gradients, resulting in unstable updates and weak variable selection. We introduce stagewise boosting for distributional regression, using sign-based, semiconsta"
+    },
+    {
+      "rango": 16,
+      "titulo": "Enhanced Variable Selection for Boosting Sparser and Less Complex Models in Distributional Copula Regression",
+      "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+      "fecha": "Jun 2026",
+      "fuente": "STATISTICS IN BIOSCIENCES, 18(2), pp.372-394",
+      "resumen": "Structured additive distributional copula regression allows to model the joint distribution of multivariate outcomes by relating all distribution parameters to covariates. Estimation via statistical boosting enables accounting for high-dimensional data and incorporating data-driven variable selection, both of which are useful given the complexity of the model class. However, as known from univa"
+    },
+    {
+      "rango": 17,
+      "titulo": "Deselection of base-learners for statistical boosting-with an application to distributional regression",
+      "autores": "Strömer, A; Staerk, C; (...); Mayr, A",
+      "fecha": "Feb 2022",
+      "fuente": "STATISTICAL METHODS IN MEDICAL RESEARCH, 31(2), pp.207-224",
+      "resumen": "We present a new procedure for enhanced variable selection for component-wise gradient boosting. Statistical boosting is a computational approach that emerged from machine learning, which allows to fit regression models in the presence of high-dimensional data. Furthermore, the algorithm can lead to data-driven variable selection. In practice, however, the final models typically tend to include"
+    },
+    {
+      "rango": 18,
+      "titulo": "Bivariate postprocessing of wind vectors",
+      "autores": "Buchner, F; Jobst, D; (...); Czado, C",
+      "fecha": "Jul 2026",
+      "fuente": "QUARTERLY JOURNAL OF THE ROYAL METEOROLOGICAL SOCIETY, 152(778)",
+      "resumen": "To quantify the uncertainty in numerical weather prediction (NWP) forecasts, ensemble prediction systems are utilized. Although NWP forecasts are improving continuously, they suffer from systematic bias and dispersion errors. To obtain well-calibrated and sharp predictive probability distributions, statistical postprocessing methods are applied to NWP output. Recent developments focus on multiv"
+    },
+    {
+      "rango": 19,
+      "titulo": "bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond)",
+      "autores": "Umlauf, N; Klein, N; (...); Zeileis, A",
+      "fecha": "Nov 2021",
+      "fuente": "JOURNAL OF STATISTICAL SOFTWARE, 100(4), pp.1-53",
+      "resumen": "Over the last decades, the challenges in applied regression and in predictive modeling have been changing considerably: (1) More flexible regression model specifications are needed as data sizes and available information are steadily increasing, consequently demanding for more powerful computing infrastructure. (2) Full probabilistic models by means of distributional regression - rather than pr"
+    },
+    {
+      "rango": 20,
+      "titulo": "The betaboost package-a software tool for modelling bounded outcome variables in potentially high-dimensional epidemiological data",
+      "autores": "Mayr, A; Weinhold, L; (...); Schmid, M",
+      "fecha": "Oct 2018",
+      "fuente": "INTERNATIONAL JOURNAL OF EPIDEMIOLOGY, 47(5), pp.1383-1388",
+      "resumen": "Motivation: To provide an integrated software environment for model fitting and variable selection in regression models with a bounded outcome variable. Implementation: The proposed modelling framework is implemented in the add-on package betaboost of the statistical software environment R. General features: The betaboost methodology is based on beta-regression, which is a state-of-"
+    },
+    {
+      "rango": 21,
+      "titulo": "Boosting multivariate structured additive distributional regression models",
+      "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+      "fecha": "May 20 2023",
+      "fuente": "STATISTICS IN MEDICINE, 42(11), pp.1779-1801",
+      "resumen": "We develop a model-based boosting approach for multivariate distributional regression within the framework of generalized additive models for location, scale, and shape. Our approach enables the simultaneous modeling of all distribution parameters of an arbitrary parametric distribution of a multivariate response conditional on explanatory variables, while being applicable to potentially high-d"
+    },
+    {
+      "rango": 22,
+      "titulo": "Polygenic modeling of genetic effects on both phenotypic mean and variance: distributional regression for BMI, blood and urine biomarkers in the UK Biobank",
+      "autores": "Kunwar, K; Wu, Q; (...); Maj, C",
+      "fecha": "Jun 11 2026",
+      "fuente": "FRONTIERS IN BIOINFORMATICS, 6",
+      "resumen": "Polygenic scores (PGS) are commonly used to estimate the cumulative genetic contribution to complex traits by aggregating the effects of multiple genetic variants. In the case of continuous phenotypes, traditional methods have primarily focused on predicting the effect of variants on the phenotypic mean, thereby overlooking potential genetic influences that modulate phenotypic variance. Recent"
+    },
+    {
+      "rango": 23,
+      "titulo": "Detecting gene-environment interactions to guide personalized intervention: Boosting distributional regression for polygenic scores",
+      "autores": "Wu, Q; Klinkhammer, H; (...); Mayr, A",
+      "fecha": "Apr 7 2026",
+      "fuente": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA, 123(14)",
+      "resumen": "Polygenic risk scores can be used to model the individual genetic liability for human traits. Current methods primarily focus on modeling the mean of a phenotype while neglecting the variance. However, genetic variants associated with phenotypic variance can provide important insights into gene-environment interaction studies. We propose snpboostlss, a cyclical gradient boosting algorithm for a"
+    },
+    {
+      "rango": 24,
+      "titulo": "Signal regression models for location, scale and shape with an application to stock returns",
+      "autores": "Brockhaus, S; Fuest, A; (...); Greven, S",
+      "fecha": "Apr 2018",
+      "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS, 67(3), pp.665-686",
+      "resumen": "We discuss scalar-on-function regression models where all parameters of the assumed response distribution can be modelled depending on covariates. We thus combine signal regression models with generalized additive models for location, scale and shape. Our approach is motivated by a time series of stock returns, where it is of interest to model both the expectation and the variance depending on"
+    },
+    {
+      "rango": 25,
+      "titulo": "Boosting functional response models for location, scale and shape with an application to bacterial competition",
+      "autores": "Stöcker, A; Brockhaus, S; (...); Greven, S",
+      "fecha": "Oct 2021",
+      "fuente": "STATISTICAL MODELLING, 21(5), pp.385-404",
+      "resumen": "We extend generalized additive models for location, scale and shape (GAMLSS) to regression with functional response. This allows us to simultaneously model point-wise mean curves, variances and other distributional parameters of the response in dependence of various scalar and functional covariate effects. In addition, the scope of distributions is extended beyond exponential families. The mode"
+    },
+    {
+      "rango": 26,
+      "titulo": "Gradient boosting for distributional regression: faster tuning and improved variable selection via noncyclical updates",
+      "autores": "Thomas, J; Mayr, A; (...); Hofner, B",
+      "fecha": "May 2018",
+      "fuente": "STATISTICS AND COMPUTING, 28(3), pp.673-687",
+      "resumen": "We present a new algorithm for boosting generalized additive models for location, scale and shape (GAMLSS) that allows to incorporate stability selection, an increasingly popular way to obtain stable sets of covariates while controlling the per-family error rate. The model is fitted repeatedly to subsampled data, and variables with high selection frequencies are extracted. To apply stability se"
+    },
+    {
+      "rango": 27,
+      "titulo": "Robust gradient boosting for generalized additive models for location, scale and shape",
+      "autores": "Speller, J; Staerk, C; (...); Mayr, A",
+      "fecha": "Mar 2026",
+      "fuente": "ADVANCES IN DATA ANALYSIS AND CLASSIFICATION, 20(1), pp.39-58",
+      "resumen": "Due to the increasing complexity and dimensionality of data sources, it is favorable that methodological approaches yield robust results so that corrupted observations do not jeopardize overall conclusions. We propose a modelling approach which is robust towards outliers in the response variable for generalized additive models for location, scale and shape (GAMLSS). We extend a recently propose"
+    },
+    {
+      "rango": 28,
+      "titulo": "Distributional regression using generalized additive models for location, scale and shape",
+      "autores": "Merder, J; Rigby, RA; (...); Stasinopoulos, DM",
+      "fecha": "Jul 9 2026",
+      "fuente": "NATURE REVIEWS METHODS PRIMERS, 6(1)",
+      "resumen": "Distributional regression (DR) refers to regression methods that model the entire conditional probability distribution of a response variable given a set of explanatory variables. The generalized additive model for location, scale and shape (GAMLSS) is a common framework of DR, extending traditional regression models (such as linear models, generalized linear models and generalized additive mod"
+    },
+    {
+      "rango": 29,
+      "titulo": "Scalable Estimation for Structured Additive Distributional Regression",
+      "autores": "Umlauf, N; Seiler, J; (...); Klein, N",
+      "fecha": "Apr 3 2025",
+      "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS, 34(2), pp.601-617",
+      "resumen": "Obtaining probabilistic models is of high relevance in many recent applications. However, estimation of such distributional models with very large datasets remains a difficult task. In particular, the use of rather complex models can easily lead to memory-related efficiency problems and thereby make estimation infeasible even on high-performance computers. We address these challenges and propos"
+    },
+    {
+      "rango": 30,
+      "titulo": "Variable Selection and Allocation in Joint Models via Gradient Boosting Techniques",
+      "autores": "Griesbach, C; Mayr, A and Bergherr, E",
+      "fecha": "Jan 2023",
+      "fuente": "MATHEMATICS, 11(2)",
+      "resumen": "Modeling longitudinal data (e.g., biomarkers) and the risk for events separately leads to a loss of information and bias, even though the underlying processes are related to each other. Hence, the popularity of joint models for longitudinal and time-to-event-data has grown rapidly in the last few decades. However, it is quite a practical challenge to specify which part of a joint model the sing"
+    },
+    {
+      "rango": 31,
+      "titulo": "Spatial Prediction of Diameter Distributions for the Alpine Protection Forests in Ebensee, Austria, Using ALS/PLS and Spatial Distributional Regression Models",
+      "autores": "Nothdurft, A; Tockner, A; (...); Finley, AO",
+      "fecha": "Jun 2024",
+      "fuente": "REMOTE SENSING, 16(12)",
+      "resumen": "A novel Bayesian spatial distributional regression model is presented to predict forest structural diversity in terms of the distributions of the stem diameter at breast height (DBH) in the protection forests in Ebensee, Austria. The distributional regression approach overcomes the limitations and uncertainties of traditional regression modeling, in which the conditional mean of the response is"
+    },
+    {
+      "rango": 32,
+      "titulo": "Significance Tests for Boosted Location and Scale Models with Linear Base-Learners",
+      "autores": "Hepp, T; Schmid, M and Mayr, A",
+      "fecha": "May 2019",
+      "fuente": "INTERNATIONAL JOURNAL OF BIOSTATISTICS, 15(1)",
+      "resumen": "Generalized additive models for location scale and shape (GAMLSS) offer very flexible solutions to a wide range of statistical analysis problems, but can be challenging in terms of proper model specification. This complex task can be simplified using regularization techniques such as gradient boosting algorithms, but the estimates derived from such models are shrunken towards zero and it is con"
+    },
+    {
+      "rango": 33,
+      "titulo": "A Parsimonious Hedonic Distributional Regression Model for Large Data with Heterogeneous Covariate Effects",
+      "autores": "Granna, J; Lang, SF; (...); Umlauf, N",
+      "fecha": "2025",
+      "fuente": "AUSTRIAN JOURNAL OF STATISTICS, 54(2), pp.44-68",
+      "resumen": "Modeling real estate prices in the context of hedonic models often involves fitting a Generalized Additive Model, where only the mean of a (lognormal) distribution is regressed on a set of variables without taking other parameters of the distribution into account. Thus far, the application of regression models that model the full conditional distribution of the prices, has been infeasible for l"
+    },
+    {
+      "rango": 34,
+      "titulo": "Gradient boosting in Markov-switching generalized additive models for location, scale, and shape",
+      "autores": "Adam, T; Mayr, A and Kneib, T",
+      "fecha": "Apr 2022",
+      "fuente": "ECONOMETRICS AND STATISTICS, 22, pp.3-16",
+      "resumen": "Markov-switching generalized additive models for location, scale, and shape constitute a novel class of flexible latent-state time series regression models. In contrast to conventional Markov-switching regression models, they can be used to model different state dependent parameters of the response distribution - not only the mean, but also variance, skewness, and kurtosis parameters - as poten"
+    },
+    {
+      "rango": 35,
+      "titulo": "Modelling dependent censoring in time-to-event data using boosting copula regression",
+      "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+      "fecha": "Oct 2025",
+      "fuente": "LIFETIME DATA ANALYSIS, 31(4), pp.994-1016",
+      "resumen": "Survival analysis plays a pivotal role across disciplines, including engineering, economics, and social sciences-not just in biomedical research. In many of these applications, incomplete observations due to censoring are common, arising from limited follow-up periods, study dropouts, or administrative constraints. A standard assumption in such settings is that the censoring mechanism is indepe"
+    },
+    {
+      "rango": 36,
+      "titulo": "Machine Learning Methods for Postprocessing Ensemble Forecasts of Wind Gusts: A Systematic Comparison",
+      "autores": "Schulz, B and Lerch, S",
+      "fecha": "Jan 2022",
+      "fuente": "MONTHLY WEATHER REVIEW, 150(1), pp.235-257",
+      "resumen": "Postprocessing ensemble weather predictions to correct systematic errors has become a standard practice in research and operations. However, only a few recent studies have focused on ensemble postprocessing of wind gust forecasts, despite its importance for severe weather warnings. Here, we provide a comprehensive review and systematic comparison of eight statistical and machine learning method"
+    },
+    {
+      "rango": 37,
+      "titulo": "Beyond binary AKI classification: development and external validation of a distributional model predicting serum creatinine and urine output trajectories in ICU patients",
+      "autores": "Jonkers, J; Rouzé, A; (...); Van Hoecke, S",
+      "fecha": "May 10 2026",
+      "fuente": "CRITICAL CARE, 30(1)",
+      "resumen": "Background Acute kidney injury (AKI) is a frequent, severe complication in the intensive care units (ICU). Existing machine learning models are typically inflexible, classification-based (i.e., predicting AKI occurrence as yes/no), and of limited clinical utility. This study proposes and externally validates the first multi-step, multivariate distributional regression model that directly predic"
+    },
+    {
+      "rango": 38,
+      "titulo": "Dairy Trade Reconsidered: Gravity and the Distributional Effect of Non-Tariff Barriers and Distance",
+      "autores": "Kondaridze, M; Liu, X and Luckstead, J",
+      "fecha": "Jan 2026",
+      "fuente": "AGRICULTURAL ECONOMICS, 57(1)",
+      "resumen": "This study examines the average and distributional effects of trade policy and friction variables on dairy trade flows. To capture average effects, we utilize the recently extended Poisson Pseudo Maximum Likelihood (PPML) methods, which rigorously address potential bias for coefficient and standard error estimates due to the incidental parameter problem in two-way and three-way gravity models."
+    },
+    {
+      "rango": 39,
+      "titulo": "Structured additive distributional hurdle Poisson modelling of individual fertility levels in Nigeria",
+      "autores": "Somo-Aina, O and Gayawan, E",
+      "fecha": "Sep 14 2019",
+      "fuente": "GENUS, 75(1)",
+      "resumen": "Fertility is one of the dynamic components of population and has been modelled through children ever born per woman, which is a count variable that can be characterized with excessive zeros origination from women without any births. In order to examine the spatial variation across states of Nigeria, we proposed the use of hurdle models that classifies the data into a truncated count and point m"
+    },
+    {
+      "rango": 40,
+      "titulo": "Sensitivity analysis of Bayesian networks to parameters of the conditional probability model using a Beta regression approach",
+      "autores": "Rohmer, J and Gehl, P",
+      "fecha": "May 1 2020",
+      "fuente": "EXPERT SYSTEMS WITH APPLICATIONS, 145",
+      "resumen": "Ensuring the validity and credibility of Bayesian Belief Network (BBN) as a modelling tool for expert systems requires appropriate methods for sensitivity analysis (SA), in order to test the robustness of the BBN diagnostic and prognostic with respect to the parameterisation of the conditional probability model (CPM). Yet, the most widely used techniques (based on sensitivity functions for disc"
+    },
+    {
+      "rango": 41,
+      "titulo": "In quest of China sports lottery development path to common prosperity in 2035",
+      "autores": "Yao, YP; Wan, B; (...); Zhang, Y",
+      "fecha": "Jan 26 2024",
+      "fuente": "PLOS ONE, 19(1)",
+      "resumen": "Objectives The China sports lottery contributes to sports and welfare causes. This study aims to construct a macro forecasting model supporting its sustained growth aligned with Vision 2035. Methods The modeling employed a distributional regression. Sales data of the China sports lottery from 2011 to 2022 were chosen as the response variable, alongside various macro- and event-level explanatory"
+    },
+    {
+      "rango": 42,
+      "titulo": "Learning Theory for Distribution Regression",
+      "autores": "Szabó, Z; Sriperumbudur, BK; (...); Gretton, A",
+      "fecha": "2016",
+      "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 17",
+      "resumen": "We also cover consistency for more recent kernels on distributions, including those due to Christmann and Steinwart (2010).We focus on the distribution regression problem: regressing to vector-valued outputs from probability measures. Many important machine learning and statistical tasks fit into this framework, including multi-instance learning and point estimation problems without analytical"
+    },
+    {
+      "rango": 43,
+      "titulo": "Detecting Anomalous Time Series by GAMLSS-Akaike-Weights-Scoring",
+      "autores": "Sodja, C",
+      "fecha": "Jan 2 2024",
+      "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS, 33(1)",
+      "resumen": "An extensible statistical framework for detecting anomalous time series including those with heavy-tailed distributions and nonstationarity in higher-order moments is introduced based on penalized likelihood distributional regression. Specifically, generalized additive models for location, scale, and shape are used to infer sample path representations defined by a parametric distribution with p"
+    },
+    {
+      "rango": 44,
+      "titulo": "Deep and interpretable regression models for ordinal outcomes",
+      "autores": "Kook, L; Herzog, L; (...); Sick, B",
+      "fecha": "Feb 2022",
+      "fuente": "PATTERN RECOGNITION, 122",
+      "resumen": "Outcomes with a natural order commonly occur in prediction problems and often the available input data are a mixture of complex data like images and tabular predictors. Deep Learning (DL) models are state-of-the-art for image classification tasks but frequently treat ordinal outcomes as unordered and lack interpretability. In contrast, classical ordinal regression models consider the outcome's"
+    },
+    {
+      "rango": 45,
+      "titulo": "Ordinal distribution regression for gait-based age estimation",
+      "autores": "Zhu, HP; Zhang, YH; (...); Shan, HM",
+      "fecha": "Jan 15 2020",
+      "fuente": "SCIENCE CHINA-INFORMATION SCIENCES, 63(2)",
+      "resumen": "Computer vision researchers prefer to estimate age from face images because facial features provide useful information. However, estimating age from face images becomes challenging when people are distant from the camera or occluded. A person's gait is a unique biometric feature that can be perceived efficiently even at a distance. Thus, gait can be used to predict age when face images are not"
+    },
+    {
+      "rango": 46,
+      "titulo": "Longitudinal Bayesian Zero-Inflated Beta Regression for Citrus Canker Resistance in Orange Rootstocks",
+      "autores": "Henriques, MJ; Gonzatto, OA Jr; (...); Louzada, F",
+      "fecha": "Sep 2026",
+      "fuente": "JOURNAL OF AGRICULTURAL BIOLOGICAL AND ENVIRONMENTAL STATISTICS, 31(3), pp.619-640",
+      "resumen": "When analyzing data in the vast majority of knowledge domains, it is common to encounter a high number of zeros. This is no different when working with data science in agriculture. When dealing with proportional data with a zero inflation, a useful approach is to model the problem with zero-inflated beta regression (ZIBe). This allows for a statistically correct (or at least reasonable) approac"
+    },
+    {
+      "rango": 47,
+      "titulo": "Bayesian simulation of hearing thresholds at conventional and extended high frequencies in young adults",
+      "autores": "Shahnaz, N and Ciocca, V",
+      "fecha": "Mar 2026",
+      "fuente": "HEARING RESEARCH, 472",
+      "resumen": "The goal of this study was to characterize the population-level distributions of hearing thresholds at conventional and extended high frequencies (EHFs). To achieve this goal, distributions of typical hearing thresholds expressed in dB SPL were measured in an otologically normal young-adult sample. Thresholds were obtained using an adaptive procedure with the Sennheiser HDA-200 earphone. Thresh"
+    },
+    {
+      "rango": 48,
+      "titulo": "Modelling climatic and temporal influences on boating traffic with relevance to digital camera monitoring of recreational fisheries",
+      "autores": "Afrifa-Yamoah, E; Taylor, SM and Mueller, U",
+      "fecha": "Dec 1 2021",
+      "fuente": "OCEAN & COASTAL MANAGEMENT, 215",
+      "resumen": "Digital camera monitoring data on recreational boating traffic are often manually interpreted and the reading cost can be expensive. Typically, these data are used along with other periodic survey information and camera data between these surveys may not be read, creating gaps in the time series. We predicted recreational boating traffic during these 'gap' periods using historical camera data a"
+    },
+    {
+      "rango": 49,
+      "titulo": "Minimum deviation distribution machine for large scale regression",
+      "autores": "Liu, MZ; Shao, YH; (...); Chen, WJ",
+      "fecha": "Apr 15 2018",
+      "fuente": "KNOWLEDGE-BASED SYSTEMS, 146, pp.167-180",
+      "resumen": "In this paper, by introducing the statistics of training data into support vector regression (SVR), we propose a minimum deviation distribution regression (MDR). Rather than just minimizing the structural risk, MDR also minimizes both the regression deviation mean and the regression deviation variance, which is able to deal with the different distribution of boundary data and noises. The formul"
+    },
+    {
+      "rango": 50,
+      "titulo": "PAC-Bayes Meta-Learning With Implicit Task-Specific Posteriors",
+      "autores": "Nguyen, C; Do, TT and Carneiro, G",
+      "fecha": "Jan 1 2023",
+      "fuente": "IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE, 45(1), pp.841-851",
+      "resumen": "We introduce a new and rigorously-formulated PAC-Bayes meta-learning algorithm that solves few-shot learning. Our proposed method extends the PAC-Bayes framework from a single-task setting to the meta-learning multiple-task setting to upper-bound the error evaluated on any, even unseen, tasks and samples. We also propose a generative-based approach to estimate the posterior of task-specific mod"
+    }
+  ]
+}

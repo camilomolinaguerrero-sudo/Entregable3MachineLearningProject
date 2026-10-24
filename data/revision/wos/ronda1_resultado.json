@@ -1,0 +1,1268 @@
+{
+ "filas": [
+  {
+   "id": "W01",
+   "consulta": "TS=(\"distribution regression\" OR \"distributional regression\" OR \"threshold ensemble\" OR \"multiple thresholds\" OR \"conditional distribution\") AND TS=(\"food supply\" OR \"food distribution\" OR \"wholesale market*\" OR \"supply chain*\") AND TS=(disruption* OR interruption* OR shortage*)",
+   "proposito": "familia × aplicación (EN)",
+   "resultados": 0,
+   "revisados": 0,
+   "relevantes": 0,
+   "cercanos": [],
+   "observacion": "Sin resultados en WoS.",
+   "problema": "Sin errores de sintaxis. Web of Science Core Collection respondió 'Your search found no results' (N = 0); resultado confirmado en una segunda ejecución independiente. El recuadro Query Preview traía una consulta previa de otra sesión; se limpió con el botón 'Clear search query' antes de escribir la consulta exacta (verificada carácter por carácter). Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W01_registros.json"
+  },
+  {
+   "id": "W04",
+   "consulta": "TS=(\"monotone rearrangement\" OR \"isotonic regression\" OR \"non-crossing\" OR \"quantile crossing\") AND TS=(\"empirical Bayes\" OR \"hierarchical shrinkage\" OR \"target encoding\" OR \"hierarchical Bayes*\") AND TS=(classif* OR \"early warning\" OR forecast* OR predict*)",
+   "proposito": "componentes del mecanismo × predicción (EN)",
+   "resultados": 3,
+   "revisados": 3,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Reliability modelling of wheel wear deterioration using conditional bivariate gamma processes and Bayesian hierarchical models",
+     "autores": "Dai, XL; Qu, S; (...); Wu, PB",
+     "fecha": "Oct 2022",
+     "fuente": "RELIABILITY ENGINEERING & SYSTEM SAFETY, 226",
+     "clase": "cercano_metodo",
+     "motivo": "Aplica regresión isotónica para corregir los datos y modelos bayesianos jerárquicos para las diferencias entre vehículos. Ambos componentes se parecen a la proyección monótona y a la codificación jerárquica del EJUL, pero el trabajo modela el desgaste de ruedas ferroviarias y no usa clasificadores en umbrales."
+    },
+    {
+     "titulo": "Monotone false discovery rate",
+     "autores": "Won, JH; Lim, J; (...); Kim, K",
+     "fecha": "Apr 2014",
+     "fuente": "STATISTICS & PROBABILITY LETTERS, 87, pp.86-93",
+     "clase": "cercano_metodo",
+     "motivo": "Propone una monotonización isotónica, asintóticamente óptima, de las estimaciones de la tasa local y de cola de falsos descubrimientos, que son probabilidades de tipo Bayes empírico. Se parece a la proyección isotónica que el EJUL aplica a sus probabilidades, pero el contexto es el de pruebas múltiples y no el abastecimiento de alimentos."
+    }
+   ],
+   "observacion": "La consulta W04 devolvió solo trabajos de estadística y confiabilidad sobre restricciones de monotonía y regresión isotónica; uno de ellos también usa modelos bayesianos jerárquicos. Ninguno trata el abastecimiento de alimentos ni usa clasificadores en varios umbrales. El más cercano al EJUL es [2] (Monotone false discovery rate), porque monotoniza probabilidades estimadas de tipo Bayes empírico, en la misma línea que la proyección isotónica del EJUL. / La consulta W04 devolvió solo trabajos de estadística y confiabilidad sobre estimación monótona o isotónica (desgaste de ruedas, FDR monótona, regresión monótona no emparejada). Ninguno trata interrupciones del abastecimiento de alimentos ni seguridad alimentaria. El más cercano al EJUL es [2], porque monotoniza curvas de probabilidad posterior dentro de un marco Bayes empírico; aun así es solo cercano por método.",
+   "problema": "Sin errores de sintaxis. El editor conservaba una consulta previa, así que se vació con \"Clear\" y la consulta se escribió de nuevo; se verificó que el texto era idéntico. Los registros solo se cargaron después de tomar un screenshot, porque la pestaña en segundo plano no los mostraba. JSON guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W04_registros.json"
+  },
+  {
+   "id": "W07",
+   "consulta": "TS=(\"early warning\" OR \"alerta temprana\") AND TS=(\"food supply\" OR \"food security\" OR \"food price*\" OR \"food crisis\") AND TS=(\"gradient boosting\" OR XGBoost OR \"random forest\" OR \"machine learning\")",
+   "proposito": "alerta temprana alimentaria con ML (EN/ES)",
+   "resultados": 106,
+   "revisados": 50,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "From Feature Selection to Forecasting: A Two-Stage Hybrid Framework for Food Price Prediction Using Economic Indicators in Türkiye",
+     "autores": "Senel, UT; Arici, N; (...); Polat, H",
+     "fecha": "Jan 4 2026",
+     "fuente": "SUSTAINABILITY",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica precios de alimentos en Turquía con un marco híbrido de selección de variables y pronóstico, sin clasificadores en varios umbrales."
+    },
+    {
+     "titulo": "Predicting food security in Ethiopia using spatiotemporal integration of heterogeneous data",
+     "autores": "Demissie, Z; Assabie, Y and Tegegne, T",
+     "fecha": "Mar 2026",
+     "fuente": "JOURNAL OF AGRICULTURE AND FOOD RESEARCH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Predice seguridad alimentaria en Etiopía integrando datos heterogéneos (precios, comercio, clima) con ML convencional, no con regresión distribucional por umbrales."
+    },
+    {
+     "titulo": "Year-Independent Prediction of Food Insecurity Using Classical and Neural Network Machine Learning Methods",
+     "autores": "Christensen, C; Wagner, T and Langhals, B",
+     "fecha": "Jun 2021",
+     "fuente": "AI",
+     "clase": "cercano_aplicacion",
+     "motivo": "Clasifica crisis alimentarias en 21 países con ML clásico y redes neuronales; es una tarea binaria de seguridad alimentaria, pero sin ensamble de umbrales ni reordenamiento."
+    },
+    {
+     "titulo": "Food Security: 3D Dynamic Display and Early Warning Platform Construction and Security Strategy",
+     "autores": "Sun, N; Tang, S; (...); Wang, HW",
+     "fecha": "Sep 2022",
+     "fuente": "INTERNATIONAL JOURNAL OF ENVIRONMENTAL RESEARCH AND PUBLIC HEALTH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Plataforma de visualización y alerta temprana de seguridad alimentaria de granos basada en mapas autoorganizados, no en métodos de umbrales."
+    },
+    {
+     "titulo": "Responsible use of artificial intelligence and machine learning for food security early warning systems",
+     "autores": "Anderson, W; Becker-Reshef, I; (...); Vos, R",
+     "fecha": "Aug 2026",
+     "fuente": "NATURE FOOD",
+     "clase": "cercano_aplicacion",
+     "motivo": "Perspectiva sobre el uso responsable de IA/ML en sistemas de alerta temprana de seguridad alimentaria, sin un método de umbrales."
+    },
+    {
+     "titulo": "Forecasting trends in food security with real time data",
+     "autores": "Herteux, J; Raeth, C; (...); Piovani, D",
+     "fecha": "Oct 21 2024",
+     "fuente": "COMMUNICATIONS EARTH & ENVIRONMENT",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica niveles de consumo de alimentos a escala subnacional con datos en tiempo real; es seguridad alimentaria con otro tipo de método."
+    },
+    {
+     "titulo": "Predicting Food-Security Crises in the Horn of Africa Using Machine Learning",
+     "autores": "Busker, T; van den Hurk, B; (...); Aerts, JCJH",
+     "fecha": "Aug 9 2024",
+     "fuente": "EARTHS FUTURE",
+     "clase": "cercano_aplicacion",
+     "motivo": "Predice crisis de seguridad alimentaria en el Cuerno de África con ML, sin clasificadores en umbrales vecinos ni codificación jerárquica."
+    },
+    {
+     "titulo": "Forecasting transitions in the state of food security with machine learning using transferable features",
+     "autores": "Westerveld, JJL; van den Homberg, MJC; (...); Stuit, SM",
+     "fecha": "Sep 10 2021",
+     "fuente": "SCIENCE OF THE TOTAL ENVIRONMENT",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica transiciones del estado de seguridad alimentaria con ML y variables transferibles; evento discreto, pero sin ensamble de umbrales sobre una variable continua."
+    },
+    {
+     "titulo": "An agricultural drought early warning threshold model with considering copula combined with diminishing marginal benefit theory: A case study in the Yellow River basin",
+     "autores": "Qian, TR; Su, XL; (...); Zhang, T",
+     "fecha": "Jul 1 2025",
+     "fuente": "AGRICULTURAL WATER MANAGEMENT",
+     "clase": "cercano_metodo",
+     "motivo": "Determina umbrales de alerta de sequía agrícola con probabilidades condicionales vía cópulas, un enfoque distribucional de eventos de umbral aplicado a otro fenómeno."
+    },
+    {
+     "titulo": "Artificial intelligence and machine learning in predicting food hunger and severity: A comprehensive review",
+     "autores": "He, S; Mehboob, S; (...); Hung, NM",
+     "fecha": "Oct 2026",
+     "fuente": "JOURNAL OF FOOD COMPOSITION AND ANALYSIS",
+     "clase": "cercano_aplicacion",
+     "motivo": "Revisión del uso de IA/ML para predecir el hambre y su severidad (seguridad alimentaria)."
+    },
+    {
+     "titulo": "Text mining and machine learning reveal global determinants of food insecurity",
+     "autores": "Carneiro, B; Resce, G; (...); Coffey, K",
+     "fecha": "Oct 21 2025",
+     "fuente": "SCIENTIFIC REPORTS",
+     "clase": "cercano_aplicacion",
+     "motivo": "Explica los determinantes globales de la inseguridad alimentaria con minería de texto de informes de FEWS NET y ML."
+    },
+    {
+     "titulo": "High- frequency monitoring enables machine learning-based forecasting of acute child malnutrition for early warning",
+     "autores": "Constenla-Villoslada, S; Liu, YY; (...); Barrett, CB",
+     "fecha": "Jun 10 2025",
+     "fuente": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica desnutrición aguda infantil con ML y monitoreo de alta frecuencia para alertar de emergencias alimentarias, sin un método de umbrales."
+    },
+    {
+     "titulo": "Maize yield forecasts for Sub-Saharan Africa using Earth Observation data and machine learning",
+     "autores": "Lee, DH; Davenport, F; (...); Verdin, J",
+     "fecha": "Jun 2022",
+     "fuente": "GLOBAL FOOD SECURITY-AGRICULTURE POLICY ECONOMICS AND ENVIRONMENT",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica rendimientos de maíz en África subsahariana para anticipar escasez de alimentos en la alerta temprana de FEWS NET, con regresión de ML."
+    },
+    {
+     "titulo": "Global warming increases the risk of crop yield failures driven by climate oscillations",
+     "autores": "Li, LC; Wang, B; (...); Yu, Q",
+     "fecha": "Jun 20 2025",
+     "fuente": "ONE EARTH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Cuantifica con ML y modelos de cultivo el riesgo de fallas de rendimiento (caídas de producción) causadas por oscilaciones climáticas y su efecto en la resiliencia del sistema alimentario."
+    },
+    {
+     "titulo": "AI-Based Assessment of Food Security and Climate Change: Multi-Scenario Analysis for Africa",
+     "autores": "Bostanci, SH; Kantar, G and Yildirim, S",
+     "fecha": "2025",
+     "fuente": "IEEE ACCESS",
+     "clase": "cercano_aplicacion",
+     "motivo": "Marco de IA para cuantificar cómo el clima y la dinámica de mercados afectan la seguridad alimentaria en África, sin un método de umbrales."
+    },
+    {
+     "titulo": "Beyond Prediction: Data, Baselines, Explanation, and Causation in Machine Learning for Food Insecurity",
+     "autores": "Mehboob, S; Abdullah, A; (...); Afghan, N",
+     "fecha": "Sep 2026 (Early Access)",
+     "fuente": "FOOD SAFETY AND HEALTH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Revisión crítica del ML para la inseguridad alimentaria (datos, líneas base, causalidad)."
+    },
+    {
+     "titulo": "Yield forecasting with machine learning and small data: What gains for grains?",
+     "autores": "Meroni, M; Waldner, F; (...); Rembold, F",
+     "fecha": "Oct 15 2021",
+     "fuente": "AGRICULTURAL AND FOREST METEOROLOGY",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica rendimientos de granos con ML y pocos datos para detectar dónde caerá la producción con fines de seguridad alimentaria."
+    }
+   ],
+   "observacion": "La consulta W07 devolvió sobre todo trabajos de alerta temprana de seguridad alimentaria (crisis IPC/FEWS NET, desnutrición) y muchos de sequía, rendimiento y plagas con ML convencional. Ninguno es relevante y ninguno usa clasificadores en varios umbrales ni reordenamiento. El más cercano en método al EJUL es [16], con umbrales de alerta definidos por probabilidad condicional mediante cópulas, y en aplicación [3] y [12], que clasifican crisis o transiciones alimentarias. / La consulta W07 (solo WoS) devolvió sobre todo estudios de sequía, rendimiento de cultivos y plagas con ML, y una minoría sobre predicción de crisis de seguridad alimentaria (IPC, FEWS NET, consumo, malnutrición). Ninguno es relevante: ninguno usa clasificadores en umbrales vecinos ni regresión distribucional sobre flujos hacia mercados mayoristas. En aplicación, los más cercanos al EJUL son Westerveld et al. 2021 [12] (transiciones binarias de deterioro de la seguridad alimentaria) y Busker et al. 2024 [10]; en método, solo el modelo de umbrales por cópula de Qian et al. 2025 [16] se parece, y de forma débil.",
+   "problema": "Sin error de sintaxis; la consulta se ejecutó tal cual. El editor traía una consulta previa de otra sesión y se vació con \"Clear\" antes de escribir. La lista de resultados carga los registros a medida que se desplaza (virtualizada): el código de scrollBy por JS solo devolvió 5 de 20, así que se recorrió la página con desplazamiento real de rueda y se capturaron los 50 primeros registros (página 1, orden por relevancia). Archivo guardado y validado: /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W07_registros.json"
+  },
+  {
+   "id": "W10",
+   "consulta": "TS=(ordinal) AND TS=(\"binary decomposition\" OR \"cumulative binary\" OR \"Frank and Hall\" OR \"binary classifiers\") AND TS=(classif*)",
+   "proposito": "familia: clasificación ordinal por descomposición binaria",
+   "resultados": 24,
+   "revisados": 24,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Convolutional Ordinal Regression Forest for Image Ordinal Estimation",
+     "autores": "Zhu, HP; Shan, HM; (...); Wang, FY",
+     "fecha": "Aug 2022",
+     "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS, 33(8), pp.4084-4095",
+     "clase": "cercano_metodo",
+     "motivo": "Plantea la regresión ordinal como una serie de clasificadores binarios y preserva el orden global entre ellos, pero la aplica a la estimación ordinal en imágenes."
+    },
+    {
+     "titulo": "Learning Ordinal-Hierarchical Constraints for Deep Learning Classifiers",
+     "autores": "Rosati, R; Romeo, L; (...); Hervás-Martínez, C",
+     "fecha": "Mar 1 2025",
+     "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS, 36(3), pp.4765-4778",
+     "clase": "cercano_metodo",
+     "motivo": "Impone restricciones ordinales y jerárquicas a clasificadores profundos, lo que se parece a combinar orden y jerarquía, pero no estudia el abastecimiento de alimentos."
+    },
+    {
+     "titulo": "A new approach: ordinal predictive maintenance with ensemble binary decomposition (OPMEB)",
+     "autores": "Yürek, ÖE and Birant, D",
+     "fecha": "2024",
+     "fuente": "TURKISH JOURNAL OF ELECTRICAL ENGINEERING AND COMPUTER SCIENCES, 32(4)",
+     "clase": "cercano_metodo",
+     "motivo": "Usa un ensamble de descomposiciones binarias ordinales para estimar probabilidades de falla en mantenimiento predictivo industrial, no en abastecimiento de alimentos."
+    },
+    {
+     "titulo": "Uncertainty quantification in ordinal classification: A comparison of measures",
+     "autores": "Haas, S and Hüllermeier, E",
+     "fecha": "Nov 2025",
+     "fuente": "INTERNATIONAL JOURNAL OF APPROXIMATE REASONING, 186",
+     "clase": "cercano_metodo",
+     "motivo": "Compara medidas de incertidumbre para la clasificación ordinal, que es una familia afín, sin aplicarlas a cadenas agroalimentarias."
+    },
+    {
+     "titulo": "Error-Correcting Output Codes in the Framework of Deep Ordinal Classification",
+     "autores": "Barbero-Gómez, J; Gutiérrez, PA and Hervás-Martínez, C",
+     "fecha": "May 2022 (Early Access)",
+     "fuente": "NEURAL PROCESSING LETTERS",
+     "clase": "cercano_metodo",
+     "motivo": "Descompone la clasificación ordinal en problemas binarios mediante códigos correctores de error en redes convolucionales, con una aplicación genérica."
+    },
+    {
+     "titulo": "Noncrossing ordinal classification",
+     "autores": "Qiao, XY",
+     "fecha": "2017",
+     "fuente": "STATISTICS AND ITS INTERFACE, 10(2), pp.187-198",
+     "clase": "cercano_metodo",
+     "motivo": "Combina clasificadores binarios en varios cortes ordinales y corrige el cruce de fronteras con una restricción de monotonía, que es análoga al reordenamiento del EJUL, aunque no tiene aplicación a alimentos."
+    },
+    {
+     "titulo": "Exploiting Structured Global and Neighbor Orders for Enhanced Ordinal Regression",
+     "autores": "Kamal, IM; Mochammad, S; (...); Kalili, M",
+     "fecha": "Jul 22 2025",
+     "fuente": "INFORMATION, 16(8)",
+     "clase": "cercano_metodo",
+     "motivo": "Su regresión ordinal con clasificadores binarios restringidos por el orden global y por los vecinos es afín al uso de umbrales vecinos, pero en otras aplicaciones."
+    },
+    {
+     "titulo": "Affective rating ranking based on face images in arousal-valence dimensional space",
+     "autores": "Xu, GP; Lu, HT; (...); Mao, QR",
+     "fecha": "Jun 2018",
+     "fuente": "FRONTIERS OF INFORMATION TECHNOLOGY & ELECTRONIC ENGINEERING, 19(6), pp.783-795",
+     "clase": "cercano_metodo",
+     "motivo": "Trata una anotación afectiva continua como ranking ordinal construido con clasificadores binarios, lo que equivale a dicotomizar una variable continua, en reconocimiento facial."
+    },
+    {
+     "titulo": "Multiple-class classification: Ordinal and categorical labels",
+     "autores": "Chang, YCI",
+     "fecha": "2017",
+     "fuente": "COMMUNICATIONS IN STATISTICS-SIMULATION AND COMPUTATION, 46(10), pp.7561-7581",
+     "clase": "cercano_metodo",
+     "motivo": "Estudia la clasificación multiclase ordinal y categórica construida con clasificadores binarios, sin una aplicación al abastecimiento."
+    },
+    {
+     "titulo": "Error-Correcting Output Codes in the Framework of Deep Ordinal Classification",
+     "autores": "Barbero-Gómez, J; Gutiérrez, PA and Hervás-Martínez, C",
+     "fecha": "Oct 2023",
+     "fuente": "NEURAL PROCESSING LETTERS, 55(5), pp.5299-5330",
+     "clase": "cercano_metodo",
+     "motivo": "Es la versión publicada del registro 5: descompone la clasificación ordinal profunda en problemas binarios con códigos correctores de error."
+    },
+    {
+     "titulo": "Is an ordinal class structure useful in classifier learning?",
+     "autores": "Hühn, JC and Hüllermeier, E",
+     "fecha": "2008",
+     "fuente": "INTERNATIONAL JOURNAL OF DATA MINING MODELLING AND MANAGEMENT, 1(1), pp.45-67",
+     "clase": "cercano_metodo",
+     "motivo": "Evalúa si aprovechar la estructura ordinal, por ejemplo con descomposición binaria, mejora a los clasificadores, y lo hace en un plano metodológico general."
+    },
+    {
+     "titulo": "Rank consistent ordinal regression for neural networks with application to age estimation",
+     "autores": "Cao, WZ; Mirjalili, V and Raschka, S",
+     "fecha": "Dec 2020",
+     "fuente": "PATTERN RECOGNITION LETTERS, 140, pp.325-331",
+     "clase": "cercano_metodo",
+     "motivo": "CORAL descompone la regresión ordinal en tareas binarias con consistencia de rango (monotonía) y la aplica a la estimación de edad."
+    },
+    {
+     "titulo": "Ordinal-ResLogit: Interpretable deep residual neural networks for ordered choices",
+     "autores": "Kamal, K and Farooq, B",
+     "fecha": "Mar 2024",
+     "fuente": "JOURNAL OF CHOICE MODELLING, 50",
+     "clase": "cercano_metodo",
+     "motivo": "Integra ResLogit en el marco CORAL de clasificación binaria por umbrales para modelar elecciones ordenadas en transporte."
+    },
+    {
+     "titulo": "Facial age estimation based on advanced ordinal ranking",
+     "autores": "Zhao, W and Wang, H",
+     "fecha": "Jun 11 2015",
+     "fuente": "ELECTRONICS LETTERS, 51(12), pp.903-904",
+     "clase": "cercano_metodo",
+     "motivo": "Combina clasificadores binarios de ranking ordinal con nuevas reglas de agregación para estimar la edad facial."
+    },
+    {
+     "titulo": "Empirical study on virtual order of class labels in nominal classification",
+     "autores": "Li, CW; Liu, H and Ming, Z",
+     "fecha": "Nov 2022",
+     "fuente": "INTERNATIONAL JOURNAL OF MACHINE LEARNING AND CYBERNETICS, 13(11), pp.3255-3266",
+     "clase": "cercano_metodo",
+     "motivo": "Analiza la descomposición binaria ordenada aplicada a la clasificación nominal, con una orientación metodológica general."
+    },
+    {
+     "titulo": "Public Governance and Public Health: Evaluating the Spatial Transferability of Groundwater Fluoride Risk Models in China",
+     "autores": "Wang, YX; Guo, LW; (...); Khan, H",
+     "fecha": "Jul-sep 2026",
+     "fuente": "FLUORIDE, 59(10)",
+     "clase": "cercano_metodo",
+     "motivo": "Entrena clasificadores binarios en umbrales anidados de una concentración continua y corrige sus estimaciones inconsistentes, lo que es muy afín al EJUL, pero el fenómeno es el flúor en aguas subterráneas."
+    },
+    {
+     "titulo": "Ordinal Regression Methods: Survey and Experimental Study",
+     "autores": "Gutiérrez, PA; Pérez-Ortiz, M; (...); Hervás-Martínez, C",
+     "fecha": "Jan 1 2016",
+     "fuente": "IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING, 28(1), pp.127-146",
+     "clase": "cercano_metodo",
+     "motivo": "Es una revisión experimental de métodos de regresión ordinal que incluye la descomposición binaria acumulada, sin aplicación a alimentos."
+    },
+    {
+     "titulo": "Instance-Level Future Motion Estimation in a Single Image Based on Ordinal Regression and Semi-Supervised Domain Adaptation",
+     "autores": "Kim, KR; Koh, YJ and Kim, CS",
+     "fecha": "2020",
+     "fuente": "IEEE ACCESS, 8, pp.115089-115108",
+     "clase": "cercano_metodo",
+     "motivo": "Usa regresión ordinal sobre clases de velocidad y dirección, es decir, discretiza magnitudes continuas, para estimar el movimiento futuro en imágenes."
+    },
+    {
+     "titulo": "Leveraging ordinal information to improve thermal comfort prediction with deep learning models",
+     "autores": "Cen, C; Zhai, YX; (...); Wong, NH",
+     "fecha": "Mar 1 2026",
+     "fuente": "JOURNAL OF BUILDING ENGINEERING, 121",
+     "clase": "cercano_metodo",
+     "motivo": "Modela de forma explícita la naturaleza ordinal del voto de confort térmico, con costos de error desiguales, en ingeniería de edificaciones."
+    },
+    {
+     "titulo": "Cautious classification with nested dichotomies and imprecise probabilities",
+     "autores": "Yang, G; Destercke, S and Masson, MH",
+     "fecha": "Dec 2017",
+     "fuente": "SOFT COMPUTING, 21(24), pp.7447-7462",
+     "clase": "cercano_metodo",
+     "motivo": "Usa dicotomías anidadas (descomposición binaria) con probabilidades imprecisas para dar predicciones cautelosas, en otras aplicaciones."
+    },
+    {
+     "titulo": "Code smell severity classification using machine learning techniques",
+     "autores": "Fontana, FA and Zanoni, M",
+     "fecha": "Jul 15 2017",
+     "fuente": "KNOWLEDGE-BASED SYSTEMS, 128, pp.43-58",
+     "clase": "cercano_metodo",
+     "motivo": "Clasifica la severidad ordinal de los code smells comparando enfoques que incluyen la clasificación ordinal por descomposición binaria, en ingeniería de software."
+    },
+    {
+     "titulo": "A transitivity analysis of bipartite rankings in pairwise multi-class classification",
+     "autores": "Waegeman, W and De Baets, B",
+     "fecha": "Nov 1 2010",
+     "fuente": "INFORMATION SCIENCES, 180(21), pp.4099-4117",
+     "clase": "cercano_metodo",
+     "motivo": "Analiza la transitividad de los rankings binarios en ensambles por pares frente a la regresión ordinal, con un enfoque teórico."
+    }
+   ],
+   "observacion": "La consulta W10 devolvió sobre todo trabajos metodológicos de clasificación y regresión ordinal por descomposición binaria (CORAL, códigos correctores de error, dicotomías anidadas, revisiones), aplicados a imágenes, edad facial, mantenimiento o confort térmico; ninguno trata el abastecimiento de alimentos y ninguno es relevante. El más cercano al EJUL es el 17 (clasificadores binarios en umbrales anidados de una concentración continua, con corrección de inconsistencias), seguido del 6 (clasificación ordinal sin cruce de fronteras). / La consulta W10 devolvió sobre todo trabajos metodológicos de clasificación y regresión ordinal por descomposición binaria (CORAL, ECOC, Frank-Hall, dicotomías anidadas), aplicados a imágenes, mantenimiento, transporte o software; ninguno trata interrupciones del abastecimiento de alimentos y ninguno es relevante. El más cercano al EJUL es [17], con clasificadores binarios en umbrales anidados de una variable continua y coherencia entre umbrales (fluoruro en agua), seguido de [6], que corrige el cruce entre clasificadores binarios.",
+   "problema": "Sin errores de sintaxis. El editor traía una consulta previa precargada; se limpió con \"Clear\" antes de escribir. Los registros 5 y 10 son el mismo artículo (versión Early Access 2022 y versión final 2023). Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W10_registros.json"
+  },
+  {
+   "id": "W13",
+   "consulta": "TS=(\"supply chain disruption*\" OR \"supply disruption*\") AND TS=(predict* OR forecast* OR \"early warning\") AND TS=(\"machine learning\" OR \"gradient boosting\" OR XGBoost OR \"random forest\")",
+   "proposito": "aplicación: disrupciones de cadenas de suministro con ML",
+   "resultados": 60,
+   "revisados": 50,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Forecasting for food price inflation using machine learning methodology: Expansion on FRED-MD",
+     "autores": "Yan, HQ; Manfredo, M and Mishra, AK",
+     "fecha": "May 2026",
+     "fuente": "FOOD POLICY",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica la inflación de precios de alimentos con ML sobre FRED-MD; es una aplicación alimentaria con un método distinto al EJUL."
+    },
+    {
+     "titulo": "Forecasting global agricultural trade imbalances using a hybrid deep learning and gradient boosting framework",
+     "autores": "Zhao, TW; Chen, GQ; (...); Busababodhin, P",
+     "fecha": "Jul 16 2026",
+     "fuente": "DISCOVER COMPUTING",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica desequilibrios del comercio agrícola global con aprendizaje profundo y gradient boosting; trata la seguridad alimentaria con otro método."
+    },
+    {
+     "titulo": "Data analytics and optimised machine learning algorithm to analyse coffee commodity prices",
+     "autores": "Tan, ND; Yu, HC; (...); You, SS",
+     "fecha": "2022",
+     "fuente": "INTERNATIONAL JOURNAL OF SUSTAINABLE AGRICULTURAL MANAGEMENT AND INFORMATICS",
+     "clase": "cercano_aplicacion",
+     "motivo": "Analiza y pronostica precios del café, una materia prima alimentaria, con red de estado de eco y wavelets; es un método distinto."
+    },
+    {
+     "titulo": "Climate variability and Trade-Offs in maize production: A comparative assessment of temperature and precipitation trends during the growing season in China and the USA",
+     "autores": "Baloch, N",
+     "fecha": "Aug 1 2026",
+     "fuente": "FIELD CROPS RESEARCH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Variabilidad climática y producción de maíz en el marco de la seguridad alimentaria; la relación es tangencial y el método es distinto."
+    },
+    {
+     "titulo": "Livelihood Changes, Spatial Anticontagion Policy Effects, and Structural Resilience of National Food Systems in a Sub-Saharan African Country Context: A Panel Machine Learning Approach",
+     "autores": "Frimpong, S; Frimpong, H; (...); Adjei, B",
+     "fecha": "Nov 2023",
+     "fuente": "SOCIAL SCIENCES-BASEL",
+     "clase": "cercano_aplicacion",
+     "motivo": "Resiliencia de sistemas alimentarios nacionales ante políticas COVID con ML de panel; trata alimentos con otro método."
+    },
+    {
+     "titulo": "Forecasting disruptions in global food value chains to tackle food insecurity: The role of AI and big data analytics - A bibliometric and scientometric analysis",
+     "autores": "Tamasiga, P; Ouassou, E; (...); Molala, M",
+     "fecha": "Dec 2023",
+     "fuente": "JOURNAL OF AGRICULTURE AND FOOD RESEARCH",
+     "clase": "cercano_aplicacion",
+     "motivo": "Análisis bibliométrico sobre IA y big data para pronosticar disrupciones en cadenas de valor alimentarias; el fenómeno es muy cercano, pero no propone un modelo por umbrales."
+    }
+   ],
+   "observacion": "La consulta W13 de WoS devolvió sobre todo trabajos de ML genérico (XGBoost, RF, redes profundas, gemelos digitales) para disrupciones en manufactura, farmacia, transporte marítimo, energía y construcción, más unos pocos alimentarios (precios de alimentos, comercio agrícola, sistemas alimentarios). Ninguno usa clasificadores en varios umbrales, regresión distribucional, reordenamiento monótono ni Bayes empírico jerárquico, así que no hay registros relevantes ni cercanos por método. El más cercano al EJUL es, por aplicación, [37] (bibliometría sobre pronóstico de disrupciones en cadenas de valor alimentarias); por planteamiento, [3] y [1] (alerta temprana de rupturas de suministro por línea de producto o componente). / La consulta W13 devolvió sobre todo trabajos de ML genérico (XGBoost, random forest, aprendizaje profundo, gemelos digitales) para predecir disrupciones en cadenas de suministro industriales, farmacéuticas, marítimas y energéticas, y unos pocos sobre precios de alimentos, comercio agrícola o resiliencia de sistemas alimentarios. Ninguno es relevante ni usa la familia de umbrales del EJUL. En aplicación, el más cercano es [37], una bibliometría sobre el pronóstico de disrupciones en cadenas de valor alimentarias, seguido de [33] y [13]; en la tarea (alerta binaria de disrupción), los más parecidos son [3] y [9], pero ninguno trata alimentos.",
+   "problema": "No hubo errores de sintaxis y WoS devolvió N = 60. El recuadro Query Preview traía la consulta de otra sesión, así que lo limpié con \"Clear search query\" antes de escribir W13. Extraje los 50 registros de la página 1, ordenados por relevancia. Los rangos 51 a 60 están en la página 2 y no los extraje, porque el procedimiento fija un límite de 50. En la pestaña de fondo la lista de WoS no se renderizaba solo con desplazar la página; para que apareciera tomé una captura después de cada desplazamiento. El resumen de cada registro es el inicio que muestra WoS en la lista. En el rango 32, ese texto empieza con la plantilla \"Highlights\" de la revista. Guardé el archivo en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W13_registros.json"
+  },
+  {
+   "id": "W02",
+   "consulta": "TS=(\"latent variable\" OR \"latent threshold\" OR dichotomi* OR \"continuous outcome\") AND TS=(supply OR food OR logistic*) AND TS=(disruption* OR interruption* OR shortage*) AND TS=(\"machine learning\" OR classif* OR boosting)",
+   "proposito": "variable latente dicotomizada × interrupción (EN)",
+   "resultados": 2,
+   "revisados": 2,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [],
+   "observacion": "La consulta W02 trajo dos trabajos que solo coinciden por palabras sueltas: una comparación de clasificadores en quimiometría y un estudio de asociación sobre disrupción circadiana. Ninguno es relevante ni cercano. Por método, el menos alejado del EJUL es el registro 1 (clasificación supervisada con validación externa), aunque no usa umbrales ni regresión distribucional. / La consulta W02 devolvió solo dos registros, que coinciden con ella por términos sueltos («classifiers», «disruption»): uno de quimiometría y otro de nutrición y epidemiología circadiana. Ninguno se acerca al EJUL ni por método ni por aplicación. Si hubiera que nombrar el menos lejano, sería el [1], solo porque compara clasificadores.",
+   "problema": "Sin errores de sintaxis. El editor traía precargado \"TS=(SIPSA)\" de una sesión anterior; se limpió con el botón Clear antes de escribir la consulta, que quedó exacta. Ambos registros parecen poco pertinentes (coinciden por \"shortage\" y \"disruptions\" en sentido no logístico)."
+  },
+  {
+   "id": "W05",
+   "consulta": "TS=(abastecimiento OR desabastecimiento OR \"centrales mayoristas\" OR \"central mayorista\" OR \"seguridad alimentaria\") AND TS=(\"aprendizaje automático\" OR \"aprendizaje de máquina\" OR umbral* OR ensamble* OR \"regresión distribucional\")",
+   "proposito": "familia × aplicación (ES)",
+   "resultados": 0,
+   "revisados": 0,
+   "relevantes": 0,
+   "cercanos": [],
+   "observacion": "Sin resultados en WoS.",
+   "problema": "Sin error de sintaxis. Web of Science Core Collection devolvió 'Your search found no results' para la consulta exacta (verificada en el editor antes de pulsar Search). Una segunda ejecución independiente confirmó el resultado; la página permanece en advanced-search, sin URL de resultados. Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W05_registros.json"
+  },
+  {
+   "id": "W08",
+   "consulta": "TS=(\"distribution regression\" OR \"multiple thresholds\" OR \"threshold ensemble\" OR \"cumulative binary\") AND TS=(\"empirical Bayes\" OR hierarchical OR shrinkage) AND TS=(rearrangement OR isotonic OR monoton*)",
+   "proposito": "combinación exacta del mecanismo",
+   "resultados": 0,
+   "revisados": 0,
+   "relevantes": 0,
+   "cercanos": [],
+   "observacion": "Sin resultados en WoS.",
+   "problema": "Sin errores de sintaxis. Se verificó el texto exacto en el editor y se pulsó Search; WoS Core Collection respondió 'Your search found no results' (0 registros). Resultado confirmado en un segundo intento. Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W08_registros.json"
+  },
+  {
+   "id": "W11",
+   "consulta": "TS=(\"privileged information\" OR \"LUPI\") AND TS=(classif*) AND TS=(regression OR continuous OR auxiliary)",
+   "proposito": "familia: información privilegiada",
+   "resultados": 31,
+   "revisados": 31,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Efficient and robust kernel learning with class-wise privileged information for pattern classification",
+     "autores": "Tang, JJ; Gou, Q; (...); Tian, YJ",
+     "fecha": "Nov 2026",
+     "fuente": "PATTERN RECOGNITION 179",
+     "clase": "cercano_metodo",
+     "motivo": "Usa información privilegiada por clase dentro de un aprendizaje kernel para clasificar patrones genéricos; no trata el abastecimiento de alimentos."
+    },
+    {
+     "titulo": "Robust learning with imperfect privileged information",
+     "autores": "Li, X; Du, B; (...); Tao, DC",
+     "fecha": "May 2020",
+     "fuente": "ARTIFICIAL INTELLIGENCE 282",
+     "clase": "cercano_metodo",
+     "motivo": "Propone un LUPI robusto cuando la información privilegiada es imperfecta o incompleta, en tareas de clasificación genéricas."
+    },
+    {
+     "titulo": "Learning using privileged information with logistic regression on acute respiratory distress syndrome detection",
+     "autores": "Gao, ZJ; Cheng, SY; (...); Najarian, K",
+     "fecha": "Oct 2024",
+     "fuente": "ARTIFICIAL INTELLIGENCE IN MEDICINE 156",
+     "clase": "cercano_metodo",
+     "motivo": "Usa una regresión logística con información privilegiada (LUPI) para detectar un evento binario clínico (SDRA); la aplicación es médica."
+    },
+    {
+     "titulo": "KOC plus : Kernel ridge regression based one-class classification using privileged information",
+     "autores": "Gautam, C; Tiwari, A and Tanveer, M",
+     "fecha": "Dec 2019",
+     "fuente": "INFORMATION SCIENCES 504, pp.324-333",
+     "clase": "cercano_metodo",
+     "motivo": "Extiende un clasificador de una clase basado en KRR al paradigma LUPI para detectar valores atípicos o novedades."
+    },
+    {
+     "titulo": "AEKOC plus : Kernel Ridge Regression-Based Auto-Encoder for One-Class Classification Using Privileged Information",
+     "autores": "Gautam, C; Tiwari, A and Tanveer, M",
+     "fecha": "Mar 2020",
+     "fuente": "COGNITIVE COMPUTATION 12(2), pp.412-425",
+     "clase": "cercano_metodo",
+     "motivo": "Es un autocodificador KRR de una clase con información privilegiada para detectar novedades; no trata cadenas agroalimentarias."
+    },
+    {
+     "titulo": "Coarse-grained privileged learning for classification",
+     "autores": "Fu, SJ; Wang, XX; (...); Li, JC",
+     "fecha": "Nov 2023",
+     "fuente": "INFORMATION PROCESSING & MANAGEMENT 60(6)",
+     "clase": "cercano_metodo",
+     "motivo": "Propone información privilegiada de grano grueso (compartida por grupos) en clasificación genérica."
+    },
+    {
+     "titulo": "Extending the learning using privileged information paradigm to logistic regression",
+     "autores": "Martínez-García, M; García-Gutierrez, S; (...); Lozano, JA",
+     "fecha": "Jan 28 2025",
+     "fuente": "NEUROCOMPUTING 615",
+     "clase": "cercano_metodo",
+     "motivo": "Extiende LUPI a la regresión logística para predicciones binarias probabilísticas, sin una aplicación al abastecimiento."
+    },
+    {
+     "titulo": "Ensemble Deep Random Vector Functional Link Network Using Privileged Information for Alzheimer's Disease Diagnosis",
+     "autores": "Ganaie, MA and Tanveer, M",
+     "fecha": "Jul-aug 2024",
+     "fuente": "IEEE-ACM TRANSACTIONS ON COMPUTATIONAL BIOLOGY AND BIOINFORMATICS 21(4), pp.534-545",
+     "clase": "cercano_metodo",
+     "motivo": "Es un ensamble de redes RVFL profundas con información privilegiada para diagnosticar Alzheimer."
+    },
+    {
+     "titulo": "A novel stochastic configuration network with iterative learning using privileged information and its application",
+     "autores": "Lu, J and Ding, JL",
+     "fecha": "Oct 2022",
+     "fuente": "INFORMATION SCIENCES 613, pp.953-965",
+     "clase": "cercano_metodo",
+     "motivo": "Es una red de configuración estocástica con aprendizaje iterativo usando información privilegiada en una aplicación industrial."
+    },
+    {
+     "titulo": "Incremental learning paradigm with privileged information for random vector functional-link networks: IRVFL",
+     "autores": "Dai, W; Ao, YS; (...); Wang, XS",
+     "fecha": "May 2022",
+     "fuente": "NEURAL COMPUTING & APPLICATIONS 34(9), pp.6847-6859",
+     "clase": "cercano_metodo",
+     "motivo": "Es un aprendizaje incremental con LUPI para redes RVFL, en clasificación genérica."
+    },
+    {
+     "titulo": "Incorporating Privileged Information Through Metric Learning",
+     "autores": "Fouad, S; Tino, P; (...); Schneider, P",
+     "fecha": "Jul 2013",
+     "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS 24(7), pp.1086-1098",
+     "clase": "cercano_metodo",
+     "motivo": "Incorpora la información privilegiada mediante aprendizaje de métricas para clasificar patrones."
+    },
+    {
+     "titulo": "Dictionary-Based Multi-View Learning With Privileged Information",
+     "autores": "Liu, B; Sun, P; (...); Huang, YS",
+     "fecha": "May 2024",
+     "fuente": "IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY 34(5), pp.3523-3537",
+     "clase": "cercano_metodo",
+     "motivo": "Es un aprendizaje multivista basado en diccionarios con información privilegiada para clasificar."
+    },
+    {
+     "titulo": "Self-paced multi-view positive and unlabeled graph learning with auxiliary information",
+     "autores": "Liu, B; Peng, TT; (...); Huang, YS",
+     "fecha": "Sep 2023",
+     "fuente": "INFORMATION SCIENCES 642",
+     "clase": "cercano_metodo",
+     "motivo": "Clasifica grafos con aprendizaje positivo-no etiquetado multivista que usa información auxiliar (privilegiada) en el entrenamiento."
+    },
+    {
+     "titulo": "Multi-view ordinal regression with feature augmentation and privileged information learning",
+     "autores": "Xiao, YS; Chen, LB and Liu, B",
+     "fecha": "Aug 2025",
+     "fuente": "INFORMATION SCIENCES 708",
+     "clase": "cercano_metodo",
+     "motivo": "Combina regresión ordinal (clases ordenadas por umbrales) e información privilegiada en datos multivista; es afín en dos componentes, pero no trata alimentos."
+    },
+    {
+     "titulo": "Learning Using Privileged Information: Similarity Control and Knowledge Transfer",
+     "autores": "Vapnik, V and Izmailov, R",
+     "fecha": "Sep 2015",
+     "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH 16, pp.2023-2049",
+     "clase": "cercano_metodo",
+     "motivo": "Es el trabajo fundacional de LUPI (control de similitud y transferencia de conocimiento), sin aplicación al abastecimiento."
+    },
+    {
+     "titulo": "A novel extreme learning machine using privileged information",
+     "autores": "Zhang, WB; Ji, HB; (...); Zhang, YQ",
+     "fecha": "Nov 30 2015",
+     "fuente": "NEUROCOMPUTING 168, pp.823-828",
+     "clase": "cercano_metodo",
+     "motivo": "Introduce la información privilegiada en una máquina de aprendizaje extremo (ELM+) para clasificar."
+    },
+    {
+     "titulo": "Self-paced learning and privileged information based KRR classification algorithm for diagnosis of Parkinson's disease",
+     "autores": "Peng, B; Gong, ZJ; (...); Dai, YK",
+     "fecha": "Jan 1 2022",
+     "fuente": "NEUROSCIENCE LETTERS 766",
+     "clase": "cercano_metodo",
+     "motivo": "Es un clasificador KRR con información privilegiada y aprendizaje autodirigido para diagnosticar Parkinson."
+    },
+    {
+     "titulo": "Capturing global spatial patterns for distinguishing posed and spontaneous expressions",
+     "autores": "Wang, SF; Wu, CL and Ji, Q",
+     "fecha": "Jun 2016",
+     "fuente": "COMPUTER VISION AND IMAGE UNDERSTANDING 147, pp.69-76",
+     "clase": "cercano_metodo",
+     "motivo": "Usa el género y la categoría de expresión como información privilegiada para distinguir expresiones faciales posadas y espontáneas."
+    },
+    {
+     "titulo": "From the Lab to the Wild: Affect Modeling Via Privileged Information",
+     "autores": "Makantasis, K; Pinitas, K; (...); Yannakakis, GN",
+     "fecha": "Apr-jun 2024",
+     "fuente": "IEEE TRANSACTIONS ON AFFECTIVE COMPUTING 15(2), pp.380-392",
+     "clase": "cercano_metodo",
+     "motivo": "Usa información privilegiada para transferir modelos de afecto del laboratorio a entornos reales."
+    },
+    {
+     "titulo": "Synergy of Monotonic Rules",
+     "autores": "Vapnik, V and Izmailov, R",
+     "fecha": "2016",
+     "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH 17",
+     "clase": "cercano_metodo",
+     "motivo": "Combina los puntajes de varias reglas monótonas en una regla de sinergia que estima la probabilidad condicional con monotonía; es afín al ensamble con imposición de monotonía, pero en reconocimiento de patrones genérico."
+    },
+    {
+     "titulo": "Posed and Spontaneous Expression Distinction Using Latent Regression Bayesian Networks",
+     "autores": "Wang, SF; Hao, LF and Ji, Q",
+     "fecha": "Sep 2020",
+     "fuente": "ACM TRANSACTIONS ON MULTIMEDIA COMPUTING COMMUNICATIONS AND APPLICATIONS 16(3)",
+     "clase": "cercano_metodo",
+     "motivo": "Usa redes bayesianas de regresión latente con información adicional de entrenamiento para distinguir expresiones; la aplicación es la visión por computador."
+    },
+    {
+     "titulo": "An Efficient Transfer Learning Method with Auxiliary Information",
+     "autores": "Liu, B; Li, LJ; (...); Huang, RG",
+     "fecha": "Jan 2024",
+     "fuente": "ACM TRANSACTIONS ON KNOWLEDGE DISCOVERY FROM DATA 18(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Propone un aprendizaje por transferencia que aprovecha información auxiliar (privilegiada) en clasificación."
+    },
+    {
+     "titulo": "Knowledge transfer in SVM and neural networks",
+     "autores": "Vapnik, V and Izmailov, R",
+     "fecha": "Oct 2017",
+     "fuente": "ANNALS OF MATHEMATICS AND ARTIFICIAL INTELLIGENCE 81(1-2), pp.3-19 (5th Symposium on Conformal and Probabilistic Prediction with Applications, COPA)",
+     "clase": "cercano_metodo",
+     "motivo": "Aplica la transferencia de conocimiento del paradigma LUPI a SVM y redes neuronales en modelos generales."
+    },
+    {
+     "titulo": "Enhancing SVM for survival data using local invariances and weighting",
+     "autores": "Sanz, H; Reverter, F and Valim, C",
+     "fecha": "May 19 2020",
+     "fuente": "BMC BIOINFORMATICS 21(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Mejora SVM para datos de supervivencia con invariancias locales y ponderación; la conexión con información privilegiada se infiere de la consulta porque el resumen está truncado."
+    },
+    {
+     "titulo": "Multi-dimensional MRI representation and privileged learning approaches to functional outcome prediction for ischemic stroke patients",
+     "autores": "Wittrup, E; Reavey-Cantwell, J; (...); Najarian, K",
+     "fecha": "May 10 2026",
+     "fuente": "NPJ DIGITAL MEDICINE 9(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Usa aprendizaje con información privilegiada (imágenes de RM) para pronosticar el resultado funcional tras un ictus."
+    },
+    {
+     "titulo": "Improving MRI-based analysis of brain structural changes in patients with hypertension via a privileged information learning algorithm",
+     "autores": "Peng, B; Yu, XY; (...); Dai, YK",
+     "fecha": "Jun 2022",
+     "fuente": "METHODS 202, pp.103-109",
+     "clase": "cercano_metodo",
+     "motivo": "Aplica un algoritmo de información privilegiada a imágenes de RM para analizar cambios cerebrales por hipertensión."
+    },
+    {
+     "titulo": "Predicting Visual Political Bias Using Webly Supervised Data and an Auxiliary Task",
+     "autores": "Thomas, C and Kovashka, A",
+     "fecha": "Nov 2021",
+     "fuente": "INTERNATIONAL JOURNAL OF COMPUTER VISION 129(11), pp.2978-3003",
+     "clase": "cercano_metodo",
+     "motivo": "Predice el sesgo político visual usando una tarea auxiliar e información textual disponible solo en el entrenamiento."
+    },
+    {
+     "titulo": "Pedestrian Counting With Back-Propagated Information and Target Drift Remedy",
+     "autores": "Chen, K and Zhang, ZX",
+     "fecha": "Apr 2017",
+     "fuente": "IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS 47(4), pp.639-647",
+     "clase": "cercano_metodo",
+     "motivo": "Cuenta peatones con información retropropagada en el entrenamiento (tipo privilegiada) y corrige la deriva del objetivo; la aplicación es la vigilancia visual."
+    },
+    {
+     "titulo": "Rethinking statistical learning theory: learning using statistical invariants",
+     "autores": "Vapnik, V and Izmailov, R",
+     "fecha": "Mar 2019",
+     "fuente": "MACHINE LEARNING 108(3), pp.381-423",
+     "clase": "cercano_metodo",
+     "motivo": "Propone LUSI, que estima la función de probabilidad condicional con invariantes estadísticos; extiende la línea de LUPI de Vapnik y no trata alimentos."
+    },
+    {
+     "titulo": "The Benefits of Modeling Slack Variables in SVMs",
+     "autores": "Tang, FZ; Tino, P; (...); Chen, HH",
+     "fecha": "Apr 2015",
+     "fuente": "NEURAL COMPUTATION 27(4), pp.954-981",
+     "clase": "cercano_metodo",
+     "motivo": "Analiza el modelado de las variables de holgura en SVM+ con información privilegiada."
+    },
+    {
+     "titulo": "Learning to Classify Fine-Grained Categories with Privileged Visual-Semantic Misalignment",
+     "autores": "Chen, K and Zhang, ZX",
+     "fecha": "Mar 1 2017",
+     "fuente": "IEEE TRANSACTIONS ON BIG DATA 3(1), pp.37-43",
+     "clase": "cercano_metodo",
+     "motivo": "Usa el desajuste visual-semántico como información privilegiada para clasificar categorías finas de imágenes."
+    }
+   ],
+   "observacion": "La consulta W11 devolvió casi solo trabajos del paradigma LUPI (información privilegiada) aplicados a clasificación genérica, medicina, visión por computador y afecto; ninguno trata el abastecimiento de alimentos ni usa clasificadores en varios umbrales de una variable continua, así que no hay ningún relevante. Los más cercanos al EJUL son [14] (regresión ordinal multivista con información privilegiada, afín a la descomposición por umbrales) y [20] (Synergy of Monotonic Rules: combina puntajes de reglas monótonas para estimar una probabilidad condicional con monotonía). / La consulta W11 en Web of Science devolvió solo trabajos metodológicos sobre información privilegiada (LUPI, SVM+, KRR/RVFL/ELM con información privilegiada y la línea teórica de Vapnik), aplicados a medicina, visión por computador y computación afectiva; ninguno trata interrupciones del abastecimiento de alimentos, así que ninguno es relevante ni cercano en aplicación. Por el método, los más próximos al EJUL son [14] (regresión ordinal multivista con información privilegiada) y [20] (combinación de varias reglas monótonas para estimar la probabilidad condicional).",
+   "problema": "Sin errores de sintaxis. El recuadro de consulta traía texto de otra sesión y se limpió con el botón Clear antes de escribir. La lista de WoS solo dibuja los registros visibles, así que el script dado devolvió registros vacíos. Para extraer los 31 registros se desplazó cada uno a la vista. Los resúmenes son el fragmento truncado que muestra la página de resultados."
+  },
+  {
+   "id": "W14",
+   "consulta": "TS=(\"freight flow*\" OR \"truck flow*\" OR \"road freight\" OR corridor*) AND TS=(food OR agricultur* OR produce) AND TS=(disruption* OR interruption* OR \"supply shock*\") AND TS=(predict* OR forecast* OR \"machine learning\")",
+   "proposito": "aplicación: flujos de carga de alimentos y corredores",
+   "resultados": 14,
+   "revisados": 14,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Disruption in ground transportation: Natural disasters and disintegration of local food markets",
+     "autores": "Nino, G",
+     "fecha": "May 2026",
+     "fuente": "FOOD POLICY, 140",
+     "clase": "cercano_aplicacion",
+     "motivo": "Estudia cómo los bloqueos viales por desastres naturales desintegran los mercados locales de alimentos y elevan los precios, con métodos econométricos y no con un ensamble de umbrales."
+    }
+   ],
+   "observacion": "La consulta W14 devolvió sobre todo trabajos de riesgo de infraestructura, transporte y amenazas naturales (inundaciones, sismos, redes viales, drones) que no tienen relación con el método. Ninguno usa clasificadores en varios umbrales, regresión distribucional ni Bayes empírico jerárquico. El más cercano al EJUL es [3] (Nino, Food Policy), que estudia cómo los bloqueos viales desintegran los mercados locales de alimentos, aunque lo hace con otro método y solo cuenta como cercano_aplicacion. / La consulta W14 devolvió sobre todo trabajos de riesgos naturales, infraestructura y transporte en general (inundaciones, sismos, redes viales, ferrocarriles) que no tratan del abastecimiento de alimentos ni usan métodos por umbrales; ninguno es relevante. El más cercano al EJUL es el registro [3] (Nino, Food Policy 2026), que explica cómo los bloqueos viales desintegran los mercados locales de alimentos, aunque lo hace con econometría y no con la familia de clasificadores por umbrales.",
+   "problema": "Ninguno de sintaxis. El recuadro Query Preview traía texto de una sesión anterior; se limpió con \"Clear\" antes de escribir la consulta. El registro 2 llegó vacío en la primera extracción (carga diferida) y se recuperó desplazándose hasta él. Archivo guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W14_registros.json"
+  },
+  {
+   "id": "W03",
+   "consulta": "TS=(XGBoost OR \"gradient boosting\" OR \"random forest*\" OR \"ensemble learning\") AND TS=(\"food supply\" OR \"agri-food\" OR \"food market*\" OR \"wholesale market*\" OR \"fresh produce\") AND TS=(disruption* OR interruption* OR shortage* OR \"supply drop*\")",
+   "proposito": "ensambles de árboles × abastecimiento de alimentos (EN)",
+   "resultados": 4,
+   "revisados": 4,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Machine Learning and Food Security: Insights for Agricultural Spatial Planning in the Context of Agriculture 4.0",
+     "autores": "Martinho, VJPD; Cunha, CAD; (...); Coronado, F",
+     "fecha": "Nov 2022",
+     "fuente": "APPLIED SCIENCES-BASEL 12(22)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Aplica aprendizaje automático a la seguridad alimentaria y la planificación agrícola frente a disrupciones de las cadenas alimentarias, pero sin clasificadores por umbrales, regresión distribucional ni codificación jerárquica."
+    },
+    {
+     "titulo": "Machine learning for soybean yield forecasting in Brazil",
+     "autores": "von Bloh, M; Noia, RD Jr; (...); Asseng, S",
+     "fecha": "Oct 15 2023",
+     "fuente": "AGRICULTURAL AND FOREST METEOROLOGY 341",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica el rendimiento municipal de soya en Brasil para anticipar disrupciones del suministro alimentario mediante regresión con ML, no mediante clasificación de eventos de umbral ni ensambles sobre umbrales."
+    },
+    {
+     "titulo": "An Experimental Analysis of Traditional Machine Learning Algorithms for Maize Yield Prediction",
+     "autores": "Tahi, SPG; Hounmenou, CG; (...); Kakai, RG",
+     "fecha": "2024",
+     "fuente": "CONTEMPORARY MATHEMATICS 5(4), pp.6208-6224",
+     "clase": "cercano_aplicacion",
+     "motivo": "Compara algoritmos tradicionales de ML para predecir el rendimiento de maíz con fines de seguridad alimentaria y abastecimiento, como regresión continua y sin la familia metodológica del EJUL."
+    }
+   ],
+   "observacion": "La consulta W03 devolvió trabajos agronómicos con aprendizaje automático (clasificación de cultivos y pronóstico de rendimientos) que citan la seguridad alimentaria o las disrupciones de suministro solo como motivación; ninguno usa clasificadores en varios umbrales, regresión distribucional ni Bayes empírico jerárquico. El más cercano al EJUL es [3] (von Bloh et al., 2023), porque pronostica a nivel municipal para mitigar disrupciones del suministro, aunque su tarea es una regresión de rendimiento y no la predicción de un evento binario de interrupción. / La consulta W03 devolvió trabajos agronómicos con aprendizaje automático: uno de clasificación de cultivos por teledetección y otros de pronóstico de rendimiento o de apoyo a la seguridad alimentaria. Ninguno usa clasificadores en umbrales ni predice interrupciones semanales de corredores de abastecimiento. El más cercano al EJUL es [3] (von Bloh et al., 2023), porque vincula su pronóstico de rendimiento de soya con la mitigación de disrupciones del suministro de alimentos.",
+   "problema": "Sin error de sintaxis. El editor traía texto de una búsqueda anterior (\"TS=(SIPSA)\"); se limpió con \"Clear\" y se volvió a escribir la consulta exacta. Los registros se cargan solo al entrar en pantalla, así que hubo que volver al inicio de la página para leer los registros 1 a 3. Archivo guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W03_registros.json"
+  },
+  {
+   "id": "W06",
+   "consulta": "TS=(SIPSA OR \"Sistema de Información de Precios y Abastecimiento\") OR (TS=(Colombia*) AND TS=(\"food supply\" OR \"wholesale market*\" OR \"food prices\" OR abastecimiento) AND TS=(\"machine learning\" OR \"random forest\" OR XGBoost OR \"gradient boosting\" OR forecast*))",
+   "proposito": "SIPSA y abastecimiento en Colombia",
+   "resultados": 9,
+   "revisados": 9,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "A Data-Driven Framework for Agri-Food Supply Chains: A Case Study on Inventory Optimization in Colombian Potatoes Management",
+     "autores": "Rojas, DM; Montoya-Torres, JR and Valderrama, DMA",
+     "fecha": "Nov 21 2025",
+     "fuente": "LOGISTICS-BASEL 9(4)",
+     "clase": "cercano_aplicacion",
+     "motivo": "Estudia la cadena agroalimentaria de la papa en Boyacá con un marco basado en datos para optimizar inventarios, con un método de optimización que no estima umbrales y sin predecir eventos binarios de interrupción."
+    },
+    {
+     "titulo": "Predicting Household Food Insecurity Through a Livelihood lens: A Machine Learning Approach in Rural Colombia",
+     "autores": "Mazenda, A",
+     "fecha": "Jul 2026",
+     "fuente": "JOURNAL OF INTERNATIONAL DEVELOPMENT 38(5), pp.827-840",
+     "clase": "cercano_aplicacion",
+     "motivo": "Predice con aprendizaje automático la inseguridad alimentaria de hogares rurales en Colombia, pero el resumen no menciona clasificadores en varios umbrales, regresión distribucional, reordenamiento monótono ni codificación jerárquica, y el fenómeno no es el abastecimiento mayorista."
+    }
+   ],
+   "observacion": "La consulta W06 en WoS devolvió sobre todo falsos positivos por la sigla SiPSA (adhesivos de silicona) y algunos trabajos colombianos de agroalimentos y aprendizaje automático. Ninguno usa clasificadores en varios umbrales, regresión distribucional, reordenamiento isotónico ni codificación Bayes empírica jerárquica. El más cercano al EJUL es [5], que predice inseguridad alimentaria con aprendizaje automático, seguido de [4], que trata la cadena de la papa en Colombia; ambos son solo cercanos por aplicación. / La consulta W06 trajo sobre todo ruido por la sigla: cinco registros son de adhesivos de silicona (SiPSA). El resto son trabajos agroalimentarios o de energía en Colombia, y ninguno predice interrupciones del abastecimiento con modelos por umbrales. El más cercano al EJUL es [5] (clasificación con ML de la inseguridad alimentaria rural en Colombia), seguido de [4] (optimización de inventarios en la cadena de la papa); ambos son solo cercano_aplicacion.",
+   "problema": "Sin errores de sintaxis. El término SIPSA coincide en WoS con 'SiPSA' (silicone pressure-sensitive adhesive), por lo que los registros 2, 3, 8 y 9 son ruido de química de adhesivos; el registro 1 (mercado de derivados energéticos) tampoco es pertinente. WoS sugirió una variante ('sipsc', 'abastecimento') con 258 resultados que no se usó. Ninguno de los 9 registros trata sobre el SIPSA del DANE. Guardado en /Users/cjmolina/Library/Mobile Documents/com~apple~CloudDocs/doctorado en ingenieria /Machine learing/Entregable3MachineLearningProject/data/revision/wos/W06_registros.json"
+  },
+  {
+   "id": "W09",
+   "consulta": "TS=(\"distribution regression\" OR \"distributional regression\") AND TS=(classif* OR \"binary regression*\" OR \"binary outcome*\" OR boosting OR \"random forest*\")",
+   "proposito": "familia: regresión distribucional para clasificación",
+   "resultados": 58,
+   "revisados": 50,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Confidence and Uncertainty Assessment for Distributional Random Forests",
+     "autores": "Näf, J; Emmenegger, C; (...); Meinshausen, N",
+     "fecha": "2023",
+     "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 24, pp.1-77",
+     "clase": "cercano_metodo",
+     "motivo": "Bosques aleatorios distribucionales que estiman distribuciones condicionales y cuantiles con inferencia de incertidumbre; es regresión distribucional no paramétrica sin aplicación a abastecimiento ni a eventos de umbral."
+    },
+    {
+     "titulo": "DISTRIBUTIONAL REGRESSION FORESTS FOR PROBABILISTIC PRECIPITATION FORECASTING IN COMPLEX TERRAIN",
+     "autores": "Schlosser, L; Hothorn, T; (...); Zeileis, A",
+     "fecha": "Sep 2019",
+     "fuente": "ANNALS OF APPLIED STATISTICS, 13(3), pp.1564-1589",
+     "clase": "cercano_metodo",
+     "motivo": "Bosques de regresión distribucional para pronóstico probabilístico de precipitación; familia distribucional afín aplicada a meteorología."
+    },
+    {
+     "titulo": "Circular regression trees and forests with an application to probabilistic wind direction forecasting",
+     "autores": "Lang, MN; Schlosser, L; (...); Zeileis, A",
+     "fecha": "Nov 2020",
+     "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS, 69(5), pp.1357-1374",
+     "clase": "cercano_metodo",
+     "motivo": "Árboles y bosques distribucionales para respuestas circulares (dirección del viento); regresión distribucional en otra aplicación."
+    },
+    {
+     "titulo": "A review of predictive uncertainty estimation with machine learning",
+     "autores": "Tyralis, H and Papacharalampous, G",
+     "fecha": "Mar 18 2024",
+     "fuente": "ARTIFICIAL INTELLIGENCE REVIEW, 57(4)",
+     "clase": "cercano_metodo",
+     "motivo": "Revisión de la predicción probabilística con aprendizaje automático (regresión distribucional, cuantílica, etc.); es marco metodológico afín, no una aplicación al abastecimiento."
+    },
+    {
+     "titulo": "Distributional Random Forests: Heterogeneity Adjustment and Multivariate Distributional Regression",
+     "autores": "Cevid, D; Michel, L; (...); Meinshausen, N",
+     "fecha": "2022",
+     "fuente": "JOURNAL OF MACHINE LEARNING RESEARCH, 23",
+     "clase": "cercano_metodo",
+     "motivo": "Propone los bosques aleatorios distribucionales para estimar distribuciones condicionales multivariadas; método afín de uso general."
+    },
+    {
+     "titulo": "Distributional Regression Forests Approach to Regional Frequency Analysis With Partial Duration Series",
+     "autores": "Kiran, KG and Srinivas, VV",
+     "fecha": "Oct 2021",
+     "fuente": "WATER RESOURCES RESEARCH, 57(10)",
+     "clase": "cercano_metodo",
+     "motivo": "Bosques de regresión distribucional para el análisis regional de frecuencia de crecientes; método afín en hidrología."
+    },
+    {
+     "titulo": "Postprocessing of Ensemble Weather Forecast Using Decision Tree-Based Probabilistic Forecasting Methods",
+     "autores": "Benácek, P; Farda, A and Stepánek, P",
+     "fecha": "Jan 2023",
+     "fuente": "WEATHER AND FORECASTING, 38(1), pp.69-82",
+     "clase": "cercano_metodo",
+     "motivo": "Posprocesa pronósticos meteorológicos de ensamble con métodos probabilísticos basados en árboles (bosques distribucionales o cuantílicos); familia afín en otra aplicación."
+    },
+    {
+     "titulo": "Efficient Distributional Regression Trees Learning Algorithms for Calibrated Non-Parametric Probabilistic Forecasts",
+     "autores": "Duchemin, Q and Obozinski, G",
+     "fecha": "Jun 2026 (Early Access)",
+     "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS",
+     "clase": "cercano_metodo",
+     "motivo": "Árboles de regresión distribucional no paramétricos y calibrados que estiman p(y|x); método afín sin vínculo con eventos de abastecimiento."
+    },
+    {
+     "titulo": "Transformation boosting machines",
+     "autores": "Hothorn, T",
+     "fecha": "Feb 2020",
+     "fuente": "STATISTICS AND COMPUTING, 30(1), pp.141-152",
+     "clase": "cercano_metodo",
+     "motivo": "Máquinas de boosting para modelos de transformación condicional, que estiman directamente la función de distribución condicional F(y|x); es de lo más afín al EJUL en lo conceptual, pero es metodología general."
+    },
+    {
+     "titulo": "UAV multisensor data and GAMLSS improve forage biomass estimation in Cerrado integrated crop-livestock pastures",
+     "autores": "de Lima, GSA; Ferreira, ME; (...); Madari, BE",
+     "fecha": "Aug 26 2026",
+     "fuente": "FRONTIERS IN AGRONOMY, 8",
+     "clase": "cercano_metodo",
+     "motivo": "Usa GAMLSS (regresión distribucional) para estimar biomasa forrajera con sensores UAV; método afín en agronomía, sin interrupciones de abastecimiento ni tarea binaria."
+    },
+    {
+     "titulo": "Isotonic distributional regression",
+     "autores": "Henzi, A; Ziegel, JF and Gneiting, T",
+     "fecha": "Nov 2021",
+     "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES B-STATISTICAL METHODOLOGY, 83(5), pp.963-993",
+     "clase": "cercano_metodo",
+     "motivo": "La regresión distribucional isotónica estima CDF condicionales calibradas bajo restricciones de orden, en esencia ajustes isotónicos de indicadores 1{Y≤y} en muchos umbrales; es el método más cercano al núcleo del EJUL (umbrales más monotonía), pero no se aplica al abastecimiento."
+    },
+    {
+     "titulo": "Stagewise Boosting Distributional Regression",
+     "autores": "Wetscher, M; Seiler, J; (...); Umlauf, N",
+     "fecha": "Dec 29 2025",
+     "fuente": "STAT, 15(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting por etapas para regresión distribucional; avance metodológico afín sin aplicación al problema."
+    },
+    {
+     "titulo": "Enhanced Variable Selection for Boosting Sparser and Less Complex Models in Distributional Copula Regression",
+     "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+     "fecha": "Jun 2026",
+     "fuente": "STATISTICS IN BIOSCIENCES, 18(2), pp.372-394",
+     "clase": "cercano_metodo",
+     "motivo": "Selección de variables en boosting para regresión distribucional con cópulas; método afín en bioestadística."
+    },
+    {
+     "titulo": "Deselection of base-learners for statistical boosting-with an application to distributional regression",
+     "autores": "Strömer, A; Staerk, C; (...); Mayr, A",
+     "fecha": "Feb 2022",
+     "fuente": "STATISTICAL METHODS IN MEDICAL RESEARCH, 31(2), pp.207-224",
+     "clase": "cercano_metodo",
+     "motivo": "Desselección de aprendices base en boosting, aplicada a regresión distribucional; método afín en investigación médica."
+    },
+    {
+     "titulo": "Bivariate postprocessing of wind vectors",
+     "autores": "Buchner, F; Jobst, D; (...); Czado, C",
+     "fecha": "Jul 2026",
+     "fuente": "QUARTERLY JOURNAL OF THE ROYAL METEOROLOGICAL SOCIETY, 152(778)",
+     "clase": "cercano_metodo",
+     "motivo": "Posprocesamiento distribucional bivariado de vectores de viento; regresión distribucional en meteorología."
+    },
+    {
+     "titulo": "bamlss: A Lego Toolbox for Flexible Bayesian Regression (and Beyond)",
+     "autores": "Umlauf, N; Klein, N; (...); Zeileis, A",
+     "fecha": "Nov 2021",
+     "fuente": "JOURNAL OF STATISTICAL SOFTWARE, 100(4), pp.1-53",
+     "clase": "cercano_metodo",
+     "motivo": "Paquete bamlss para regresión distribucional bayesiana flexible; herramienta de la familia afín."
+    },
+    {
+     "titulo": "The betaboost package-a software tool for modelling bounded outcome variables in potentially high-dimensional epidemiological data",
+     "autores": "Mayr, A; Weinhold, L; (...); Schmid, M",
+     "fecha": "Oct 2018",
+     "fuente": "INTERNATIONAL JOURNAL OF EPIDEMIOLOGY, 47(5), pp.1383-1388",
+     "clase": "cercano_metodo",
+     "motivo": "Software de regresión beta con boosting que también modela el parámetro de precisión (tipo distribucional) para respuestas acotadas en epidemiología; afinidad débil."
+    },
+    {
+     "titulo": "Boosting multivariate structured additive distributional regression models",
+     "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+     "fecha": "May 20 2023",
+     "fuente": "STATISTICS IN MEDICINE, 42(11), pp.1779-1801",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting para regresión distribucional aditiva estructurada multivariada (GAMLSS); método afín en estadística médica."
+    },
+    {
+     "titulo": "Polygenic modeling of genetic effects on both phenotypic mean and variance: distributional regression for BMI, blood and urine biomarkers in the UK Biobank",
+     "autores": "Kunwar, K; Wu, Q; (...); Maj, C",
+     "fecha": "Jun 11 2026",
+     "fuente": "FRONTIERS IN BIOINFORMATICS, 6",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión distribucional para modelar efectos genéticos sobre la media y la varianza de fenotipos; método afín en genómica."
+    },
+    {
+     "titulo": "Detecting gene-environment interactions to guide personalized intervention: Boosting distributional regression for polygenic scores",
+     "autores": "Wu, Q; Klinkhammer, H; (...); Mayr, A",
+     "fecha": "Apr 7 2026",
+     "fuente": "PROCEEDINGS OF THE NATIONAL ACADEMY OF SCIENCES OF THE UNITED STATES OF AMERICA, 123(14)",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting de regresión distribucional (snpboostlss) para puntajes poligénicos; método afín en genética."
+    },
+    {
+     "titulo": "Signal regression models for location, scale and shape with an application to stock returns",
+     "autores": "Brockhaus, S; Fuest, A; (...); Greven, S",
+     "fecha": "Apr 2018",
+     "fuente": "JOURNAL OF THE ROYAL STATISTICAL SOCIETY SERIES C-APPLIED STATISTICS, 67(3), pp.665-686",
+     "clase": "cercano_metodo",
+     "motivo": "Modelos de regresión de señales tipo GAMLSS para retornos bursátiles; regresión distribucional en finanzas."
+    },
+    {
+     "titulo": "Boosting functional response models for location, scale and shape with an application to bacterial competition",
+     "autores": "Stöcker, A; Brockhaus, S; (...); Greven, S",
+     "fecha": "Oct 2021",
+     "fuente": "STATISTICAL MODELLING, 21(5), pp.385-404",
+     "clase": "cercano_metodo",
+     "motivo": "Extiende GAMLSS con boosting a respuestas funcionales (competencia bacteriana); método afín en otra aplicación."
+    },
+    {
+     "titulo": "Gradient boosting for distributional regression: faster tuning and improved variable selection via noncyclical updates",
+     "autores": "Thomas, J; Mayr, A; (...); Hofner, B",
+     "fecha": "May 2018",
+     "fuente": "STATISTICS AND COMPUTING, 28(3), pp.673-687",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting no cíclico para GAMLSS con selección por estabilidad; avance metodológico de la familia distribucional."
+    },
+    {
+     "titulo": "Robust gradient boosting for generalized additive models for location, scale and shape",
+     "autores": "Speller, J; Staerk, C; (...); Mayr, A",
+     "fecha": "Mar 2026",
+     "fuente": "ADVANCES IN DATA ANALYSIS AND CLASSIFICATION, 20(1), pp.39-58",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting robusto a atípicos para GAMLSS; método distribucional afín sin aplicación al abastecimiento."
+    },
+    {
+     "titulo": "Distributional regression using generalized additive models for location, scale and shape",
+     "autores": "Merder, J; Rigby, RA; (...); Stasinopoulos, DM",
+     "fecha": "Jul 9 2026",
+     "fuente": "NATURE REVIEWS METHODS PRIMERS, 6(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Introducción a la regresión distribucional con GAMLSS; referencia metodológica afín."
+    },
+    {
+     "titulo": "Scalable Estimation for Structured Additive Distributional Regression",
+     "autores": "Umlauf, N; Seiler, J; (...); Klein, N",
+     "fecha": "Apr 3 2025",
+     "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS, 34(2), pp.601-617",
+     "clase": "cercano_metodo",
+     "motivo": "Estimación escalable de regresión distribucional aditiva estructurada para grandes datos; método afín."
+    },
+    {
+     "titulo": "Spatial Prediction of Diameter Distributions for the Alpine Protection Forests in Ebensee, Austria, Using ALS/PLS and Spatial Distributional Regression Models",
+     "autores": "Nothdurft, A; Tockner, A; (...); Finley, AO",
+     "fecha": "Jun 2024",
+     "fuente": "REMOTE SENSING, 16(12)",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión distribucional espacial bayesiana para predecir distribuciones de diámetros forestales; método afín en dasometría."
+    },
+    {
+     "titulo": "Significance Tests for Boosted Location and Scale Models with Linear Base-Learners",
+     "autores": "Hepp, T; Schmid, M and Mayr, A",
+     "fecha": "May 2019",
+     "fuente": "INTERNATIONAL JOURNAL OF BIOSTATISTICS, 15(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Pruebas de significancia para modelos de localización y escala con boosting (GAMLSS); método distribucional afín."
+    },
+    {
+     "titulo": "A Parsimonious Hedonic Distributional Regression Model for Large Data with Heterogeneous Covariate Effects",
+     "autores": "Granna, J; Lang, SF; (...); Umlauf, N",
+     "fecha": "2025",
+     "fuente": "AUSTRIAN JOURNAL OF STATISTICS, 54(2), pp.44-68",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión distribucional hedónica para precios inmobiliarios con grandes datos; método afín en otra aplicación."
+    },
+    {
+     "titulo": "Gradient boosting in Markov-switching generalized additive models for location, scale, and shape",
+     "autores": "Adam, T; Mayr, A and Kneib, T",
+     "fecha": "Apr 2022",
+     "fuente": "ECONOMETRICS AND STATISTICS, 22, pp.3-16",
+     "clase": "cercano_metodo",
+     "motivo": "Boosting en GAMLSS con cambio de régimen markoviano para series temporales; regresión distribucional afín."
+    },
+    {
+     "titulo": "Modelling dependent censoring in time-to-event data using boosting copula regression",
+     "autores": "Strömer, A; Klein, N; (...); Mayr, A",
+     "fecha": "Oct 2025",
+     "fuente": "LIFETIME DATA ANALYSIS, 31(4), pp.994-1016",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión con cópulas y boosting para censura dependiente en datos de supervivencia; familia distribucional afín."
+    },
+    {
+     "titulo": "Machine Learning Methods for Postprocessing Ensemble Forecasts of Wind Gusts: A Systematic Comparison",
+     "autores": "Schulz, B and Lerch, S",
+     "fecha": "Jan 2022",
+     "fuente": "MONTHLY WEATHER REVIEW, 150(1), pp.235-257",
+     "clase": "cercano_metodo",
+     "motivo": "Compara ocho métodos estadísticos y de aprendizaje automático para el posprocesamiento distribucional de ráfagas de viento (bosques cuantílicos, redes distribucionales y redes de histograma que tratan la distribución como probabilidades por intervalos); es afín a la descomposición por umbrales, pero en meteorología."
+    },
+    {
+     "titulo": "Beyond binary AKI classification: development and external validation of a distributional model predicting serum creatinine and urine output trajectories in ICU patients",
+     "autores": "Jonkers, J; Rouzé, A; (...); Van Hoecke, S",
+     "fecha": "May 10 2026",
+     "fuente": "CRITICAL CARE, 30(1)",
+     "clase": "cercano_metodo",
+     "motivo": "En lugar de clasificar la lesión renal aguda (sí/no), predice con regresión distribucional las trayectorias de creatinina y diuresis, de las que se deriva el evento binario de umbral; es cercano en lógica (de distribución a evento binario), pero en clínica."
+    },
+    {
+     "titulo": "Dairy Trade Reconsidered: Gravity and the Distributional Effect of Non-Tariff Barriers and Distance",
+     "autores": "Kondaridze, M; Liu, X and Luckstead, J",
+     "fecha": "Jan 2026",
+     "fuente": "AGRICULTURAL ECONOMICS, 57(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Estima los efectos distribucionales de barreras no arancelarias y distancia sobre el comercio lácteo (modelos de gravedad); combina un método distribucional con flujos agroalimentarios, pero explica volúmenes de comercio en lugar de predecir interrupciones binarias."
+    },
+    {
+     "titulo": "Structured additive distributional hurdle Poisson modelling of individual fertility levels in Nigeria",
+     "autores": "Somo-Aina, O and Gayawan, E",
+     "fecha": "Sep 14 2019",
+     "fuente": "GENUS, 75(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión distribucional aditiva estructurada con modelo hurdle Poisson para fecundidad en Nigeria; método afín en demografía."
+    },
+    {
+     "titulo": "In quest of China sports lottery development path to common prosperity in 2035",
+     "autores": "Yao, YP; Wan, B; (...); Zhang, Y",
+     "fecha": "Jan 26 2024",
+     "fuente": "PLOS ONE, 19(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Aplica regresión distribucional para pronosticar las ventas de la lotería deportiva china; método afín en otra aplicación."
+    },
+    {
+     "titulo": "Detecting Anomalous Time Series by GAMLSS-Akaike-Weights-Scoring",
+     "autores": "Sodja, C",
+     "fecha": "Jan 2 2024",
+     "fuente": "JOURNAL OF COMPUTATIONAL AND GRAPHICAL STATISTICS, 33(1)",
+     "clase": "cercano_metodo",
+     "motivo": "Detecta series temporales anómalas con GAMLSS y ponderación de Akaike; deriva una señal de anomalía a partir de un modelo distribucional, en otra aplicación."
+    },
+    {
+     "titulo": "Deep and interpretable regression models for ordinal outcomes",
+     "autores": "Kook, L; Herzog, L; (...); Sick, B",
+     "fecha": "Feb 2022",
+     "fuente": "PATTERN RECOGNITION, 122",
+     "clase": "cercano_metodo",
+     "motivo": "Modelos ordinales acumulativos profundos e interpretables (modelos de transformación con puntos de corte); familia ordinal acumulada afín a la descomposición por umbrales."
+    },
+    {
+     "titulo": "Ordinal distribution regression for gait-based age estimation",
+     "autores": "Zhu, HP; Zhang, YH; (...); Shan, HM",
+     "fecha": "Jan 15 2020",
+     "fuente": "SCIENCE CHINA-INFORMATION SCIENCES, 63(2)",
+     "clase": "cercano_metodo",
+     "motivo": "La regresión de distribución ordinal descompone la edad en subproblemas binarios ordenados (descomposición acumulada tipo Frank-Hall) para estimarla a partir de la marcha; método muy afín, aplicado a biometría."
+    },
+    {
+     "titulo": "Longitudinal Bayesian Zero-Inflated Beta Regression for Citrus Canker Resistance in Orange Rootstocks",
+     "autores": "Henriques, MJ; Gonzatto, OA Jr; (...); Louzada, F",
+     "fecha": "Sep 2026",
+     "fuente": "JOURNAL OF AGRICULTURAL BIOLOGICAL AND ENVIRONMENTAL STATISTICS, 31(3), pp.619-640",
+     "clase": "cercano_metodo",
+     "motivo": "Regresión beta inflada en cero, bayesiana y longitudinal, para la resistencia al cancro de los cítricos; modelo distribucional afín en agronomía, sin abastecimiento ni eventos de umbral."
+    }
+   ],
+   "observacion": "La consulta W09 devolvió sobre todo trabajos de regresión distribucional general (GAMLSS con boosting, bosques distribucionales, modelos de transformación), aplicados a meteorología, bioestadística y otros campos; también trajo homónimos de 'distribution regression' sin relación. Ninguno trata interrupciones del abastecimiento de alimentos, así que ninguno es relevante. El más cercano al EJUL es la regresión distribucional isotónica de Henzi, Ziegel y Gneiting (2021), que estima la CDF condicional en muchos umbrales bajo monotonía. Le siguen la regresión de distribución ordinal por descomposición binaria (gait, 2020) y el modelo distribucional de creatinina del que se deriva el evento binario de lesión renal aguda (2026). / La consulta W09 devolvió sobre todo trabajos metodológicos de regresión distribucional (GAMLSS con boosting, bosques y árboles distribucionales, modelos de transformación, IDR) aplicados a meteorología, biomedicina y genética; ninguno predice interrupciones del abastecimiento de alimentos, así que no hay registros relevantes. Por método, el más cercano al EJUL es la regresión distribucional isotónica [14], seguida de la regresión ordinal acumulativa [44]. Por aplicación, solo el estudio del comercio lácteo [38] trata flujos agroalimentarios, aunque no predice disrupciones.",
+   "problema": "Sin errores de sintaxis. Al abrir la búsqueda avanzada, el editor ya tenía una consulta previa de otra sesión. Se vació con el botón \"Clear\" y luego se escribió la consulta exacta, verificada en el textarea. Se extrajeron 50 de los 58 registros, en orden de relevancia. Los registros 2 y 13 salieron vacíos en la primera extracción y se recuperaron llevando cada uno a la vista. No se aceptaron cookies, no se inició sesión y no se exportó nada."
+  },
+  {
+   "id": "W12",
+   "consulta": "TS=(\"dichotomized outcome*\" OR \"dichotomised outcome*\" OR dichotomization) AND TS=(\"machine learning\" OR classif* OR \"prediction model*\") AND TS=(threshold* OR continuous)",
+   "proposito": "familia: predicción de resultados dicotomizados",
+   "resultados": 77,
+   "revisados": 50,
+   "relevantes": 0,
+   "relevantes_detalle": [],
+   "cercanos": [
+    {
+     "titulo": "Predicting dichotomised outcomes from high-dimensional data in biomedicine",
+     "autores": "Rauschenberger, A; Glaab, E",
+     "fecha": "Jul 3 2024",
+     "fuente": "JOURNAL OF APPLIED STATISTICS",
+     "clase": "cercano_metodo",
+     "motivo": "Predice la probabilidad de que una respuesta numérica supere un umbral aprovechando la información continua, en biomedicina de alta dimensión; es la idea central del EJUL aplicada a otro dominio."
+    },
+    {
+     "titulo": "Classifying responders and non-responders; does it help when there is evidence of differentially responding patient groups?",
+     "autores": "Boessen, R; Groenwold, RHH; (...); Roes, KCB",
+     "fecha": "Sep 2012",
+     "fuente": "JOURNAL OF PSYCHIATRIC RESEARCH",
+     "clase": "cercano_metodo",
+     "motivo": "Estudia cuándo conviene dicotomizar un resultado continuo en respondedores y no respondedores (bimodalidad) en ensayos de antidepresivos."
+    },
+    {
+     "titulo": "Understanding the effects of dichotomization of continuous outcomes on geostatistical inference",
+     "autores": "Kyomuhangi, I; Abeku, TA; (...); Giorgi, E",
+     "fecha": "Apr 2021",
+     "fuente": "SPATIAL STATISTICS",
+     "clase": "cercano_metodo",
+     "motivo": "Muestra el efecto de dicotomizar un resultado continuo sobre la inferencia de probabilidades de excedencia en geoestadística; usa la lógica de evento de umbral sobre variable continua."
+    },
+    {
+     "titulo": "Dichotomisation of Continuous Data: Review of Methods, Advantages, and Disadvantages",
+     "autores": "Baneshi, MR; Talei, AR",
+     "fecha": "Win 2011",
+     "fuente": "IRANIAN JOURNAL OF CANCER PREVENTION",
+     "clase": "cercano_metodo",
+     "motivo": "Revisión metodológica de cómo dicotomizar datos continuos y de sus ventajas y desventajas; corresponde a la familia afín de dicotomización."
+    },
+    {
+     "titulo": "Should responder analyses be conducted on continuous outcomes?",
+     "autores": "Abugov, R; Clark, J; (...); Sharretts, J",
+     "fecha": "Mar 2023",
+     "fuente": "PHARMACEUTICAL STATISTICS",
+     "clase": "cercano_metodo",
+     "motivo": "Discute análisis de respondedores frente a resultados continuos en ensayos; trata la dicotomización de la respuesta continua."
+    },
+    {
+     "titulo": "Improving Power by Dichotomizing (Even Under Normality)",
+     "autores": "Westfall, PH",
+     "fecha": "May 2011",
+     "fuente": "STATISTICS IN BIOPHARMACEUTICAL RESEARCH",
+     "clase": "cercano_metodo",
+     "motivo": "Analiza cuándo dicotomizar datos continuos mejora la potencia en comparaciones múltiples; trata la dicotomización, aunque con fines inferenciales."
+    },
+    {
+     "titulo": "Food security analysis and forecasting: A machine learning case study in southern Malawi",
+     "autores": "Gholami, S; Knippenberg, E; (...); Ferres, JL",
+     "fecha": "2022",
+     "fuente": "DATA & POLICY",
+     "clase": "cercano_aplicacion",
+     "motivo": "Pronostica la inseguridad alimentaria de hogares en Malawi con aprendizaje automático; misma área aplicada, pero sin regresión por umbrales."
+    },
+    {
+     "titulo": "Lost in dichotomization: Preserving statistical power and sensitivity in MS cognitive research",
+     "autores": "Van Schependom, J; Cutter, G",
+     "fecha": "",
+     "fuente": "MULTIPLE SCLEROSIS JOURNAL",
+     "clase": "cercano_metodo",
+     "motivo": "Critica dicotomizar el desempeño cognitivo continuo en esclerosis múltiple por la pérdida de potencia; trata la dicotomización de la respuesta."
+    },
+    {
+     "titulo": "Incorporation of Clinical Meaningfulness Into the Analysis of a Continuous Variable: A More Powerful Alternative tothe Responder Analysis",
+     "autores": "Snapinn, SM; Jiang, Q",
+     "fecha": "Oct 2 2014",
+     "fuente": "STATISTICS IN BIOPHARMACEUTICAL RESEARCH",
+     "clase": "cercano_metodo",
+     "motivo": "Propone una alternativa al análisis de respondedores que conserva la variable continua al evaluar si se supera un umbral clínicamente relevante."
+    },
+    {
+     "titulo": "A General AUC-Type Measure and Biomarker Selection",
+     "autores": "Wang, ZF; Chang, YCI",
+     "fecha": "Feb 2014",
+     "fuente": "STATISTICS IN BIOPHARMACEUTICAL RESEARCH",
+     "clase": "cercano_metodo",
+     "motivo": "Generaliza el AUC a un estándar de oro en escala continua, lo que obliga a tratar umbrales sobre la respuesta continua; afín por la evaluación sobre umbrales."
+    },
+    {
+     "titulo": "A comparison of two methods for estimating odds ratios: Results from the National Health Survey",
+     "autores": "Bakhshi, E; Eshraghian, MR; (...); Seifi, B",
+     "fecha": "Nov 25 2008",
+     "fuente": "BMC MEDICAL RESEARCH METHODOLOGY",
+     "clase": "cercano_metodo",
+     "motivo": "Compara la logística sobre la respuesta dicotomizada con un enfoque que estima razones de odds desde la distribución de la respuesta continua; es un antecedente de la regresión distribucional."
+    },
+    {
+     "titulo": "Improving the power of clinical trials of rheumatoid arthritis by using data on continuous scales when analysing response rates: an application of the augmented binary method",
+     "autores": "Wason, JMS; Jenkins, M",
+     "fecha": "Oct 2016",
+     "fuente": "RHEUMATOLOGY",
+     "clase": "cercano_metodo",
+     "motivo": "El método binario aumentado estima tasas de respuesta dicotomizada modelando la variable continua subyacente; es afín a estimar F(c|x) en otra aplicación."
+    }
+   ],
+   "observacion": "La consulta W12 trajo casi solo trabajos biomédicos y bioestadísticos sobre dicotomizar variables continuas y sobre modelos clínicos de predicción. Ninguno es relevante, y el único con una aplicación alimentaria es el [28] (inseguridad alimentaria en Malawi). El más cercano al EJUL es [16] Rauschenberger y Glaab, que predice la probabilidad de superar un umbral a partir de la respuesta continua. Le siguen [46] (método binario aumentado) y [42] (enfoque distribucional para resultados dicotomizados), pero ninguno combina varios umbrales, reordenamiento ni codificación jerárquica. / La consulta W12 devolvió casi solo trabajos biomédicos y bioestadísticos sobre la dicotomización de variables continuas o modelos pronósticos clínicos. Ninguno es relevante: ninguno reúne la familia de umbrales, el fenómeno de interrupción del abastecimiento y la tarea binaria. Por método, el más cercano al EJUL es Rauschenberger y Glaab (2024) [16], que estima la probabilidad de que un resultado numérico supere un umbral; por aplicación, el único próximo es el pronóstico de inseguridad alimentaria en Malawi [28].",
+   "problema": "Sin errores de sintaxis. El editor traía texto de una consulta anterior y se limpió con \"Clear\" antes de escribir. El código de extracción indicado devolvía registros vacíos porque WoS renderiza los registros de forma virtual (solo los visibles), así que se extrajeron desplazando la página poco a poco y leyendo el DOM por selectores. Se guardaron los primeros 50 de 77 registros (orden por relevancia). El registro 29 no muestra fecha. El resumen es el fragmento truncado que muestra la página de resultados."
+  }
+ ],
+ "comentario_critico": null
+}

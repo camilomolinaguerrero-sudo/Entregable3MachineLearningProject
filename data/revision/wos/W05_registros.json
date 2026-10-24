@@ -1,0 +1,8 @@
+{
+  "id": "W05",
+  "consulta": "TS=(abastecimiento OR desabastecimiento OR \"centrales mayoristas\" OR \"central mayorista\" OR \"seguridad alimentaria\") AND TS=(\"aprendizaje automático\" OR \"aprendizaje de máquina\" OR umbral* OR ensamble* OR \"regresión distribucional\")",
+  "resultados": 0,
+  "url": "https://www.webofscience.com/wos/woscc/advanced-search",
+  "problema": "Sin error de sintaxis. Web of Science Core Collection devolvió 'Your search found no results' para la consulta exacta, verificada en el editor (textarea) antes de pulsar Search. Resultado confirmado de nuevo el 2026-10-23 en una ejecución independiente (antes se limpió con 'Clear' una consulta previa que quedaba en el editor). La página sigue en advanced-search y no hay URL de resultados.",
+  "registros": []
+}

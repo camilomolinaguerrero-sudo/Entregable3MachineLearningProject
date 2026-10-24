@@ -1,0 +1,848 @@
+[
+ {
+  "cadena": "S1_umbrales_x_abastecimiento",
+  "base": "OpenAlex",
+  "consulta": "(\"threshold ensemble\" OR \"multiple thresholds\" OR \"distribution regression\" OR \"distributional regression\") AND (\"food supply\" OR \"supply disruption\" OR \"wholesale market\" OR \"food distribution\")",
+  "fecha": "2026-10-23",
+  "resultados": 1,
+  "registros": [
+   {
+    "titulo": "Asymmetric impact of energy prices on energy imports in India: Evidence from multiple threshold non-linear model",
+    "anio": 2026,
+    "id": "https://doi.org/10.1016/j.dsef.2026.100120",
+    "fuente": "Development and sustainability in economics and finance.",
+    "citas": 1
+   }
+  ]
+ },
+ {
+  "cadena": "S1_umbrales_x_abastecimiento",
+  "base": "arXiv",
+  "consulta": "(all:\"distribution regression\" OR all:\"multiple thresholds\") AND (all:\"food supply\" OR all:\"supply disruption\")",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S1_umbrales_x_abastecimiento",
+  "base": "Semantic Scholar",
+  "consulta": "distribution regression multiple thresholds ensemble food supply disruption wholesale market",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S2_latente_x_interrupcion",
+  "base": "OpenAlex",
+  "consulta": "(\"latent threshold\" OR \"dichotomized outcome\" OR \"continuous outcome\" OR \"latent variable\") AND (interruption OR disruption OR shortage) AND (\"machine learning\" OR \"gradient boosting\" OR classifier)",
+  "fecha": "2026-10-23",
+  "resultados": 33,
+  "registros": [
+   {
+    "titulo": "From Latent Variables to Large Language Models: A Unified Glossary Bridging Chemometrics, Machine Learning, and Artificial Intelligence",
+    "anio": 2026,
+    "id": "https://doi.org/10.56530/spectroscopy.bc1665p8",
+    "fuente": "Spectroscopy",
+    "citas": 0
+   },
+   {
+    "titulo": "The Effects of Environmental Risk and Regulatory Pressure on Operational Vulnerability and Disruption Probability in Supply Chains: An Integration of PLS-SEM and Machine Learning",
+    "anio": 2026,
+    "id": "https://doi.org/10.21203/rs.3.rs-10780708/v1",
+    "fuente": "Research Square",
+    "citas": 0
+   },
+   {
+    "titulo": "latent variable modeling approaches of cognitive and neural variables and their connection to externalizing and antisocial behavior",
+    "anio": 2026,
+    "id": "https://openalex.org/W7134102542",
+    "fuente": "OSF Preprints (OSF Preprints)",
+    "citas": 0
+   },
+   {
+    "titulo": "Machine Learning for Efficient Water Infrastructure Management",
+    "anio": 2021,
+    "id": "https://doi.org/10.1007/978-3-030-72188-6_3",
+    "fuente": "Springer eBooks",
+    "citas": 3
+   },
+   {
+    "titulo": "Gaussian process latent variable model and Bayesian inference for non-parametric failure modeling applied to ship engine",
+    "anio": 2025,
+    "id": "https://doi.org/10.1016/j.ress.2025.111611",
+    "fuente": "Reliability Engineering & System Safety",
+    "citas": 2
+   },
+   {
+    "titulo": "Towards Robust and Reliable Machine Learning on Time Series Forecasting",
+    "anio": 2024,
+    "id": "https://doi.org/10.54337/aau766169172",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Merits of random forests emerge in evaluation of chemometric classifiers by external validation",
+    "anio": 2013,
+    "id": "https://doi.org/10.1016/j.aca.2013.09.027",
+    "fuente": "Analytica Chimica Acta",
+    "citas": 40
+   },
+   {
+    "titulo": "Sources and patterns of uncertainty in construction MSMEs: A machine learning study in southwestern Colombia",
+    "anio": 2026,
+    "id": "https://doi.org/10.2478/otmcj-2026-0005",
+    "fuente": "Organization Technology and Management in Construction An International Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Computational graph-based framework for integrating econometric models and machine learning algorithms in emerging data-driven analytical environments",
+    "anio": 2021,
+    "id": "https://doi.org/10.1080/23249935.2021.1938744",
+    "fuente": "Transportmetrica A Transport Science",
+    "citas": 24
+   },
+   {
+    "titulo": "Modeling GABA-mediated stress in pomegranate using integrated structural equation modeling and Machine Learning",
+    "anio": 2026,
+    "id": "https://doi.org/10.1016/j.plaphy.2026.111601",
+    "fuente": "Plant Physiology and Biochemistry",
+    "citas": 0
+   },
+   {
+    "titulo": "The impact of the COVID-19 pandemic on Routine Immunisation: coverage disruptions, risk factors, and implications for recovery and resilience",
+    "anio": 2025,
+    "id": "https://doi.org/10.13097/archive-ouverte/unige:188866",
+    "fuente": "Archive ouverte UNIGE (University of Geneva)",
+    "citas": 0
+   },
+   {
+    "titulo": "The Impact of Russia-Ukraine Conflict on Global Commodity Brent Crude Prices",
+    "anio": 2023,
+    "id": "https://doi.org/10.14293/pr2199.000322.v1",
+    "fuente": null,
+    "citas": 1
+   },
+   {
+    "titulo": "MVAE: Multimodal Variational Autoencoder for Fake News Detection",
+    "anio": 2019,
+    "id": "https://doi.org/10.1145/3308558.3313552",
+    "fuente": null,
+    "citas": 838
+   },
+   {
+    "titulo": "Predicting Factors Affecting Preparedness of Volcanic Eruption for a Sustainable Community: A Case Study in the Philippines",
+    "anio": 2022,
+    "id": "https://doi.org/10.3390/su141811329",
+    "fuente": "Sustainability",
+    "citas": 37
+   },
+   {
+    "titulo": "Artificial Intelligence as the Next Layer of Chemometrics",
+    "anio": 2026,
+    "id": "https://doi.org/10.56530/spectroscopy.mc8973c4",
+    "fuente": "Spectroscopy",
+    "citas": 0
+   },
+   {
+    "titulo": "Decoding Risky Decision-Making from Nonlinear Neural Latent Dynamics",
+    "anio": 2025,
+    "id": "https://doi.org/10.1109/ieeeconf67917.2025.11443904",
+    "fuente": "2018 52nd Asilomar Conference on Signals, Systems, and Computers",
+    "citas": 0
+   },
+   {
+    "titulo": "The Two-stage PLS-SEM–LightGBM Hybrid for Causal‑predictive Modeling of Stunting with Latent Feature Interaction Analysis",
+    "anio": 2026,
+    "id": "https://doi.org/10.22266/ijies2026.0430.15",
+    "fuente": "International journal of intelligent engineering and systems",
+    "citas": 0
+   },
+   {
+    "titulo": "Impact of Russia-Ukraine War on Global Commodity Brent Crude Prices.",
+    "anio": 2023,
+    "id": "https://doi.org/10.2139/ssrn.4667582",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Early Identification of Unbalanced Freight Traffic Loads Based on Wayside Monitoring and Artificial Intelligence",
+    "anio": 2023,
+    "id": "https://doi.org/10.3390/s23031544",
+    "fuente": "Sensors",
+    "citas": 22
+   },
+   {
+    "titulo": "Deep Generative Data Augmentation for Natural Language Processing",
+    "anio": 2020,
+    "id": "https://openalex.org/W3035637848",
+    "fuente": "Seoul National University Open Repository (Seoul National University)",
+    "citas": 1
+   },
+   {
+    "titulo": "0748 Proteomic Biomarkers of Obstructive Sleep Apnea",
+    "anio": 2022,
+    "id": "https://doi.org/10.1093/sleep/zsac079.744",
+    "fuente": "SLEEP",
+    "citas": 0
+   },
+   {
+    "titulo": "Resolving Injectisome Binding Dynamics in Yersinia enterocolitica and Bactofilin Organization in Helicobacter pylori by Single-Molecule Localization and Tracking Microscopy",
+    "anio": 2026,
+    "id": "https://doi.org/10.18130/v3em-7k97",
+    "fuente": "Libra",
+    "citas": 0
+   },
+   {
+    "titulo": "Data-driven development of the Novel and Advanced Migrant Workforce Integration Index (NAMWII): a predictive and multidimensional analysis of Sri Lankan migrant labour participation in Australia",
+    "anio": 2026,
+    "id": "https://doi.org/10.26183/anem-my39",
+    "fuente": "Western Sydney University ResearchDirect",
+    "citas": 0
+   },
+   {
+    "titulo": "Analytic Methods in Finance with Applications to Portfolio and Risk Management",
+    "anio": 2023,
+    "id": "https://openalex.org/W7137506604",
+    "fuente": "Tuwhera (Auckland University of Technology)",
+    "citas": 0
+   },
+   {
+    "titulo": "Conformal Prediction in Clinical Artificial Intelligence",
+    "anio": 2026,
+    "id": "https://doi.org/10.1016/j.chest.2025.07.4116",
+    "fuente": "CHEST Journal",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "S2_latente_x_interrupcion",
+  "base": "arXiv",
+  "consulta": "(all:\"latent threshold\" OR all:dichotomized) AND (all:disruption OR all:shortage) AND all:classification",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S2_latente_x_interrupcion",
+  "base": "Semantic Scholar",
+  "consulta": "latent continuous outcome dichotomized threshold classifier supply disruption shortage prediction",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S3_boosting_x_abastecimiento",
+  "base": "OpenAlex",
+  "consulta": "(XGBoost OR \"gradient boosting\" OR \"random forest\") AND (\"food supply\" OR \"agri-food\" OR \"food market\" OR \"wholesale market\") AND (interruption OR disruption OR shortage OR \"supply drop\")",
+  "fecha": "2026-10-23",
+  "resultados": 22,
+  "registros": [
+   {
+    "titulo": "An Offline Digital Twin for Resilience and Supplier Reliability in Perishable Food Supply Chains",
+    "anio": 2023,
+    "id": "https://doi.org/10.46254/au02.20230085",
+    "fuente": null,
+    "citas": 2
+   },
+   {
+    "titulo": "Design and Validation of a Predictive Agribusiness Intelligence Platform for U.S. Food-Supply and Market Resilience",
+    "anio": 2026,
+    "id": "https://doi.org/10.63125/bsqvs196",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Correction: Impact of fossil energy consumption on economic growth in carbon-resource economies: a Random Forest approach",
+    "anio": 2026,
+    "id": "https://doi.org/10.3389/fsufs.2026.1935581",
+    "fuente": "Frontiers in Sustainable Food Systems",
+    "citas": 0
+   },
+   {
+    "titulo": "Pandemic Disruptions and Supply Chain Resilience: A Retail Food Perspective",
+    "anio": 2025,
+    "id": "https://doi.org/10.52783/jisem.v10i8s.1098",
+    "fuente": "Journal of Information Systems Engineering & Management",
+    "citas": 1
+   },
+   {
+    "titulo": "An integrative framework for early estimation of global crop yields demonstrated under large-scale disruptions",
+    "anio": 2026,
+    "id": "https://doi.org/10.1038/s43016-026-01418-w",
+    "fuente": "Nature Food",
+    "citas": 1
+   },
+   {
+    "titulo": "Do Trees Still Beat Transformers in Day-Ahead Electricity Price Forecasting? Evidence from Volatile US Markets",
+    "anio": 2026,
+    "id": "https://doi.org/10.2139/ssrn.7006338",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Machine learning for soybean yield forecasting in Brazil",
+    "anio": 2023,
+    "id": "https://doi.org/10.1016/j.agrformet.2023.109670",
+    "fuente": "Agricultural and Forest Meteorology",
+    "citas": 44
+   },
+   {
+    "titulo": "An Experimental Analysis of Traditional Machine Learning Algorithms for Maize Yield Prediction",
+    "anio": 2024,
+    "id": "https://doi.org/10.37256/cm.5420244481",
+    "fuente": "Contemporary Mathematics",
+    "citas": 0
+   },
+   {
+    "titulo": "Enhancing wheat price forecasting accuracy through Prophet based models",
+    "anio": 2025,
+    "id": "https://openalex.org/W7113673389",
+    "fuente": "ResearchOnline (Glasgow Caledonian University)",
+    "citas": 0
+   },
+   {
+    "titulo": "Ensemble Machine Learning Model for Better Crop Production",
+    "anio": 2024,
+    "id": "https://doi.org/10.1007/978-981-97-3485-6_10",
+    "fuente": "Innovations in Sustainable Technologies and Computing",
+    "citas": 0
+   },
+   {
+    "titulo": "Machine Learning and IoT based Seed Suggestion: To Increase Agriculture Harvesting and Development",
+    "anio": 2023,
+    "id": "https://doi.org/10.1109/icscds56580.2023.10104981",
+    "fuente": "International Conference on Sustainable Computing and Data Communication Systems (ICSCDS)",
+    "citas": 8
+   },
+   {
+    "titulo": "An Optimization Approach Based on Machine Learning Algorithms for Shipping Lead Time Prediction: A Case Study",
+    "anio": 2026,
+    "id": "https://doi.org/10.1007/978-981-95-4717-3_65",
+    "fuente": "Lecture notes in mechanical engineering",
+    "citas": 0
+   },
+   {
+    "titulo": "Comparative Performance Analysis of Machine Learning Models for Agricultural Crop Prediction",
+    "anio": 2026,
+    "id": "https://doi.org/10.1007/978-3-032-08600-6_18",
+    "fuente": "Lecture notes in networks and systems",
+    "citas": 0
+   },
+   {
+    "titulo": "Unveiling the drivers contributing to global wheat yield shocks through quantile regression",
+    "anio": 2025,
+    "id": "https://doi.org/10.1016/j.aiia.2025.03.004",
+    "fuente": "Artificial Intelligence in Agriculture",
+    "citas": 3
+   },
+   {
+    "titulo": "What Drives Ecological Recovery? Identifying Key Factors of Benthic Faunal Restoration After Invasive Spartina alterniflora Removal",
+    "anio": 2025,
+    "id": "https://doi.org/10.20944/preprints202511.1354.v1",
+    "fuente": "Preprints.org",
+    "citas": 0
+   },
+   {
+    "titulo": "Machine Learning and Food Security: Insights for Agricultural Spatial Planning in the Context of Agriculture 4.0",
+    "anio": 2022,
+    "id": "https://doi.org/10.3390/app122211828",
+    "fuente": "Applied Sciences",
+    "citas": 31
+   },
+   {
+    "titulo": "Improving Food Demand Forecasting through Stacked Regression and Hybrid Machine Learning Methods",
+    "anio": 2024,
+    "id": "https://openalex.org/W7216738881",
+    "fuente": "International Journal of Intelligent Systems and Applications in Engineering",
+    "citas": 0
+   },
+   {
+    "titulo": "Machine Learning-Based Fine Classification of Agricultural Crops in the Cross-Border Basin of the Heilongjiang River between China and Russia",
+    "anio": 2024,
+    "id": "https://doi.org/10.3390/rs16101670",
+    "fuente": "Remote Sensing",
+    "citas": 3
+   },
+   {
+    "titulo": "The Potential of Remote Sensing for Enhancing a Sustainable Agricultural Intensification under a Changing Climate in West Africa",
+    "anio": 2024,
+    "id": "https://doi.org/10.5194/egusphere-egu24-16115",
+    "fuente": null,
+    "citas": 1
+   },
+   {
+    "titulo": "Risk Measurement Analysis of a Regional Water‒Land-Energy-Food Coupling System Under Complex and Uncertain Climate Influences",
+    "anio": 2024,
+    "id": "https://doi.org/10.2139/ssrn.4891409",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 0
+   },
+   {
+    "titulo": "Integration of Machine Learning and Optimization Models to Solve Supplier Selection and Order Allocation Problems",
+    "anio": 2025,
+    "id": "https://doi.org/10.32920/30247573.v1",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Integration of Machine Learning and Optimization Models to Solve Supplier Selection and Order Allocation Problems",
+    "anio": 2025,
+    "id": "https://doi.org/10.32920/30247573",
+    "fuente": null,
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "S3_boosting_x_abastecimiento",
+  "base": "arXiv",
+  "consulta": "(all:XGBoost OR all:\"gradient boosting\") AND (all:\"food supply\" OR all:\"agri-food\") AND (all:disruption OR all:shortage)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S3_boosting_x_abastecimiento",
+  "base": "Semantic Scholar",
+  "consulta": "XGBoost gradient boosting food supply disruption shortage prediction wholesale market",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S4_rearreglo_bayes_x_alerta",
+  "base": "OpenAlex",
+  "consulta": "(\"monotone rearrangement\" OR \"isotonic regression\" OR \"non-crossing\") AND (\"empirical Bayes\" OR \"hierarchical shrinkage\" OR \"target encoding\") AND (classification OR \"early warning\" OR forecasting)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S4_rearreglo_bayes_x_alerta",
+  "base": "arXiv",
+  "consulta": "(all:rearrangement OR all:isotonic) AND (all:\"empirical Bayes\" OR all:hierarchical) AND all:classification",
+  "fecha": "2026-10-23",
+  "resultados": 2,
+  "registros": [
+   {
+    "titulo": "Machine Learning based Prediction of Hierarchical Classification of Transposable Elements",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1907.01674v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Hire-MLP: Vision MLP via Hierarchical Rearrangement",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2108.13341v2",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "S4_rearreglo_bayes_x_alerta",
+  "base": "Semantic Scholar",
+  "consulta": "monotone rearrangement empirical Bayes hierarchical encoding classification early warning",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S5_es_umbrales_x_abastecimiento",
+  "base": "OpenAlex",
+  "consulta": "(\"umbral\" OR \"regresión distribucional\" OR \"ensamble\" OR \"aprendizaje automático\") AND (\"abastecimiento de alimentos\" OR \"centrales mayoristas\" OR \"seguridad alimentaria\") AND (interrupción OR desabastecimiento OR caída)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S5_es_umbrales_x_abastecimiento",
+  "base": "arXiv",
+  "consulta": "all:abastecimiento OR all:desabastecimiento",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S5_es_umbrales_x_abastecimiento",
+  "base": "Semantic Scholar",
+  "consulta": "ensamble de umbrales regresión distribucional abastecimiento de alimentos centrales mayoristas desabastecimiento",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S6_sipsa",
+  "base": "OpenAlex",
+  "consulta": "SIPSA AND (\"machine learning\" OR \"aprendizaje automático\" OR predicción OR prediction OR forecasting)",
+  "fecha": "2026-10-23",
+  "resultados": 4,
+  "registros": [
+   {
+    "titulo": "Proposal for a SIPSA index and its relation to food inflation for the Colombian case: empiricalevidence",
+    "anio": 2019,
+    "id": "https://openalex.org/W7137669270",
+    "fuente": "Repositorio Institucional FULL",
+    "citas": 0
+   },
+   {
+    "titulo": "Propuesta de un índice SIPSA y su relación con la inflación de alimentos para el caso colombiano: evidencia empírica",
+    "anio": 2019,
+    "id": "https://doi.org/10.15332/23393076/5635",
+    "fuente": "Comunicaciones en Estadística",
+    "citas": 1
+   },
+   {
+    "titulo": "Predicting the price per ton of rice crops in Colombia using non-parametric time series",
+    "anio": 2024,
+    "id": "https://openalex.org/W7132955096",
+    "fuente": "Repositorio Institucional Universidad El Bosque",
+    "citas": 0
+   },
+   {
+    "titulo": "JOURNAL SCAN",
+    "anio": 2005,
+    "id": "https://doi.org/10.1097/01.cot.0000289776.06364.80",
+    "fuente": "Oncology Times",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "S6_sipsa",
+  "base": "arXiv",
+  "consulta": "all:SIPSA AND (all:food OR all:supply)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S6_sipsa",
+  "base": "Semantic Scholar",
+  "consulta": "SIPSA abastecimiento DANE machine learning prediction",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S7_alerta_temprana_alimentos",
+  "base": "OpenAlex",
+  "consulta": "(\"early warning\" OR \"alerta temprana\") AND (\"food supply\" OR \"food security\" OR \"seguridad alimentaria\" OR \"food prices\") AND (\"gradient boosting\" OR XGBoost OR \"random forest\" OR \"machine learning\")",
+  "fecha": "2026-10-23",
+  "resultados": 252,
+  "registros": [
+   {
+    "titulo": "Machine Learning-Based Early Warning System for Food Security Threats in Transitional Bioeconomies",
+    "anio": 2025,
+    "id": "https://doi.org/10.1109/idaacs68557.2025.11322181",
+    "fuente": "IEEE International Conference on Intelligent Data Acquisition and Advanced Computing Systems: Technology and Applications (IDAACS)",
+    "citas": 3
+   },
+   {
+    "titulo": "Responsible use of artificial intelligence and machine learning for food security early warning systems",
+    "anio": 2026,
+    "id": "https://doi.org/10.1038/s43016-026-01400-6",
+    "fuente": "Nature Food",
+    "citas": 2
+   },
+   {
+    "titulo": "Modelling Nonlinear Climate-Economic Interactions in Food Security: An Explainable Machine Learning Approach for Early Warning Systems",
+    "anio": 2026,
+    "id": "https://doi.org/10.1109/acit69831.2026.11699939",
+    "fuente": "International Conference on Advanced Computer Information Technologies (ACIT)",
+    "citas": 0
+   },
+   {
+    "titulo": "Three essays on machine learning and food security",
+    "anio": 2020,
+    "id": "https://openalex.org/W3190432869",
+    "fuente": "Illinois Digital Environment for Access to Learning and Scholarship (University of Illinois at Urbana-Champaign)",
+    "citas": 3
+   },
+   {
+    "titulo": "Machine Learning for Food Security and Drought Resilience Assessment",
+    "anio": 2025,
+    "id": "https://doi.org/10.2139/ssrn.5337144",
+    "fuente": "SSRN Electronic Journal",
+    "citas": 3
+   },
+   {
+    "titulo": "Automated food safety early warning system in the dairy supply chain using machine learning",
+    "anio": 2022,
+    "id": "https://doi.org/10.1016/j.foodcont.2022.108872",
+    "fuente": "Food Control",
+    "citas": 62
+   },
+   {
+    "titulo": "Predicting Food‐Security Crises in the Horn of Africa Using Machine Learning",
+    "anio": 2024,
+    "id": "https://doi.org/10.1029/2023ef004211",
+    "fuente": "Earth s Future",
+    "citas": 22
+   },
+   {
+    "titulo": "Food Security: 3D Dynamic Display and Early Warning Platform Construction and Security Strategy",
+    "anio": 2022,
+    "id": "https://doi.org/10.3390/ijerph191811169",
+    "fuente": "International Journal of Environmental Research and Public Health",
+    "citas": 6
+   },
+   {
+    "titulo": "Predicting Food-Security Crises in the Horn of Africa Using Machine Learning",
+    "anio": 2024,
+    "id": "https://doi.org/10.5194/egusphere-egu24-4330",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "An AI-Based Early Warning Algorithm for Food Security in Somalia: A Hybrid Time-Series Forecasting Framework",
+    "anio": 2025,
+    "id": "https://doi.org/10.1145/3785706.3785784",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "Early Warning Systems for Plant Diseases in delta regions: Machine Learning Approaches",
+    "anio": 2025,
+    "id": "https://doi.org/10.1051/shsconf/202521601021/pdf",
+    "fuente": "Springer Link (Chiba Institute of Technology)",
+    "citas": 0
+   },
+   {
+    "titulo": "Early Warning Systems for Plant Diseases in delta regions: Machine Learning Approaches",
+    "anio": 2025,
+    "id": "https://doi.org/10.1051/shsconf/202521601021",
+    "fuente": "SHS Web of Conferences",
+    "citas": 0
+   },
+   {
+    "titulo": "Design of Food Supply Chain Safety Early Warning Mechanism Integrating Big Data Analysis",
+    "anio": 2026,
+    "id": "https://doi.org/10.1007/978-981-92-1030-5_22",
+    "fuente": "Lecture notes in electrical engineering",
+    "citas": 0
+   },
+   {
+    "titulo": "SISTEM PREDIKSI LONJAKAN HARGA PANGAN BERBASIS RANDOM FOREST UNTUK EARLY WARNING SYSTEM",
+    "anio": 2026,
+    "id": "https://doi.org/10.46880/mtk.v12i2.5656",
+    "fuente": "METHODIKA Jurnal Teknik Informatika dan Sistem Informasi",
+    "citas": 0
+   },
+   {
+    "titulo": "Classification of food security status in disaster-prone areas: a comparative analysis of machine learning models using Support Vector Machine, Random Forest, and Logistic Regression",
+    "anio": 2026,
+    "id": "https://doi.org/10.1590/1519-6984.305154",
+    "fuente": "Brazilian Journal of Biology",
+    "citas": 0
+   },
+   {
+    "titulo": "Forecast based Financing for Food Security : from early warning to early action in Eastern Africa",
+    "anio": 2021,
+    "id": "https://doi.org/10.5194/egusphere-egu21-13115",
+    "fuente": null,
+    "citas": 0
+   },
+   {
+    "titulo": "A Machine Learning Model for Predicting Food Price Variations Under Currency Fluctuation Scenarios in Afghanistan",
+    "anio": 2026,
+    "id": "https://doi.org/10.65496/jcste.2026.66",
+    "fuente": "Journal of Computer Science and Technological Enquiry",
+    "citas": 0
+   },
+   {
+    "titulo": "AI and Big Data in Food Security: Predictive Analytics for Early Warning, Supply Chain Optimization, and Data-Driven Nutrition Planning",
+    "anio": 2025,
+    "id": "https://openalex.org/W7220345087",
+    "fuente": "National Journal of Food Security and Nutritional Innovation",
+    "citas": 0
+   },
+   {
+    "titulo": "Identifying Risk Factors and Predicting Food Security Status Using Supervised Machine Learning Algorithms",
+    "anio": 2026,
+    "id": "https://doi.org/10.22214/ijraset.2026.78742",
+    "fuente": "International Journal for Research in Applied Science and Engineering Technology",
+    "citas": 0
+   },
+   {
+    "titulo": "A review on monitoring, forecasting, and early warning of harmful algal bloom",
+    "anio": 2024,
+    "id": "https://doi.org/10.1016/j.aquaculture.2024.741351",
+    "fuente": "Aquaculture",
+    "citas": 120
+   },
+   {
+    "titulo": "Modelling Food Insecurity in Ethiopia: Towards a machine learning model that predicts the transitions in food security using scalable features.",
+    "anio": 2019,
+    "id": "https://openalex.org/W2962619292",
+    "fuente": "Utrecht University Repository (Utrecht University)",
+    "citas": 1
+   },
+   {
+    "titulo": "Developing an automatic identification and early warning and monitoring web based system of fall army worm based on machine learning in developing countries",
+    "anio": 2019,
+    "id": "https://doi.org/10.33260/zictjournal.v3i1.71",
+    "fuente": "Zambia ICT Journal",
+    "citas": 10
+   },
+   {
+    "titulo": "Ecological Security Assessment and Multi-Scenario Early Warning in Black Soil Basins Based on the MESI–XGBoost–BN Integrated Framework",
+    "anio": 2026,
+    "id": "https://doi.org/10.3390/su18147272",
+    "fuente": "Sustainability",
+    "citas": 0
+   },
+   {
+    "titulo": "Forecasting trends in food security with real time data",
+    "anio": 2024,
+    "id": "https://doi.org/10.1038/s43247-024-01698-9",
+    "fuente": "Communications Earth & Environment",
+    "citas": 30
+   },
+   {
+    "titulo": "Spatial Analysis of Ensemble Learning Models for Agricultural Drought Early Warning",
+    "anio": 2026,
+    "id": "https://doi.org/10.47738/jads.v7i1.1108",
+    "fuente": "Journal of Applied Data Sciences",
+    "citas": 0
+   }
+  ]
+ },
+ {
+  "cadena": "S7_alerta_temprana_alimentos",
+  "base": "arXiv",
+  "consulta": "all:\"early warning\" AND (all:\"food security\" OR all:\"food supply\") AND all:\"machine learning\"",
+  "fecha": "2026-10-23",
+  "resultados": 10,
+  "registros": [
+   {
+    "titulo": "Improving the accuracy of food security predictions by integrating conflict data",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2410.22342v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Forecasting trends in food security with real time data",
+    "anio": 2023,
+    "id": "http://arxiv.org/abs/2312.00626v3",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Yield forecasting with machine learning and small data: what gains for grains?",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2104.13246v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "On pseudo-absence generation and machine learning for locust breeding ground prediction in Africa",
+    "anio": 2021,
+    "id": "http://arxiv.org/abs/2111.03904v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Keyword Spotter Model for Crop Pest and Disease Monitoring from Community Radio Data",
+    "anio": 2019,
+    "id": "http://arxiv.org/abs/1910.02292v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "A monthly sub-national Harmonized Food Insecurity Dataset for comprehensive analysis and predictive modeling",
+    "anio": 2025,
+    "id": "http://arxiv.org/abs/2501.06076v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Climate Variability Modulates the Impact of Price Spikes on Food Insecurity",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2609.24394v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "NourishNet: Proactive Severity State Forecasting of Food Commodity Prices for Global Warning Systems",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2407.00698v1",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "A Geospatial Approach to Predicting Desert Locust Breeding Grounds in Africa",
+    "anio": 2024,
+    "id": "http://arxiv.org/abs/2403.06860v2",
+    "fuente": "arXiv",
+    "citas": null
+   },
+   {
+    "titulo": "Monsoon Mayhem to Market Waves: Forecasting Fisheries Resilience in Sri Lanka",
+    "anio": 2026,
+    "id": "http://arxiv.org/abs/2608.04023v2",
+    "fuente": "arXiv",
+    "citas": null
+   }
+  ]
+ },
+ {
+  "cadena": "S7_alerta_temprana_alimentos",
+  "base": "Semantic Scholar",
+  "consulta": "early warning food security food supply machine learning gradient boosting",
+  "fecha": "2026-10-23",
+  "resultados": null,
+  "registros": [
+   {
+    "error": "HTTP Error 429: "
+   }
+  ]
+ },
+ {
+  "cadena": "S8_combinacion_exacta",
+  "base": "OpenAlex",
+  "consulta": "(\"distribution regression\" OR \"multiple thresholds\" OR \"threshold ensemble\") AND (\"empirical Bayes\" OR hierarchical) AND (rearrangement OR isotonic) AND (supply OR abastecimiento OR food)",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S8_combinacion_exacta",
+  "base": "arXiv",
+  "consulta": "all:\"distribution regression\" AND all:\"empirical Bayes\" AND all:rearrangement",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ },
+ {
+  "cadena": "S8_combinacion_exacta",
+  "base": "Semantic Scholar",
+  "consulta": "threshold-smoothed distribution regression ensemble monotone rearrangement empirical Bayes corridor food supply interruption",
+  "fecha": "2026-10-23",
+  "resultados": 0,
+  "registros": []
+ }
+]

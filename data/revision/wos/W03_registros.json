@@ -1,0 +1,41 @@
+{
+  "id": "W03",
+  "consulta": "TS=(XGBoost OR \"gradient boosting\" OR \"random forest*\" OR \"ensemble learning\") AND TS=(\"food supply\" OR \"agri-food\" OR \"food market*\" OR \"wholesale market*\" OR \"fresh produce\") AND TS=(disruption* OR interruption* OR shortage* OR \"supply drop*\")",
+  "resultados": 4,
+  "url": "https://www.webofscience.com/wos/woscc/summary/e65dd4a4-945a-4628-bf71-dd81b9b10d15-01cffc6d69/relevance/1",
+  "problema": "",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Machine Learning-Based Fine Classification of Agricultural Crops in the Cross-Border Basin of the Heilongjiang River between China and Russia",
+      "autores": "Liu, M; Wang, JL; (...); Jiang, JW",
+      "fecha": "May 2024",
+      "fuente": "REMOTE SENSING 16(10)",
+      "resumen": "The transboundary region along the Heilongjiang River, encompassing the Russian Far East and Northeast China, possesses abundant agricultural natural resources crucial for global food security. In the face of the challenge of disruptions in the global food supply chain, the precise monitoring and exploitation of agricultural resources in the Heilongjiang Basin becomes imperative. This study emp"
+    },
+    {
+      "rango": 2,
+      "titulo": "Machine Learning and Food Security: Insights for Agricultural Spatial Planning in the Context of Agriculture 4.0",
+      "autores": "Martinho, VJPD; Cunha, CAD; (...); Coronado, F",
+      "fecha": "Nov 2022",
+      "fuente": "APPLIED SCIENCES-BASEL 12(22)",
+      "resumen": "Climate change and global warming interconnected with the new contexts created by the COVID-19 pandemic and the Russia-Ukraine conflict have brought serious challenges to national and international organizations, especially in terms of food security and agricultural planning. These circumstances are of particular concern due to the impacts on food chains and the resulting disruptions in supply"
+    },
+    {
+      "rango": 3,
+      "titulo": "Machine learning for soybean yield forecasting in Brazil",
+      "autores": "von Bloh, M; Noia, RD Jr; (...); Asseng, S",
+      "fecha": "Oct 15 2023",
+      "fuente": "AGRICULTURAL AND FOREST METEOROLOGY 341",
+      "resumen": "Brazil supplies half of the world's exported soybeans. Forecasting its national soybean yield before harvest could help mitigate disruptions in food supply. The objective of this study is to develop a national soybean yield forecasting system for Brazil based on machine learning (ML) models. Twenty years (2001-2020) of municipality yield, the Oceanic Nino Index (ONI), remote sensing, and gridde"
+    },
+    {
+      "rango": 4,
+      "titulo": "An Experimental Analysis of Traditional Machine Learning Algorithms for Maize Yield Prediction",
+      "autores": "Tahi, SPG; Hounmenou, CG; (...); Kakai, RG",
+      "fecha": "2024",
+      "fuente": "CONTEMPORARY MATHEMATICS 5(4), pp.6208-6224",
+      "resumen": "Maize plays a significant role in the African diet and is one of the main staple foods in many parts of the continent. Accurate yield estimations ensure an adequate food supply, contributing to food security and reducing the risk of food shortages. They also enable market planning and price setting. Machine learning is well known as one of the most advanced statistical methods for predicting cr"
+    }
+  ]
+}

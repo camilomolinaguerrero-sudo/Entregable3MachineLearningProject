@@ -1,0 +1,200 @@
+{
+  "id": "W10",
+  "consulta": "TS=(ordinal) AND TS=(\"binary decomposition\" OR \"cumulative binary\" OR \"Frank and Hall\" OR \"binary classifiers\") AND TS=(classif*)",
+  "resultados": 24,
+  "url": "https://www.webofscience.com/wos/woscc/summary/e8d0306f-ef6c-4c4c-a316-388fdddb7081-01d002cba6/relevance/1",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Convolutional Ordinal Regression Forest for Image Ordinal Estimation",
+      "autores": "Zhu, HP; Shan, HM; (...); Wang, FY",
+      "fecha": "Aug 2022",
+      "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS, 33(8), pp.4084-4095",
+      "resumen": "Image ordinal estimation is to predict the ordinal label of a given image, which can be categorized as an ordinal regression (OR) problem. Recent methods formulate an OR problem as a series of binary classification problems. Such methods cannot ensure that the global ordinal relationship is preserved since the relationships among different binary classifiers are neglected. We propose a novel OR"
+    },
+    {
+      "rango": 2,
+      "titulo": "Learning Ordinal-Hierarchical Constraints for Deep Learning Classifiers",
+      "autores": "Rosati, R; Romeo, L; (...); Hervás-Martínez, C",
+      "fecha": "Mar 1 2025",
+      "fuente": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS, 36(3), pp.4765-4778",
+      "resumen": "Real-world classification problems may disclose different hierarchical levels where the categories are displayed in an ordinal structure. However, no specific deep learning (DL) models simultaneously learn hierarchical and ordinal constraints while improving generalization performance. To fill this gap, we propose the introduction of two novel ordinal-hierarchical DL methodologies, namely, the"
+    },
+    {
+      "rango": 3,
+      "titulo": "A new approach: ordinal predictive maintenance with ensemble binary decomposition (OPMEB)",
+      "autores": "Yürek, ÖE and Birant, D",
+      "fecha": "2024",
+      "fuente": "TURKISH JOURNAL OF ELECTRICAL ENGINEERING AND COMPUTER SCIENCES, 32(4)",
+      "resumen": "Predictive maintenance (PdM), a fundamental element of modern industrial systems, employs machine learning to monitor equipment conditions, estimate failure probabilities, and optimize maintenance schedules. Its core objective is to enhance equipment reliability, extend lifespan, and minimize costs through data-driven insights by enabling efficient maintenance scheduling, reducing downtime, and"
+    },
+    {
+      "rango": 4,
+      "titulo": "Uncertainty quantification in ordinal classification: A comparison of measures",
+      "autores": "Haas, S and Hüllermeier, E",
+      "fecha": "Nov 2025",
+      "fuente": "INTERNATIONAL JOURNAL OF APPROXIMATE REASONING, 186",
+      "resumen": "Uncertainty quantification has received increasing attention in machine learning in the recent past, but the focus has mostly been on standard (nominal) classification and regression so far. In this paper, we address the question of how to quantify uncertainty in ordinal classification, where class labels have a natural (linear) order. We reckon that commonly used uncertainty measures such as S"
+    },
+    {
+      "rango": 5,
+      "titulo": "Error-Correcting Output Codes in the Framework of Deep Ordinal Classification",
+      "autores": "Barbero-Gómez, J; Gutiérrez, PA and Hervás-Martínez, C",
+      "fecha": "May 2022 (Early Access)",
+      "fuente": "NEURAL PROCESSING LETTERS",
+      "resumen": "Automatic classification tasks on structured data have been revolutionized by Convolutional Neural Networks (CNNs), but the focus has been on binary and nominal classification tasks. Only recently, ordinal classification (where class labels present a natural ordering) has been tackled through the framework of CNNs. Also, ordinal classification datasets commonly present a high imbalance in the n"
+    },
+    {
+      "rango": 6,
+      "titulo": "Noncrossing ordinal classification",
+      "autores": "Qiao, XY",
+      "fecha": "2017",
+      "fuente": "STATISTICS AND ITS INTERFACE, 10(2), pp.187-198",
+      "resumen": "Ordinal data are often seen in real applications. Regular multicategory classification methods are not designed for this data type and a more proper treatment is needed. We consider a framework of ordinal classification which pools the results from binary classifiers together. An inherent difficulty of this framework is that the class prediction can be ambiguous due to boundary crossing. To fix"
+    },
+    {
+      "rango": 7,
+      "titulo": "Exploiting Structured Global and Neighbor Orders for Enhanced Ordinal Regression",
+      "autores": "Kamal, IM; Mochammad, S; (...); Kalili, M",
+      "fecha": "Jul 22 2025",
+      "fuente": "INFORMATION, 16(8)",
+      "resumen": "Ordinal regression combines classification and regression techniques, constrained by the intrinsic order among categories. It has wide-ranging applications in real-world scenarios, such as product quality grading, medical diagnoses, and facial age recognition, where understanding ranked relationships is crucial. Existing models, which often employ a series of binary classifiers with ordinal con"
+    },
+    {
+      "rango": 8,
+      "titulo": "Affective rating ranking based on face images in arousal-valence dimensional space",
+      "autores": "Xu, GP; Lu, HT; (...); Mao, QR",
+      "fecha": "Jun 2018",
+      "fuente": "FRONTIERS OF INFORMATION TECHNOLOGY & ELECTRONIC ENGINEERING, 19(6), pp.783-795",
+      "resumen": "In dimensional affect recognition, the machine learning methods, which are used to model and predict affect, are mostly classification and regression. However, the annotation in the dimensional affect space usually takes the form of a continuous real value which has an ordinal property. The aforementioned methods do not focus on taking advantage of this important information. Therefore, we prop"
+    },
+    {
+      "rango": 9,
+      "titulo": "Multiple-class classification: Ordinal and categorical labels",
+      "autores": "Chang, YCI",
+      "fecha": "2017",
+      "fuente": "COMMUNICATIONS IN STATISTICS-SIMULATION AND COMPUTATION, 46(10), pp.7561-7581",
+      "resumen": "We study multiple-class classification problems. Both ordinal and categorical labeled cases are discussed. The common approaches for multiple-class classification are built on binary classifiers, in which one-versus-one and one-versus-rest are typical approaches. When the number of classes is large, then these binary-classifier-based methods may suffer from either computational costs or the hig"
+    },
+    {
+      "rango": 10,
+      "titulo": "Error-Correcting Output Codes in the Framework of Deep Ordinal Classification",
+      "autores": "Barbero-Gómez, J; Gutiérrez, PA and Hervás-Martínez, C",
+      "fecha": "Oct 2023",
+      "fuente": "NEURAL PROCESSING LETTERS, 55(5), pp.5299-5330",
+      "resumen": "Automatic classification tasks on structured data have been revolutionized by Convolutional Neural Networks (CNNs), but the focus has been on binary and nominal classification tasks. Only recently, ordinal classification (where class labels present a natural ordering) has been tackled through the framework of CNNs. Also, ordinal classification datasets commonly present a high imbalance in the n"
+    },
+    {
+      "rango": 11,
+      "titulo": "Is an ordinal class structure useful in classifier learning?",
+      "autores": "Hühn, JC and Hüllermeier, E",
+      "fecha": "2008",
+      "fuente": "INTERNATIONAL JOURNAL OF DATA MINING MODELLING AND MANAGEMENT, 1(1), pp.45-67",
+      "resumen": "In recent years, a number of machine learning algorithms have been developed for the problem of ordinal classification. These algorithms try to exploit, in one way or the other, the order information of the problem, essentially relying on the assumption that the ordinal structure of the set of class labels is also reflected in the topology of the instance space. The purpose of this paper is to"
+    },
+    {
+      "rango": 12,
+      "titulo": "Rank consistent ordinal regression for neural networks with application to age estimation",
+      "autores": "Cao, WZ; Mirjalili, V and Raschka, S",
+      "fecha": "Dec 2020",
+      "fuente": "PATTERN RECOGNITION LETTERS, 140, pp.325-331",
+      "resumen": "In many real-world prediction tasks, class labels include information about the relative ordering between labels, which is not captured by commonly-used loss functions such as multi-category cross-entropy. Recently, the deep learning community adopted ordinal regression frameworks to take such ordering information into account. Neural networks were equipped with ordinal regression capabilities"
+    },
+    {
+      "rango": 13,
+      "titulo": "CNN explanation methods for ordinal regression tasks",
+      "autores": "Barbero-Gómez, J; Cruz, RPM; (...); Hervás-Martínez, C",
+      "fecha": "Jan 28 2025",
+      "fuente": "NEUROCOMPUTING, 615",
+      "resumen": "The use of Convolutional Neural Network (CNN) models for image classification tasks has gained significant popularity. However, the lack of interpretability in CNN models poses challenges for debugging and validation. To address this issue, various explanation methods have been developed to provide insights into CNN models. This paper focuses on the validity of these explanation methods for ord"
+    },
+    {
+      "rango": 14,
+      "titulo": "Ordinal-ResLogit: Interpretable deep residual neural networks for ordered choices",
+      "autores": "Kamal, K and Farooq, B",
+      "fecha": "Mar 2024",
+      "fuente": "JOURNAL OF CHOICE MODELLING, 50",
+      "resumen": "This study presents an Ordinal version of Residual Logit (Ordinal-ResLogit) model to investigate the ordinal responses. We integrate the standard ResLogit model into COnsistent RAnk Logits (CORAL) framework, classified as a binary classification algorithm, to develop a fully interpretable deep learning-based ordinal regression model. As the formulation of the Ordinal-ResLogit model enjoys the R"
+    },
+    {
+      "rango": 15,
+      "titulo": "Facial age estimation based on advanced ordinal ranking",
+      "autores": "Zhao, W and Wang, H",
+      "fecha": "Jun 11 2015",
+      "fuente": "ELECTRONICS LETTERS, 51(12), pp.903-904",
+      "resumen": "Ordinal hyperplane ranking achieves superior performance in facial age estimation. However, further experiments show that this approach suffers from its ideal ranking rule, which sometimes causes unnecessary estimation deviations and degrades performance. Two approaches with new ranking rules are proposed, which minimise accidental deviations of binary classifiers and tactfully combine the accu"
+    },
+    {
+      "rango": 16,
+      "titulo": "Empirical study on virtual order of class labels in nominal classification",
+      "autores": "Li, CW; Liu, H and Ming, Z",
+      "fecha": "Nov 2022",
+      "fuente": "INTERNATIONAL JOURNAL OF MACHINE LEARNING AND CYBERNETICS, 13(11), pp.3255-3266",
+      "resumen": "Binary Decomposition can be adopted in ordered and unordered ways. Inspired by the case that label order information can be exploited to improve the ordinal classification performance through adopting an ordered decomposition strategy, this paper explores whether the effectiveness of binary decomposition in nominal classification tasks can be improved by setting a virtual label order. The essen"
+    },
+    {
+      "rango": 17,
+      "titulo": "Public Governance and Public Health: Evaluating the Spatial Transferability of Groundwater Fluoride Risk Models in China",
+      "autores": "Wang, YX; Guo, LW; (...); Khan, H",
+      "fecha": "Jul-sep 2026",
+      "fuente": "FLUORIDE, 59(10)",
+      "resumen": "Purpose: Groundwater fluoride contamination is commonly modeled as independently trained binary classifiers evaluated by random cross-validation, an approach that can overstate real-world predictive performance and produce logically inconsistent risk estimates across nested concentration thresholds. Methods: Using 1,787 groundwater samples from five Ningxia, China prefectures (Yinchuan, Wuzhong"
+    },
+    {
+      "rango": 18,
+      "titulo": "Ordinal Regression Methods: Survey and Experimental Study",
+      "autores": "Gutiérrez, PA; Pérez-Ortiz, M; (...); Hervás-Martínez, C",
+      "fecha": "Jan 1 2016",
+      "fuente": "IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING, 28(1), pp.127-146",
+      "resumen": "Ordinal regression problems are those machine learning problems where the objective is to classify patterns using a categorical scale which shows a natural order between the labels. Many real-world applications present this labelling structure and that has increased the number of methods and algorithms developed over the last years in this field. Although ordinal regression can be faced using s"
+    },
+    {
+      "rango": 19,
+      "titulo": "Instance-Level Future Motion Estimation in a Single Image Based on Ordinal Regression and Semi-Supervised Domain Adaptation",
+      "autores": "Kim, KR; Koh, YJ and Kim, CS",
+      "fecha": "2020",
+      "fuente": "IEEE ACCESS, 8, pp.115089-115108",
+      "resumen": "A novel algorithm to estimate instance-level future motion (FM) in a single image is proposed in this paper. First, the FM of an instance is defined with its direction, speed, and action classes. Then, a deep neural network, called FM-Net, is developed to determine the FM of the instance. More specifically, the multi-context pooling layer is proposed to exploit both object and global context fe"
+    },
+    {
+      "rango": 20,
+      "titulo": "Leveraging ordinal information to improve thermal comfort prediction with deep learning models",
+      "autores": "Cen, C; Zhai, YX; (...); Wong, NH",
+      "fecha": "Mar 1 2026",
+      "fuente": "JOURNAL OF BUILDING ENGINEERING, 121",
+      "resumen": "Data-driven thermal comfort prediction increasingly relies on machine learning techniques. However, most existing approaches treat thermal comfort indexes such as thermal sensation vote (TSV) as nominal categories, thereby overlooking their inherent ordinal nature. This study investigates whether explicitly modelling ordinal relationships and unequal misclassification costs can improve predicti"
+    },
+    {
+      "rango": 21,
+      "titulo": "Cautious classification with nested dichotomies and imprecise probabilities",
+      "autores": "Yang, G; Destercke, S and Masson, MH",
+      "fecha": "Dec 2017",
+      "fuente": "SOFT COMPUTING, 21(24), pp.7447-7462",
+      "resumen": "In some applications of machine learning and information retrieval (e.g. medical diagnosis, image recognition, pre-classification...), it can be preferable to provide less informative but more reliable predictions. This can be done by making partial predictions in the form of class subsets when the available information is insufficient to provide a reliable unique class. Imprecise probabilistic"
+    },
+    {
+      "rango": 22,
+      "titulo": "Code smell severity classification using machine learning techniques",
+      "autores": "Fontana, FA and Zanoni, M",
+      "fecha": "Jul 15 2017",
+      "fuente": "KNOWLEDGE-BASED SYSTEMS, 128, pp.43-58",
+      "resumen": "Several code smells detection tools have been developed providing different results, because smells can be subjectively interpreted and hence detected in different ways. Machine learning techniques have been used for different topics in software engineering, e.g., design pattern detection, code smell detection, bug prediction, recommending systems. In this paper, we focus our attention on the c"
+    },
+    {
+      "rango": 23,
+      "titulo": "A transitivity analysis of bipartite rankings in pairwise multi-class classification",
+      "autores": "Waegeman, W and De Baets, B",
+      "fecha": "Nov 1 2010",
+      "fuente": "INFORMATION SCIENCES, 180(21), pp.4099-4117",
+      "resumen": "Many multi-class classification algorithms in statistics and machine learning typically combine several binary classifiers in order to construct an overall classifier. In the popular pairwise ensemble, one classifier is built for each pair of classes, resulting in pairwise bipartite rankings. In contrast, ordinal regression algorithms consider a single ranking function for several ordered class"
+    },
+    {
+      "rango": 24,
+      "titulo": "Multicentre prospective study on the diagnostic and prognostic validity of malnutrition assessment tools in surgery",
+      "autores": "Petra, G; Kritsotakis, E; (...); MATS Study Grp",
+      "fecha": "Mar 3 2025",
+      "fuente": "BJS-BRITISH JOURNAL OF SURGERY, 112(2)",
+      "resumen": "Background Malnutrition is a risk factor for postoperative morbidity but the optimal tool for the assessment of malnutrition is unclear.Methods This is a prospective multicentre cohort study. Consecutive patients undergoing elective or emergency major abdominal surgery for benign or malignant disease in 12 Greek hospitals between January 2022 and December 2023 were included. Patients unable to"
+    }
+  ]
+}

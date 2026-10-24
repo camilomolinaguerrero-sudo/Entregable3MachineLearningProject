@@ -1,0 +1,25 @@
+{
+  "id": "W02",
+  "consulta": "TS=(\"latent variable\" OR \"latent threshold\" OR dichotomi* OR \"continuous outcome\") AND TS=(supply OR food OR logistic*) AND TS=(disruption* OR interruption* OR shortage*) AND TS=(\"machine learning\" OR classif* OR boosting)",
+  "resultados": 2,
+  "url": "https://www.webofscience.com/wos/woscc/summary/30429712-ea62-41a3-87cc-0b0a7c0885ed-01cffc6cff/relevance/1",
+  "problema": "",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "Merits of random forests emerge in evaluation of chemometric classifiers by external validation",
+      "autores": "Scott, IM; Lin, W; (...); King, RD",
+      "fecha": "Nov 1 2013",
+      "fuente": "ANALYTICA CHIMICA ACTA, 801, pp.22-33",
+      "resumen": "Real-world applications will inevitably entail divergence between samples on which chemometric classifiers are trained and the unknowns requiring classification. This has long been recognized, but there is a shortage of empirical studies on which classifiers perform best in 'external validation' (EV), where the unknown samples are subject to sources of variation relative to the population used"
+    },
+    {
+      "rango": 2,
+      "titulo": "Unfavorable Mealtime, Meal Skipping, and Shiftwork Are Associated with Circadian Syndrome in Adults Participating in NHANES 2005-2016",
+      "autores": "Akbar, Z and Shi, ZM",
+      "fecha": "Jun 2024",
+      "fuente": "NUTRIENTS, 16(11)",
+      "resumen": "The concept of Circadian Syndrome (CircS) aims to emphasize the circadian disruptions underlying cardiometabolic conditions. Meal timing and shiftwork may disrupt circadian rhythms, increasing cardiometabolic risk. This study aimed to assess the associations of meal timing, meal skipping, and shiftwork with CircS in US adults and explore effect modifications by sociodemographic and lifestyle fa"
+    }
+  ]
+}

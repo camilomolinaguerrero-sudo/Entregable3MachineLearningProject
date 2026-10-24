@@ -1,0 +1,13 @@
+# Tabla de contenidos (Jupyter Book 1.x), estructura del cuadro 4 de la guía
+format: jb-book
+root: intro
+chapters:
+  - file: 01_correcciones        # trazabilidad de correcciones
+  - file: 02_datos               # ETL y EDA
+  - file: 03_benchmarks          # mejores combinaciones y artefactos
+  - file: 04_literatura          # revisión de literatura y novedad
+  - file: 05_modelo_original     # EJUL: formulación, pseudocódigo, complejidad, pruebas, ablación
+  - file: 06_validacion          # pruebas de hipótesis
+  - file: 07_dashboard           # dashboard y despliegue
+  - file: 08_conclusiones        # conclusiones, limitaciones y declaración de uso de IA
+  - file: 09_reproducibilidad    # entorno, semillas, tabla maestra y bibliografía

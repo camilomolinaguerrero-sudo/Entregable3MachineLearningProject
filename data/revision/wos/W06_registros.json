@@ -1,0 +1,81 @@
+{
+  "id": "W06",
+  "consulta": "TS=(SIPSA OR \"Sistema de Información de Precios y Abastecimiento\") OR (TS=(Colombia*) AND TS=(\"food supply\" OR \"wholesale market*\" OR \"food prices\" OR abastecimiento) AND TS=(\"machine learning\" OR \"random forest\" OR XGBoost OR \"gradient boosting\" OR forecast*))",
+  "resultados": 9,
+  "url": "https://www.webofscience.com/wos/woscc/summary/0915dc09-1400-489d-ba3c-17e8fa622200-01cffc72fe/relevance/1",
+  "problema": "Sin errores de sintaxis. El término SIPSA coincide en WoS con 'SiPSA' (silicone pressure-sensitive adhesive), por lo que los registros 2, 3, 8 y 9 son ruido de química de adhesivos; el registro 1 (mercado de derivados energéticos) tampoco es pertinente. WoS sugirió una variante ('sipsc', 'abastecimento') con 258 resultados que no se usó. Ninguno de los 9 registros trata sobre el SIPSA del DANE.",
+  "registros": [
+    {
+      "rango": 1,
+      "titulo": "An Overview of the Colombian Market for Standarized Derivatives of Energy Commodities",
+      "autores": "Velásquez, JD; Gil, V and Franco, CJ",
+      "fecha": "Jul 2015",
+      "fuente": "IEEE LATIN AMERICA TRANSACTIONS 13(7), pp.2176-2182",
+      "resumen": "This paper presents an overview of DERIVEX, the new Colombian market for standardized derivatives of energy commodities. With the aim of understanding the market operation in context and the sources of electricity price variability, this work presents: first, a disscusion the main physical characteristics of the electricity system; second, the operation of the energy market; and finally, the op"
+    },
+    {
+      "rango": 2,
+      "titulo": "UV-curable silicone pressure-sensitive adhesive based on thiol-ene reaction",
+      "autores": "Zhou, Y; Zhao, ZY; (...); Li, F",
+      "fecha": "Jan 2024",
+      "fuente": "PROGRESS IN ORGANIC COATINGS 186",
+      "resumen": "In order to improve the curing efficiency and reduce energy consumption of silicone pressure-sensitive adhesive (SiPSA), a kind of UV-curable SiPSA based on thiol-ene reaction was prepared with methyl vinyl MQ resin as hard segment, methyl vinyl silicone rubber (110-2S) as soft segment and mercaptyl silicone oil as cross-linker. The UVcured SiPSA exhibited excellent thermal stability and water"
+    },
+    {
+      "rango": 3,
+      "titulo": "Moisture-resistant and Thermally Dual-detachable Silicone-contained Pressure-sensitive Adhesive: Preparation and Potential Applications in Medical Care",
+      "autores": "Yin, FM; Zhou, XX; (...); Kong, XZ",
+      "fecha": "Sep 2026 (Early Access)",
+      "fuente": "CHINESE JOURNAL OF POLYMER SCIENCE",
+      "resumen": "Thermo-responsive pressure-sensitive adhesives (PSAs) offer significant potential for advanced wound care but face challenges in achieving simultaneously robust physiological adhesion and controllable, atraumatic removal. This study introduces silicone-contained pressure-sensitive adhesive (SiPSA), the adhesive platform synthesized by crosslinking thermo-responsive poly(ethylene glycol-co-silox"
+    },
+    {
+      "rango": 4,
+      "titulo": "A Data-Driven Framework for Agri-Food Supply Chains: A Case Study on Inventory Optimization in Colombian Potatoes Management",
+      "autores": "Rojas, DM; Montoya-Torres, JR and Valderrama, DMA",
+      "fecha": "Nov 21 2025",
+      "fuente": "LOGISTICS-BASEL 9(4)",
+      "resumen": "Background: Mitigating the negative impacts of climate change and ensuring food security are critical challenges for sustainable development. Potato crops play a key role in global food security, and optimizing their supply chains can improve yields, reduce waste, and stabilize farmer incomes. This study focuses on the potato supply chain in Boyac & aacute;, Colombia, aiming to maximize profita"
+    },
+    {
+      "rango": 5,
+      "titulo": "Predicting Household Food Insecurity Through a Livelihood lens: A Machine Learning Approach in Rural Colombia",
+      "autores": "Mazenda, A",
+      "fecha": "Jul 2026",
+      "fuente": "JOURNAL OF INTERNATIONAL DEVELOPMENT 38(5), pp.827-840",
+      "resumen": "Food insecurity remains a persistent challenge in rural Colombia, driven by structural inequalities, livelihood constraints and exposure to shocks. This paper examined the determinants and predictive drivers of household food insecurity using nationally representative data from the Food and Agriculture Organisation (FAO) Data in Emergencies Monitoring (DIEM) surveys collected in 2023, covering"
+    },
+    {
+      "rango": 6,
+      "titulo": "Predictive Modeling of Above-Ground Biomass in Brachiaria Pastures from Satellite and UAV Imagery Using Machine Learning Approaches",
+      "autores": "Alvarez-Mendoza, CI; Guzman, D; (...); Selvaraj, MG",
+      "fecha": "Nov 2022",
+      "fuente": "REMOTE SENSING 14(22)",
+      "resumen": "Grassland pastures are crucial for the global food supply through their milk and meat production; hence, forage species monitoring is essential for cattle feed. Therefore, knowledge of pasture above-ground canopy features help understand the crop status. This paper finds how to construct machine learning models to predict above-ground canopy features in Brachiaria pasture from ground truth data"
+    },
+    {
+      "rango": 7,
+      "titulo": "Classification of images of bee pollen according to their producers",
+      "autores": "Campuzano, JDL; Niño, CAM and Jaramillo, FAG",
+      "fecha": "Oct 21 2025",
+      "fuente": "PLOS ONE 20(10)",
+      "resumen": "The food industry is witnessing a growing interest in pollen due to its nutritional and energy composition. Consumers of bee pollen are increasingly eager to learn about the origins of the products they purchase. Establishing the geographical origin and the producer of pollen can enhance the product's value and meet consumer demands for transparency in the supply chain. This article presents a"
+    },
+    {
+      "rango": 8,
+      "titulo": "Correlation between the size of the inter-platelet cation in the montmorillonite and the influence of MMT on the performance of silicone pressure-sensitive adhesives",
+      "autores": "Antosik, AK; Mozelewska, K; (...); Bartkowiak, M",
+      "fecha": "Jun 2025",
+      "fuente": "INTERNATIONAL JOURNAL OF ADHESION AND ADHESIVES 140",
+      "resumen": "In this study, various types of montmorillonite (H+, Na+, Ca+) were employed as additives for the physical modification of commercially available silicone pressure-sensitive adhesives (Si-PSA). Additionally, a modification of sodium montmorillonite was carried out to obtain the MMT-Al variant. Prior to adding MMTs to the SiPSA composition, analyses of MMTs were performed using XRD technique. Ne"
+    },
+    {
+      "rango": 9,
+      "titulo": "Alkaline microenvironments enable high-temperature resistance in waterborne silicone pressure-sensitive adhesives",
+      "autores": "Du, HQ; Chen, WJ; (...); Xu, YF",
+      "fecha": "Jun 2026",
+      "fuente": "GIANT 28",
+      "resumen": "Achieving high-temperature heat resistance in waterborne silicone pressure-sensitive adhesives (SiPSAs) without resorting to complex formulations remains a considerable challenge. This study addresses the issue by introducing a minor quantity of K2CO3 into a straightforward waterborne silicone emulsion. Utilizing cryogenic transmission electron microscopy and tomography, the microphase structur"
+    }
+  ]
+}

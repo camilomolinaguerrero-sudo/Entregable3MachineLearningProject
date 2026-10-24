@@ -1,0 +1,24 @@
+k2 {'auc': 0.786, 'auc_pr': 0.5692, 'brier': 0.1639, 'log_loss': 0.4889, 'ece': 0.0123, 'f1': 0.5899} {'lam': 5.561918972790498, 'gamma': 0.9824062125993923, 'profundidad': 4, 'eta0': 3.9623815429271185, 'max_iter': 300, 'calibrar': True} 119s
+                                         auc  auc_pr   brier  log_loss     ece
+variante                                                                      
+AJ-KL (completo)                      0.7860  0.5692  0.1639    0.4889  0.0123
+Promedio simple                       0.7828  0.5654  0.1657    0.4937  0.0262
+Pesos por inverso de la log-loss      0.7836  0.5662  0.1649    0.4920  0.0182
+Stacking logístico                    0.7849  0.5676  0.1642    0.4896  0.0096
+BLP (Ranjan y Gneiting)               0.7853  0.5690  0.1640    0.4894  0.0086
+Profundidad 1: apilamiento global     0.7846  0.5675  0.1643    0.4901  0.0107
+Profundidad 2: país y central         0.7852  0.5682  0.1641    0.4895  0.0104
+Profundidad 3: sin nivel de corredor  0.7856  0.5686  0.1640    0.4892  0.0107
+Profundidad 4: con nivel de corredor  0.7860  0.5692  0.1639    0.4889  0.0123
+Sin encogimiento (λ = 0)              0.7823  0.5504  0.1679    0.5146  0.0267
+Sin olvido (γ = 1)                    0.7861  0.5693  0.1639    0.4888  0.0122
+Sin calibración                       0.7860  0.5692  0.1638    0.4893  0.0094
+Modelo base: XGBoost                  0.7850  0.5682  0.1643    0.4904  0.0155
+Modelo base: Random Forest            0.7838  0.5647  0.1645    0.4904  0.0067
+Modelo base: SVM                      0.7828  0.5629  0.1661    0.4975  0.0327
+Modelo base: Regresión logística      0.7799  0.5574  0.1664    0.4965  0.0234
+Modelo base: KNN                      0.7722  0.5442  0.1696    0.5035  0.0323
+Modelo base: Decision Tree            0.7720  0.5418  0.1994    0.5756  0.1614
+Modelo base: Naive Bayes              0.7678  0.5273  0.2337    0.9626  0.1994
+Modelo base: LightGBM                 0.7841  0.5670  0.1645    0.4908  0.0149
+Modelo base: CatBoost                 0.7839  0.5659  0.1645    0.4914  0.0083
